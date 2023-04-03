@@ -1,0 +1,41 @@
+@use '../../../styles/main.scss' as *;
+
+.colors-container{
+     width: 100%;
+     min-height: 300px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+
+
+     .small-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+
+        p{
+            font-size: 22px;
+        }
+        
+         .color-only{
+             width: 200px;
+             height: 100px;
+
+        &.primary{
+            background: $primary-color;
+        }
+        &.secondary{
+            background: $secondary-color;
+        }
+        &.tertiary{
+            background: $tertiary-color;
+        }
+        &.extra{
+            background: $extra-color;
+        }
+    }
+     }
+}

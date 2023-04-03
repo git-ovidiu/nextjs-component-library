@@ -1,0 +1,24 @@
+@use '../../../styles/main.scss' as *;
+
+.font_weight-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+
+    .font-weight-small-container{
+        &.font-weight-s{
+            font-weight: $font-weight-s;
+        }
+        &.font-weight-m{
+            font-weight: $font-weight-m;
+        }
+        &.font-weight-l{
+            font-weight: $font-weight-l;
+        }
+        &.font-weight-xl{
+            font-weight: $font-weight-xl;
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+@use '../../../styles/main.scss' as *;
+
+:root{
+    --a-button-slide-second-background: #{$tertiary-color};
+    --a-button-slide-second-background-hover: #{$primary-color};
+    --a-button-slide-second-animation-transition: #{$transition-duration-normal};
+    --a-button-slide-second-animation-transition-fast: #{$transition-duration-fast};
+    --a-button-slide-second-border-radius: #{$border-radius-0};
+    --a-button-slide-second-font-size: 20px;
+    --a-button-slide-second-padding: 10px 30px;
+    --a-button-slide-second-line-height: 1;
+    --a-button-slide-second-font-weight: 400;
+    --a-button-slide-second-text-color: #{$color-white};
+}
+
+@mixin button_typography_primary {
+    font-size: var(--a-button-slide-second-font-size);
+    padding: var(--a-button-slide-second-padding);
+    line-height: var(--a-button-slide-second-line-height);
+    font-weight: var(--a-button-slide-second-font-weight);
+    border-radius: var(--a-button-slide-second-border-radius);
+}
+
+.btn_hover_left {
+    @include button_typography_primary();
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--a-button-slide-second-background);
+    box-shadow: 0 5px 15px var(--a-button-slide-second-background);
+  
+    span {
+      position: relative;
+      z-index: 1;
+      color: var(--a-button-slide-second-text-color);
+    }
+  
+    &:after {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 0;
+      height: 300px;
+      width: 140%;
+      background: var(--a-button-slide-second-background-hover);
+      -webkit-transition: all var(--a-button-slide-second-animation-transition-fast) ease-in-out;
+      transition: all var(--a-button-slide-second-animation-transition) ease-in-out;
+      -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+      transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    }
+  
+    &:hover {
+      color: var(--a-button-slide-second-background);
+    }
+  }
+  
+  .btn_hover_left:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+  
+  .link {
+    margin-top: 30px;
+  }
+  
+  
+  

@@ -1,0 +1,47 @@
+@use '../../../styles/main.scss' as *;
+
+
+.border-radius-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 30px;
+    
+    .border-radius-small-container{
+        width: 150px;
+        height: 65px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: $primary-color;
+        color: white;
+        &.border-radius-0{
+            border-radius: $border-radius-0;
+        }
+        &.border-radius-xs{
+            border-radius: $border-radius-xs;
+        }
+        &.border-radius-s{
+            border-radius: $border-radius-s;
+        }
+        &.border-radius-m{
+            border-radius: $border-radius-m;
+        }
+        &.border-radius-l{
+            border-radius: $border-radius-l;
+        }
+        &.border-radius-xl{
+            border-radius: $border-radius-xl;
+        }
+        &.border-radius-xxl{
+            border-radius: $border-radius-xxl;
+        }
+        &.border-radius-xxxl{
+            border-radius: $border-radius-xxxl;
+        }
+    }
+}
