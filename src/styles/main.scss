@@ -1,2 +1,9 @@
 @forward './Settings/Design';
 @forward './Settings/Typography';
+@forward './Settings/Flex';
+
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: unset;
+    padding: unset;
+}

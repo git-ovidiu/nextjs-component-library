@@ -4,6 +4,7 @@ import "./Button_Slide.scss";
 export interface ButtonProps {
   text: string;
   hover_effect: string;
+  test: string;
 }
 
 export default function Button_slide(props: ButtonProps) {
@@ -18,7 +19,7 @@ export default function Button_slide(props: ButtonProps) {
           ${props.hover_effect === "slide-left" ? "btn_hover_slide slide_left" : ""}
           `}
             >
-              <span>{props.text}</span>
+              <span>{props.text} +++ {props.test}</span>
             </button>
         </div>
     </>

@@ -1,0 +1,117 @@
+@use '../../../styles/main.scss' as *;
+
+:root{
+    --a-button-slide-background: #{$tertiary-color};
+    --a-button-slide-background-hover: #{$primary-color};
+    --a-button-slide-animation-transition: 0.3s;
+    --a-button-slide-border-radius: #{$border-radius-0};
+    --a-button-slide-font-size: 20px;
+    --a-button-slide-padding: 20px 30px;
+    --a-button-slide-line-height: 1;
+    --a-button-slide-font-weight: 400;
+    --a-button-slide-text-color: #{$color-white};
+
+}
+
+@mixin button_typography_primary {
+    font-size: var(--a-button-slide-font-size);
+    padding: var(--a-button-slide-padding);
+    line-height: var(--a-button-slide-line-height);
+    font-weight: var(--a-button-slide-font-weight);
+    border-radius: var(--a-button-slide-border-radius);
+}
+
+.btn_hover_slide {
+    @include button_typography_primary;
+    position: relative;
+    display: block;
+    height: 100%;
+    color: var(--a-button-slide-text-color);
+    background-color: var(--a-button-slide-background-hover);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--a-button-slide-background);                                                
+
+    span {
+        @include button_typography_primary;
+        position: relative;
+        display: block;
+        top: 0;
+        left: 0;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: var(--a-button-slide-background);
+        transition: var(--a-button-slide-animation-transition) ease-out;
+        border-radius: var(--a-button-slide-border-radius);
+    }
+}
+@mixin slide_hover_paddings {
+    padding: 0;
+    margin: 0;
+}
+.btn_hover_slide.slide_down {
+    @include slide_hover_paddings;
+    &::before {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+    }
+    &:hover {
+        &::before {
+            height: 0%;
+        }
+    }
+}
+
+.btn_hover_slide.slide_up {
+    @include slide_hover_paddings;
+    &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+    }
+    &:hover {
+        &::before {
+            height: 0%;
+        }
+    }
+}
+
+.btn_hover_slide.slide_right {
+    @include slide_hover_paddings;
+
+    &::before {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+    }
+    &:hover {
+        &::before {
+            width: 0%;
+        }
+    }
+}
+
+.btn_hover_slide.slide_left {
+    @include slide_hover_paddings;
+    &::before {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    &:hover {
+        &::before {
+            width: 0%;
+        }
+    }
+}

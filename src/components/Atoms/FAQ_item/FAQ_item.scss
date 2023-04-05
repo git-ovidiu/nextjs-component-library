@@ -1,0 +1,87 @@
+@use '../../../styles/main.scss' as *;
+
+:root{
+    --faq-item-icon-margin-top: 10px; 
+    --faq-item-border-radius: #{$border-radius-m}; 
+    --faq-item-box-shadow: #{$box-shadow-xl}; 
+    --faq-item-padding: 40px; 
+    --faq-item-content-padding-right: 20px; 
+    --faq-item-content-title-opacity: 0.7; 
+    --faq-item-content-title-font-weight: 600; 
+    --faq-item-content-title-transition: all #{$transition-duration-normal}; 
+}
+
+
+.faq-item{
+    @include flex(row,  center, flex-start);
+    border-radius: var(--faq-item-border-radius);
+    box-shadow: var(--faq-item-box-shadow);
+    padding: var(--faq-item-padding);
+    position: relative;
+    cursor: pointer;
+    .content{
+        @include flex(column, center, flex-start);
+        width: 95%;
+        padding-right: var(--faq-item-content-padding-right);
+        .title{
+            opacity: var(--faq-item-content-title-opacity);
+            font-weight: var(--faq-item-content-title-font-weight);
+            transition: var(--faq-item-content-title-transition);
+        }
+        
+        .hidden-text{
+            margin-top: 0px;
+            overflow: hidden;
+            height: 0;
+            max-height: 0;
+            opacity: 0;
+            transition: all $transition-duration-normal;
+        }
+    }
+    
+    .arrow{
+        transform: rotate(0deg);
+        opacity: 0.7;
+        transition: all $transition-duration-normal;
+        margin-top: var(--faq-item-icon-margin-top);
+    }
+    
+    .close{
+        width: 0px;
+        height: 0px;
+            overflow: none;
+            transition: all $transition-duration-normal;
+            opacity: 0;
+            position: absolute;
+            right: 2%;
+            margin-top: var(--faq-item-icon-margin-top);
+        }
+        &.toggle{
+            .content{
+                .title{
+                    opacity: 1;
+                    font-weight: 800;
+                }
+            .hidden-text{
+                margin-top: 20px;
+                overflow: visible;
+                max-height: 500px;
+                height: 100%;
+                opacity: 1;
+            }
+        }
+
+        .arrow{
+            transform: rotate(180deg);
+            opacity: 1;
+        }
+        .close{
+            display: block;
+            width: 12px; 
+            height: 12px;
+            overflow: visible;
+            opacity: 1;
+        }
+    }
+    
+}
