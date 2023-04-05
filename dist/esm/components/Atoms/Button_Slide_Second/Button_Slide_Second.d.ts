@@ -1,7 +1,7 @@
 /// <reference types="react" />
 import "./Button_Slide_Second.scss";
-export interface ButtonProps {
+export interface Button_Slide_Second_Props {
     text: string;
     hover_effect: string;
 }
-export default function Button_Slide_Second(props: ButtonProps): JSX.Element;
+export default function Button_Slide_Second(props: Button_Slide_Second_Props): JSX.Element;
