@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/git-ovidiu"
   },
-  "version": "0.1.1",
+  "version": "0.7.3",
   "description": "A Next.js component library. It follows the atomic design rules (atoms/molecules/organisms).",
   "scripts": {
     "dev": "next dev",
@@ -48,10 +48,12 @@
     "css-loader": "^6.5.1",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
+    "framer-motion": "^10.10.0",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.3",
     "next": "13.2.4",
+    "npm-check": "^6.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rollup": "^2.60.0",
