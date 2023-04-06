@@ -1,10 +1,10 @@
-/// <reference types="react" />
+import { ReactElement } from "react";
 import "./FAQ_item.scss";
 interface FAQProps {
-    title: string;
+    title: ReactElement;
     description: string;
-    arrow: string;
-    close: string;
+    arrow: ReactElement;
+    close: ReactElement;
 }
 export default function FAQ_item(props: FAQProps): JSX.Element;
 export {};

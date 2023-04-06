@@ -1,11 +1,12 @@
-import React from "react";
+import React, {ReactElement} from "react";
 import "./FAQ_item.scss";
+import {motion} from 'framer-motion';
 
 interface FAQProps {
-  title: string;
+  title: ReactElement;
   description: string;
-  arrow: string;
-  close: string;
+  arrow: ReactElement;
+  close: ReactElement;
 }
 
 export default function FAQ_item(props: FAQProps) {
@@ -16,13 +17,16 @@ export default function FAQ_item(props: FAQProps) {
   };
 
   return (
-    <div className={`faq-item ${toggle ? 'toggle' : ''}`} onClick={toggleFaq}>
+    <motion.div className={`faq-item ${toggle ? 'toggle' : ''}`} onClick={toggleFaq}
+    initial={{y: -200, opacity: 0}}
+    animate={{y:0, opacity: 1}}
+    >
       <div className="content">
         <div className="title">{props.title}</div>
         <div className="hidden-text">{props.description}</div>
       </div>
       <div className="arrow">{props.arrow}</div>
       <div className="close">{props.close}</div>
-    </div>
+    </motion.div>
   );
 }

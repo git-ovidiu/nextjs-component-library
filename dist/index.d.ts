@@ -1,4 +1,6 @@
 /// <reference types="react" />
+import { ReactElement } from 'react';
+
 interface ButtonProps {
     text: string;
     hover_effect: string;
@@ -18,10 +20,10 @@ interface Button_Slide_Second_Props {
 declare function Button_Slide_Second(props: Button_Slide_Second_Props): JSX.Element;
 
 interface FAQProps {
-    title: string;
+    title: ReactElement;
     description: string;
-    arrow: string;
-    close: string;
+    arrow: ReactElement;
+    close: ReactElement;
 }
 declare function FAQ_item(props: FAQProps): JSX.Element;
 

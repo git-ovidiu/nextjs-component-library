@@ -38,7 +38,9 @@ component: Extra_Info
 
   // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
   const Template: ComponentStory<typeof FAQ_item> = (args) =>
-    <FAQ_item {...args} />;
+  <>
+    <FAQ_item {...args} />
+  </>
 
 
     export const FAQ_item_story = Template.bind({});
