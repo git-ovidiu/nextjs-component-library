@@ -1,0 +1,68 @@
+@use '../../../styles/main.scss' as *;
+
+// @keyframes to-bottom {
+//   to {
+//     transform: translateY(100%);
+//   }
+// }
+
+// @keyframes to-top {
+//   to {
+//     transform: translateY(-100%);
+//   }
+// }
+
+// @keyframes to-left {
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// @keyframes to-right {
+//   to {
+//     transform: translateX(100%);
+//   }
+// }
+
+.tot{
+    h2{
+        margin-bottom: 130vh;
+    } 
+}
+
+
+.animated-title {
+    opacity: 0;
+  
+    span {
+      display: inline-block;
+    }
+  
+    >span {
+      overflow: hidden;
+      transition-duration: 1s;
+      transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  
+      >span {
+        position: relative;
+        transform: translateY(100%);
+        transition: inherit;
+      }
+    }
+  
+    @for $i from 2 through 255 {
+      >span:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.05}s;
+      }
+    }
+  
+    &.slide-in {
+      opacity: 1;
+  
+      >span {
+        >span {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
