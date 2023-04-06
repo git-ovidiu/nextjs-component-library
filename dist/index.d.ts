@@ -28,7 +28,8 @@ interface FAQProps {
 declare function FAQ_item(props: FAQProps): JSX.Element;
 
 interface Animated_text_Props {
-    text: string;
+    text: ReactElement;
+    variant: string;
 }
 declare function Animated_text(props: Animated_text_Props): JSX.Element;
 

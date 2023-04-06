@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import FAQ_item from './FAQ_item';
+import Animated_text from '../Animated_text/Animated_text'
 
 const Extra_Info = `
 <br>
@@ -47,8 +48,8 @@ component: Extra_Info
     export const FAQ_item_story = Template.bind({});
     // More on args: https://storybook.js.org/docs/react/writing-stories/args
     FAQ_item_story.args = {
-     title: <h1>test</h1>,
-     description: <div><br /><br /><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ad autem dolorem praesentium vel hic vero similique quasi ex inventore laborum beatae, provident molestias fuga labore dignissimos nesciunt alias.</p></div>,
+     title: <Animated_text  variant="h1" text={<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, facere.</h1>}/>,
+     description: <Animated_text  variant="p" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, facere."/>,
     arrow: <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M1 1L7 7L13 1" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>,

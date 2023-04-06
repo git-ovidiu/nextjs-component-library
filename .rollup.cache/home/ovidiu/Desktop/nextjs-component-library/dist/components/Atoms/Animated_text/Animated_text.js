@@ -40,8 +40,6 @@ export default function Animated_text(props) {
             breakTextIntoWords(titleElement);
         }
     }, [props.text]);
-    return (React.createElement(React.Fragment, null,
-        React.createElement("div", { className: "tot" },
-            React.createElement("h1", { ref: titleRef, className: "animated-title" }, props.text))));
+    return (React.createElement(React.Fragment, null, props.variant == 'h1' ? (React.createElement("h1", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == 'h2' ? (React.createElement("h2", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == 'h3' ? (React.createElement("h3", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == 'h4' ? (React.createElement("h4", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == 'p' ? (React.createElement("p", { ref: titleRef, className: "animated-title" }, props.text)) : ''));
 }
 //# sourceMappingURL=Animated_text.js.map

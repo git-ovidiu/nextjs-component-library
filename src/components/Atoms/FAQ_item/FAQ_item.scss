@@ -18,6 +18,9 @@
     box-shadow: var(--faq-item-box-shadow);
     padding: var(--faq-item-padding);
     position: relative;
+    ::selection{
+      background: transparent;
+    }
     cursor: pointer;
     .content{
         @include flex(column, center, flex-start);

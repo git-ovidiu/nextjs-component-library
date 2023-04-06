@@ -1,5 +1,12 @@
 @use '../../../styles/main.scss' as *;
 
+
+:root{
+  --animated-title-transition-duration: 1s;
+  --animated-title-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
 .animated-title {
     opacity: 0;
   
@@ -9,8 +16,8 @@
   
     >span {
       overflow: hidden;
-      transition-duration: 1s;
-      transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+      transition-duration: var(--animated-title-transition-duration);
+      transition-timing-function: var(--animated-title-transition-timing-function);
   
       >span {
         position: relative;

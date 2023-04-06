@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { ReactElement, useEffect, useRef } from "react";
 import "./Animated_text.scss";
 
 export interface Animated_text_Props {
-  text: string;
+  text: ReactElement;
+  variant: string;
 }
 
 export default function Animated_text(props: Animated_text_Props) {
@@ -55,11 +56,27 @@ export default function Animated_text(props: Animated_text_Props) {
 
   return (
     <>
-      <div className="tot">
+      {props.variant == 'h1' ? (
         <h1 ref={titleRef} className="animated-title">
           {props.text}
         </h1>
-      </div>
+      ) : props.variant == 'h2' ? (
+      <h2 ref={titleRef} className="animated-title">
+        {props.text}
+      </h2>
+      ) : props.variant == 'h3' ? (
+        <h3 ref={titleRef} className="animated-title">
+          {props.text}
+        </h3>
+        ) : props.variant == 'h4' ? (
+          <h4 ref={titleRef} className="animated-title">
+            {props.text}
+          </h4>
+          ) : props.variant == 'p' ? (
+            <p ref={titleRef} className="animated-title">
+              {props.text}
+            </p>
+            ) : ''}
     </>
   );
 }
