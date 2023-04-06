@@ -1,0 +1,25 @@
+# Files
+*.log
+*.lock
+*.md
+*.txt
+*.yml
+*.jsonc
+*.npmrc
+*.gitignore
+*.prettierrc
+*.editorconfig
+*.env
+
+# Directories
+node_modules
+coverage
+build
+dist
+docs
+storybook-static
+.cache
+.nyc_output
+.vscode
+.idea
+__tests__

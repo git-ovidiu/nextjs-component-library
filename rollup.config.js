@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
+import filesize from 'rollup-plugin-filesize';
 
 const packageJson = require("./package.json");
 
@@ -26,7 +27,8 @@ const rollupConfig = [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json", outputToFilesystem: false }),
-      postcss()
+      postcss(),
+      filesize()
     ],
   },
   {

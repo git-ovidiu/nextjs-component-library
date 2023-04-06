@@ -1,6 +1,5 @@
 import React, {ReactElement} from "react";
 import "./FAQ_item.scss";
-import {motion} from 'framer-motion';
 import { useState, useEffect } from 'react';
 import 'intersection-observer';
 
@@ -68,16 +67,13 @@ export default function FAQ_item(props: FAQProps) {
   };
 
   return (
-    <motion.div className={`faq-item ${toggle ? 'toggle' : ''}`} onClick={toggleFaq}
-    initial={{y: -200, opacity: 0}}
-    animate={{y:0, opacity: 1}}
-    >
+    <div className={`faq-item ${toggle ? 'toggle' : ''}`} onClick={toggleFaq}>
       <div className="content">
         <div className="title">{props.title}</div>
         <div className="hidden-text animated-title">{props.description}</div>
       </div>
       <div className="arrow">{props.arrow}</div>
       <div className="close">{props.close}</div>
-    </motion.div>
+    </div>
   );
 }

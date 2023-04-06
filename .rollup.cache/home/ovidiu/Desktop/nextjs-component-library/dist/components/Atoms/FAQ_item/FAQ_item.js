@@ -1,6 +1,5 @@
 import React from "react";
 import "./FAQ_item.scss";
-import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import 'intersection-observer';
 export default function FAQ_item(props) {
@@ -51,7 +50,7 @@ export default function FAQ_item(props) {
     var toggleFaq = function () {
         setToggle(function (prevToggle) { return !prevToggle; });
     };
-    return (React.createElement(motion.div, { className: "faq-item ".concat(toggle ? 'toggle' : ''), onClick: toggleFaq, initial: { y: -200, opacity: 0 }, animate: { y: 0, opacity: 1 } },
+    return (React.createElement("div", { className: "faq-item ".concat(toggle ? 'toggle' : ''), onClick: toggleFaq },
         React.createElement("div", { className: "content" },
             React.createElement("div", { className: "title" }, props.title),
             React.createElement("div", { className: "hidden-text animated-title" }, props.description)),

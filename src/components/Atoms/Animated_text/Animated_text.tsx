@@ -56,7 +56,6 @@ export default function Animated_text(props: Animated_text_Props) {
   return (
     <>
       <div className="tot">
-        <h2>cacat</h2>
         <h1 ref={titleRef} className="animated-title">
           {props.text}
         </h1>

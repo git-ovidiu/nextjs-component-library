@@ -42,7 +42,6 @@ export default function Animated_text(props) {
     }, [props.text]);
     return (React.createElement(React.Fragment, null,
         React.createElement("div", { className: "tot" },
-            React.createElement("h2", null, "cacat"),
             React.createElement("h1", { ref: titleRef, className: "animated-title" }, props.text))));
 }
 //# sourceMappingURL=Animated_text.js.map

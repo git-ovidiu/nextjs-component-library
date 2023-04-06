@@ -41,5 +41,5 @@ component: Extra_Info
     export const Animated_text_story = Template.bind({});
     // More on args: https://storybook.js.org/docs/react/writing-stories/args
     Animated_text_story.args = {
-    text: 'Hello world!',
+    text: 'Test!',
     };
