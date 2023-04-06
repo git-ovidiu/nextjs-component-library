@@ -26,7 +26,7 @@ const rollupConfig = [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json", outputToFilesystem: false }),
-      postcss(),
+      postcss()
     ],
   },
   {

@@ -5,7 +5,7 @@ export interface Animated_text_Props {
   text: string;
 }
 
-export default function Button_slide(props: Animated_text_Props) {
+export default function Animated_text(props: Animated_text_Props) {
   const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function Button_slide(props: Animated_text_Props) {
   }, []);
 
   const breakTextIntoWords = function (text: HTMLElement) {
-    const words = text.innerText.trim().split(" ");
+    const words = (text.innerText || '').trim().split(' ');
     text.innerText = "";
 
     for (const word of words) {

@@ -1,36 +1,5 @@
 @use '../../../styles/main.scss' as *;
 
-// @keyframes to-bottom {
-//   to {
-//     transform: translateY(100%);
-//   }
-// }
-
-// @keyframes to-top {
-//   to {
-//     transform: translateY(-100%);
-//   }
-// }
-
-// @keyframes to-left {
-//   to {
-//     transform: translateX(-100%);
-//   }
-// }
-
-// @keyframes to-right {
-//   to {
-//     transform: translateX(100%);
-//   }
-// }
-
-.tot{
-    h2{
-        margin-bottom: 130vh;
-    } 
-}
-
-
 .animated-title {
     opacity: 0;
   

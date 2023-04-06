@@ -8,15 +8,7 @@ const Extra_Info = `
 
 <h2><u>CSS VARIABLES</u></h2>
 <ul>
-  <li>--a-button-slide-background</li>
-  <li>--a-button-slide-background-hover</li>
-  <li>--a-button-slide-animation-transition</li>
-  <li>--a-button-slide-border-radius</li>
-  <li>--a-button-slide-font-size</li>
-  <li>--a-button-slide-padding</li>
-  <li>--a-button-slide-line-height</li>
-  <li>--a-button-slide-font-weight</li>
-  <li>--a-button-line-drawing-text-color</li>
+  animated text scss vars will be placed here
 </ul>
 `
 
@@ -50,5 +42,4 @@ component: Extra_Info
     // More on args: https://storybook.js.org/docs/react/writing-stories/args
     Animated_text_story.args = {
     text: 'Hello world!',
-    hover_effect: "slide-right"
     };

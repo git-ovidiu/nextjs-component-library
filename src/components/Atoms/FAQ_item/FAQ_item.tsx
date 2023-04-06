@@ -2,6 +2,8 @@ import React, {ReactElement} from "react";
 import "./FAQ_item.scss";
 import {motion} from 'framer-motion';
 import { useState, useEffect } from 'react';
+import 'intersection-observer';
+
 interface FAQProps {
   title: ReactElement;
   description: string;
@@ -12,8 +14,6 @@ interface FAQProps {
 export default function FAQ_item(props: FAQProps) {
   const [toggle, setToggle] = React.useState(false);
 
-
-
   const [titles, setTitles] = useState<HTMLElement[]>([]);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function FAQ_item(props: FAQProps) {
   }, []);
 
   const breakTextIntoWords = function(text: HTMLElement) {
-    const words = text.innerText.trim().split(' ');
+    const words = (text.innerText || '').trim().split(' ');
     text.innerText = '';
   
     for (const word of words) {
