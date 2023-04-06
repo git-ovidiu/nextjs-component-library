@@ -40,6 +40,7 @@ component: Extra_Info
   const Template: ComponentStory<typeof FAQ_item> = (args) =>
   <>
     <FAQ_item {...args} />
+    <FAQ_item {...args} />
   </>
 
 

@@ -1,7 +1,7 @@
 import React, {ReactElement} from "react";
 import "./FAQ_item.scss";
 import {motion} from 'framer-motion';
-
+import { useState, useEffect } from 'react';
 interface FAQProps {
   title: ReactElement;
   description: string;
@@ -11,6 +11,55 @@ interface FAQProps {
 
 export default function FAQ_item(props: FAQProps) {
   const [toggle, setToggle] = React.useState(false);
+
+  const [titles, setTitles] = useState([]);
+
+  useEffect(() => {
+    const titles = document.querySelectorAll('.animated-title');
+    setTitles(titles);
+  }, []);
+
+  const breakTextIntoWords = function(text) {
+    const words = text.innerText.trim().split(' ');
+    text.innerText = '';
+
+    for (const word of words) {
+      const span1 = document.createElement('span');
+      const span2 = document.createElement('span');
+      span1.innerText = `${word}`;
+      span2.append(span1);
+
+      text.append(span2);
+      text.append(' ');
+    }
+  };
+
+  const addAnimatedTitleObserver = function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-in');
+        }
+      });
+    });
+
+    for (const title of titles) {
+      observer.observe(title);
+    }
+  };
+
+  const initializeAnimatedTitle = function() {
+    for (const title of titles) {
+      breakTextIntoWords(title);
+    }
+  };
+
+  useEffect(() => {
+    if (titles.length > 0) {
+      initializeAnimatedTitle();
+      addAnimatedTitleObserver();
+    }
+  }, [titles]);
 
   const toggleFaq = () => {
     setToggle(prevToggle => !prevToggle);
@@ -23,7 +72,7 @@ export default function FAQ_item(props: FAQProps) {
     >
       <div className="content">
         <div className="title">{props.title}</div>
-        <div className="hidden-text">{props.description}</div>
+        <div className="hidden-text animated-title">{props.description}</div>
       </div>
       <div className="arrow">{props.arrow}</div>
       <div className="close">{props.close}</div>
