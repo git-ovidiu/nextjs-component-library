@@ -20,7 +20,34 @@ const Extra_Info = `
   <li>--a-button-line-drawing-animation-transition-faster</li>
   <li>--a-button-line-drawing-animation-transition-ultra-fast</li>
 </ul>
-
+<br>
+<br>
+<table>
+  <tr>
+    <td>--a-button-line-drawing-font-size</td>
+    <td>20px</td>
+    <td>--a-button-line-drawing-padding</td>
+    <td>20px 30px</td>
+    <td>--a-button-line-drawing-line-height</td>
+    <td>2</td>
+    <td>--a-button-line-drawing-font-weight</td>
+    <td>400</td>
+    <td>--a-button-line-drawing-text-color</td>
+    <td>$color-black</td>
+    <td>--a-button-line-drawing-line-color</td>
+    <td>$tertiary-color</td>
+    <td>--a-button-line-drawing-background-color</td>
+    <td>transparent</td>
+    <td>--a-button-line-drawing-animation-transition</td>
+    <td>$transition-duration-normal</td>
+    <td>--a-button-line-drawing-animation-transition-fast</td>
+    <td>$transition-duration-fast</td>
+    <td>--a-button-line-drawing-animation-transition-faster</td>
+    <td>$transition-duration-faster</td>
+    <td>--a-button-line-drawing-animation-transition-ultra-fast</td>
+    <td>$transition-duration-ultra-fast</td>
+  </tr>
+</table>
 <table>
   <tr>
     <td>--a-button-line-drawing-font-size</td>

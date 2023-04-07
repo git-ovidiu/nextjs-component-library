@@ -75,5 +75,5 @@ component: Extra_Info
     // More on args: https://storybook.js.org/docs/react/writing-stories/args
     Animated_text_story.args = {
     variant: 'h1',
-    text: <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!</h1>
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!'
     };

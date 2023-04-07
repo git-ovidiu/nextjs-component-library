@@ -2,7 +2,7 @@ import React, { ReactElement, useEffect, useRef } from "react";
 import "./Animated_text.scss";
 
 export interface Animated_text_Props {
-  text: ReactElement;
+  text: string;
   variant: string;
 }
 

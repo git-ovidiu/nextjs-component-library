@@ -18,7 +18,6 @@ const Extra_Info = `
   <li>--a-button-slide-font-weight</li>
   <li>--a-button-line-drawing-text-color</li>
 </ul>
-<br>
 <table>
   <tr>
     <td>--a-button-slide-background</td>
