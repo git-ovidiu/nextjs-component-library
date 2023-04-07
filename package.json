@@ -49,6 +49,7 @@
     "next": "13.2.4",
     "npm-check": "^6.0.1",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
     "react-intersection-observer": "^9.4.3",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",

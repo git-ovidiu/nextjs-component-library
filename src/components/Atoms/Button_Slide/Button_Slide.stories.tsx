@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { AiOutlineDownload } from "react-icons/ai";
 import Button_slide from './Button_Slide';
 
 const Extra_Info = `
@@ -88,5 +88,7 @@ component: Extra_Info
     // More on args: https://storybook.js.org/docs/react/writing-stories/args
     Button_slide_story.args = {
     text: 'Hello world!',
-    hover_effect: "slide-right"
+    hover_effect: "slide-right",
+    icon: <AiOutlineDownload size={20}/>,
+    iconPosition: "right"
     };

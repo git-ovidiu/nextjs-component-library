@@ -32,10 +32,19 @@
     cursor: pointer;
     box-shadow: 0 5px 15px var(--a-button-slide-background);                                                
 
+    .icon{
+        z-index: 2;
+    }
+
     span {
+        &.reverse{
+            flex-direction: row-reverse
+        }
         @include button_typography_primary;
         position: relative;
-        display: block;
+        display: flex;
+        align-items: center;
+        gap: 15px;
         top: 0;
         left: 0;
     }
