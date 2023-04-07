@@ -18,6 +18,45 @@ const Extra_Info = `
   <li>--a-button-slide-font-weight</li>
   <li>--a-button-line-drawing-text-color</li>
 </ul>
+<br>
+<table>
+  <tr>
+    <td>--a-button-slide-background</td>
+    <td>$tertiary-color</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-background-hover</td>
+    <td>$primary-color</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-animation-transition</td>
+    <td>0.3s</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-border-radius</td>
+    <td>$border-radius-0</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-font-size</td>
+    <td>20px</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-padding</td>
+    <td>20px 30px</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-line-height</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-font-weight</td>
+    <td>400</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-text-color</td>
+    <td>$color-white</td>
+  </tr>
+</table>
 `
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

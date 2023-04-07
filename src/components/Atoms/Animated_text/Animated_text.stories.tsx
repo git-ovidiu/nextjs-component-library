@@ -13,21 +13,35 @@ const Extra_Info = `
 
 <br>
 <h2><u>CURRENT VALUES</u></h2>
-<li>--animated-title-transition-duration: 1s;</li>
-<li>--animated-title-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);</li>
+<table>
+  <tr>
+    <td>--animated-title-transition-duration</td>
+    <td>1s</td>
+  </tr>
+  <tr>
+    <td>--animated-title-transition-timing-function</td>
+    <td>cubic-bezier(0.19, 1, 0.22, 1)</td>
+  </tr>
+</table>
 <br>
 <h2><u>IT HAS 2 PROPS</u></h2>
-<ol>
-<li>text</li>
-<li>variant 
-<ul>
-<li>h1</li>
-<li>h2</li>
-<li>h3</li>
-<li>h4</li>
-<li>p</li>
-</ul></li>
-</ol>
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>can be:</td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td>ReactElement</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>variant</td>
+    <td>string</td>
+    <td>h1, h2, h3, h4, p</td>
+  </tr>
+</table>
 
 `
 

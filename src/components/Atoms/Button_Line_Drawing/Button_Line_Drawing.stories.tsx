@@ -67,6 +67,25 @@ const Extra_Info = `
     <td>$transition-duration-ultra-fast</td>
   </tr>
 </table>
+<br>
+<h2><u>IT HAS 2 PROPS</u></h2>
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>can be:</td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td>string</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>line_effect</td>
+    <td>string</td>
+    <td>line-below, line-above, line-side</td>
+  </tr>
+</table>
 `
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
