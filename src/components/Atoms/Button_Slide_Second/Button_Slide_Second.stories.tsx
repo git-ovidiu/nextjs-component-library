@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { AiOutlineDownload } from "react-icons/ai";
 import Button_Slide_Second from './Button_Slide_Second';
 
 const Extra_Info = `
@@ -17,7 +17,69 @@ const Extra_Info = `
   <li>--a-button-slide-line-height</li>
   <li>--a-button-slide-font-weight</li>
   <li>--a-button-line-drawing-text-color</li>
+  <li>--a-button-slide-second-gap</li>
+  <li>--a-button-slide-second-decoration-margin-left</li>
+  <li>--a-button-slide-second-decoration-height</li>
+  <li>--a-button-slide-second-decoration-width</li>
 </ul>
+<table>
+  <tr>
+    <td>--a-button-slide-second-background</td>
+    <td>$tertiary-color</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-background-hover</td>
+    <td>$primary-color</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-animation-transition</td>
+    <td>$transition-duration-normal</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-animation-transition-fast</td>
+    <td>$transition-duration-fast</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-border-radius</td>
+    <td>$border-radius-0</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-font-size</td>
+    <td>20px</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-padding</td>
+    <td>20px 30px</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-line-height</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-font-weight</td>
+    <td>400</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-text-color</td>
+    <td>$color-white</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-gap</td>
+    <td>14px</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-decoration-margin-left</td>
+    <td>10px</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-decoration-height</td>
+    <td>300px</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-second-decoration-width</td>
+    <td>140%</td>
+  </tr>
+</table>
 `
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -43,6 +105,7 @@ component: Extra_Info
     export const Button_Slide_Second_story = Template.bind({});
     // More on args: https://storybook.js.org/docs/react/writing-stories/args
     Button_Slide_Second_story.args = {
-    text: 'Hello world!',
-    hover_effect: "tertiary"
+    text: 'Placeholder text',
+    hover_effect: "tertiary",
+    iconPosition: "right"
     };

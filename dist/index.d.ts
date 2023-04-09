@@ -4,6 +4,8 @@ import { ReactElement } from 'react';
 interface ButtonProps {
     text: string;
     hover_effect: string;
+    icon?: ReactElement;
+    iconPosition?: string;
 }
 declare function Button_slide(props: ButtonProps): JSX.Element;
 
@@ -16,6 +18,8 @@ declare function Button_Line_Drawing(props: Button_Line_Drawing_Props): JSX.Elem
 interface Button_Slide_Second_Props {
     text: string;
     hover_effect: string;
+    icon?: ReactElement;
+    iconPosition?: string;
 }
 declare function Button_Slide_Second(props: Button_Slide_Second_Props): JSX.Element;
 

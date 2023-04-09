@@ -10,6 +10,7 @@
     --a-button-slide-line-height: 1;
     --a-button-slide-font-weight: 400;
     --a-button-slide-text-color: #{$color-white};
+    --a-button-slide-gap: 15px;
 
 }
 
@@ -44,7 +45,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: var(--a-button-slide-gap);
         top: 0;
         left: 0;
     }

@@ -7,10 +7,14 @@
     --a-button-slide-second-animation-transition-fast: #{$transition-duration-fast};
     --a-button-slide-second-border-radius: #{$border-radius-0};
     --a-button-slide-second-font-size: 20px;
-    --a-button-slide-second-padding: 10px 30px;
+    --a-button-slide-second-padding: 20px 30px;
     --a-button-slide-second-line-height: 1;
     --a-button-slide-second-font-weight: 400;
     --a-button-slide-second-text-color: #{$color-white};
+    --a-button-slide-second-gap: 14px;
+    --a-button-slide-second-decoration-margin-left: 10px;
+    --a-button-slide-second-decoration-height: 300px;
+    --a-button-slide-second-decoration-width: 140%;
 }
 
 @mixin button_typography_primary {
@@ -33,19 +37,29 @@
     background-color: var(--a-button-slide-second-background);
     box-shadow: 0 5px 15px var(--a-button-slide-second-background);
   
+    .icon{
+      z-index: 2;
+  }
+
     span {
-      position: relative;
-      z-index: 1;
-      color: var(--a-button-slide-second-text-color);
+      &.reverse{
+        flex-direction: row-reverse
+    }
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: var(--a-button-slide-second-gap);
+    z-index: 1;
+    color: var(--a-button-slide-second-text-color);
     }
   
     &:after {
       content: "";
       position: absolute;
-      left: -20px;
+      left: var(--a-button-slide-second-decoration-margin-left);
       top: 0;
-      height: 300px;
-      width: 140%;
+      height: var(--a-button-slide-second-decoration-height);
+      width: var(--a-button-slide-second-decoration-width);
       background: var(--a-button-slide-second-background-hover);
       -webkit-transition: all var(--a-button-slide-second-animation-transition-fast) ease-in-out;
       transition: all var(--a-button-slide-second-animation-transition) ease-in-out;
