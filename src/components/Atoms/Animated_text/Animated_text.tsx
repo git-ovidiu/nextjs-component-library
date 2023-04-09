@@ -15,8 +15,9 @@ export default function Animated_text(props: Animated_text_Props) {
     if (titleElement && "IntersectionObserver" in window) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.intersectionRatio > 0) {
             titleElement.classList.add("slide-in");
+            observer.unobserve(titleElement);
           } else {
             titleElement.classList.remove("slide-in");
           }
@@ -30,21 +31,6 @@ export default function Animated_text(props: Animated_text_Props) {
       };
     }
   }, []);
-
-  const breakTextIntoWords = function (text: HTMLElement) {
-    const words = (text.innerText || '').trim().split(' ');
-    text.innerText = "";
-
-    for (const word of words) {
-      const span1 = document.createElement("span");
-      const span2 = document.createElement("span");
-      span1.innerText = `${word}`;
-      span2.append(span1);
-
-      text.append(span2);
-      text.append(" ");
-    }
-  };
 
   useEffect(() => {
     const titleElement = titleRef.current;
@@ -79,4 +65,19 @@ export default function Animated_text(props: Animated_text_Props) {
             ) : ''}
     </>
   );
+}
+
+function breakTextIntoWords(text: HTMLElement) {
+  const words = (text.innerText || '').trim().split(' ');
+  text.innerText = "";
+
+  for (const word of words) {
+    const span1 = document.createElement("span");
+    const span2 = document.createElement("span");
+    span1.innerText = `${word}`;
+    span2.append(span1);
+
+    text.append(span2);
+    text.append(" ");
+  }
 }

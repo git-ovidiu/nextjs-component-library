@@ -22,12 +22,12 @@
     "sourceMap": true,
     "outDir": "dist",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
     "paths": {
       "components/*": [
         "./src/*"
       ]
     },
+    "noEmit": true
   },
   "include": [
     "next-env.d.ts",

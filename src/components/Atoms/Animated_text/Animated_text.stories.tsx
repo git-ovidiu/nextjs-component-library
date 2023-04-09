@@ -1,7 +1,7 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Animated_text from './Animated_text';
+import Animated_text from "./Animated_text";
 
 const Extra_Info = `
 <br>
@@ -43,37 +43,36 @@ const Extra_Info = `
   </tr>
 </table>
 
-`
+`;
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-title: 'Atoms/Animated_text',
-component: Animated_text,
-argTypes: {
-  variant: {
-  control: "radio",
-  options: ["h1", "h2", "h3", "h4", "p"]
+  title: "Atoms/Animated_text",
+  component: Animated_text,
+  argTypes: {
+    variant: {
+      control: "radio",
+      options: ["h1", "h2", "h3", "h4", "p"],
+    },
   },
+  parameters: {
+    actions: { disabled: true },
+    docs: {
+      description: {
+        component: Extra_Info,
+      },
+    },
   },
-parameters: {
-actions: {disabled: true},
-docs: {
-description: {
-component: Extra_Info
-}
-}
-}
 } as ComponentMeta<typeof Animated_text>;
 
+// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+const Template: ComponentStory<typeof Animated_text> = (args) => (
+    <Animated_text {...args} />
+);
 
-  // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-  const Template: ComponentStory<typeof Animated_text> = (args) =>
-    <Animated_text {...args} />;
-
-
-    export const Animated_text_story = Template.bind({});
-    // More on args: https://storybook.js.org/docs/react/writing-stories/args
-    Animated_text_story.args = {
-    variant: 'h1',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!'
-    };
+export const Animated_text_story = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Animated_text_story.args = {
+  variant: "h1",
+  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!",
+};
