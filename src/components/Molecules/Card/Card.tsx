@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, CSSProperties } from "react";
 import "./Card.scss";
 
 export interface CardProps {

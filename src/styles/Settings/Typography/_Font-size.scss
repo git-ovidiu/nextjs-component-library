@@ -1,0 +1,29 @@
+$font-size-p: 16px;
+$font-size-h1: 36px;
+$font-size-h2: 28px;
+$font-size-h3: 24px;
+$font-size-h4: 20px;
+
+$font-size-label: 12px;
+
+
+
+p{
+    font-size: $font-size-p;
+}
+h1{
+    font-size: $font-size-h1;
+}
+h2{
+    font-size: $font-size-h2;
+}
+h3{
+    font-size: $font-size-h3;
+}
+h4{
+    font-size: $font-size-h4;
+}
+
+.label{
+    font-size: 5px;
+}

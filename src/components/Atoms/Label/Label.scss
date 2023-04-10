@@ -1,0 +1,18 @@
+@use '../../../styles/main.scss' as *;
+
+:root{
+    --a-label-color: #{$color-white};
+    --a-label-background-color: #{$color-black};
+    --a-label-padding: 5px;
+    --a-label-border-radius: #{$border-radius-xxl};
+
+}
+
+.a-label{
+    display: inline-block;
+    padding: var(--a-label-padding);
+    border-radius: var(--a-label-border-radius);
+    color: var(--a-label-color);
+    background: var(--a-label-background-color);
+    font-size: $font-size-label;
+}

@@ -10,12 +10,24 @@
     padding: 24px;
     box-shadow: $box-shadow-xxxl;
     border-radius: 20px 20px 60px 20px;
+    height: 100%;
+
+    .image{
+        position: relative;
+        
+        img{
+            max-height: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
 
     .labels{
         margin-top: 24px;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        gap: 8px;
     }
 
     .title{
@@ -27,7 +39,10 @@
     }
 
     .buttons{
-        margin-top: 40px;
+        margin-top: 24px;
+        @include flex(column, center, flex-start);
+        gap:  16px;
+        width: 100%;
         --a-button-slide-padding: 10px 20px;
     }
 }

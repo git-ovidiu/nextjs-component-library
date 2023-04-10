@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { ReactElement } from 'react';
+import { ReactElement, CSSProperties } from 'react';
 
 interface ButtonProps {
     text: string;
@@ -31,10 +31,31 @@ interface FAQProps {
 }
 declare function FAQ_item(props: FAQProps): JSX.Element;
 
+interface LabelStyle extends CSSProperties {
+    '--a-label-color'?: string;
+    '--a-label-background-color'?: string;
+}
+interface LabelProps {
+    text: string;
+    color: string;
+    backgroundColor: string;
+    style?: LabelStyle;
+}
+declare function Label(props: LabelProps): ReactElement;
+
 interface Animated_text_Props {
     text: string;
     variant: string;
 }
 declare function Animated_text(props: Animated_text_Props): JSX.Element;
 
-export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, FAQ_item };
+interface CardProps {
+    image?: ReactElement;
+    labels?: ReactElement;
+    title?: ReactElement;
+    description?: ReactElement;
+    buttons?: ReactElement;
+}
+declare function Card(props: CardProps): JSX.Element;
+
+export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, FAQ_item, Label };
