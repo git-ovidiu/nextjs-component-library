@@ -1,0 +1,33 @@
+@use '../../../styles/main.scss' as *;
+
+:root{
+
+}
+
+.m-card{
+    position: relative;
+    background: rgba(255, 255, 255, 0.425);
+    padding: 24px;
+    box-shadow: $box-shadow-xxxl;
+    border-radius: 20px 20px 60px 20px;
+
+    .labels{
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .title{
+        margin-top: 12px;
+    }
+
+    .description{
+        margin-top: 4px;
+    }
+
+    .buttons{
+        margin-top: 40px;
+        --a-button-slide-padding: 10px 20px;
+    }
+}
