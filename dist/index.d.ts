@@ -55,6 +55,8 @@ interface CardProps {
     title?: ReactElement;
     description?: ReactElement;
     buttons?: ReactElement;
+    image_full_width?: boolean;
+    is_overlapped?: boolean;
 }
 declare function Card(props: CardProps): JSX.Element;
 

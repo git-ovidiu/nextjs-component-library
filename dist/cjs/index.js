@@ -1222,17 +1222,22 @@ function breakTextIntoWords(text) {
     }
 }
 
-var css_248z = "p {\n  font-size: 16px;\n}\n\nh1 {\n  font-size: 36px;\n}\n\nh2 {\n  font-size: 28px;\n}\n\nh3 {\n  font-size: 24px;\n}\n\nh4 {\n  font-size: 20px;\n}\n\n.label {\n  font-size: 5px;\n}\n\nh1, h2, h3, h4, h5, h6, p {\n  margin: unset;\n  padding: unset;\n}\n\n.m-card {\n  position: relative;\n  background: rgba(255, 255, 255, 0.425);\n  padding: 24px;\n  box-shadow: 0px 0px 64px -8px rgba(16, 24, 40, 0.16);\n  border-radius: 20px 20px 60px 20px;\n  height: 100%;\n}\n.m-card .image {\n  position: relative;\n}\n.m-card .image img {\n  max-height: 300px;\n  height: 300px;\n  object-fit: cover;\n}\n.m-card .labels {\n  margin-top: 24px;\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n.m-card .title {\n  margin-top: 12px;\n}\n.m-card .description {\n  margin-top: 4px;\n}\n.m-card .buttons {\n  margin-top: 24px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 16px;\n  width: 100%;\n  --a-button-slide-padding: 10px 20px;\n}";
+var css_248z = "p {\n  font-size: 16px;\n}\n\nh1 {\n  font-size: 36px;\n}\n\nh2 {\n  font-size: 28px;\n}\n\nh3 {\n  font-size: 24px;\n}\n\nh4 {\n  font-size: 20px;\n}\n\n.label {\n  font-size: 5px;\n}\n\nh1, h2, h3, h4, h5, h6, p {\n  margin: unset;\n  padding: unset;\n}\n\n:root {\n  --m-card-background: rgba(255, 255, 255, 0.425);\n  --m-card-padding: 24px;\n  --m-card-box-shadow: 0px 0px 64px -8px rgba(16, 24, 40, 0.16);\n  --m-card-border-radius: 20px 20px 60px 20px;\n  --m-card-height: 100%;\n  --m-card-image-height: 300px;\n  --m-card-image-object-fit: cover;\n  --m-card-labels-margin-top: 24px;\n  --m-card-labels-gap: 8px;\n  --m-card-title-margin-top: 12px;\n  --m-card-description-margin-top: 4px;\n  --m-card-buttons-margin-top: 24px;\n  --m-card-buttons-gap: 16px;\n  --m-card-button-padding: 10px 20px;\n}\n\n.card-container .m-card {\n  position: relative;\n  background: var(--m-card-background);\n  padding: var(--m-card-padding);\n  box-shadow: var(--m-card-box-shadow);\n  border-radius: var(--m-card-border-radius);\n  height: var(--m-card-height);\n}\n.card-container .m-card.image-full-width {\n  padding: unset;\n}\n.card-container .m-card.image-full-width .content {\n  padding: var(--m-card-padding);\n}\n.card-container .m-card.image-full-width .content .labels {\n  margin-top: unset;\n}\n.card-container .m-card .image {\n  position: relative;\n}\n.card-container .m-card .image img {\n  height: var(--m-card-image-height);\n  object-fit: var(--m-card-image-object-fit);\n}\n.card-container .m-card .labels {\n  margin-top: var(--m-card-labels-margin-top);\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: var(--m-card-labels-gap);\n}\n.card-container .m-card .title {\n  margin-top: var(--m-card-title-margin-top);\n}\n.card-container .m-card .description {\n  margin-top: var(--m-card-description-margin-top);\n}\n.card-container .m-card .buttons {\n  margin-top: var(--m-card-buttons-margin-top);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: var(--m-card-buttons-gap);\n  width: 100%;\n  --a-button-slide-padding: var(--m-card-button-padding);\n}";
 styleInject(css_248z);
 
 function Card(props) {
-    return (React__default["default"].createElement(React__default["default"].Fragment, null,
-        React__default["default"].createElement("div", { className: "m-card" },
-            props.image ? React__default["default"].createElement("div", { className: "image" }, props.image) : "",
+    return (React__default["default"].createElement("div", { className: "card-container" }, props.image_full_width ? (React__default["default"].createElement("div", { className: "m-card image-full-width" },
+        React__default["default"].createElement("div", { className: "image" }, props.image ? React__default["default"].createElement("div", { className: "image" }, props.image) : ""),
+        React__default["default"].createElement("div", { className: "content" },
             props.labels ? React__default["default"].createElement("div", { className: "labels" }, props.labels) : "",
             props.title ? React__default["default"].createElement("div", { className: "title" }, props.title) : "",
-            props.description ? React__default["default"].createElement("div", { className: "description" }, props.description) : "",
-            props.buttons ? React__default["default"].createElement("div", { className: "buttons" }, props.buttons) : "")));
+            props.description ? (React__default["default"].createElement("div", { className: "description" }, props.description)) : (""),
+            props.buttons ? (React__default["default"].createElement("div", { className: "buttons" }, props.buttons)) : ("")))) : (React__default["default"].createElement("div", { className: "m-card" },
+        props.image ? React__default["default"].createElement("div", { className: "image" }, props.image) : "",
+        props.labels ? React__default["default"].createElement("div", { className: "labels" }, props.labels) : "",
+        props.title ? React__default["default"].createElement("div", { className: "title" }, props.title) : "",
+        props.description ? (React__default["default"].createElement("div", { className: "description" }, props.description)) : (""),
+        props.buttons ? React__default["default"].createElement("div", { className: "buttons" }, props.buttons) : ""))));
 }
 
 exports.Animated_text = Animated_text;

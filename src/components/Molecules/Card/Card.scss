@@ -1,48 +1,105 @@
-@use '../../../styles/main.scss' as *;
+@use '../../../styles/main.scss'as *;
 
-:root{
-
+:root {
+  --m-card-background: rgba(255, 255, 255, 0.425);
+  --m-card-padding: 24px;
+  --m-card-box-shadow: #{$box-shadow-xxxl};
+  --m-card-border-radius: 20px 20px 60px 20px;
+  --m-card-content-background: #{$color-white};
+  --m-card-height: 100%;
+  --m-card-image-height: 300px;
+  --m-card-image-object-fit: cover;
+  --m-card-labels-margin-top: 24px;
+  --m-card-labels-gap: 8px;
+  --m-card-title-margin-top: 12px;
+  --m-card-description-margin-top: 4px;
+  --m-card-buttons-margin-top: 24px;
+  --m-card-buttons-gap: 16px;
+  --m-card-button-padding: 10px 20px;
+  --m-card-overlapped-width: 75%;
+  --m-card-overlapped-margin-top: -40px;
 }
 
-.m-card{
+.card-container {
+  .m-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.425);
-    padding: 24px;
-    box-shadow: $box-shadow-xxxl;
-    border-radius: 20px 20px 60px 20px;
-    height: 100%;
+    background: var(--m-card-background);
+    padding: var(--m-card-padding);
+    box-shadow: var(--m-card-box-shadow);
+    border-radius: var(--m-card-border-radius);
+    height: var(--m-card-height);
+    display: flex;
+    flex-direction: column;
 
-    .image{
+    &.m-card-overlapped {
+      padding: unset;
+      align-items: center;
+      box-shadow: unset;
+
+      .image {
         position: relative;
-        
-        img{
-            max-height: 300px;
-            height: 300px;
-            object-fit: cover;
+      }
+
+      .content {
+        width: var(--m-card-overlapped-width);
+        position: relative;
+        margin-top: var(--m-card-overlapped-margin-top);
+        box-shadow: var(--m-card-box-shadow);
+        padding: var(--m-card-padding);
+
+        .labels{
+            margin-top: unset;
         }
+      }
     }
 
-    .labels{
-        margin-top: 24px;
+    &.image-full-width {
+      padding: unset;
+
+      .content {
+        padding: var(--m-card-padding);
+
+        .labels {
+          margin-top: unset;
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+
+      img {
+        height: var(--m-card-image-height);
+        object-fit: var(--m-card-image-object-fit);
+      }
+    }
+
+    .content {
+      background: var(--m-card-content-background);
+
+      .labels {
+        margin-top: var(--m-card-labels-margin-top);
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 8px;
-    }
+        gap: var(--m-card-labels-gap);
+      }
 
-    .title{
-        margin-top: 12px;
-    }
+      .title {
+        margin-top: var(--m-card-title-margin-top);
+      }
 
-    .description{
-        margin-top: 4px;
-    }
+      .description {
+        margin-top: var(--m-card-description-margin-top);
+      }
 
-    .buttons{
-        margin-top: 24px;
+      .buttons {
+        margin-top: var(--m-card-buttons-margin-top);
         @include flex(column, center, flex-start);
-        gap:  16px;
+        gap: var(--m-card-buttons-gap);
         width: 100%;
-        --a-button-slide-padding: 10px 20px;
+        --a-button-slide-padding: var(--m-card-button-padding);
+      }
     }
+  }
 }
