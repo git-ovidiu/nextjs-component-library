@@ -27,7 +27,6 @@ interface FAQProps {
     title: ReactElement;
     description: string;
     arrow: ReactElement;
-    close: ReactElement;
 }
 declare function FAQ_item(props: FAQProps): JSX.Element;
 
