@@ -1,0 +1,27 @@
+@use '../../../styles/main.scss' as *;
+
+:root {
+  --footer-card-background: rgba(160, 160, 160, 0.648);
+  --footer-card-padding: 40px;
+  --footer-card-border-radius: 30px;
+  --footer-card-description-margin-top: 20px;
+  --footer-card-action-margin-top: 40px;
+}
+
+.footer-card-container{
+  background: var(--footer-card-background);
+  padding: var(--footer-card-padding);
+  border-radius: var(--footer-card-border-radius);
+  
+  .logo{
+
+  }
+
+  .description{
+    margin-top: var(--footer-card-description-margin-top);
+  }
+
+  .action{
+    margin-top: var(--footer-card-action-margin-top);
+  }
+}

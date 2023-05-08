@@ -137,7 +137,7 @@ const Extra_Info = `
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Atoms/Card",
+  title: "Molecules/Card",
   component: Card,
   parameters: {
     actions: { disabled: true },
