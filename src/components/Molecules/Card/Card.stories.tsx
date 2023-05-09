@@ -135,7 +135,6 @@ const Extra_Info = `
 
 `;
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "Molecules/Card",
   component: Card,
@@ -167,16 +166,8 @@ Card_story.args = {
   image_full_width: false,
   labels: (
     <>
-      <Label
-        backgroundColor="black"
-        color="white"
-        text="Placeholder text"
-      />
-      <Label
-        backgroundColor="black"
-        color="white"
-        text="Placeholder text"
-      />
+      <Label backgroundColor="black" color="white" text="Placeholder text" />
+      <Label backgroundColor="black" color="white" text="Placeholder text" />
     </>
   ),
   title: (
@@ -185,11 +176,11 @@ Card_story.args = {
       variant="h3"
     />
   ),
-  description: ( 
+  description: (
     <Animated_text
       text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"
       variant="p"
-      />
+    />
   ),
   buttons: (
     <>

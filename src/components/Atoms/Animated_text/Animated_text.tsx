@@ -42,33 +42,35 @@ export default function Animated_text(props: Animated_text_Props) {
 
   return (
     <>
-      {props.variant == 'h1' ? (
+      {props.variant == "h1" ? (
         <h1 ref={titleRef} className="animated-title">
           {props.text}
         </h1>
-      ) : props.variant == 'h2' ? (
-      <h2 ref={titleRef} className="animated-title">
-        {props.text}
-      </h2>
-      ) : props.variant == 'h3' ? (
+      ) : props.variant == "h2" ? (
+        <h2 ref={titleRef} className="animated-title">
+          {props.text}
+        </h2>
+      ) : props.variant == "h3" ? (
         <h3 ref={titleRef} className="animated-title">
           {props.text}
         </h3>
-        ) : props.variant == 'h4' ? (
-          <h4 ref={titleRef} className="animated-title">
-            {props.text}
-          </h4>
-          ) : props.variant == 'p' ? (
-            <p ref={titleRef} className="animated-title">
-              {props.text}
-            </p>
-            ) : ''}
+      ) : props.variant == "h4" ? (
+        <h4 ref={titleRef} className="animated-title">
+          {props.text}
+        </h4>
+      ) : props.variant == "p" ? (
+        <p ref={titleRef} className="animated-title">
+          {props.text}
+        </p>
+      ) : (
+        ""
+      )}
     </>
   );
 }
 
 function breakTextIntoWords(text: HTMLElement) {
-  const words = (text.innerText || '').trim().split(' ');
+  const words = (text.innerText || "").trim().split(" ");
   text.innerText = "";
 
   for (const word of words) {

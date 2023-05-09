@@ -6,6 +6,8 @@
   --footer-card-border-radius: 30px;
   --footer-card-description-margin-top: 20px;
   --footer-card-action-margin-top: 40px;
+  --footer-card-logo-max-width: 160px;
+  --footer-card-logo-height: 63px;
 }
 
 .footer-card-container{
@@ -14,7 +16,9 @@
   border-radius: var(--footer-card-border-radius);
   
   .logo{
-
+    max-width: var(--footer-card-logo-max-width);
+    height: var(--footer-card-logo-height);
+    width: 100%;
   }
 
   .description{

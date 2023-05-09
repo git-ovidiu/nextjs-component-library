@@ -1,11 +1,44 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { AiOutlineDownload } from "react-icons/ai";
-import Button_slide from './Button_Slide';
+import Button_slide from "./Button_Slide";
 
 const Extra_Info = `
 <br>
-
+<h2><u>PROPS</u></h2>
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>can be:</td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td>string</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td> hover_effect</td>
+    <td>string</td>
+    <td>slide_down, slide_left, slide_right, slide_up</td>
+  </tr>
+  <tr>
+    <td>padding</td>
+    <td>string</td>
+    <td>xs, s, m, l, xl, xxl</td>
+  </tr>
+  <tr>
+    <td>icon</td>
+    <td>ReactElement</td>
+    <td>use React Icons</td>
+  </tr>
+  <tr>
+    <td>iconPosition</td>
+    <td>string</td>
+    <td>left, right</td>
+  </tr>
+</table>
+<br>
 <h2><u>CSS VARIABLES</u></h2>
 <ul>
   <li>--a-button-slide-background</li>
@@ -96,83 +129,45 @@ const Extra_Info = `
     <td>$padding-xxl</td>
   </tr>
 </table>
-<br>
-<h2><u>IT HAS 5 PROPS</u></h2>
-<table>
-  <tr>
-    <td>name</td>
-    <td>type</td>
-    <td>can be:</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td> hover_effect</td>
-    <td>string</td>
-    <td>slide_down, slide_left, slide_right, slide_up</td>
-  </tr>
-  <tr>
-    <td>padding</td>
-    <td>string</td>
-    <td>xs, s, m, l, xl, xxl</td>
-  </tr>
-  <tr>
-    <td>icon</td>
-    <td>ReactElement</td>
-    <td>use React Icons</td>
-  </tr>
-  <tr>
-    <td>iconPosition</td>
-    <td>string</td>
-    <td>left, right</td>
-  </tr>
-</table>
-`
+`;
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-title: 'Atoms/Button_slide',
-component: Button_slide,
-argTypes: {
-hover_effect: {
-control: "radio",
-options: ["slide-up", "slide-down", "slide-right", "slide-left"]
-},
-iconPosition:{
-control: "radio",
-options: ["left", "right"]
-},
-padding: {
-control: "radio",
-options: ["xs", "s", "m", "l", "xl", "xxl"]
-},
-},
-parameters: {
-actions: {disabled: true},
-docs: {
-description: {
-component: Extra_Info
-}
-}
-}
+  title: "Atoms/Button_slide",
+  component: Button_slide,
+  argTypes: {
+    hover_effect: {
+      control: "radio",
+      options: ["slide-up", "slide-down", "slide-right", "slide-left"],
+    },
+    iconPosition: {
+      control: "radio",
+      options: ["left", "right"],
+    },
+    padding: {
+      control: "radio",
+      options: ["xs", "s", "m", "l", "xl", "xxl"],
+    },
+  },
+  parameters: {
+    actions: { disabled: true },
+    docs: {
+      description: {
+        component: Extra_Info,
+      },
+    },
+  },
 } as ComponentMeta<typeof Button_slide>;
 
+const Template: ComponentStory<typeof Button_slide> = (args) => (
+  <Button_slide {...args} />
+);
 
-  // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-  const Template: ComponentStory<typeof Button_slide> = (args) =>
-      <Button_slide {...args} />
+export const Button_slide_story = Template.bind({});
 
-
-    export const Button_slide_story = Template.bind({});
-    // More on args: https://storybook.js.org/docs/react/writing-stories/args
-    Button_slide_story.args = {
-    text: 'Placeholder text',
-    hover_effect: "slide-right",
-    padding: 'xs',
-    iconPosition: "right",
-    icon:
-    <AiOutlineDownload size={20} />
-    };
+Button_slide_story.args = {
+  text: "Placeholder text",
+  hover_effect: "slide-right",
+  padding: "xs",
+  iconPosition: "right",
+  icon: <AiOutlineDownload size={20} />,
+};

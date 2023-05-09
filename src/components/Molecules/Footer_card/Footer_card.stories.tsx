@@ -13,6 +13,8 @@ const Extra_Info = `
   <li>--footer-card-border-radius</li>
   <li>--footer-card-description-margin-top</li>
   <li>--footer-card-action-margin-top</li>
+  <li>--footer-card-logo-max-width</li>
+  <li>--footer-card-logo-height</li>
 </ul>
 <br>
 <table>
@@ -35,6 +37,14 @@ const Extra_Info = `
   <tr>
     <td>--footer-card-action-margin-top</td>
     <td>40px</td>
+  </tr>
+  <tr>
+    <td>--footer-card-logo-max-width</td>
+    <td>160px</td>
+  </tr>
+  <tr>
+    <td>--footer-card-logo-height</td>
+    <td>63px</td>
   </tr>
 </table>
 <br>
@@ -78,6 +88,7 @@ Card_story.args = {
   logo : <img src="https://via.placeholder.com/160x63/e3e3e3/b38686" alt="Logo Placeholder" />,
   description: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, debitis. Rerum eos, quae expedita maxime labore ipsa nisi iure nam repellendus, mollitia repellat. Assumenda, deleniti!</p>,
   action:   <Button_slide
+  padding="m"
   hover_effect="slide-right"
   icon={<AiOutlineDownload size={20} />}
   iconPosition="right"

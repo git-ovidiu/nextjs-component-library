@@ -32,10 +32,10 @@ export default function Card(props: CardProps) {
     <div className="buttons">{props.buttons}</div>
   ) : null;
 
-  const cardImageClass = props.image_full_width ? "m-card image-full-width" : "";
+  const cardImageClass = props.image_full_width
+    ? "m-card image-full-width"
+    : "";
   const isOverlapped = props.is_overlapped ? "m-card m-card-overlapped" : "";
-
-
 
   return (
     <div className="card-container">

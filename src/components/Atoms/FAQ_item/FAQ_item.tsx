@@ -1,4 +1,4 @@
-import React, {ReactElement} from "react";
+import React, { ReactElement } from "react";
 import "./FAQ_item.scss";
 interface FAQProps {
   title: ReactElement;
@@ -9,13 +9,12 @@ interface FAQProps {
 export default function FAQ_item(props: FAQProps) {
   const [toggle, setToggle] = React.useState(false);
 
-
   const toggleFaq = () => {
-    setToggle(prevToggle => !prevToggle);
+    setToggle((prevToggle) => !prevToggle);
   };
 
   return (
-    <div className={`faq-item ${toggle ? 'toggle' : ''}`} onClick={toggleFaq}>
+    <div className={`faq-item ${toggle ? "toggle" : ""}`} onClick={toggleFaq}>
       <div className="content">
         <div className="title">{props.title}</div>
         <div className="hidden-text animated-title">{props.description}</div>

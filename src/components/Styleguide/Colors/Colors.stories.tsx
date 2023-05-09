@@ -1,7 +1,7 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Colors from './Colors';
+import Colors from "./Colors";
 
 const Extra_Info = `
 <br>
@@ -36,27 +36,22 @@ const Extra_Info = `
     <td>'#ffffff'</td>
   </tr>
 </table>
-`
+`;
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-title: 'Styleguide/Colors',
-component: Colors,
-parameters: {
-controls: { disabled: true },
-actions: {disabled: true},
-docs: {
-description: {
-component: Extra_Info
-}
-}
-}
+  title: "Styleguide/Colors",
+  component: Colors,
+  parameters: {
+    controls: { disabled: true },
+    actions: { disabled: true },
+    docs: {
+      description: {
+        component: Extra_Info,
+      },
+    },
+  },
 } as ComponentMeta<typeof Colors>;
 
+const Template: ComponentStory<typeof Colors> = () => <Colors />;
 
-  // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-  const Template: ComponentStory<typeof Colors> = () =>
-    <Colors />;
-
-
-    export const Colors_story = Template.bind({});
+export const Colors_story = Template.bind({});

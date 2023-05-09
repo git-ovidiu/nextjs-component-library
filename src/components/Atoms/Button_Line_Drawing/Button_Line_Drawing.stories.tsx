@@ -4,8 +4,31 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Button_Line_Drawing from "./Button_Line_Drawing";
 
 const Extra_Info = `
+<br/>
+<h2><u>PROPS</u></h2>
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>can be:</td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td>string</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>line_effect</td>
+    <td>string</td>
+    <td>line-below, line-above, line-side</td>
+  </tr>
+  <tr>
+    <td>padding</td>
+    <td>string</td>
+    <td>xs, s, m, l, xl, xxl</td>
+  </tr>
+</table>
 <br>
-
 <h2><u>CSS VARIABLES</u></h2>
 <ul>
   <li>--a-button-line-drawing-font-size</li>
@@ -96,30 +119,6 @@ const Extra_Info = `
   <tr>
     <td>--a-button-line-drawing-padding-xxl</td>
     <td>$padding-xxl</td>
-  </tr>
-</table>
-<br>
-<h2><u>IT HAS 2 PROPS</u></h2>
-<table>
-  <tr>
-    <td>name</td>
-    <td>type</td>
-    <td>can be:</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td>line_effect</td>
-    <td>string</td>
-    <td>line-below, line-above, line-side</td>
-  </tr>
-  <tr>
-    <td>padding</td>
-    <td>string</td>
-    <td>xs, s, m, l, xl, xxl</td>
   </tr>
 </table>
 `;

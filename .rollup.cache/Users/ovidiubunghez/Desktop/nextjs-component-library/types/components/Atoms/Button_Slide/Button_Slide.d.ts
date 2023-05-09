@@ -5,5 +5,6 @@ export interface ButtonProps {
     hover_effect: string;
     icon?: ReactElement;
     iconPosition?: string;
+    padding?: string;
 }
 export default function Button_slide(props: ButtonProps): JSX.Element;

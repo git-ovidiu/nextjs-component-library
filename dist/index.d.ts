@@ -6,12 +6,14 @@ interface ButtonProps {
     hover_effect: string;
     icon?: ReactElement;
     iconPosition?: string;
+    padding?: string;
 }
 declare function Button_slide(props: ButtonProps): JSX.Element;
 
 interface Button_Line_Drawing_Props {
-    text: string;
-    line_effect: string;
+    text?: string;
+    line_effect?: string;
+    padding?: string;
 }
 declare function Button_Line_Drawing(props: Button_Line_Drawing_Props): JSX.Element;
 
