@@ -16,7 +16,14 @@ const Extra_Info = `
   <li>--a-button-slide-padding</li>
   <li>--a-button-slide-line-height</li>
   <li>--a-button-slide-font-weight</li>
-  <li>--a-button-line-drawing-text-color</li>
+  <li>--a-button-slide-text-color</li>
+  <li>--a-button-slide-gap</li>
+  <li>--a-button-slide-padding-xs</li>
+  <li>--a-button-slide-padding-s</li>
+  <li>--a-button-slide-padding-m</li>
+  <li>--a-button-slide-padding-l</li>
+  <li>--a-button-slide-padding-xl</li>
+  <li>--a-button-slide-padding-xxl</li>
 </ul>
 <table>
   <tr>
@@ -55,6 +62,73 @@ const Extra_Info = `
     <td>--a-button-slide-text-color</td>
     <td>$color-white</td>
   </tr>
+  <tr>
+    <td>--a-button-slide-text-color</td>
+    <td>$color-white</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-gap</td>
+    <td>15px</td>
+  </tr>
+  <br>
+  <tr>
+    <td>--a-button-slide-padding-xs</td>
+    <td>$padding-xs</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-padding-s</td>
+    <td>$padding-s</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-padding-m</td>
+    <td>$padding-m</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-padding-l</td>
+    <td>$padding-l</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-padding-xl</td>
+    <td>$padding-xl</td>
+  </tr>
+  <tr>
+    <td>--a-button-slide-padding-xxl</td>
+    <td>$padding-xxl</td>
+  </tr>
+</table>
+<br>
+<h2><u>IT HAS 5 PROPS</u></h2>
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>can be:</td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td>string</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td> hover_effect</td>
+    <td>string</td>
+    <td>slide_down, slide_left, slide_right, slide_up</td>
+  </tr>
+  <tr>
+    <td>padding</td>
+    <td>string</td>
+    <td>xs, s, m, l, xl, xxl</td>
+  </tr>
+  <tr>
+    <td>icon</td>
+    <td>ReactElement</td>
+    <td>use React Icons</td>
+  </tr>
+  <tr>
+    <td>iconPosition</td>
+    <td>string</td>
+    <td>left, right</td>
+  </tr>
 </table>
 `
 
@@ -68,8 +142,12 @@ control: "radio",
 options: ["slide-up", "slide-down", "slide-right", "slide-left"]
 },
 iconPosition:{
-  control: "radio",
-  options: ["left", "right"]
+control: "radio",
+options: ["left", "right"]
+},
+padding: {
+control: "radio",
+options: ["xs", "s", "m", "l", "xl", "xxl"]
 },
 },
 parameters: {
@@ -85,10 +163,7 @@ component: Extra_Info
 
   // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
   const Template: ComponentStory<typeof Button_slide> = (args) =>
-  <div style={{display: "flex", gap: "50px"}}>
-    <Button_slide {...args} />
-    <Button_slide text="Placeholder text" hover_effect='slide-right' />
-  </div>
+      <Button_slide {...args} />
 
 
     export const Button_slide_story = Template.bind({});
@@ -96,6 +171,8 @@ component: Extra_Info
     Button_slide_story.args = {
     text: 'Placeholder text',
     hover_effect: "slide-right",
-    icon: <AiOutlineDownload size={20}/>,
-    iconPosition: "right"
+    padding: 'xs',
+    iconPosition: "right",
+    icon:
+    <AiOutlineDownload size={20} />
     };

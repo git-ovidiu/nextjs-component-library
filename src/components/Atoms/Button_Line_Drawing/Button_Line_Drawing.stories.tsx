@@ -1,7 +1,7 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Button_Line_Drawing from './Button_Line_Drawing';
+import Button_Line_Drawing from "./Button_Line_Drawing";
 
 const Extra_Info = `
 <br>
@@ -19,35 +19,14 @@ const Extra_Info = `
   <li>--a-button-line-drawing-animation-transition-fast</li>
   <li>--a-button-line-drawing-animation-transition-faster</li>
   <li>--a-button-line-drawing-animation-transition-ultra-fast</li>
+  <li>--a-button-line-drawing-padding-xs</li>
+  <li>--a-button-line-drawing-padding-s</li>
+  <li>--a-button-line-drawing-padding-m</li>
+  <li>--a-button-line-drawing-padding-l</li>
+  <li>--a-button-line-drawing-padding-xl</li>
+  <li>--a-button-line-drawing-padding-xxl</li>
 </ul>
 <br>
-<br>
-<table>
-  <tr>
-    <td>--a-button-line-drawing-font-size</td>
-    <td>20px</td>
-    <td>--a-button-line-drawing-padding</td>
-    <td>20px 30px</td>
-    <td>--a-button-line-drawing-line-height</td>
-    <td>2</td>
-    <td>--a-button-line-drawing-font-weight</td>
-    <td>400</td>
-    <td>--a-button-line-drawing-text-color</td>
-    <td>$color-black</td>
-    <td>--a-button-line-drawing-line-color</td>
-    <td>$tertiary-color</td>
-    <td>--a-button-line-drawing-background-color</td>
-    <td>transparent</td>
-    <td>--a-button-line-drawing-animation-transition</td>
-    <td>$transition-duration-normal</td>
-    <td>--a-button-line-drawing-animation-transition-fast</td>
-    <td>$transition-duration-fast</td>
-    <td>--a-button-line-drawing-animation-transition-faster</td>
-    <td>$transition-duration-faster</td>
-    <td>--a-button-line-drawing-animation-transition-ultra-fast</td>
-    <td>$transition-duration-ultra-fast</td>
-  </tr>
-</table>
 <table>
   <tr>
     <td>--a-button-line-drawing-font-size</td>
@@ -92,6 +71,31 @@ const Extra_Info = `
   <tr>
     <td>--a-button-line-drawing-animation-transition-ultra-fast</td>
     <td>$transition-duration-ultra-fast</td>
+  </tr>
+  <br>
+  <tr>
+    <td>--a-button-line-drawing-padding-xs</td>
+    <td>$padding-xs</td>
+  </tr>
+  <tr>
+    <td>--a-button-line-drawing-padding-s</td>
+    <td>$padding-s</td>
+  </tr>
+  <tr>
+    <td>--a-button-line-drawing-padding-m</td>
+    <td>$padding-m</td>
+  </tr>
+  <tr>
+    <td>--a-button-line-drawing-padding-l</td>
+    <td>$padding-l</td>
+  </tr>
+  <tr>
+    <td>--a-button-line-drawing-padding-xl</td>
+    <td>$padding-xl</td>
+  </tr>
+  <tr>
+    <td>--a-button-line-drawing-padding-xxl</td>
+    <td>$padding-xxl</td>
   </tr>
 </table>
 <br>
@@ -112,38 +116,44 @@ const Extra_Info = `
     <td>string</td>
     <td>line-below, line-above, line-side</td>
   </tr>
+  <tr>
+    <td>padding</td>
+    <td>string</td>
+    <td>xs, s, m, l, xl, xxl</td>
+  </tr>
 </table>
-`
+`;
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-title: 'Atoms/Button_Line_Drawing',
-component: Button_Line_Drawing,
-argTypes: {
-line_effect: {
-control: "radio",
-options: ["line-below", "line-above", "line-side"]
-},
-},
-parameters: {
-actions: {disabled: true},
-docs: {
-description: {
-component: Extra_Info
-}
-}
-}
+  title: "Atoms/Button_Line_Drawing",
+  component: Button_Line_Drawing,
+  argTypes: {
+    line_effect: {
+      control: "radio",
+      options: ["line-below", "line-above", "line-side"],
+    },
+    padding: {
+      control: "radio",
+      options: ["xs", "s", "m", "l", "xl", "xxl"],
+    },
+  },
+  parameters: {
+    actions: { disabled: true },
+    docs: {
+      description: {
+        component: Extra_Info,
+      },
+    },
+  },
 } as ComponentMeta<typeof Button_Line_Drawing>;
 
+const Template: ComponentStory<typeof Button_Line_Drawing> = (args) => (
+  <Button_Line_Drawing {...args} />
+);
 
-  // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-  const Template: ComponentStory<typeof Button_Line_Drawing> = (args) =>
-    <Button_Line_Drawing {...args} />;
-
-
-    export const Button_Line_Drawing_story = Template.bind({});
-    // More on args: https://storybook.js.org/docs/react/writing-stories/args
-    Button_Line_Drawing_story.args = {
-    text: 'Hello world!',
-    line_effect: "line-below"
-    };
+export const Button_Line_Drawing_story = Template.bind({});
+Button_Line_Drawing_story.args = {
+  text: "Placeholder text",
+  padding: "xs",
+  line_effect: "line-below",
+};

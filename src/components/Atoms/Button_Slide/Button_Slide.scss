@@ -6,21 +6,27 @@
     --a-button-slide-animation-transition: 0.3s;
     --a-button-slide-border-radius: #{$border-radius-0};
     --a-button-slide-font-size: 20px;
-    --a-button-slide-padding: 20px 30px;
     --a-button-slide-line-height: 1;
     --a-button-slide-font-weight: 400;
     --a-button-slide-text-color: #{$color-white};
     --a-button-slide-gap: 15px;
-
+    
+    --a-button-slide-padding-xs: #{$padding-xs};
+    --a-button-slide-padding-s: #{$padding-s};
+    --a-button-slide-padding-m: #{$padding-m};
+    --a-button-slide-padding-l: #{$padding-l};
+    --a-button-slide-padding-xl: #{$padding-xl};
+    --a-button-slide-padding-xxl: #{$padding-xxl};
 }
 
 @mixin button_typography_primary {
     font-size: var(--a-button-slide-font-size);
-    padding: var(--a-button-slide-padding);
     line-height: var(--a-button-slide-line-height);
     font-weight: var(--a-button-slide-font-weight);
     border-radius: var(--a-button-slide-border-radius);
 }
+
+
 
 .btn_hover_slide {
     @include button_typography_primary;
@@ -32,9 +38,19 @@
     border: none;
     cursor: pointer;
     box-shadow: 0 5px 15px var(--a-button-slide-background);                                                
+    
+    &.padding-xs{ span{ padding: var(--a-button-slide-padding-xs); } }
+    &.padding-s{ span{ padding: var(--a-button-slide-padding-s); } }
+    &.padding-m{ span{ padding: var(--a-button-slide-padding-m); } }
+    &.padding-l{ span{ padding: var(--a-button-slide-padding-l); } }
+    &.padding-xl{ span{ padding: var(--a-button-slide-padding-xl); } }
+    &.padding-xxl{ span{ padding: var(--a-button-slide-padding-xxl); } }
+    
 
     .icon{
         z-index: 2;
+        display: inline-flex;
+        
     }
 
     span {
