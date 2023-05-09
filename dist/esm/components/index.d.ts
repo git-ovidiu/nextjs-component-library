@@ -5,3 +5,4 @@ export { default as FAQ_item } from "./Atoms/FAQ_item";
 export { default as Label } from "./Atoms/Label";
 export { default as Animated_text } from "./Atoms/Animated_text";
 export { default as Card } from "./Molecules/Card";
+export { default as Footer_card } from "./Molecules/Footer_card";

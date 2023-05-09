@@ -59,4 +59,11 @@ interface CardProps {
 }
 declare function Card(props: CardProps): JSX.Element;
 
-export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, FAQ_item, Label };
+interface FooterCardProps {
+    logo?: ReactElement;
+    description?: ReactElement;
+    action?: ReactElement;
+}
+declare function Footer_card(props: FooterCardProps): JSX.Element;
+
+export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, FAQ_item, Footer_card, Label };
