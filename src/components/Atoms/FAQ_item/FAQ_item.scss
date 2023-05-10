@@ -14,7 +14,7 @@
     --faq-item-max-width: 95%; 
 }
 
-
+ 
 .faq-item{
     @include flex(row,  center, flex-start);
     border-radius: var(--faq-item-border-radius);
