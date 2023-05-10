@@ -24,7 +24,7 @@
     background: var(--faq-item-background);
     ::selection{
       background: transparent;
-    }
+    } 
     cursor: pointer;
     .content{
         @include flex(column, center, flex-start);
