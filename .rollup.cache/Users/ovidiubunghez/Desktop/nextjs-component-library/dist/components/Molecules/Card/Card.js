@@ -6,7 +6,9 @@ export default function Card(props) {
     var titleElement = props.title ? (React.createElement("div", { className: "title" }, props.title)) : null;
     var descriptionElement = props.description ? (React.createElement("div", { className: "description" }, props.description)) : null;
     var buttonsElement = props.buttons ? (React.createElement("div", { className: "buttons" }, props.buttons)) : null;
-    var cardImageClass = props.image_full_width ? "m-card image-full-width" : "";
+    var cardImageClass = props.image_full_width
+        ? "m-card image-full-width"
+        : "";
     var isOverlapped = props.is_overlapped ? "m-card m-card-overlapped" : "";
     return (React.createElement("div", { className: "card-container" },
         React.createElement("div", { className: "m-card ".concat(isOverlapped, " ").concat(cardImageClass) },

@@ -5,7 +5,7 @@ export default function FAQ_item(props) {
     var toggleFaq = function () {
         setToggle(function (prevToggle) { return !prevToggle; });
     };
-    return (React.createElement("div", { className: "faq-item ".concat(toggle ? 'toggle' : ''), onClick: toggleFaq },
+    return (React.createElement("div", { className: "faq-item ".concat(toggle ? "toggle" : ""), onClick: toggleFaq },
         React.createElement("div", { className: "content" },
             React.createElement("div", { className: "title" }, props.title),
             React.createElement("div", { className: "hidden-text animated-title" }, props.description)),

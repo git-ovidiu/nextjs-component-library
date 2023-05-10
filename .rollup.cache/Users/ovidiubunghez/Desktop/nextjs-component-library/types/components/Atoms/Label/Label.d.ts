@@ -1,8 +1,8 @@
 import { ReactElement, CSSProperties } from "react";
 import "./Label.scss";
 interface LabelStyle extends CSSProperties {
-    '--a-label-color'?: string;
-    '--a-label-background-color'?: string;
+    "--a-label-color"?: string;
+    "--a-label-background-color"?: string;
 }
 export interface LabelProps {
     text: string;

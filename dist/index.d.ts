@@ -33,8 +33,8 @@ interface FAQProps {
 declare function FAQ_item(props: FAQProps): JSX.Element;
 
 interface LabelStyle extends CSSProperties {
-    '--a-label-color'?: string;
-    '--a-label-background-color'?: string;
+    "--a-label-color"?: string;
+    "--a-label-background-color"?: string;
 }
 interface LabelProps {
     text: string;
@@ -68,4 +68,10 @@ interface FooterCardProps {
 }
 declare function Footer_card(props: FooterCardProps): JSX.Element;
 
-export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, FAQ_item, Footer_card, Label };
+interface FooterLinkProps {
+    link_type?: string;
+    link: ReactElement;
+}
+declare function Footer_link(props: FooterLinkProps): ReactElement;
+
+export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, FAQ_item, Footer_card, Footer_link, Label };

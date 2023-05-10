@@ -28,10 +28,10 @@ export default function Animated_text(props) {
             breakTextIntoWords(titleElement);
         }
     }, [props.text]);
-    return (React.createElement(React.Fragment, null, props.variant == 'h1' ? (React.createElement("h1", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == 'h2' ? (React.createElement("h2", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == 'h3' ? (React.createElement("h3", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == 'h4' ? (React.createElement("h4", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == 'p' ? (React.createElement("p", { ref: titleRef, className: "animated-title" }, props.text)) : ''));
+    return (React.createElement(React.Fragment, null, props.variant == "h1" ? (React.createElement("h1", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == "h2" ? (React.createElement("h2", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == "h3" ? (React.createElement("h3", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == "h4" ? (React.createElement("h4", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == "p" ? (React.createElement("p", { ref: titleRef, className: "animated-title" }, props.text)) : ("")));
 }
 function breakTextIntoWords(text) {
-    var words = (text.innerText || '').trim().split(' ');
+    var words = (text.innerText || "").trim().split(" ");
     text.innerText = "";
     for (var _i = 0, words_1 = words; _i < words_1.length; _i++) {
         var word = words_1[_i];
