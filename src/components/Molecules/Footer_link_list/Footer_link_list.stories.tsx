@@ -12,9 +12,22 @@ const Extra_Info = `
     <td>type</td>
     <td>can be:</td>
   </tr>
+  <tr>
+  <td>link_element</td>
+  <td></td>
+  </tr>
 </table>
 <br>
-
+<h2><u>CSS VARIABLES</u></h2>
+<ol>
+<li>--m-footer-link-list-gap</li>
+</ol>
+<table>
+<tr>
+<td>--m-footer-link-list-gap</td>
+<td>5px</td>
+</tr>
+</table> 
 
 `;
 
