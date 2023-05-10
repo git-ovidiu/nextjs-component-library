@@ -32,8 +32,9 @@ const Extra_Info = `
 </table>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
-<ul>
+<ol>
   <li>--faq-item-icon-margin-top</li>
+  <li>--faq-item-background</li>
   <li>--faq-item-border-radius</li>
   <li>--faq-item-box-shadow</li>
   <li>--faq-item-padding</li>
@@ -43,11 +44,15 @@ const Extra_Info = `
   <li>--faq-item-content-title-transition</li>
   <li>--faq-item-arrow-opacity</li>
   <li>--faq-item-max-width</li>
-</ul>
+</ol>
 <table>
   <tr>
     <td>--faq-item-icon-margin-top</td>
     <td>-2px</td>
+  </tr>
+  <tr>
+    <td>--faq-item-background</td>
+    <td>$color-white</td>
   </tr>
   <tr>
     <td>--faq-item-border-radius</td>
@@ -75,7 +80,7 @@ const Extra_Info = `
   </tr>
   <tr>
     <td>--faq-item-content-title-transition</td>
-    <td>all $transition-duration-normal</td>
+    <td>all #{$transition-duration-normal}</td>
   </tr>
   <tr>
     <td>--faq-item-arrow-opacity</td>

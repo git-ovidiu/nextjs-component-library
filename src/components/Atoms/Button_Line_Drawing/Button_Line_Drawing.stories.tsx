@@ -30,9 +30,8 @@ const Extra_Info = `
 </table>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
-<ul>
+<ol>
   <li>--a-button-line-drawing-font-size</li>
-  <li>--a-button-line-drawing-padding</li>
   <li>--a-button-line-drawing-line-height</li>
   <li>--a-button-line-drawing-font-weight</li>
   <li>--a-button-line-drawing-text-color</li>
@@ -48,16 +47,12 @@ const Extra_Info = `
   <li>--a-button-line-drawing-padding-l</li>
   <li>--a-button-line-drawing-padding-xl</li>
   <li>--a-button-line-drawing-padding-xxl</li>
-</ul>
+</ol>
 <br>
 <table>
   <tr>
     <td>--a-button-line-drawing-font-size</td>
     <td>20px</td>
-  </tr>
-  <tr>
-    <td>--a-button-line-drawing-padding</td>
-    <td>20px 30px</td>
   </tr>
   <tr>
     <td>--a-button-line-drawing-line-height</td>

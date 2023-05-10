@@ -15,11 +15,10 @@
   --m-card-description-margin-top: 4px;
   --m-card-buttons-margin-top: 24px;
   --m-card-buttons-gap: 16px;
-  --m-card-button-padding: 10px 20px;
   --m-card-overlapped-width: 75%;
   --m-card-overlapped-margin-top: -40px;
 }
-
+ 
 .card-container {
   .m-card {
     position: relative;
@@ -98,7 +97,6 @@
         @include flex(column, center, flex-start);
         gap: var(--m-card-buttons-gap);
         width: 100%;
-        --a-button-slide-padding: var(--m-card-button-padding);
       }
     }
   }

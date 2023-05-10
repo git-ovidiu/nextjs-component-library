@@ -14,7 +14,7 @@ const Extra_Info = `
   </tr>
   <tr>
     <td>text</td>
-    <td>ReactElement</td>
+    <td>string</td>
     <td>-</td>
   </tr>
   <tr>
@@ -25,10 +25,10 @@ const Extra_Info = `
 </table>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
-<ul>
+<ol>
 <li>--animated-title-transition-duration</li>
 <li>--animated-title-transition-timing-function</li>
-</ul>
+</ol>
 
 <br>
 <h2><u>CURRENT VALUES</u></h2>
@@ -50,7 +50,7 @@ export default {
   argTypes: {
     variant: {
       control: "radio",
-      options: ["h1", "h2", "h3", "h4", "p"],
+      options: ["please refresh the page if you change the below values", "h1", "h2", "h3", "h4", "p"],
     },
   },
   parameters: {

@@ -40,24 +40,24 @@ const Extra_Info = `
 </table>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
-<ul>
+<ol>
   <li>--a-button-slide-background</li>
   <li>--a-button-slide-background-hover</li>
   <li>--a-button-slide-animation-transition</li>
   <li>--a-button-slide-border-radius</li>
   <li>--a-button-slide-font-size</li>
-  <li>--a-button-slide-padding</li>
   <li>--a-button-slide-line-height</li>
   <li>--a-button-slide-font-weight</li>
   <li>--a-button-slide-text-color</li>
   <li>--a-button-slide-gap</li>
+  
   <li>--a-button-slide-padding-xs</li>
   <li>--a-button-slide-padding-s</li>
   <li>--a-button-slide-padding-m</li>
   <li>--a-button-slide-padding-l</li>
   <li>--a-button-slide-padding-xl</li>
   <li>--a-button-slide-padding-xxl</li>
-</ul>
+</ol>
 <table>
   <tr>
     <td>--a-button-slide-background</td>
@@ -78,10 +78,6 @@ const Extra_Info = `
   <tr>
     <td>--a-button-slide-font-size</td>
     <td>20px</td>
-  </tr>
-  <tr>
-    <td>--a-button-slide-padding</td>
-    <td>20px 30px</td>
   </tr>
   <tr>
     <td>--a-button-slide-line-height</td>

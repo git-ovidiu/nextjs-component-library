@@ -58,7 +58,6 @@ const Extra_Info = `
 <li>--m-card-description-margin-top</li>
 <li>--m-card-buttons-margin-top</li>
 <li>--m-card-buttons-gap</li>
-<li>--m-card-button-padding</li>
 <li>--m-card-overlapped-width</li>
 <li>--m-card-overlapped-margin-top</li>
 </ul>
@@ -118,10 +117,6 @@ const Extra_Info = `
   <tr>
     <td>--m-card-buttons-gap</td>
     <td>16px</td>
-  </tr>
-  <tr>
-    <td>--m-card-button-padding</td>
-    <td>10px 20px</td>
   </tr>
   <tr>
     <td>--m-card-overlapped-width</td>
@@ -189,12 +184,14 @@ Card_story.args = {
         icon={<AiOutlineDownload size={20} />}
         iconPosition="right"
         text="Placeholder text"
+        padding="xs"
       />
       <Button_slide
         hover_effect="slide-right"
         icon={<AiOutlineDownload size={20} />}
         iconPosition="right"
         text="Placeholder text"
+        padding="xs"
       />
     </>
   ),
