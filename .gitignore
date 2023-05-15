@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /.rollup.cache
+/.idea
 
 # testing
 /coverage
