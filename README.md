@@ -1,8 +1,22 @@
 
-# NEXTJS COMPONENT LIBRARY
+<h1 style="color: teal">NEXTJS COMPONENT LIBRARY</h1>
 
-## INSTALL
-`@git-ovidiu/nextjs-component-library@latest`
+## TERMINAL
+```
+@git-ovidiu/nextjs-component-library@latest
+```
+
+```
+npm run rollup
+```
+
+```
+npm run test
+```
+
+```
+npm publish
+```
 
 <hr/>
 <h2> LIVE COMPONENTS </h2>
@@ -17,7 +31,6 @@
     <li>Footer_link</li>
     <li>Label</li>
 </ol>
-<br/>
 <h3 style="color: teal">MOLECULES</h3>
 <ol>
     <li>Card</li>
@@ -28,10 +41,11 @@
 
 <hr/>
 
-# FILE STRUCTURE
+<h1 style="color: teal">FILE STRUCTURE</h1>
 <u><h3>You will to generate and customize 4 files for each component:</h3></u>
 
-## CSS
+<h2 style="color: gold">SCSS - COMPONENT.scss</h2>
+
  ```scss
  //@use '../../../styles/main.scss' as *;
 
@@ -45,8 +59,10 @@
 ```
 
 <br/>
+<hr>
 
-## TSX
+<h2 style="color: gold">TSX - COMPONENT.tsx</h2>
+
 ```tsx
 import React, { ReactElement } from "react";
 import "./Component.scss";
@@ -67,10 +83,11 @@ export default function Component(props: ComponentProps) {
 }
 
 ```
-
 <br/>
+<hr/>
 
-## TESTING
+<h2 style="color: gold">TESTING - COMPONENT.test.tsx</h2>
+
 ```tsx
  import React from "react";
 import { render } from "@testing-library/react";
@@ -83,10 +100,12 @@ describe("COMPONENT", () => {
   });
 });
 ```
-
 <br/>
+<hr/>
 
-## STORYBOOK
+
+<h2 style="color: gold">STORYBOOK - COMPONENT.stories.tsx</h2>
+
 ```tsx
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
