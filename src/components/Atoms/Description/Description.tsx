@@ -6,9 +6,10 @@ interface DescriptionStyle extends CSSProperties {
 }
 
 export interface LabelProps {
+  style?: DescriptionStyle;
+
   text?: ReactElement;
   color?: string;
-  style?: DescriptionStyle;
   underline?: boolean;
   italic?: boolean;
 }
