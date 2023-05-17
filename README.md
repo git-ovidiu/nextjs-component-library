@@ -4,6 +4,29 @@
 ## INSTALL
 `@git-ovidiu/nextjs-component-library@latest`
 
+<hr/>
+<h2> LIVE COMPONENTS </h2>
+<h3 style="color: teal">ATOMS</h3>
+<ol>
+    <li>Animated_text</li>
+    <li>Button_Line_Drawing</li>
+    <li>Button_Slide</li>
+    <li>Button_Slide_Second</li>
+    <li>Description</li>
+    <li>FAQ_item</li>
+    <li>Footer_link</li>
+    <li>Label</li>
+</ol>
+<br/>
+<h3 style="color: teal">MOLECULES</h3>
+<ol>
+    <li>Card</li>
+    <li>Footer_card</li>
+    <li>Footer_link_list</li>
+</ol>
+
+
+<hr/>
 
 # FILE STRUCTURE
 <u><h3>You will to generate and customize 4 files for each component:</h3></u>
