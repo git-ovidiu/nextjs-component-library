@@ -33,7 +33,7 @@
 
 ## CSS
  ```scss
- @use '../../../styles/main.scss' as *;
+ //@use '../../../styles/main.scss' as *;
 
 :root{
   //--a|m|o-component-name-div-action: value;
