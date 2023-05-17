@@ -5,7 +5,7 @@ interface DescriptionStyle extends CSSProperties {
   "--a-description-color"?: string;
 }
 
-export interface LabelProps {
+export interface DescriptionProps {
   style?: DescriptionStyle;
 
   text?: ReactElement;
@@ -14,7 +14,7 @@ export interface LabelProps {
   italic?: boolean;
 }
 
-export default function Description(props: LabelProps): ReactElement {
+export default function Description(props: DescriptionProps): ReactElement {
   return (
     <div
       className={`a-description ${props.underline ? "underline" : ""} ${props.italic ? "italic" : ""}`}
