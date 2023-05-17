@@ -14,7 +14,7 @@
     --faq-item-max-width: 95%; 
 }
 
-
+ 
 .faq-item{
     @include flex(row,  center, flex-start);
     border-radius: var(--faq-item-border-radius);
@@ -24,7 +24,7 @@
     background: var(--faq-item-background);
     ::selection{
       background: transparent;
-    }
+    } 
     cursor: pointer;
     .content{
         @include flex(column, center, flex-start);

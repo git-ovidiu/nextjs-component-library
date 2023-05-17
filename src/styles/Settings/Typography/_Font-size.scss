@@ -8,26 +8,24 @@ $font-size-label: 12px;
 $font-size-footer-main-link: clamp(1rem, 3.25vw, 1.2rem);
 $font-size-footer-secondary-link: clamp(1rem, 3.25vw, 1.1rem);
 
+.styleguide {
+  p {
+    font-size: $font-size-p;
+  }
+  h1 {
+    font-size: $font-size-h1;
+  }
+  h2 {
+    font-size: $font-size-h2;
+  }
+  h3 {
+    font-size: $font-size-h3;
+  }
+  h4 {
+    font-size: $font-size-h4;
+  }
 
-.styleguide{
-    
-    p{
-        font-size: $font-size-p;
-    }
-    h1{
-        font-size: $font-size-h1;
-    }
-    h2{
-        font-size: $font-size-h2;
-    }
-    h3{
-        font-size: $font-size-h3;
-    }
-    h4{
-        font-size: $font-size-h4;
-    }
-    
-    .label{
-        font-size: 5px;
-    }
+  .label {
+    font-size: 5px;
+  }
 }

@@ -1,0 +1,19 @@
+@use '../../../styles/main.scss' as *;
+
+:root{
+    --m-footer-link-list-gap: 5px;
+}
+
+.m-footer-link-list{
+    @include flex(column, flex-start, flex-start);
+    width: 100%;
+    gap: 5px;
+
+    &.center{
+        align-items: center;
+    }
+
+    &.right{
+        align-items: flex-end;
+    }
+}

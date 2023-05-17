@@ -1,0 +1,18 @@
+@use '../../../styles/main.scss' as *;
+
+:root{
+    --a-description-color: #{$color-black};
+}
+
+.a-description{
+    display: inline-block;
+    color: var(--a-description-color);
+
+    &.underline{
+        text-decoration: underline;
+    }
+
+    &.italic{
+        font-style: italic;
+    }
+}

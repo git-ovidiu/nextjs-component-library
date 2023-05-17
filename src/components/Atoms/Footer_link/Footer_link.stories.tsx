@@ -12,9 +12,68 @@ const Extra_Info = `
     <td>type</td>
     <td>can be:</td>
   </tr>
+  <tr>
+    <td>link_type</td>
+    <td>string</td>
+    <td>main || secondary</td>
+  </tr>
+  <tr>
+    <td>link</td>
+    <td>ReactElement</td>
+    <td>use Nextjs Link || regular < a / ></td>
+  </tr>
 </table>
 <br>
-
+<h2><u>CSS VARIABLES</u></h2>
+<ol>
+  <li>--a-footer-main-link-font-weight</li>
+  <li>--a-footer-main-link-font-size</li>
+  <li>--a-footer-main-link-line-height</li>
+  <li>--a-footer-main-link-color</li>
+  <li>--a-footer-main-link-margin-botton</li>
+  <li>--a-footer-secondary-link-font-weight</li>
+  <li>--a-footer-secondary-link-font-size</li>
+  <li>--a-footer-secondary-link-line-height</li>
+  <li>--a-footer-secondary-link-color</li>
+</ol>
+<table>
+  <tr>
+    <td>--a-footer-main-link-font-weight</td>
+    <td>$font-weight-xl</td>
+  </tr>
+  <tr>
+    <td>--a-footer-main-link-font-size</td>
+    <td>$font-size-footer-main-link</td>
+  </tr>
+  <tr>
+    <td>--a-footer-main-link-line-height</td>
+    <td>24px</td>
+  </tr>
+  <tr>
+    <td>--a-footer-main-link-color</td>
+    <td>$primary-color</td>
+  </tr>
+  <tr>
+    <td>--a-footer-main-link-margin-botton</td>
+    <td>5px</td>
+  </tr>
+  <tr>
+    <td>--a-footer-secondary-link-font-weight</td>
+    <td>$font-weight-l</td>
+  </tr>
+  <tr>
+    <td>--a-footer-secondary-link-font-size</td>
+    <td>$font-size-footer-secondary-link</td>
+  </tr>
+  <tr>
+    <td>--a-footer-secondary-link-line-height</td>
+    <td>24px</td>
+  </tr>
+  <tr>
+    <td>--a-footer-secondary-link-color</td>
+    <td>$extra-color</td>
+  </tr>
+</table>
 
 `;
 
