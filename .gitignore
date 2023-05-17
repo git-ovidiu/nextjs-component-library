@@ -6,7 +6,6 @@
 .pnp.js
 /.rollup.cache
 /.idea
-
 # testing
 /coverage
 
@@ -36,3 +35,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/.rollup.cache/
+/dist/

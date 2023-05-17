@@ -74,4 +74,10 @@ interface FooterLinkProps {
 }
 declare function Footer_link(props: FooterLinkProps): ReactElement;
 
-export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, FAQ_item, Footer_card, Footer_link, Label };
+interface FooterLinkListProps {
+    link_element?: ReactElement;
+    position?: string;
+}
+declare function Footer_link_list(props: FooterLinkListProps): ReactElement;
+
+export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, FAQ_item, Footer_card, Footer_link, Footer_link_list, Label };
