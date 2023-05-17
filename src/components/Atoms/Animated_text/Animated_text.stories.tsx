@@ -22,12 +22,18 @@ const Extra_Info = `
     <td>string</td>
     <td>h1, h2, h3, h4, p</td>
   </tr>
+  <tr>
+    <td>color</td>
+    <td>string</td>
+    <td>hex || color name || rgb</td>
+  </tr>
 </table>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
 <ol>
 <li>--animated-title-transition-duration</li>
 <li>--animated-title-transition-timing-function</li>
+<li>--a-animated-text-color</li>
 </ol>
 
 <br>
@@ -41,6 +47,10 @@ const Extra_Info = `
     <td>--animated-title-transition-timing-function</td>
     <td>cubic-bezier(0.19, 1, 0.22, 1)</td>
   </tr>
+    <tr>
+        <td>--a-animated-text-color</td>
+        <td>$color-black</td>
+    </tr>
 </table>
 `;
 
@@ -72,4 +82,5 @@ export const Animated_text_story = Template.bind({});
 Animated_text_story.args = {
   variant: "h1",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!",
+  color: "black"
 };

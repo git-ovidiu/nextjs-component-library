@@ -4,11 +4,14 @@
 :root{
   --animated-title-transition-duration: 1s;
   --animated-title-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  --a-animated-text-color: #{$color-black};
+
 }
 
 
 .animated-title {
     opacity: 0;
+    color: var(--a-animated-text-color);
   
     span {
       display: inline-block;
