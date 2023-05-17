@@ -4,7 +4,7 @@ export default create({
   base: "dark",
   appBg: "white",
 
-  appBg: "black",
+  // appBg: "black",
   appBorderColor: "#4cbfa6",
   appBorderRadius: 20,
 
