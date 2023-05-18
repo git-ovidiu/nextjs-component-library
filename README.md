@@ -3,7 +3,7 @@
 
 ## TERMINAL
 ```
-@git-ovidiu/nextjs-component-library@latest
+npm i @git-ovidiu/nextjs-component-library@latest
 ```
 
 ```
