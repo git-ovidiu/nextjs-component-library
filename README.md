@@ -109,7 +109,7 @@ describe("COMPONENT", () => {
 ```tsx
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import COMPONENT from "./COMPONENT";
+import TEST_COMPONENT from "./TEST_COMPONENT";
 
 const Extra_Info = `
 <br>
@@ -143,8 +143,8 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/Molecules/Organisms/COMPONENT",
-  component: COMPONENT,
+  title: "Atoms/Molecules/Organisms/TEST_COMPONENT",
+  component: TEST_COMPONENT,
   argTypes: {
     selectOption: {
       control: "radio",
@@ -159,15 +159,15 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof COMPONENT>;
+} as ComponentMeta<typeof TEST_COMPONENT>;
 
-const Template: ComponentStory<typeof COMPONENT> = (args) => (
-  <COMPONENT {...args} />
+const Template: ComponentStory<typeof TEST_COMPONENT> = (args) => (
+  <TEST_COMPONENT {...args} />
 );
 
-export const COMPONENT_STORY = Template.bind({});
+export const TEST_COMPONENT_STORY = Template.bind({});
 
-COMPONENT_STORY.args = {
+TEST_COMPONENT_STORY.args = {
     selectOption: 'selectOption_3',
     text: "Placeholder text",
 };
