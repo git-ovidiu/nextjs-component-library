@@ -1,6 +1,9 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Title_and_description from "./Title_and_description";
+import Description from "../../Atoms/Description";
+import Animated_text from "../../Atoms/Animated_text";
+import Button_slide from "../../Atoms/Button_Slide";
 
 const Extra_Info = `
 <br>
@@ -34,12 +37,12 @@ const Extra_Info = `
 `;
 
 export default {
-	title: "Atoms/Molecules/Organisms/Title_and_description",
+	title: "Molecules/Title_and_description",
 	component: Title_and_description,
 	argTypes: {
-		selectOption: {
+		text_align: {
 			control: "radio",
-			options: ["selectOption_1", "selectOption_2", "selectOption_3", "selectOption_4"],
+			options: ["left", "center", "right"],
 		}
 	},
 	parameters: {
@@ -53,12 +56,18 @@ export default {
 } as ComponentMeta<typeof Title_and_description>;
 
 const Template: ComponentStory<typeof Title_and_description> = (args) => (
-	<Title_and_description {...args} />
+	<div style={{maxWidth:  "600px"}}>
+		<Title_and_description {...args} />
+	</div>
 );
 
 export const Title_and_description_STORY = Template.bind({});
 
 Title_and_description_STORY.args = {
-	selectOption: 'selectOption_3',
-	text: "Placeholder text",
+	text_align: "left",
+	label: <Description text={<p>label</p>} color="red" />,
+	title: <Animated_text variant="h2" text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti" />,
+	description: <Description text={<p>semper sed adolescens vocent molestiae equidem tale consectetuer repudiandae viverra nostra habeo legere bibendum ceteros vivendo voluptatibus quem voluptatum diam tantas nisl debet oporteat solet epicurei lorem voluptatibus parturient aliquet</p>}
+	/>,
+	action: <Button_slide text="button text" hover_effect="slide-right" padding="xs" />,
 };

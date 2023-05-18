@@ -1,9 +1,49 @@
 @use '../../../styles/main.scss' as *;
 
-:root{
+:root {
   //--a-test-component-right-column-background: gray;
+  --m-title-and-description-label-margin-top: unset;
+  --m-title-and-description-title-margin-top: unset;
+  --m-title-and-description-text-description-margin-top: 12px;
+  --m-title-and-description-action-margin-top: 40px;
+
+  --m-title-and-description-label-margin-bottom: 12px;
+  --m-title-and-description-title-margin-bottom: 12px;
+  --m-title-and-description-text-description-margin-bottom: unset;
+  --m-title-and-description-action-margin-bottom: unset;
 }
 
-.a-test-component{
+.m-title-and-description {
+  background: unset;
+  padding: unset;
 
+  &.center{
+    @include flex(column, center, center);
+    text-align: center;
+  }
+
+  &.right{
+    @include flex(column, flex-end, flex-end);
+    text-align: right;
+  }
+
+  .label {
+	margin-top: var(--m-title-and-description-label-margin-top);
+    margin-bottom: var(--m-title-and-description-label-margin-bottom);
+  }
+
+  .title {
+	margin-top: var(--m-title-and-description-title-margin-top);
+    margin-bottom: var(--m-title-and-description-title-margin-bottom);
+  }
+
+  .description{
+	margin-top: var(--m-title-and-description-text-description-margin-top);
+	margin-bottom: var(--m-title-and-description-text-description-margin-bottom);
+  }
+
+  .action {
+    margin-top: var(--m-title-and-description-action-margin-top);
+	margin-bottom: var(--m-title-and-description-action-margin-bottom);
+  }
 }
