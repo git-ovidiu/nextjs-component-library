@@ -1,4 +1,4 @@
-import React, { ReactElement, CSSProperties } from "react";
+import React, { ReactNode, CSSProperties } from "react";
 import "./Description.scss";
 
 interface DescriptionStyle extends CSSProperties {
@@ -8,13 +8,13 @@ interface DescriptionStyle extends CSSProperties {
 export interface DescriptionProps {
   style?: DescriptionStyle;
 
-  text?: ReactElement;
+  text?: ReactNode | string;
   color?: string;
   underline?: boolean;
   italic?: boolean;
 }
 
-export default function Description(props: DescriptionProps): ReactElement {
+export default function Description(props: DescriptionProps): ReactNode {
   return (
     <div
       className={`a-description ${props.underline ? "underline" : ""} ${props.italic ? "italic" : ""}`}

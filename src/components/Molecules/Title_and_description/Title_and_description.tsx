@@ -1,13 +1,13 @@
 import React, { ReactElement } from "react";
 import "./Title_and_description.scss";
 export interface TitleAndDescriptionProps {
-  label?: ReactElement;
-  title?: ReactElement;
-  description?: ReactElement;
-  action?: ReactElement;
+  label?: ReactElement | string;
+  title?: ReactElement | string;
+  description?: ReactElement | string;
+  action?: ReactElement | string;
   text_align: string;
 }
-export default function Component(props: TitleAndDescriptionProps) {
+export default function Title_and_description(props: TitleAndDescriptionProps) {
   return (
     <>
       <div className={`m-title-and-description ${props.text_align === "center" ? 'center' : ''} ${props.text_align === "right" ? "right" : ''}`}>

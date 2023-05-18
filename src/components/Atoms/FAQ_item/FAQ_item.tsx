@@ -1,9 +1,9 @@
-import React, { ReactElement } from "react";
+import React, { ReactNode } from "react";
 import "./FAQ_item.scss";
 interface FAQProps {
-  title: ReactElement;
+  title: ReactNode | string;
   description: string;
-  arrow: ReactElement;
+  arrow: ReactNode | string;
 }
 
 export default function FAQ_item(props: FAQProps) {

@@ -1,14 +1,14 @@
-import React, { ReactElement } from "react";
+import React, { ReactNode } from "react";
 import "./Footer_link.scss";
 
 export interface Animated_text_Props {}
 
 export interface FooterLinkProps {
   link_type?: string;
-  link: ReactElement;
+  link: ReactNode | string;
 }
 
-export default function Footer_link(props: FooterLinkProps): ReactElement {
+export default function Footer_link(props: FooterLinkProps): ReactNode {
   return (
     <div className="a-footer-link">
       {props.link_type === "main" ? (

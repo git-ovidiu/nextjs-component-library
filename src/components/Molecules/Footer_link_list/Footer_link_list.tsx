@@ -4,7 +4,7 @@ import "./Footer_link_list.scss";
 export interface Animated_text_Props {}
 
 export interface FooterLinkListProps {
-  link_element?: ReactElement;
+  link_element?: ReactElement | string;
   position?: string;
 }
 

@@ -14,25 +14,80 @@ const Extra_Info = `
     <td>type</td>
     <td>can be:</td>
   </tr>
-  <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
+<tr>
+	<td>label</td>
+	<td>ReactElement</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>title</td>
+	<td>ReactElement</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>description</td>
+	<td>ReactElement</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>action</td>
+	<td>ReactElement</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>text_align</td>
+	<td>string</td>
+	<td>left | center | right</td>
+</tr>
 </table>
 
 <br>
 
 <h2><u>CSS VARIABLES</u></h2>
 <ol>
-  <li>--a-test-component-right-column-background</li>
+<li>--m-title-and-description-label-margin-top</li>
+<li>--m-title-and-description-title-margin-top</li>
+<li>--m-title-and-description-text-description-margin-top</li>
+<li>--m-title-and-description-action-margin-top</li>
+<li>--m-title-and-description-label-margin-bottom</li>
+<li>--m-title-and-description-title-margin-bottom</li>
+<li>--m-title-and-description-text-description-margin-bottom</li>
+<li>--m-title-and-description-action-margin-bottom</li>
 </ol>
 
 <table>
-  <tr>
-    <td>--a-test-component-right-column-background</td>
-    <td>gray</td>
-  </tr>
+<tr>
+<td>--m-title-and-description-label-margin-top</td>
+<td>unset</td>
+</tr>
+<tr>
+<td>--m-title-and-description-title-margin-top</td>
+<td>unset</td>
+</tr>
+<tr>
+<td>--m-title-and-description-text-description-margin-top</td>
+<td>12px</td>
+</tr>
+<tr>
+<td>--m-title-and-description-action-margin-top</td>
+<td>24px</td>
+</tr>
+<tr>
+<td>--m-title-and-description-label-margin-bottom</td>
+<td>12px</td>
+</tr>
+<tr>
+<td>--m-title-and-description-title-margin-bottom</td>
+<td>12px</td>
+</tr>
+<tr>
+<td>--m-title-and-description-text-description-margin-bottom</td>
+<td>unset</td>
+</tr>
+<tr>
+<td>--m-title-and-description-action-margin-bottom</td>
+<td>unset</td>
+</tr>
 </table>
 `;
 
@@ -57,7 +112,7 @@ export default {
 
 const Template: ComponentStory<typeof Title_and_description> = (args) => (
 	<div style={{maxWidth:  "600px"}}>
-		<Title_and_description {...args} />
+		<Title_and_description {...args} label={<Description color='red' text='Label' />} action={<Button_slide text="button text" hover_effect="slide-right" padding="xs" />} title={<Animated_text variant="h2" text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti" />} />
 	</div>
 );
 
@@ -65,9 +120,5 @@ export const Title_and_description_STORY = Template.bind({});
 
 Title_and_description_STORY.args = {
 	text_align: "left",
-	label: <Description text={<p>label</p>} color="red" />,
-	title: <Animated_text variant="h2" text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti" />,
-	description: <Description text={<p>semper sed adolescens vocent molestiae equidem tale consectetuer repudiandae viverra nostra habeo legere bibendum ceteros vivendo voluptatibus quem voluptatum diam tantas nisl debet oporteat solet epicurei lorem voluptatibus parturient aliquet</p>}
-	/>,
-	action: <Button_slide text="button text" hover_effect="slide-right" padding="xs" />,
+	description: "Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur",
 };

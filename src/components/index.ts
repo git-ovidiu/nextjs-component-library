@@ -12,3 +12,4 @@ export { default as Footer_link } from "./Atoms/Footer_link";
 export { default as Footer_link_list } from "./Molecules/Footer_link_list/Footer_link_list";
 export { default as Footer_card } from "./Molecules/Footer_card";
 export { default as Card } from "./Molecules/Card";
+export { default as Title_and_description } from "./Molecules/Title_and_description";

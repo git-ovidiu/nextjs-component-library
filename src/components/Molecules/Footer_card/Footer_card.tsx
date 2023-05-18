@@ -1,10 +1,10 @@
-import React, { ReactElement } from "react";
+import React, { ReactNode } from "react";
 import "./Footer_card.scss";
 
 export interface FooterCardProps {
-  logo? : ReactElement;
-  description? : ReactElement;
-  action? : ReactElement;
+  logo? : ReactNode | string;
+  description? : ReactNode | string;
+  action? : ReactNode | string;
 }
 
 export default function Footer_card(props: FooterCardProps) {

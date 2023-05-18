@@ -1,10 +1,10 @@
-import React, { ReactElement } from "react";
+import React, { ReactNode } from "react";
 import "./Button_Slide_Second.scss";
 
 export interface Button_Slide_Second_Props {
   text: string;
   hover_effect: string;
-  icon? : ReactElement;
+  icon? : ReactNode | string;
   iconPosition? : string;
 }
 

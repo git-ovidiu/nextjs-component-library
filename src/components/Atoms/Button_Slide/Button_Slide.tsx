@@ -3,7 +3,7 @@ import "./Button_Slide.scss";
 export interface ButtonProps {
   text: string;
   hover_effect: string;
-  icon?: ReactElement;
+  icon?: ReactElement | string;
   iconPosition?: string;
   padding?: string;
 }
