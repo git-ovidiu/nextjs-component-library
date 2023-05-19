@@ -25,8 +25,6 @@ jobs:
         run: npm run build
       - name: Run Tests
         run: npm test
-      - name: Generate Code Coverage Report
-        run: npm run test:coverage
       - name: Validate TypeScript Types
         run: npm run type-check
       - name: Run ESLint
