@@ -2,7 +2,7 @@ name: Qodana
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   qodana:
