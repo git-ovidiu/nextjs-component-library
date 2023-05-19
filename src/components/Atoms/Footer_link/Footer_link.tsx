@@ -1,4 +1,4 @@
-import React, {ReactElement, ReactNode} from "react";
+import React, {ReactElement} from "react";
 import "./Footer_link.scss";
 
 export interface Animated_text_Props {}

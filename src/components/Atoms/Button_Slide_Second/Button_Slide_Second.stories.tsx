@@ -1,6 +1,5 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { AiOutlineDownload } from "react-icons/ai";
 import Button_Slide_Second from "./Button_Slide_Second";
 
 const Extra_Info = `
@@ -31,7 +30,7 @@ const Extra_Info = `
     <td>$primary-color</td>
   </tr>
   <tr>
-    <td>--a-button-slide-second-animation-transition</td>
+    <td>--a-button-slide-second-animation-transition</td>   
     <td>$transition-duration-normal</td>
   </tr>
   <tr>

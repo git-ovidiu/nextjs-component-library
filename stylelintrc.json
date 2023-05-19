@@ -1,0 +1,18 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "indentation": 2,
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "declaration-colon-space-after": "always",
+    "declaration-colon-space-before": "never",
+    "selector-pseudo-class-no-unknown": true,
+    "selector-pseudo-element-no-unknown": true,
+    "selector-type-no-unknown": true,
+    "property-no-unknown": true,
+    "value-no-vendor-prefix": true,
+    "function-url-no-scheme-relative": true,
+    "comment-no-empty": true
+  },
+  "configBasedir": "./node_modules/"
+}
