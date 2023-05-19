@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ['res.cloudinary.com'],
   },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config) => {
     config.resolve.alias["react"] = path.resolve("./node_modules/react");
     return config;
   },
