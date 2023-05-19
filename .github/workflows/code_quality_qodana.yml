@@ -23,6 +23,14 @@ jobs:
         run: npm install
       - name: Build Next.js App
         run: npm run build
+      - name: Run Tests
+        run: npm test
+      - name: Generate Code Coverage Report
+        run: npm run test:coverage
+      - name: Validate TypeScript Types
+        run: npm run type-check
+      - name: Run ESLint
+        run: npx eslint .
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2023.1.0
         with:
