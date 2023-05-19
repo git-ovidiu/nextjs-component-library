@@ -16,4 +16,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: 'Qodana Scan'
-        uses: @git-ovidiu/master
+        uses: JetBrains/qodana-action@v2023.1.0
