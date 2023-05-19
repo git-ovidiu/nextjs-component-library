@@ -7,7 +7,7 @@ npm i @git-ovidiu/nextjs-component-library@latest
 ```
 
 ```
-npm run rollup
+npm run rollup 
 ```
 
 ```
