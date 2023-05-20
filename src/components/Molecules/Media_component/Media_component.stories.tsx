@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 import Media_component from "./Media_component";
 import Image from "next/image";
 
@@ -59,7 +59,7 @@ export default {
     actions: { disabled: true },
     docs: {
       description: {
-        component: "Your component description goes here."
+        component: Extra_Info
       }
     }
   }

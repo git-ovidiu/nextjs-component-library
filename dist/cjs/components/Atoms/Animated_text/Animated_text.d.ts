@@ -1,7 +1,13 @@
-/// <reference types="react" />
+import { CSSProperties } from "react";
 import "./Animated_text.scss";
-export interface Animated_text_Props {
-    text: string;
-    variant: string;
+interface AnimatedText extends CSSProperties {
+    "--a-animated-text-color"?: string;
 }
-export default function Animated_text(props: Animated_text_Props): JSX.Element;
+export interface AnimatedTextProps {
+    style?: AnimatedText;
+    color?: string;
+    text?: string;
+    variant?: string;
+}
+export default function Animated_text(props: AnimatedTextProps): JSX.Element;
+export {};

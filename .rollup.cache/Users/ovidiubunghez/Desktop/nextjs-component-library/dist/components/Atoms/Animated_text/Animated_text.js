@@ -1,5 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import {__assign} from "tslib";
+import React, {useEffect, useRef} from "react";
 import "./Animated_text.scss";
+
 export default function Animated_text(props) {
     var titleRef = useRef(null);
     useEffect(function () {
@@ -28,7 +30,7 @@ export default function Animated_text(props) {
             breakTextIntoWords(titleElement);
         }
     }, [props.text]);
-    return (React.createElement(React.Fragment, null, props.variant == "h1" ? (React.createElement("h1", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == "h2" ? (React.createElement("h2", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == "h3" ? (React.createElement("h3", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == "h4" ? (React.createElement("h4", { ref: titleRef, className: "animated-title" }, props.text)) : props.variant == "p" ? (React.createElement("p", { ref: titleRef, className: "animated-title" }, props.text)) : ("")));
+    return (React.createElement(React.Fragment, null, props.variant === "h1" ? (React.createElement("h1", { ref: titleRef, className: "animated-title", style: __assign({ "--a-animated-text-color": props.color }, props.style) }, props.text)) : props.variant === "h2" ? (React.createElement("h2", { ref: titleRef, className: "animated-title", style: __assign({ "--a-animated-text-color": props.color }, props.style) }, props.text)) : props.variant === "h3" ? (React.createElement("h3", { ref: titleRef, className: "animated-title", style: __assign({ "--a-animated-text-color": props.color }, props.style) }, props.text)) : props.variant === "h4" ? (React.createElement("h4", { ref: titleRef, className: "animated-title", style: __assign({ "--a-animated-text-color": props.color }, props.style) }, props.text)) : props.variant === "p" ? (React.createElement("p", { ref: titleRef, className: "animated-title", style: __assign({ "--a-animated-text-color": props.color }, props.style) }, props.text)) : ("")));
 }
 function breakTextIntoWords(text) {
     var words = (text.innerText || "").trim().split(" ");
@@ -43,4 +45,5 @@ function breakTextIntoWords(text) {
         text.append(" ");
     }
 }
+//test
 //# sourceMappingURL=Animated_text.js.map

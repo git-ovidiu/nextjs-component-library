@@ -1,10 +1,10 @@
 /// <reference types="react" />
-import { ReactElement, CSSProperties } from 'react';
+import { ReactElement, ReactNode, CSSProperties } from 'react';
 
 interface ButtonProps {
     text: string;
     hover_effect: string;
-    icon?: ReactElement;
+    icon?: ReactElement | string;
     iconPosition?: string;
     padding?: string;
 }
@@ -20,15 +20,27 @@ declare function Button_Line_Drawing(props: Button_Line_Drawing_Props): JSX.Elem
 interface Button_Slide_Second_Props {
     text: string;
     hover_effect: string;
-    icon?: ReactElement;
+    icon?: ReactNode | string;
     iconPosition?: string;
 }
 declare function Button_Slide_Second(props: Button_Slide_Second_Props): JSX.Element;
 
+interface DescriptionStyle extends CSSProperties {
+    "--a-description-color"?: string;
+}
+interface DescriptionProps {
+    style?: DescriptionStyle;
+    text?: ReactNode | string;
+    color?: string;
+    underline?: boolean;
+    italic?: boolean;
+}
+declare function Description(props: DescriptionProps): JSX.Element;
+
 interface FAQProps {
-    title: ReactElement;
+    title: ReactNode | string;
     description: string;
-    arrow: ReactElement;
+    arrow: ReactNode | string;
 }
 declare function FAQ_item(props: FAQProps): JSX.Element;
 
@@ -44,40 +56,54 @@ interface LabelProps {
 }
 declare function Label(props: LabelProps): ReactElement;
 
-interface Animated_text_Props {
-    text: string;
-    variant: string;
+interface AnimatedText extends CSSProperties {
+    "--a-animated-text-color"?: string;
 }
-declare function Animated_text(props: Animated_text_Props): JSX.Element;
+interface AnimatedTextProps {
+    style?: AnimatedText;
+    color?: string;
+    text?: string;
+    variant?: string;
+}
+declare function Animated_text(props: AnimatedTextProps): JSX.Element;
+
+interface FooterLinkProps {
+    link_type?: string;
+    link: ReactElement | string;
+}
+declare function Footer_link(props: FooterLinkProps): ReactElement;
+
+interface FooterLinkListProps {
+    link_element?: ReactElement | string;
+    position?: string;
+}
+declare function Footer_link_list(props: FooterLinkListProps): ReactElement;
+
+interface FooterCardProps {
+    logo?: ReactNode | string;
+    description?: ReactNode | string;
+    action?: ReactNode | string;
+}
+declare function Footer_card(props: FooterCardProps): JSX.Element;
 
 interface CardProps {
-    image?: ReactElement;
-    labels?: ReactElement;
-    title?: ReactElement;
-    description?: ReactElement;
-    buttons?: ReactElement;
+    image?: ReactNode | string;
+    labels?: ReactNode | string;
+    title?: ReactNode | string;
+    description?: ReactNode | string;
+    buttons?: ReactNode | string;
     image_full_width?: boolean;
     is_overlapped?: boolean;
 }
 declare function Card(props: CardProps): JSX.Element;
 
-interface FooterCardProps {
-    logo?: ReactElement;
-    description?: ReactElement;
-    action?: ReactElement;
+interface TitleAndDescriptionProps {
+    label?: ReactElement | string;
+    title?: ReactElement | string;
+    description?: ReactElement | string;
+    action?: ReactElement | string;
+    text_align: string;
 }
-declare function Footer_card(props: FooterCardProps): JSX.Element;
+declare function Title_and_description(props: TitleAndDescriptionProps): JSX.Element;
 
-interface FooterLinkProps {
-    link_type?: string;
-    link: ReactElement;
-}
-declare function Footer_link(props: FooterLinkProps): ReactElement;
-
-interface FooterLinkListProps {
-    link_element?: ReactElement;
-    position?: string;
-}
-declare function Footer_link_list(props: FooterLinkListProps): ReactElement;
-
-export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, FAQ_item, Footer_card, Footer_link, Footer_link_list, Label };
+export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, Description, FAQ_item, Footer_card, Footer_link, Footer_link_list, Label, Title_and_description };
