@@ -128,7 +128,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/Button_slide",
+  title: "Atoms/Buttons/Slide Animation",
   component: Button_slide,
   argTypes: {
     hover_effect: {

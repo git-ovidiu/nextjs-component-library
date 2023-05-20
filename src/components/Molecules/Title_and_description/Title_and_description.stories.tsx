@@ -92,7 +92,7 @@ const Extra_Info = `
 `;
 
 export default {
-	title: "Molecules/Title_and_description",
+	title: "Molecules/Title And Description",
 	component: Title_and_description,
 	argTypes: {
 		text_align: {

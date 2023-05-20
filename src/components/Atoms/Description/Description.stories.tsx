@@ -46,7 +46,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/Description",
+  title: "Atoms/Text/Description",
   component: Description,
   parameters: {
     actions: { disabled: true },

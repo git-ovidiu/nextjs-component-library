@@ -78,7 +78,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/Footer_link",
+  title: "Atoms/Text/Footer Link",
   component: Footer_link,
   argTypes:{
     link_type: {

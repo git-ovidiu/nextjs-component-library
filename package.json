@@ -21,7 +21,6 @@
   "author": "Ovidiu",
   "license": "ISC",
   "dependencies": {
-    "@git-ovidiu/component-library": "^3.0.0",
     "@mdx-js/react": "^2.1.2",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",

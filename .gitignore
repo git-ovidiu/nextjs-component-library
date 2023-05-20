@@ -6,6 +6,7 @@
 .pnp.js
 /.rollup.cache
 /.idea
+/storybook-static
 
 # testing
 /coverage

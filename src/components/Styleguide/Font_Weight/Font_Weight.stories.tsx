@@ -26,7 +26,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Styleguide/Font_Weight",
+  title: "Styleguide/Font Weight",
   component: Font_Weight,
   parameters: {
     controls: { disabled: true },

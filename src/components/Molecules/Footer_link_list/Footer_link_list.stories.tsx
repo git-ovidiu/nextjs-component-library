@@ -32,7 +32,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Molecules/Footer_link_list",
+  title: "Molecules/Footer Link List",
   component: Footer_link_list,
   argTypes: {
     position:{

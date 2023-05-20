@@ -81,7 +81,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/Button_Slide_Second",
+  title: "Atoms/Buttons/Slide Animation v2",
   component: Button_Slide_Second,
   parameters: {
     actions: { disabled: true },

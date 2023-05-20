@@ -55,7 +55,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/Animated_text",
+  title: "Atoms/Text/An imated Text",
   component: Animated_text,
   argTypes: {
     variant: {

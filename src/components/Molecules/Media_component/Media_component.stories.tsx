@@ -46,7 +46,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/Media_component",
+  title: "Molecules/Media",
   component: Media_component,
   argTypes: {
     image: { defaultValue: <h1>imagine</h1> },

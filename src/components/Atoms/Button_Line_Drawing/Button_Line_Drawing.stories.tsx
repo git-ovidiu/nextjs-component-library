@@ -119,7 +119,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/Button_Line_Drawing",
+  title: "Atoms/Buttons/Line Drawing",
   component: Button_Line_Drawing,
   argTypes: {
     line_effect: {

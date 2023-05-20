@@ -42,7 +42,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Styleguide/Border_Radius",
+  title: "Styleguide/Border Radius",
   component: Border_Radius,
   parameters: {
     controls: { disabled: true },

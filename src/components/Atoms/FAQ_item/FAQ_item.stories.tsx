@@ -94,7 +94,7 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/FAQ_item",
+  title: "Atoms/Text/FAQ Item",
   component: FAQ_item,
 
   parameters: {
