@@ -51,7 +51,7 @@ export default {
   argTypes: {
     image: { defaultValue: <h1>imagine</h1> },
     video: { defaultValue: 'https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4' },
-    autoPlay: { defaultValue: true, control: { type: 'boolean' } },
+    "auto-play": { defaultValue: true, control: { type: 'boolean' } },
     muted: { defaultValue: true, control: { type: 'boolean' } },
     loop: { defaultValue: true, control: { type: 'boolean' } },
   },
@@ -86,22 +86,22 @@ Media_component_story.args = {
   width={300}
   alt="placeholder"
 />,
-  video: 'https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4',
-  autoPlay: false,
-  muted: false,
-  loop: true,
-  showControlsProperty: true,
+  "video": 'https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4',
+  "auto-play": false,
+  "muted": false,
+  "loop": true,
+  "showControlsProperty": true,
 
-  label_top_right: <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,
-  label_top_left: <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,
-  label_bottom_right: <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,
-  label_bottom_left: <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,
+  "label-top-right": <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,
+  "label-top-left": <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,
+  "label-bottom-right": <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,
+  "label-bottom-left": <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,
 
-  fullscreen_icon_color: 'red',
-  prev_icon_color: 'red',
-  play_icon_color: 'red',
-  pause_icon_color: 'red',
-  forward_icon_color: 'red',
-  progress_bar_color: 'red',
-  object_fit: 'cover'
+  "fullscreen-icon-color": 'white',
+  "prev-icon-color": 'white',
+  'play-icon-color': 'red',
+  "pause-icon-color": 'white',
+  "forward-icon-color": 'white',
+  "progress-bar-color": 'white',
+  "object-fit": 'cover'
 };

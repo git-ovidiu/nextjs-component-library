@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import { Media_component } from "../../index";
+import {render} from "@testing-library/react";
 import Image from "next/image";
+import Media_component from './Media_component';
 
 describe("Media_component", () => {
 	test("renders the Media_component", () => {
@@ -17,7 +17,7 @@ describe("Media_component", () => {
 						/>
 					}
 					video="https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4"
-					autoPlay={false}
+					auto-play={false}
 					muted={false}
 					loop={true}
 					showControlsProperty={true}
