@@ -1,8 +1,8 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { AiOutlineDownload } from "react-icons/ai";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
+import {AiOutlineDownload} from "react-icons/ai";
 import Footer_card from "./Footer_card";
-import Button_slide from '../../Atoms/Button_Slide';
+import Button_slide from "../../Atoms/Button_Slide";
 
 const Extra_Info = `
 <br>
@@ -80,18 +80,30 @@ export default {
 
 const Template: ComponentStory<typeof Footer_card> = (args) => (
   <div style={{ width: "360px" }}>
-    <Footer_card {...args} />
+    <Footer_card
+      {...args}
+      logo={
+        <img
+          src="https://via.placeholder.com/160x63/e3e3e3/b38686"
+          alt="Logo Placeholder"
+        />
+      }
+      action={
+        <Button_slide
+          padding="m"
+          hover_effect="slide-right"
+          icon={<AiOutlineDownload size={20} />}
+          iconPosition="right"
+          // @ts-ignore
+          text={args.button_text}
+        />
+      }
+    />
   </div>
 );
 export const Card_story = Template.bind({});
 Card_story.args = {
-  logo : <img src="https://via.placeholder.com/160x63/e3e3e3/b38686" alt="Logo Placeholder" />,
-  description: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, debitis. Rerum eos, quae expedita maxime labore ipsa nisi iure nam repellendus, mollitia repellat. Assumenda, deleniti!</p>,
-  action:   <Button_slide
-  padding="m"
-  hover_effect="slide-right"
-  icon={<AiOutlineDownload size={20} />}
-  iconPosition="right"
-  text="Placeholder text"
-/>
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, debitis. Rerum eos, quae expedita maxime labore ipsa nisi iure nam repellendus, mollitia repellat. Assumenda, deleniti!",
+    // @ts-ignore
+    button_text: 'Placeholder Text'
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 import Button_Slide_Second from "./Button_Slide_Second";
 
 const Extra_Info = `
@@ -94,7 +94,9 @@ export default {
 } as ComponentMeta<typeof Button_Slide_Second>;
 
 const Template: ComponentStory<typeof Button_Slide_Second> = (args) => (
-  <Button_Slide_Second {...args} />
+  <>
+    <Button_Slide_Second {...args} />
+  </>
 );
 
 export const Button_Slide_Second_story = Template.bind({});

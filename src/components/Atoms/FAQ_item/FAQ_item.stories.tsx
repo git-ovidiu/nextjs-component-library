@@ -1,9 +1,9 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 import FAQ_item from "./FAQ_item";
 import Animated_text from "../Animated_text/Animated_text";
-import { HiChevronDown } from "react-icons/hi";
+import {HiChevronDown} from "react-icons/hi";
 
 const Extra_Info = `
 <br>
@@ -108,18 +108,15 @@ export default {
 } as ComponentMeta<typeof FAQ_item>;
 
 const Template: ComponentStory<typeof FAQ_item> = (args) => (
-  <FAQ_item {...args} />
+  <FAQ_item {...args} title={<Animated_text
+      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!"
+      variant="h2"
+  />}
+  arrow={<HiChevronDown size={25} />}/>
 );
 
 export const FAQ_item_story = Template.bind({});
 FAQ_item_story.args = {
-  title: (
-    <Animated_text
-      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!"
-      variant="h2"
-    />
-  ),
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nulla facere minus eum similique voluptatum necessitatibus magni corporis accusantium ad deserunt harum architecto sint fuga eius voluptas quisquam maiores placeat ut facilis mollitia voluptatem, minima repellendus? Quos vero molestiae, asperiores ex distinctio nesciunt minima repudiandae. Odit facere obcaecati dolores exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nulla facere minus eum similique voluptatum necessitatibus magni corporis accusantium ad deserunt harum architecto sint fuga eius voluptas quisquam maiores placeat ut facilis mollitia voluptatem, minima repellendus? Quos vero molestiae, asperiores ex distinctio nesciunt minima repudiandae. Odit facere obcaecati dolores exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nulla facere minus eum similique voluptatum necessitatibus magni corporis accusantium ad deserunt harum architecto sint fuga eius voluptas quisquam maiores placeat ut facilis mollitia voluptatem, minima repellendus? Quos vero molestiae, asperiores ex distinctio nesciunt minima repudiandae. Odit facere obcaecati dolores exercitationem!",
-  arrow: <HiChevronDown size={25} />,
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nulla facere minus eum similique voluptatum necessitatibus magni corporis accusantium ad deserunt harum architecto sint fuga eius voluptas quisquam maiores placeat",
 };

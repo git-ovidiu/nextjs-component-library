@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 import Animated_text from "./Animated_text";
 
@@ -55,12 +55,19 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Atoms/Text/An imated Text",
+  title: "Atoms/Text/Animated Text",
   component: Animated_text,
   argTypes: {
     variant: {
       control: "radio",
-      options: ["please refresh the page if you change the below values", "h1", "h2", "h3", "h4", "p"],
+      options: [
+        "please refresh the page if you change the below values",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "p",
+      ],
     },
   },
   parameters: {
@@ -74,7 +81,9 @@ export default {
 } as ComponentMeta<typeof Animated_text>;
 
 const Template: ComponentStory<typeof Animated_text> = (args) => (
-  <Animated_text {...args} />
+  <>
+    <Animated_text {...args} />
+  </>
 );
 
 export const Animated_text_story = Template.bind({});
@@ -82,5 +91,5 @@ export const Animated_text_story = Template.bind({});
 Animated_text_story.args = {
   variant: "h1",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!",
-  color: "black"
+  color: "black",
 };

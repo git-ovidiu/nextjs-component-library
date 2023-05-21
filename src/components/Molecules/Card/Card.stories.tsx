@@ -1,8 +1,8 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { AiOutlineDownload } from "react-icons/ai";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
+import {AiOutlineDownload} from "react-icons/ai";
 import Card from "./Card";
-import { Animated_text, Button_slide, Label } from "../../../index";
+import {Animated_text, Button_slide, Label} from "../../../index";
 
 const Extra_Info = `
 <br>
@@ -145,54 +145,65 @@ export default {
 
 const Template: ComponentStory<typeof Card> = (args) => (
   <div style={{ width: "360px" }}>
-    <Card {...args} />
+    <Card
+      {...args}
+      image={
+        <img
+          src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg"
+          alt="placeholder"
+          width="100%"
+        />
+      }
+      labels={
+        <>
+          <Label
+            backgroundColor="black"
+            color="white"
+            text="Placeholder text"
+          />
+          <Label
+            backgroundColor="black"
+            color="white"
+            text="Placeholder text"
+          />
+        </>
+      }
+      title={
+        <Animated_text
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque."
+          variant="h3"
+        />
+      }
+      description={
+        <Animated_text
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"
+          variant="p"
+        />
+      }
+      buttons={
+        <>
+          <Button_slide
+            hover_effect="slide-right"
+            icon={<AiOutlineDownload size={20} />}
+            iconPosition="right"
+            text="Placeholder text"
+            padding="xs"
+          />
+          <Button_slide
+            hover_effect="slide-right"
+            icon={<AiOutlineDownload size={20} />}
+            iconPosition="right"
+            text="Placeholder text"
+            padding="xs"
+          />
+        </>
+      }
+    />
   </div>
 );
 export const Card_story = Template.bind({});
 Card_story.args = {
   is_overlapped: true,
-  image: (
-    <img
-      src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg"
-      alt="placeholder"
-      width="100%"
-    />
-  ),
   image_full_width: false,
-  labels: (
-    <>
-      <Label backgroundColor="black" color="white" text="Placeholder text" />
-      <Label backgroundColor="black" color="white" text="Placeholder text" />
-    </>
-  ),
-  title: (
-    <Animated_text
-      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque."
-      variant="h3"
-    />
-  ),
-  description: (
-    <Animated_text
-      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"
-      variant="p"
-    />
-  ),
-  buttons: (
-    <>
-      <Button_slide
-        hover_effect="slide-right"
-        icon={<AiOutlineDownload size={20} />}
-        iconPosition="right"
-        text="Placeholder text"
-        padding="xs"
-      />
-      <Button_slide
-        hover_effect="slide-right"
-        icon={<AiOutlineDownload size={20} />}
-        iconPosition="right"
-        text="Placeholder text"
-        padding="xs"
-      />
-    </>
-  ),
+  buttons: undefined
 };

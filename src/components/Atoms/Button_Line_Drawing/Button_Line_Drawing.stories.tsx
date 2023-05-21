@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 import Button_Line_Drawing from "./Button_Line_Drawing";
 
@@ -142,7 +142,9 @@ export default {
 } as ComponentMeta<typeof Button_Line_Drawing>;
 
 const Template: ComponentStory<typeof Button_Line_Drawing> = (args) => (
-  <Button_Line_Drawing {...args} />
+  <>
+    <Button_Line_Drawing {...args} />
+  </>
 );
 
 export const Button_Line_Drawing_story = Template.bind({});

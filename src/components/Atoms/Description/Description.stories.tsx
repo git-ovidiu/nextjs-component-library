@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 import Description from "./Description";
 
 const Extra_Info = `
@@ -59,7 +59,9 @@ export default {
 } as ComponentMeta<typeof Description>;
 
 const Template: ComponentStory<typeof Description> = (args) => (
-  <Description {...args} />
+    <>
+      <h1>Vel massa erat deseruisse eripuit aenean  <Description text={<h4>{args.text}</h4>} color="red"/> deseruisse eripuit aenean</h1>
+    </>
 );
 
 export const Description_story = Template.bind({});
@@ -67,12 +69,6 @@ export const Description_story = Template.bind({});
 Description_story.args = {
   underline: true,
   italic: true,
-  text: (
-    <h1>
-      Vel massa erat deseruisse eripuit aenean{" "}
-      <Description text={<h4>second text</h4>} color="red" /> inimicus
-      sadipscing proin
-    </h1>
-  ),
   color: "black",
+  text: "lorem ipsum"
 };

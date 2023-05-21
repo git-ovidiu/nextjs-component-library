@@ -1,6 +1,6 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { AiOutlineDownload } from "react-icons/ai";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
+import {AiOutlineDownload} from "react-icons/ai";
 import Button_slide from "./Button_Slide";
 
 const Extra_Info = `
@@ -155,7 +155,9 @@ export default {
 } as ComponentMeta<typeof Button_slide>;
 
 const Template: ComponentStory<typeof Button_slide> = (args) => (
-  <Button_slide {...args} />
+  <>
+    <Button_slide {...args} icon={<AiOutlineDownload size={20} />} />
+  </>
 );
 
 export const Button_slide_story = Template.bind({});
@@ -165,5 +167,4 @@ Button_slide_story.args = {
   hover_effect: "slide-right",
   padding: "xs",
   iconPosition: "right",
-  icon: <AiOutlineDownload size={20} />,
 };
