@@ -1,4 +1,4 @@
-import React, {CSSProperties, ReactElement, useEffect, useRef, useState,} from "react";
+import React, {CSSProperties, ReactElement, useEffect, useRef, useState} from "react";
 import {AiOutlineStepBackward, AiOutlineStepForward} from "react-icons/ai";
 import {FaPlay} from "react-icons/fa";
 import {FiPauseCircle} from "react-icons/fi";
@@ -12,18 +12,17 @@ interface ProgressLineBackgroundColor extends CSSProperties {
 
 interface MediaComponentProps {
   style?: ProgressLineBackgroundColor;
-
   image?: ReactElement;
   label?: ReactElement;
   "label-top-left"?: ReactElement;
   "label-top-right"?: ReactElement;
   "label-bottom-left"?: ReactElement;
   "label-bottom-right"?: ReactElement;
-
   video?: string;
   muted?: boolean;
   loop?: boolean;
   showControlsProperty?: boolean;
+  hideShowControls?: boolean;
   "auto-play"?: boolean;
   "fullscreen-icon-color"?: string;
   "prev-icon-color"?: string;
@@ -39,7 +38,7 @@ export default function MediaComponent(props: MediaComponentProps) {
   const [playing, setPlaying] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
   const [showControls, setShowControls] = useState<boolean>(
-    props.showControlsProperty ?? false
+      props.showControlsProperty ?? false
   );
   const rafRef = useRef<number>(0);
 
@@ -95,118 +94,111 @@ export default function MediaComponent(props: MediaComponentProps) {
     if (videoElement) {
       if (videoElement.requestFullscreen) {
         videoElement
-          .requestFullscreen()
-          .catch((error) => console.log("Fullscreen request failed:", error));
+            .requestFullscreen()
+            .catch((error) => console.log("Fullscreen request failed:", error));
       }
     }
   };
 
   return (
-    <div
-      className="a-media"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      {props.video ? (
-        <div className="a-media__video">
-          <div className="video-container">
-            <video
-              src={props.video}
-              ref={videoRef}
-              style={{
-                width: "100%",
-                "--a-video-object-fit": props["object-fit"],
-                ...props.style,
-              }}
-              autoPlay={props["auto-play"]}
-              muted={props.muted}
-              loop={props.loop}
-            />
-          </div>
-          <div
-            className="progress-line-container"
-            style={{
-              "--a-video-progress-line-background": props["progress-bar-color"],
-              ...props.style,
-            }}
-          >
-            <div
-              className="progress-line"
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
-          {showControls && (
-            <>
-              {props["fullscreen-icon-color"] ? (
-                <div className="fullscreen-icon">
-                  <BsArrowsFullscreen
-                    style={{ color: props["fullscreen-icon-color"] }}
-                    onClick={handleFullscreen}
-                    className="controls-icon"
-                  />
-                </div>
-              ) : (
-                ""
-              )}
-              <div className="controls-container">
-                <div className="controls">
-                  <div className="icon-container">
-                    <AiOutlineStepBackward
-                      style={{ color: props["prev-icon-color"] }}
-                      className="controls-icon"
-                      onClick={revert}
-                    />
-                  </div>
-                  {playing ? (
-                    <div className="icon-container">
-                      <FiPauseCircle
-                        style={{ color: props["pause-icon-color"] }}
-                        onClick={() => videoHandler("pause")}
-                        className="controls-icon action-icon"
-                      />
-                    </div>
-                  ) : (
-                    <div className="icon-container">
-                      <FaPlay
-                        style={{ color: props["play-icon-color"] }}
-                        onClick={() => videoHandler("play")}
-                        className="controls-icon action-icon"
-                      />
-                    </div>
-                  )}
-                  <div className="icon-container">
-                    <AiOutlineStepForward
-                      style={{ color: props["forward-icon-color"] }}
-                      className="controls-icon"
-                      onClick={fastForward}
-                    />
-                  </div>
-                </div>
+      <div
+          className="a-media"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+      >
+        {props.video ? (
+            <div className="a-media__video">
+              <div className="video-container">
+                <video
+                    src={props.video}
+                    ref={videoRef}
+                    style={{
+                      width: "100%",
+                      "--a-video-object-fit": props["object-fit"],
+                      ...props.style,
+                    }}
+                    autoPlay={props.hideShowControls || props["auto-play"]}
+                    muted={!!(props.hideShowControls || props.muted)}
+                    loop={props.loop}
+                />
               </div>
-            </>
-          )}
-        </div>
-      ) : (
-        <div className="a-media__image">
-          {props["label-top-left"] && (
-            <div className="label top-left">{props["label-top-left"]}</div>
-          )}
-          {props["label-top-right"] && (
-            <div className="label top-right">{props["label-top-right"]}</div>
-          )}
-          {props["label-bottom-left"] && (
-            <div className="label bottom-left">
-              {props["label-bottom-left"]}
+              <div
+                  className="progress-line-container"
+                  style={{
+                    "--a-video-progress-line-background": props["progress-bar-color"],
+                    ...props.style,
+                  }}
+              >
+                <div className="progress-line" style={{ width: `${progress}%` }}></div>
+              </div>
+              {props.hideShowControls ? null : (
+                  showControls && (
+                      <>
+                        {props["fullscreen-icon-color"] && (
+                            <div className="fullscreen-icon">
+                              <BsArrowsFullscreen
+                                  style={{ color: props["fullscreen-icon-color"] }}
+                                  onClick={handleFullscreen}
+                                  className="controls-icon"
+                              />
+                            </div>
+                        )}
+                        <div className="controls-container">
+                          <div className="controls">
+                            <div className="icon-container">
+                              <AiOutlineStepBackward
+                                  style={{ color: props["prev-icon-color"] }}
+                                  className="controls-icon"
+                                  onClick={revert}
+                              />
+                            </div>
+                            {playing ? (
+                                <div className="icon-container">
+                                  <FiPauseCircle
+                                      style={{ color: props["pause-icon-color"] }}
+                                      onClick={() => videoHandler("pause")}
+                                      className="controls-icon action-icon"
+                                  />
+                                </div>
+                            ) : (
+                                <div className="icon-container">
+                                  <FaPlay
+                                      style={{ color: props["play-icon-color"] }}
+                                      onClick={() => videoHandler("play")}
+                                      className="controls-icon action-icon"
+                                  />
+                                </div>
+                            )}
+                            <div className="icon-container">
+                              <AiOutlineStepForward
+                                  style={{ color: props["forward-icon-color"] }}
+                                  className="controls-icon"
+                                  onClick={fastForward}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                  )
+              )}
             </div>
-          )}
-          {props["label-bottom-right"] && (
-            <div className="label bottom-right">
-              {props["label-bottom-right"]}
+        ) : (
+            <div className="a-media__image">
+              {props["label-top-left"] && (
+                  <div className="label top-left">{props["label-top-left"]}</div>
+              )}
+              {props["label-top-right"] && (
+                  <div className="label top-right">{props["label-top-right"]}</div>
+              )}
+              {props["label-bottom-left"] && (
+                  <div className="label bottom-left">{props["label-bottom-left"]}</div>
+              )}
+              {props["label-bottom-right"] && (
+                  <div className="label bottom-right">{props["label-bottom-right"]}</div>
+              )}
+              {props.image}
             </div>
-          )}
-          {props.image}
-        </div>
-      )}
-    </div>
+        )}
+      </div>
   );
 }

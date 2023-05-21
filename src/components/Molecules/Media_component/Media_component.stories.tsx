@@ -445,6 +445,7 @@ Media_component_story.args = {
   Muted: true,
   Loop: true,
   "Show Controls": true,
+  hideShowControls: true,
 
   "Control Icons Color Below":
     "------------------------------------------------",
