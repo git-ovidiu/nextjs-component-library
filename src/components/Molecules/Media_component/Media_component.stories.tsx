@@ -16,12 +16,12 @@ const Extra_Info = `
        <td>image</td>
        <td>ReactElement</td>
        <td>use next/image</td>
-    </tr>
-   <tr>
-       <td>label</td>
-       <td>ReactElement</td>
-       <td>-</td>
-    </tr>
+    </tr> 
+    <tr>
+<td>object-fit</td>
+<td>string</td>
+<td>cover | contain</td>
+</tr>
     <tr>
     <td>label-top-left</td>
     <td>ReactElement</td>
@@ -64,17 +64,19 @@ const Extra_Info = `
 <td>showControlsProperty</td>
 <td>boolean</td>
 <td>-</td>
+<td>by default, the controls will not be shown (those will appear only while on mouse hover)</td>
+</tr>
+<tr>
+<td>hideShowControls</td>
+<td>boolean</td>
+<td>-</td>
+<td>use to remove the controls entirely (used for cards with autoplay on)</td>
 </tr>
 
 <tr>
 <td>auto-play</td>
 <td>boolean</td>
 <td>-</td>
-</tr>
-<tr>
-<td>object-fit</td>
-<td>string</td>
-<td>cover | contain</td>
 </tr>
 <tr>
 <td>fullscreen-icon-color</td>
@@ -269,12 +271,12 @@ const Extra_Info = `
 export default {
   title: "Molecules/Media",
   component: Media,
-  argTypes: {
-    "Object Fit": {
-      control: "radio",
-      options: ["cover", "contain"],
+    argTypes:{
+        "object-fit": {
+            control: "radio",
+            options: ["cover", "contain"],
+        },
     },
-  },
   parameters: {
     actions: { disabled: true },
     docs: {
@@ -285,15 +287,16 @@ export default {
   },
 } as ComponentMeta<typeof Media>;
 
-// @ts-ignore
 const Template: ComponentStory<typeof Media> = (args) => (
   <div
     style={{
       display: "flex",
+      justifyContent: "center",
       flexWrap: "wrap",
       gap: "20px",
     }}
   >
+    {/*IMAGE*/}
     <div
       style={{
         maxWidth: "500px",
@@ -305,41 +308,40 @@ const Template: ComponentStory<typeof Media> = (args) => (
       <>
         {/*IMAGE*/}
         <Media
-          {...args}
           image={
             <Image
               //@ts-ignore
               src={args["Image Source"]}
               alt="placeholder"
               //@ts-ignore
-              style={{ objectFit: args["Object Fit"] }}
+              style={{ objectFit: args["object-fit"] }}
             />
           }
           label-top-left={
             <Image
               //@ts-ignore
-              src={args["Label Top Right"]}
+              src={args["label-top-left"]}
               alt="Placeholder"
             />
           }
           label-top-right={
             <Image
               //@ts-ignore
-              src={args["Label Top Left"]}
+              src={args["label-top-right"]}
               alt="Placeholder"
             />
           }
           label-bottom-left={
             <Image
               //@ts-ignore
-              src={args["Label Bottom Right"]}
+              src={args["label-bottom-left"]}
               alt="Placeholder"
             />
           }
           label-bottom-right={
             <Image
               //@ts-ignore
-              src={args["Label Bottom Left"]}
+              src={args["label-bottom-right"]}
               alt="Placeholder"
             />
           }
@@ -347,6 +349,7 @@ const Template: ComponentStory<typeof Media> = (args) => (
       </>
     </div>
 
+    {/*VIDEO*/}
     <div
       style={{
         maxWidth: "500px",
@@ -356,68 +359,30 @@ const Template: ComponentStory<typeof Media> = (args) => (
       }}
     >
       <>
-        {/*IMAGE*/}
         <Media
           {...args}
-          image={
-            <Image
-              //@ts-ignore
-              src={args["Image Source"]}
-              alt="placeholder"
-              //@ts-ignore
-              style={{ objectFit: args["Object Fit"] }}
-            />
-          }
-          label-top-left={
-            <Image
-              //@ts-ignore
-              src={args["Label Top Right"]}
-              alt="Placeholder"
-            />
-          }
-          label-top-right={
-            <Image
-              //@ts-ignore
-              src={args["Label Top Left"]}
-              alt="Placeholder"
-            />
-          }
-          label-bottom-left={
-            <Image
-              //@ts-ignore
-              src={args["Label Bottom Right"]}
-              alt="Placeholder"
-            />
-          }
-          label-bottom-right={
-            <Image
-              //@ts-ignore
-              src={args["Label Bottom Left"]}
-              alt="Placeholder"
-            />
-          }
           //@ts-ignore
-          video={args["Video"]}
+          video={args.video}
           //@ts-ignore
-          auto-play={args["Autoplay"]}
+          auto-play={args["auto-play"]}
           //@ts-ignore
-          muted={args["Muted"]}
+          muted={args.muted}
           //@ts-ignore
-          loop={args["Loop"]}
+          loop={args.loop}
           //@ts-ignore
-          showControlsProperty={args["Show Controls"]}
+          showControlsProperty={args["show-controls"]}
           //@ts-ignore
-          fullscreen-icon-color={args["Fullscreen Icon Color"]}
+          fullscreen-icon-color={args["fullscreen-icon-color"]}
           //@ts-ignore
-          prev-icon-color={args["Prev Icon Color"]}
+          prev-icon-color={args["prev-icon-color"]}
           //@ts-ignore
-          play-icon-color={args["Play Icon Color"]}
+          play-icon-color={args["play-icon-color"]}
           //@ts-ignore
-          pause-icon-color={args["Pause Icon Color"]}
+          pause-icon-color={args["pause-icon-color"]}
           //@ts-ignore
-          forward-icon-color={args["Forward Icon Color"]}
+          forward-icon-color={args["forward-icon-color"]}
           //@ts-ignore
-          progress-bar-color={args["Progress Bar Color"]}
+          progress-bar-color={args["progress-bar-color"]}
         />
       </>
     </div>
@@ -428,32 +393,32 @@ export const Media_component_story = Template.bind({});
 
 Media_component_story.args = {
   // @ts-ignore
-  "Image Options Below": "------------------------------------------------",
 
-  "Image Source":
+  "image-source":
     "https://res.cloudinary.com/dxbivmheq/image/upload/v1674309864/OvidiuBunghez_diagramic_drawing_simple_color_Yellow_Orange_only_3d2d259b-ddf5-4fb3-94ef-fe74a7954ad8_cvowat.png",
-  "Object Fit": "cover",
+  "object-fit": "cover",
 
-  "Label Top Right": "https://fakeimg.pl/100x50/000000/ffffff?text=right",
-  "Label Top Left": "https://fakeimg.pl/100x50/000000/ffffff?text=right",
-  "Label Bottom Right": "https://fakeimg.pl/100x50/000000/ff0000?text=right",
-  "Label Bottom Left": "https://fakeimg.pl/100x50/000000/ffffff?text=right",
-  "Video Options Below": "------------------------------------------------",
-  Video:
+  // @ts-ignore
+  "label-top-right": "https://fakeimg.pl/100x50/000000/ffff00?text=right",
+  // @ts-ignore
+  "label-top-left": "https://fakeimg.pl/100x50/000000/00ffff?text=left",
+  // @ts-ignore
+  "label-bottom-right": "https://fakeimg.pl/100x50/ffffff/ff0000?text=right",
+  // @ts-ignore
+  "label-bottom-left": "https://fakeimg.pl/100x50/000000/ff00ff?text=left",
+  video:
     "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
-  Autoplay: false,
-  Muted: true,
-  Loop: true,
-  "Show Controls": true,
+  ["auto-play"]: false,
+  muted: true,
+  loop: true,
+  "show-controls": true,
   hideShowControls: true,
 
-  "Control Icons Color Below":
-    "------------------------------------------------",
-  "Fullscreen Icon Color": "white",
-  "Prev Icon Color": "white",
-  "Play Icon Color": "red",
-  "Pause Icon Color": "white",
-  "Forward Icon Color": "white",
-  "Progress Bar Color": "red",
+  "fullscreen-icon-color": "white",
+  "prev-icon-color": "white",
+  "play-icon-color": "red",
+  "pause-icon-color": "white",
+  "forward-icon-color": "white",
+  "progress-bar-color": "red",
   // ----
 };

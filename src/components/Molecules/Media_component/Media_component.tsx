@@ -12,17 +12,14 @@ interface ProgressLineBackgroundColor extends CSSProperties {
 
 interface MediaComponentProps {
   style?: ProgressLineBackgroundColor;
-  image?: ReactElement;
-  label?: ReactElement;
+
+  image?: ReactElement
+  "object-fit"?: string;
   "label-top-left"?: ReactElement;
   "label-top-right"?: ReactElement;
   "label-bottom-left"?: ReactElement;
   "label-bottom-right"?: ReactElement;
-  video?: string;
-  muted?: boolean;
-  loop?: boolean;
-  showControlsProperty?: boolean;
-  hideShowControls?: boolean;
+
   "auto-play"?: boolean;
   "fullscreen-icon-color"?: string;
   "prev-icon-color"?: string;
@@ -30,7 +27,11 @@ interface MediaComponentProps {
   "pause-icon-color"?: string;
   "forward-icon-color"?: string;
   "progress-bar-color"?: string;
-  "object-fit"?: string;
+  showControlsProperty?: boolean;
+  hideShowControls?: boolean;
+  video?: string;
+  muted?: boolean;
+  loop?: boolean;
 }
 
 export default function Media(props: MediaComponentProps) {
