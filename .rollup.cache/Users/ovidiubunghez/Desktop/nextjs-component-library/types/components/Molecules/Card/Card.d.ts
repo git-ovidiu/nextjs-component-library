@@ -1,11 +1,12 @@
-import { ReactNode } from "react";
+import {ReactElement} from "react";
 import "./Card.scss";
+
 export interface CardProps {
-    image?: ReactNode | string;
-    labels?: ReactNode | string;
-    title?: ReactNode | string;
-    description?: ReactNode | string;
-    buttons?: ReactNode | string;
+    image?: ReactElement | string;
+    labels?: ReactElement | string;
+    title?: ReactElement | string;
+    description?: ReactElement | string;
+    buttons?: ReactElement | string;
     image_full_width?: boolean;
     is_overlapped?: boolean;
 }

@@ -87,11 +87,11 @@ interface FooterCardProps {
 declare function Footer_card(props: FooterCardProps): JSX.Element;
 
 interface CardProps {
-    image?: ReactNode | string;
-    labels?: ReactNode | string;
-    title?: ReactNode | string;
-    description?: ReactNode | string;
-    buttons?: ReactNode | string;
+    image?: ReactElement | string;
+    labels?: ReactElement | string;
+    title?: ReactElement | string;
+    description?: ReactElement | string;
+    buttons?: ReactElement | string;
     image_full_width?: boolean;
     is_overlapped?: boolean;
 }
@@ -106,4 +106,31 @@ interface TitleAndDescriptionProps {
 }
 declare function Title_and_description(props: TitleAndDescriptionProps): JSX.Element;
 
-export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, Description, FAQ_item, Footer_card, Footer_link, Footer_link_list, Label, Title_and_description };
+interface ProgressLineBackgroundColor extends CSSProperties {
+    "--a-video-progress-line-background"?: string;
+    "--a-video-object-fit"?: string;
+}
+interface MediaComponentProps {
+    style?: ProgressLineBackgroundColor;
+    image?: ReactElement;
+    "object-fit"?: string;
+    "label-top-left"?: ReactElement;
+    "label-top-right"?: ReactElement;
+    "label-bottom-left"?: ReactElement;
+    "label-bottom-right"?: ReactElement;
+    "auto-play"?: boolean;
+    "fullscreen-icon-color"?: string;
+    "prev-icon-color"?: string;
+    "play-icon-color"?: string;
+    "pause-icon-color"?: string;
+    "forward-icon-color"?: string;
+    "progress-bar-color"?: string;
+    showControlsProperty?: boolean;
+    hideShowControls?: boolean;
+    video?: string;
+    muted?: boolean;
+    loop?: boolean;
+}
+declare function Media(props: MediaComponentProps): JSX.Element;
+
+export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, Description, FAQ_item, Footer_card, Footer_link, Footer_link_list, Label, Media, Title_and_description };
