@@ -311,7 +311,7 @@ const Template: ComponentStory<typeof Media> = (args) => (
           image={
             <Image
               //@ts-ignore
-              src={args["Image Source"]}
+              src={args["image-source"]}
               alt="placeholder"
               //@ts-ignore
               style={{ objectFit: args["object-fit"] }}
