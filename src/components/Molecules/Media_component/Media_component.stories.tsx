@@ -48,13 +48,6 @@ const Extra_Info = `
 export default {
   title: "Molecules/Media",
   component: Media_component,
-  argTypes: {
-    image: { defaultValue: <h1>imagine</h1> },
-    video: { defaultValue: 'https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4' },
-    "auto-play": { defaultValue: true, control: { type: 'boolean' } },
-    muted: { defaultValue: true, control: { type: 'boolean' } },
-    loop: { defaultValue: true, control: { type: 'boolean' } },
-  },
   parameters: {
     actions: { disabled: true },
     docs: {
@@ -90,7 +83,7 @@ Media_component_story.args = {
   "auto-play": false,
   "muted": false,
   "loop": true,
-  "showControlsProperty": true,
+  "showControlsProperty":  true,
 
   "label-top-right": <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,
   "label-top-left": <Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />,

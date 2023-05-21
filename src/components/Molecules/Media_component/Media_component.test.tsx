@@ -20,7 +20,7 @@ describe("Media_component", () => {
 					auto-play={false}
 					muted={false}
 					loop={true}
-					showControlsProperty={true}
+					show-controls-property={true}
 					label_top_right={
 						<Image src="https://fakeimg.pl/100x50/000000/ffffff?text=right" alt="Placeholder" />
 					}
