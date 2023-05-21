@@ -33,7 +33,7 @@ interface MediaComponentProps {
   "object-fit"?: string;
 }
 
-export default function MediaComponent(props: MediaComponentProps) {
+export default function Media(props: MediaComponentProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [playing, setPlaying] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
