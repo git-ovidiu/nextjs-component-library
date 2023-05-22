@@ -8,6 +8,8 @@ import "./Media_component.scss";
 interface ProgressLineBackgroundColor extends CSSProperties {
   "--a-video-progress-line-background"?: string;
   "--a-video-object-fit"?: string;
+  "--a-media-image-border-radius"?: string;
+  "--a-video-border-radius"?: string;
 }
 
 interface MediaComponentProps {
@@ -19,6 +21,7 @@ interface MediaComponentProps {
   "label-top-right"?: ReactElement;
   "label-bottom-left"?: ReactElement;
   "label-bottom-right"?: ReactElement;
+  "image-border-radius"?: string;
 
   "auto-play"?: boolean;
   "progress-bar-color"?: string;
@@ -27,6 +30,14 @@ interface MediaComponentProps {
   video?: string;
   muted?: boolean;
   loop?: boolean;
+
+  "custom-fullscreen-icon"?: ReactElement;
+  "custom-play-icon"?: ReactElement;
+  "custom-pause-icon"?: ReactElement;
+  "custom-prev-icon"?: ReactElement;
+  "custom-next-icon"?: ReactElement;
+
+  "video-border-radius"?: string;
 }
 
 export default function Media(props: MediaComponentProps) {
@@ -97,98 +108,128 @@ export default function Media(props: MediaComponentProps) {
   };
 
   return (
-      <div
-          className="a-media"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-      >
-        {props.video ? (
-            <div className="a-media__video">
-              <div className="video-container">
-                <video
-                    src={props.video}
-                    ref={videoRef}
-                    style={{
-                      width: "100%",
-                      "--a-video-object-fit": props["object-fit"],
-                      ...props.style,
-                    }}
-                    autoPlay={props.hideShowControls || props["auto-play"]}
-                    muted={!!(props.hideShowControls || props.muted)}
-                    loop={props.loop}
-                />
-              </div>
-              <div
-                  className="progress-line-container"
-                  style={{
-                    "--a-video-progress-line-background": props["progress-bar-color"],
-                    ...props.style,
-                  }}
-              >
-                <div className="progress-line" style={{ width: `${progress}%` }}></div>
-              </div>
-              {props.hideShowControls ? null : (
-                  showControls && (
-                      <>
-                            <div className="fullscreen-icon">
-                              <BsArrowsFullscreen
-                                  onClick={handleFullscreen}
-                                  className="controls-icon"
-                              />
-                            </div>
-                        <div className="controls-container">
-                          <div className="controls">
-                            <div className="icon-container">
-                              <AiOutlineStepBackward
-                                  className="controls-icon"
-                                  onClick={revert}
-                              />
-                            </div>
-                            {playing ? (
-                                <div className="icon-container">
-                                  <FiPauseCircle
-                                      onClick={() => videoHandler("pause")}
-                                      className="controls-icon action-icon"
-                                  />
+    <div
+      className="a-media"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      {props.video ? (
+        <div className="a-media__video" style={{"--a-video-border-radius" : props["video-border-radius"], ...props.style}} >
+          <div className="video-container">
+            <video
+              src={props.video}
+              ref={videoRef}
+              style={{
+                width: "100%",
+                "--a-video-object-fit": props["object-fit"],
+                ...props.style,
+              }}
+              autoPlay={props.hideShowControls || props["auto-play"]}
+              muted={!!(props.hideShowControls || props.muted)}
+              loop={props.loop}
+            />
+          </div>
+          <div
+            className="progress-line-container"
+            style={{
+              "--a-video-progress-line-background": props["progress-bar-color"],
+              ...props.style,
+            }}
+          >
+            <div
+              className="progress-line"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+          {props.hideShowControls
+            ? null
+            : showControls && (
+                <>
+                  <div className="fullscreen-icon">
+                    {props["custom-fullscreen-icon"] ? (
+                      <div onClick={handleFullscreen}>
+                        {props["custom-fullscreen-icon"]}
+                      </div>
+                    ) : (
+                      <BsArrowsFullscreen
+                        onClick={handleFullscreen}
+                        className="controls-icon"
+                      />
+                    )}
+                  </div>
+                  <div className="controls-container">
+                    <div className="controls">
+                      <div className="icon-container">
+                        {props["custom-prev-icon"] ? (
+                                <div onClick={revert}>
+                                  {props["custom-prev-icon"]}
                                 </div>
-                            ) : (
-                                <div className="icon-container">
-                                  <FaPlay
-                                      // style={{ color: props["play-icon-color"] }}
-                                      onClick={() => videoHandler("play")}
-                                      className="controls-icon action-icon"
-                                  />
-                                </div>
-                            )}
-                            <div className="icon-container">
-                              <AiOutlineStepForward
-                                  className="controls-icon"
-                                  onClick={fastForward}
-                              />
+                        ) : (
+                          <AiOutlineStepBackward
+                            className="controls-icon"
+                            onClick={revert}
+                          />
+                        )}
+                      </div>
+                      {playing ? (
+                        <div className="icon-container">
+                          {props["custom-pause-icon"] ? (
+                            <div onClick={() => videoHandler("pause")}>
+                              {props["custom-pause-icon"]}
                             </div>
-                          </div>
+                          ) : (
+                            <FiPauseCircle
+                              onClick={() => videoHandler("pause")}
+                              className="controls-icon action-icon"
+                            />
+                          )}
                         </div>
-                      </>
-                  )
+                      ) : (
+                        <div className="icon-container">
+                          {props["custom-play-icon"] ? (
+                              <div onClick={() => videoHandler("play")}>
+                                {props["custom-play-icon"]}
+                              </div>
+                          ) : (
+                          <FaPlay
+                            onClick={() => videoHandler("play")}
+                            className="controls-icon action-icon"
+                          />
+                          )}
+                        </div>
+                      )}
+                      <div className="icon-container">
+                        <AiOutlineStepForward
+                          className="controls-icon"
+                          onClick={fastForward}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </>
               )}
+        </div>
+      ) : (
+        <div className="a-media__image" style={{"--a-media-image-border-radius" : props["image-border-radius"], ...props.style}}>
+          {props["label-top-left"] && (
+            <div className="label top-left">{props["label-top-left"]}</div>
+          )}
+          {props["label-top-right"] && (
+            <div className="label top-right">{props["label-top-right"]}</div>
+          )}
+          {props["label-bottom-left"] && (
+            <div className="label bottom-left">
+              {props["label-bottom-left"]}
             </div>
-        ) : (
-            <div className="a-media__image">
-              {props["label-top-left"] && (
-                  <div className="label top-left">{props["label-top-left"]}</div>
-              )}
-              {props["label-top-right"] && (
-                  <div className="label top-right">{props["label-top-right"]}</div>
-              )}
-              {props["label-bottom-left"] && (
-                  <div className="label bottom-left">{props["label-bottom-left"]}</div>
-              )}
-              {props["label-bottom-right"] && (
-                  <div className="label bottom-right">{props["label-bottom-right"]}</div>
-              )}
-              {props.image}
+          )}
+          {props["label-bottom-right"] && (
+            <div className="label bottom-right">
+              {props["label-bottom-right"]}
             </div>
-        )}
-      </div>
+          )}
+          {props.image}
+        </div>
+      )}
+    </div>
   );
 }
