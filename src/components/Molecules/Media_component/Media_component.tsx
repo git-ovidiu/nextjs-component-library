@@ -21,11 +21,6 @@ interface MediaComponentProps {
   "label-bottom-right"?: ReactElement;
 
   "auto-play"?: boolean;
-  "fullscreen-icon-color"?: string;
-  "prev-icon-color"?: string;
-  "play-icon-color"?: string;
-  "pause-icon-color"?: string;
-  "forward-icon-color"?: string;
   "progress-bar-color"?: string;
   showControlsProperty?: boolean;
   hideShowControls?: boolean;
@@ -135,20 +130,16 @@ export default function Media(props: MediaComponentProps) {
               {props.hideShowControls ? null : (
                   showControls && (
                       <>
-                        {props["fullscreen-icon-color"] && (
                             <div className="fullscreen-icon">
                               <BsArrowsFullscreen
-                                  style={{ color: props["fullscreen-icon-color"] }}
                                   onClick={handleFullscreen}
                                   className="controls-icon"
                               />
                             </div>
-                        )}
                         <div className="controls-container">
                           <div className="controls">
                             <div className="icon-container">
                               <AiOutlineStepBackward
-                                  style={{ color: props["prev-icon-color"] }}
                                   className="controls-icon"
                                   onClick={revert}
                               />
@@ -156,7 +147,6 @@ export default function Media(props: MediaComponentProps) {
                             {playing ? (
                                 <div className="icon-container">
                                   <FiPauseCircle
-                                      style={{ color: props["pause-icon-color"] }}
                                       onClick={() => videoHandler("pause")}
                                       className="controls-icon action-icon"
                                   />
@@ -164,7 +154,7 @@ export default function Media(props: MediaComponentProps) {
                             ) : (
                                 <div className="icon-container">
                                   <FaPlay
-                                      style={{ color: props["play-icon-color"] }}
+                                      // style={{ color: props["play-icon-color"] }}
                                       onClick={() => videoHandler("play")}
                                       className="controls-icon action-icon"
                                   />
@@ -172,7 +162,6 @@ export default function Media(props: MediaComponentProps) {
                             )}
                             <div className="icon-container">
                               <AiOutlineStepForward
-                                  style={{ color: props["forward-icon-color"] }}
                                   className="controls-icon"
                                   onClick={fastForward}
                               />

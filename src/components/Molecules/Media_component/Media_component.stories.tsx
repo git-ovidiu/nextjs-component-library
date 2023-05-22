@@ -222,7 +222,7 @@ const Extra_Info = `
 </tr>
 <tr>
     <td>--a-video-controls-padding</td>
-    <td>30px 50px;</td>
+    <td>20px 50px;</td>
 </tr>
 <tr>
     <td>--a-video-controls-hover-animation</td>
@@ -383,6 +383,9 @@ const Template: ComponentStory<typeof Media> = (args) => (
           forward-icon-color={args["forward-icon-color"]}
           //@ts-ignore
           progress-bar-color={args["progress-bar-color"]}
+          //@ts-ignore
+            custom-play-icon="test"
+
         />
       </>
     </div>
@@ -420,5 +423,6 @@ Media_component_story.args = {
   "pause-icon-color": "white",
   "forward-icon-color": "white",
   "progress-bar-color": "red",
+
   // ----
 };
