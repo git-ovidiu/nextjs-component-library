@@ -28,7 +28,6 @@
   --a-video-controls-fullscreen-padding: 8px;
   --a-video-controls-hover-scale: scale(1.5);
   --a-video-controls-default-scale: scale(1.2);
-
   --a-video-fullscreen-icon-color: white;
   --a-video-controls-icon-color: white;
   --a-video-controls-play-icon-color: red;
@@ -39,6 +38,9 @@
   --a-video-controls-icon-play-width-mobile: 13px;
   --a-video-controls-icon-play-height-mobile: 13px;
   --a-video-controls-padding-mobile: 10px 30px;
+  --a-video-fullscreen-icon-margin-right-mobile: 5px;
+  --a-video-fullscreen-icon-margin-bottom-mobile: 5px;
+  --a-video-controls-container-margin-bottom-mobile: 5px;
 }
 
 .a-media {
@@ -88,8 +90,8 @@
 
     .fullscreen-icon {
       position: absolute;
-      right: 5px;
-      bottom: 5px;
+      right: var(--a-video-fullscreen-icon-margin-right-mobile);
+      bottom: var(--a-video-fullscreen-icon-margin-bottom-mobile);
       cursor: pointer;
       z-index: 5;
       background-color: var(--a-video-controls-background);
@@ -106,7 +108,7 @@
       display: flex;
       justify-content: center;
       align-self: flex-end;
-      margin-bottom: 5px;
+      margin-bottom: var(--a-video-controls-container-margin-bottom-mobile);
       width: 100%;
       position: absolute;
       z-index: 2;
@@ -225,6 +227,7 @@
         height: 100%;
         justify-content: center;
         align-items: center;
+        margin-bottom: unset;
 
         .controls {
           padding: var(--a-video-controls-padding);

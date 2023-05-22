@@ -2,24 +2,116 @@ import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import Media from "./Media_component";
 import Image from "next/image";
-import {BsPlayCircleFill} from "react-icons/bs";
 
 const Extra_Info = `
 <br>
 <h2><u>PROPS</u></h2>
-
+<table>
+  <tr>
+    <td>name</td>
+    <td>type</td>
+    <td>can be:</td>
+  </tr>
+  <tr>
+  <td>image</td>
+  <td>ReactElement</td>
+  <td>use next/image</td>
+</tr>
+<tr>
+    <td>object-fit</td>
+    <td>string</td>
+    <td>cover | contain</td>
+</tr>
+<tr>
+    <td>label-top-left</td>
+    <td>ReactElement</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td>label-top-right</td>
+    <td>ReactElement</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td>label-bottom-left</td>
+    <td>ReactElement</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td>label-bottom-right</td>
+    <td>ReactElement</td>
+    <td>-</td>
+</tr>
+<tr>
+    <td>image-border-radius</td>
+    <td>string </td>
+    <td>0px | 0%</td>
+</tr>
+</table>
+<br/>
+<br>
+<h2><u>CSS VARIABLES</u></h2>
+<ol>
+<li>--a-media-label-top-left-margin-top</li>
+<li>--a-media-label-top-left-margin-left</li>
+<li>--a-media-label-top-right-margin-top</li>
+<li>--a-media-label-top-right-margin-right</li>
+<li>--a-media-label-bottom-left-margin-bottom</li>
+<li>--a-media-label-bottom-left-margin-left</li>
+<li>--a-media-label-bottom-right-margin-top</li>
+<li>--a-media-label-bottom-right-margin-right</li>
+<li>--a-media-image-border-radius</li>
+</ol>
+<table>
+<tr>
+    <td>--a-media-label-top-left-margin-top</td>
+    <td>50px</td>
+</tr>
+<tr>
+    <td>--a-media-label-top-left-margin-left</td>
+    <td>50px</td>
+</tr>
+<tr>
+    <td>--a-media-label-top-right-margin-top</td>
+    <td>50px</td>
+</tr>
+<tr>
+    <td>--a-media-label-top-right-margin-right</td>
+    <td>50px</td>
+</tr>
+<tr>
+    <td>--a-media-label-bottom-left-margin-bottom</td>
+    <td>50px</td>
+</tr>
+<tr>
+    <td>--a-media-label-bottom-left-margin-left</td>
+    <td>50px</td>
+</tr>
+<tr>
+    <td>--a-media-label-bottom-right-margin-top</td>
+    <td>50px</td>
+</tr>
+<tr>
+    <td>--a-media-label-bottom-right-margin-right</td>
+    <td>50px</td>
+</tr>
+<tr>
+    <td>--a-media-image-border-radius</td>
+    <td>unset</td>
+</tr>
+</table>
 
 `;
 
 export default {
   title: "Molecules/Media Component/Image",
   component: Media,
-    argTypes:{
-        "object-fit": {
-            control: "radio",
-            options: ["cover", "contain"],
-        },
+  argTypes: {
+    "object-fit": {
+      control: "radio",
+      options: ["cover", "contain"],
     },
+  },
   parameters: {
     actions: { disabled: true },
     docs: {
@@ -31,60 +123,61 @@ export default {
 } as ComponentMeta<typeof Media>;
 
 const Template: ComponentStory<typeof Media> = (args) => (
+  <div
+    style={{
+      maxWidth: "500px",
+      width: "100%",
+      height: "auto",
+      position: "relative",
+      margin: "0 auto",
+    }}
+  >
+      <Media
+        image-border-radius={args["image-border-radius"]}
 
-    <div
-      style={{
-        maxWidth: "500px",
-        width: "100%",
-        height: "auto",
-        position: "relative",
-        margin: "0 auto",
-      }}
-    >
-      <>
-        {/*IMAGE*/}
-        <Media
-            image-border-radius={args["image-border-radius"]}
-          image={
-            <Image
-              //@ts-ignore
-              src={args["image-source"]}
-              alt="placeholder"
-              //@ts-ignore
-              style={{ objectFit: args["object-fit"] }}
-            />
-          }
-          label-top-left={
-            <Image
-              //@ts-ignore
-              src={args["label-top-left"]}
-              alt="Placeholder"
-            />
-          }
-          label-top-right={
-            <Image
-              //@ts-ignore
-              src={args["label-top-right"]}
-              alt="Placeholder"
-            />
-          }
-          label-bottom-left={
-            <Image
-              //@ts-ignore
-              src={args["label-bottom-left"]}
-              alt="Placeholder"
-            />
-          }
-          label-bottom-right={
-            <Image
-              //@ts-ignore
-              src={args["label-bottom-right"]}
-              alt="Placeholder"
-            />
-          }
-        />
-      </>
-    </div>
+        image={
+          <Image
+            //@ts-ignore
+            src={args["image-source"]}
+            alt="placeholder"
+            //@ts-ignore
+            style={{ objectFit: args["object-fit"] }}
+          />
+        }
+
+        label-top-left={
+          <Image
+            //@ts-ignore
+            src={args["label-top-left"]}
+            alt="Placeholder"
+          />
+        }
+
+        label-top-right={
+          <Image
+            //@ts-ignore
+            src={args["label-top-right"]}
+            alt="Placeholder"
+          />
+        }
+        label-bottom-left={
+
+          <Image
+            //@ts-ignore
+            src={args["label-bottom-left"]}
+            alt="Placeholder"
+          />
+        }
+
+        label-bottom-right={
+          <Image
+            //@ts-ignore
+            src={args["label-bottom-right"]}
+            alt="Placeholder"
+          />
+        }
+      />
+  </div>
 );
 
 export const Media_component_story = Template.bind({});
@@ -104,28 +197,6 @@ Media_component_story.args = {
   "label-bottom-right": "https://fakeimg.pl/100x50/ffffff/ff0000?text=right",
   // @ts-ignore
   "label-bottom-left": "https://fakeimg.pl/100x50/000000/ff00ff?text=left",
-  video:
-    "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
-  ["auto-play"]: false,
-  muted: true,
-  loop: true,
-  "show-controls": true,
-  hideShowControls: true,
-
-  "fullscreen-icon-color": "white",
-  "prev-icon-color": "white",
-  "play-icon-color": "red",
-  "pause-icon-color": "white",
-  "forward-icon-color": "white",
-  "progress-bar-color": "red",
-
-  // ----
-
-    "custom-fullscreen-icon": undefined,
-    "custom-prev-icon": undefined,
-    "custom-pause-icon": undefined,
-    "custom-play-icon": <BsPlayCircleFill className="controls-icon action-icon" />,
-
-    "video-border-radius": undefined,
-    "image-border-radius": undefined,
+  //@ts-ignore
+  "image-border-radius": "0px",
 };
