@@ -1,0 +1,13 @@
+@use '../../../styles/main.scss' as *;
+
+:root{
+  --a-logo-background: white;
+}
+
+
+.a-logo{
+  @include flex(row, center, center);
+	background: var(--a-logo-background);
+  	box-shadow: $box-shadow-xl;
+  	padding: 24px;
+}
