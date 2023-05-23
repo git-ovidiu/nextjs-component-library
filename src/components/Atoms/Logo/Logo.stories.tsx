@@ -1,7 +1,7 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import Logo from "./Logo";
-import Link from "next/link";
+import Image from "next/image";
 
 const Extra_Info = `
 <br>
@@ -34,6 +34,13 @@ const Extra_Info = `
 </table>
 `;
 
+// Mock implementation for Link component
+const Link = ({ href, target, children }) => (
+	<a href={href} target={target} rel="noopener noreferrer">
+		{children}
+	</a>
+);
+
 export default {
 	title: "Atoms/Logo",
 	component: Logo,
@@ -41,7 +48,7 @@ export default {
 		selectOption: {
 			control: "radio",
 			options: ["selectOption_1", "selectOption_2", "selectOption_3", "selectOption_4"],
-		}
+		},
 	},
 	parameters: {
 		actions: { disabled: true },
@@ -60,6 +67,10 @@ const Template: ComponentStory<typeof Logo> = (args) => (
 export const Logo_STORY = Template.bind({});
 
 Logo_STORY.args = {
-	logo: <Link href="https://www.google.com">test</Link> ,
-	background: "red",
+	logo: (
+		<Link href="https://www.google.com" target="_blank">
+			<Image src="https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png" alt="Placeholder"/>
+		</Link>
+	),
+	background: "gray",
 };
