@@ -7,6 +7,7 @@ export { default as FAQ_item } from "./Atoms/FAQ_item";
 export { default as Label } from "./Atoms/Label";
 export { default as Animated_text } from "./Atoms/Animated_text";
 export { default as Footer_link } from "./Atoms/Footer_link";
+export { default as Logo } from "./Atoms/Logo";
 
 // MOLECULES
 export { default as Footer_link_list } from "./Molecules/Footer_link_list/Footer_link_list";
