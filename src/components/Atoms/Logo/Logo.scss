@@ -3,28 +3,34 @@
 :root{
   --a-logo-background: white;
   --a-logo-border-radius: 10px;
+  --a-logo-padding: 24px;
+  --a-logo-box-shadow-transition: #{$transition-duration-normal};
+  --a-logo-box-shadow: #{$box-shadow-s-white};
+  --a-logo-image-hover-transition: #{$transition-duration-fast};
+  --a-logo-box-shadow-hover: #{$box-shadow-l-white};
+  --a-logo-image-transform-hover: scale(1.15);
 }
 
 
 .a-logo{
   @include flex(row, center, center);
 	background: var(--a-logo-background);
-  	padding: 24px;
+  	padding: var(--a-logo-padding);
   	z-index: 2;
+  	transition: box-shadow var(--a-logo-box-shadow-transition);
   	border-radius: var(--a-logo-border-radius);
-  	transition: $transition-duration-normal;
-  	box-shadow:  0px 0px 40px white;
+	box-shadow: var(--a-logo-box-shadow);
 
   img{
 	transform: scale(1);
-  	transition: $transition-duration-fast;
+  	transition: var(--a-logo-image-hover-transition);
   }
 
   &:hover{
-	box-shadow: 0px 0px 64px -8px white;
+  	box-shadow:  var(--a-logo-box-shadow-hover);
 
 	img{
-	  transform: scale(1.15);
+	  transform: var(--a-logo-image-transform-hover);
 	}
   }
 }

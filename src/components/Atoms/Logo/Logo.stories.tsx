@@ -12,29 +12,76 @@ const Extra_Info = `
     <td>type</td>
     <td>can be:</td>
   </tr>
-  <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
+	
+<tr>
+<td>logo</td>
+<td>ReactElement</td>
+<td>use next/image</td>
+</tr>
+<tr>
+<td>background</td>
+<td>string</td>
+<td>hex || color name || rgb</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>string</td>
+<td>0px | 0%</td>
+</tr>
+
 </table>
 
 <br>
 
 <h2><u>CSS VARIABLES</u></h2>
 <ol>
-  <li>--a-test-component-right-column-background</li>
+<li>--a-logo-background</li>
+<li>--a-logo-border-radius</li>
+<li>--a-logo-padding</li>
+<li>--a-logo-box-shadow-transition</li>
+<li>--a-logo-box-shadow</li>
+<li>--a-logo-image-hover-transition</li>
+<li>--a-logo-box-shadow-hover</li>
+<li>--a-logo-image-transform-hover</li>
 </ol>
 
 <table>
-  <tr>
-    <td>--a-test-component-right-column-background</td>
-    <td>gray</td>
-  </tr>
+<tr>
+<td>--a-logo-background</td>
+<td>white</td>
+</tr>
+<tr>
+<td>--a-logo-border-radius</td>
+<td>10px</td>
+</tr>
+<tr>
+<td>--a-logo-padding</td>
+<td>24px</td>
+</tr>
+<tr>
+<td>--a-logo-box-shadow-transition</td>
+<td>$transition-duration-normal</td>
+</tr>
+<tr>
+<td>--a-logo-box-shadow</td>
+<td>$box-shadow-s-white</td>
+</tr>
+<tr>
+<td>--a-logo-image-hover-transition</td>
+<td>$transition-duration-fast</td>
+</tr>
+<tr>
+<td>--a-logo-box-shadow-hover</td>
+<td>$box-shadow-l-white</td>
+</tr>
+<tr>
+<td>--a-logo-image-transform-hover</td>
+<td>scale(1.15)</td>
+</tr>
 </table>
 `;
 
-// Mock implementation for Link component
+//@ts-ignore
 const Link = ({ href, target, children }) => (
 	<a href={href} target={target} rel="noopener noreferrer">
 		{children}
@@ -44,12 +91,6 @@ const Link = ({ href, target, children }) => (
 export default {
 	title: "Atoms/Logo",
 	component: Logo,
-	argTypes: {
-		selectOption: {
-			control: "radio",
-			options: ["selectOption_1", "selectOption_2", "selectOption_3", "selectOption_4"],
-		},
-	},
 	parameters: {
 		actions: { disabled: true },
 		docs: {
@@ -60,17 +101,23 @@ export default {
 	},
 } as ComponentMeta<typeof Logo>;
 
+
 const Template: ComponentStory<typeof Logo> = (args) => (
-	<Logo {...args} />
+	<Logo {...args}
+		border-radius={args["border-radius"]}
+	  	background={args.background}
+		logo={
+		//@ts-ignore
+		<Link href={args["logo-href"]} target="_blank"><Image src={args["image-source"]} alt="Placeholder"/></Link>}
+	/>
 );
 
 export const Logo_STORY = Template.bind({});
 
 Logo_STORY.args = {
-	logo: (
-		<Link href="https://www.google.com" target="_blank">
-			<Image src="https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png" alt="Placeholder"/>
-		</Link>
-	),
-	background: "gray",
+	//@ts-ignore
+	"image-source": "https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png",
+	"logo-href": "https://www.google.com",
+	background: "#4cbfa6",
+	"border-radius": "20px "
 };
