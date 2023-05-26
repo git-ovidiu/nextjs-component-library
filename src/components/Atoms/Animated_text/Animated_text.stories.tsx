@@ -81,9 +81,9 @@ export default {
 } as ComponentMeta<typeof Animated_text>;
 
 const Template: ComponentStory<typeof Animated_text> = (args) => (
-  <>
-    <Animated_text {...args} />
-  </>
+    <span>
+      <Animated_text {...args} />
+    </span>
 );
 
 export const Animated_text_story = Template.bind({});
