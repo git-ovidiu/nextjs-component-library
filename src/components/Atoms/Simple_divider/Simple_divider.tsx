@@ -24,35 +24,38 @@ export default function SimpleDivider(props: SimpleDividerProps) {
 	const dividerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		const options = {
-			root: null,
-			rootMargin: "0px",
-			threshold: 0.5	,
-		};
+		// Check if IntersectionObserver is supported
+		if ("IntersectionObserver" in window) {
+			const options = {
+				root: null,
+				rootMargin: "0px",
+				threshold: 0.5,
+			};
 
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					if (props.animate) {
-						dividerRef.current?.classList.add("animate");
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						if (props.animate) {
+							dividerRef.current?.classList.add("animate");
+						}
+						if (props["animate-vertical"]) {
+							dividerRef.current?.classList.add("animate-vertical");
+						}
+						observer.unobserve(entry.target); // Stop observing once animation is applied
 					}
-					if (props["animate-vertical"]) {
-						dividerRef.current?.classList.add("animate-vertical");
-					}
-					observer.unobserve(entry.target); // Stop observing once animation is applied
-				}
-			});
-		}, options);
+				});
+			}, options);
 
-		if (dividerRef.current) {
-			observer.observe(dividerRef.current);
-		}
-
-		return () => {
 			if (dividerRef.current) {
-				observer.unobserve(dividerRef.current);
+				observer.observe(dividerRef.current);
 			}
-		};
+
+			return () => {
+				if (dividerRef.current) {
+					observer.unobserve(dividerRef.current);
+				}
+			};
+		}
 	}, [props.animate, props["animate-vertical"]]);
 
 	return (
@@ -70,4 +73,3 @@ export default function SimpleDivider(props: SimpleDividerProps) {
 		></div>
 	);
 }
-
