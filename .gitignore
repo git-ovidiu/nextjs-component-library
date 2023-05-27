@@ -7,7 +7,7 @@
 /.rollup.cache
 /.idea
 /storybook-static
-
+/.storybook
 # testing
 /coverage
 
