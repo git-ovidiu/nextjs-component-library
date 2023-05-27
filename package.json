@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/git-ovidiu"
   },
-  "version": "16.4.0",
+  "version": "16.4.1",
   "description": "A Next.js component library. It follows the atomic design rules (atoms/molecules/organisms). => 11.5.3 is stable for now",
   "scripts": {
     "dev": "next dev",

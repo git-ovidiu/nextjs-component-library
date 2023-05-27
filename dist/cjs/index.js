@@ -206,7 +206,7 @@ function SimpleDivider(props) {
         };
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
-                var _a, _b, _c, _d;
+                var _a, _b;
                 if (entry.isIntersecting) {
                     if (props.animate) {
                         (_a = dividerRef.current) === null || _a === void 0 ? void 0 : _a.classList.add("animate");
@@ -214,10 +214,7 @@ function SimpleDivider(props) {
                     if (props["animate-vertical"]) {
                         (_b = dividerRef.current) === null || _b === void 0 ? void 0 : _b.classList.add("animate-vertical");
                     }
-                }
-                else {
-                    (_c = dividerRef.current) === null || _c === void 0 ? void 0 : _c.classList.remove("animate");
-                    (_d = dividerRef.current) === null || _d === void 0 ? void 0 : _d.classList.remove("animate-vertical");
+                    observer.unobserve(entry.target); // Stop observing once animation is applied
                 }
             });
         }, options);

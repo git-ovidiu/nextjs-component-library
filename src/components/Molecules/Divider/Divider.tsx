@@ -44,11 +44,3 @@ export default function Divider(props: DividerProps) {
 		</>
 	);
 }
-
-
-
-// TODO de facut o animatie care sa plece de la 50px de ex si sa se duca pana la 1
-
-// TODO trebuie un apdding pe ambele versiuni
-
-// TODO in loc de left/right la vertical, trebuie pus top/right cumva

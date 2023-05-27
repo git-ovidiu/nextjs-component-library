@@ -30,7 +30,7 @@
       @include flex(column, flex-start, flex-start);
     }
     &.bottom{
-      @include flex(column, flex-end, flex-end);
+      @include flex(column, flex-end, flex-start);
     }
   }
 }

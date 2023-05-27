@@ -27,7 +27,7 @@ export default function SimpleDivider(props: SimpleDividerProps) {
 		const options = {
 			root: null,
 			rootMargin: "0px",
-			threshold: 0.5, // Adjust this value as per your requirement
+			threshold: 0.5	,
 		};
 
 		const observer = new IntersectionObserver((entries) => {
@@ -71,4 +71,3 @@ export default function SimpleDivider(props: SimpleDividerProps) {
 	);
 }
 
-// TODO trebuie pus la animatie la simple divider un width care sa poata fi schimbat

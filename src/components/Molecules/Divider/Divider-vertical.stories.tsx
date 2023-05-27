@@ -12,31 +12,52 @@ const Extra_Info = `
     <td>type</td>
     <td>can be:</td>
   </tr>
-  <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
+<tr>
+<td>divider</td>
+<td>ReactElement</td>
+<td>use 'Simple_divider'</td>
+</tr>
+<tr>
+<td>vertical</td>
+<td>boolean</td>
+<td>true (default)</td>
+</tr>
+<tr>
+<td>position</td>
+<td>string</td>
+<td><b>bottom | center | top</b></td>
+</tr>
 </table>
 
 <br>
 
 <h2><u>CSS VARIABLES</u></h2>
 <ol>
-  <li>--a-test-component-right-column-background</li>
+<li>--m-divider-width</li>
+<li>--m-divider-padding</li>
 </ol>
 
 <table>
-  <tr>
-    <td>--a-test-component-right-column-background</td>
-    <td>gray</td>
-  </tr>
+ <tr>
+ <td>--m-divider-width</td>
+ <td>100%</td>
+</tr>
+ <tr>
+ <td>--m-divider-padding</td>
+ <td>unset</td>
+</tr>
 </table>
 `;
 
 export default {
-  title: "Molecules/Divider",
+  title: "Molecules/Divider/Vertical",
   component: Divider,
+    argTypes:{
+        position:{
+            control: "radio",
+            options: ["bottom", "center", "top"]
+        },
+    },
   parameters: {
     actions: { disabled: true },
     docs: {
@@ -48,28 +69,17 @@ export default {
 } as ComponentMeta<typeof Divider>;
 
 const Template: ComponentStory<typeof Divider> = (args) => (
-  <div style={{display: 'flex', flexDirection: 'column', width: "100vw", margin: "1000px 0px"}}>
+  <div style={{display: 'flex', flexDirection: 'column', height: "100px"}}>
     <Divider
       divider={
         <>
-          <Simple_Divider border-radius="10px 0px 0px 10px" animate={true} animation-duration="1s" width="100%" height="5px" color="red" />
-          <Simple_Divider border-radius="0px" animate={true} animation-duration="1s" width="100%" height="5px" color="blue" />
-          <Simple_Divider border-radius="0px 10px 10px 0px" animate={true} animation-duration="1s" width="100%" height="5px" color="green" />
-        </>
-      }
-      position="center"
-      width="300px"
-    />
-    <Divider
-      divider={
-        <div style={{height: "100%"}}>
           <Simple_Divider animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
           <Simple_Divider animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="black" />
           <Simple_Divider animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="orange" />
           <Simple_Divider animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
-        </div>
+        </>
       }
-      position="top"
+      position={args.position}
       vertical={true}
     />
   </div>
@@ -78,4 +88,5 @@ const Template: ComponentStory<typeof Divider> = (args) => (
 export const Divider_STORY = Template.bind({});
 
 Divider_STORY.args = {
+    position: "bottom",
 };
