@@ -39,9 +39,7 @@ export default function SimpleDivider(props: SimpleDividerProps) {
 					if (props["animate-vertical"]) {
 						dividerRef.current?.classList.add("animate-vertical");
 					}
-				} else {
-					dividerRef.current?.classList.remove("animate");
-					dividerRef.current?.classList.remove("animate-vertical");
+					observer.unobserve(entry.target); // Stop observing once animation is applied
 				}
 			});
 		}, options);
@@ -72,6 +70,5 @@ export default function SimpleDivider(props: SimpleDividerProps) {
 		></div>
 	);
 }
-
 
 // TODO trebuie pus la animatie la simple divider un width care sa poata fi schimbat
