@@ -7,10 +7,13 @@ export { default as FAQ_item } from "./Atoms/FAQ_item";
 export { default as Label } from "./Atoms/Label";
 export { default as Animated_text } from "./Atoms/Animated_text";
 export { default as Footer_link } from "./Atoms/Footer_link";
+export { default as Logo } from "./Atoms/Logo";
+export { default as Simple_Divider } from "./Atoms/Simple_divider";
 // MOLECULES
 export { default as Footer_link_list } from "./Molecules/Footer_link_list/Footer_link_list";
 export { default as Footer_card } from "./Molecules/Footer_card";
 export { default as Card } from "./Molecules/Card";
 export { default as Title_and_description } from "./Molecules/Title_and_description";
 export { default as Media } from "./Molecules/Media_component";
+export { default as Divider } from "./Molecules/Divider";
 //# sourceMappingURL=index.js.map

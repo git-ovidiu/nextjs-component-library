@@ -1,0 +1,38 @@
+@use '../../../styles/main.scss' as *;
+
+:root{
+  --a-simple-divider-background: #{$primary-color};
+  --a-simple-divider-height: 3px;
+  --a-simple-divider-width: 100%;
+  --a-simple-divider-animation-duration: 1s;
+  --a-simple-divider-border-radius: 0px;
+
+}
+
+.a-simple-divider{
+  height: var(--a-simple-divider-height);
+  background: var(--a-simple-divider-background);
+  width: var(--a-simple-divider-width);
+  border-radius: var(--a-simple-divider-border-radius);
+
+  &.animate{
+    width: 0;
+    animation: var(--a-simple-divider-animation-duration) lineProgress forwards;
+
+    @keyframes lineProgress {
+      0%{width: 0%}
+      100%{width: var(--a-simple-divider-width)}
+    }
+  }
+
+  &.animate-vertical{
+    height: 0;
+    animation: var(--a-simple-divider-animation-duration) lineProgressVertical forwards;
+
+    @keyframes lineProgressVertical {
+      0%{height: 0%}
+      100%{height: var(--a-simple-divider-height)}
+    }
+  }
+}
+

@@ -1,7 +1,6 @@
-import {__assign} from "tslib";
-import React, {useEffect, useRef} from "react";
+import { __assign } from "tslib";
+import React, { useEffect, useRef } from "react";
 import "./Animated_text.scss";
-
 export default function Animated_text(props) {
     var titleRef = useRef(null);
     useEffect(function () {

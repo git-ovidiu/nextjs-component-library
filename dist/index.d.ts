@@ -73,6 +73,37 @@ interface FooterLinkProps {
 }
 declare function Footer_link(props: FooterLinkProps): ReactElement;
 
+interface LogoInterface extends CSSProperties {
+    "--a-logo-border-radius"?: string;
+    "--a-logo-background"?: string;
+}
+interface LogoProps {
+    style?: LogoInterface;
+    logo?: ReactElement;
+    background?: string;
+    "border-radius": string;
+}
+declare function Logo(props: LogoProps): JSX.Element;
+
+interface SimpleDividerStyle extends CSSProperties {
+    "--a-simple-divider-background"?: string;
+    "--a-simple-divider-height"?: string;
+    "--a-simple-divider-width"?: string;
+    "--a-simple-divider-animation-duration"?: string;
+    "--a-simple-divider-border-radius"?: string;
+}
+interface SimpleDividerProps {
+    style?: SimpleDividerStyle;
+    color?: string;
+    height?: string;
+    width?: string;
+    animate?: boolean;
+    "animate-vertical"?: boolean;
+    "animation-duration"?: string;
+    "border-radius"?: string;
+}
+declare function SimpleDivider(props: SimpleDividerProps): JSX.Element;
+
 interface FooterLinkListProps {
     link_element?: ReactElement | string;
     position?: string;
@@ -109,6 +140,8 @@ declare function Title_and_description(props: TitleAndDescriptionProps): JSX.Ele
 interface ProgressLineBackgroundColor extends CSSProperties {
     "--a-video-progress-line-background"?: string;
     "--a-video-object-fit"?: string;
+    "--a-media-image-border-radius"?: string;
+    "--a-video-border-radius"?: string;
 }
 interface MediaComponentProps {
     style?: ProgressLineBackgroundColor;
@@ -118,19 +151,33 @@ interface MediaComponentProps {
     "label-top-right"?: ReactElement;
     "label-bottom-left"?: ReactElement;
     "label-bottom-right"?: ReactElement;
-    "auto-play"?: boolean;
-    "fullscreen-icon-color"?: string;
-    "prev-icon-color"?: string;
-    "play-icon-color"?: string;
-    "pause-icon-color"?: string;
-    "forward-icon-color"?: string;
-    "progress-bar-color"?: string;
-    showControlsProperty?: boolean;
-    hideShowControls?: boolean;
+    "image-border-radius"?: string;
     video?: string;
     muted?: boolean;
     loop?: boolean;
+    "show-controls"?: boolean;
+    "remove-controls"?: boolean;
+    "video-border-radius"?: string;
+    "auto-play"?: boolean;
+    "progress-bar-color"?: string;
+    "custom-fullscreen-icon"?: ReactElement;
+    "custom-play-icon"?: ReactElement;
+    "custom-pause-icon"?: ReactElement;
+    "custom-prev-icon"?: ReactElement;
+    "custom-next-icon"?: ReactElement;
 }
 declare function Media(props: MediaComponentProps): JSX.Element;
 
-export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, Description, FAQ_item, Footer_card, Footer_link, Footer_link_list, Label, Media, Title_and_description };
+interface DividerStyle extends CSSProperties {
+    "--m-divider-width"?: string;
+}
+interface DividerProps {
+    style?: DividerStyle;
+    divider?: ReactElement;
+    vertical?: boolean;
+    position?: string;
+    width?: string;
+}
+declare function Divider(props: DividerProps): JSX.Element;
+
+export { Animated_text, Button_Line_Drawing, Button_Slide_Second, Button_slide, Card, Description, Divider, FAQ_item, Footer_card, Footer_link, Footer_link_list, Label, Logo, Media, SimpleDivider as Simple_Divider, Title_and_description };

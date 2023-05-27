@@ -1,0 +1,36 @@
+@use '../../../styles/main.scss' as *;
+
+:root {
+  --m-divider-width: 100%;
+  --m-divider-padding: unset;
+}
+
+.m-divider {
+  width: var(--m-divider-width);
+  padding: var(--m-divider-padding);
+
+  &.left{
+    @include flex(row, flex-start, center);
+  }
+
+  &.center{
+    @include flex(row, center, center);
+  }
+
+  &.right{
+    @include flex(row, flex-end, center);
+  }
+
+  &.vertical{
+    &.center{
+      @include flex(column, center, center);
+    }
+
+    &.top{
+      @include flex(column, flex-start, flex-start);
+    }
+    &.bottom{
+      @include flex(column, flex-end, flex-end);
+    }
+  }
+}

@@ -1,6 +1,5 @@
-import {ReactElement} from "react";
+import { ReactElement } from "react";
 import "./Card.scss";
-
 export interface CardProps {
     image?: ReactElement | string;
     labels?: ReactElement | string;

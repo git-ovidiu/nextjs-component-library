@@ -1,6 +1,5 @@
-import {CSSProperties} from "react";
+import { CSSProperties } from "react";
 import "./Animated_text.scss";
-
 interface AnimatedText extends CSSProperties {
     "--a-animated-text-color"?: string;
 }
