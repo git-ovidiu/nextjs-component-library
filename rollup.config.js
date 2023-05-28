@@ -22,7 +22,7 @@ const rollupConfig = [
         sourcemap: true,
       },
     ],
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", "next/image", "react-icons/ai", "react-icons/fa", "react-icons/fi", "react-icons/bs"],
     plugins: [
       resolve(),
       commonjs(),
