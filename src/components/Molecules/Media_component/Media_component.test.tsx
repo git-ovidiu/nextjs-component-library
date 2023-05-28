@@ -14,6 +14,7 @@ describe("Media_component", () => {
 							height={300}
 							width={300}
 							alt="placeholder"
+							fill
 						/>
 					}
 					video="https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4"

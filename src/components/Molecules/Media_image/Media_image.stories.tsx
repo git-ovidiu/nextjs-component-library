@@ -1,6 +1,6 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
-import Media from "./Media_component";
+import Media_image from "./Media_image";
 import Image from "next/image";
 
 const Extra_Info = `
@@ -104,8 +104,8 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Molecules/Media Component/Image",
-  component: Media,
+  title: "Molecules/Media/Image",
+  component: Media_image,
   argTypes: {
     "object-fit": {
       control: "radio",
@@ -120,19 +120,19 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Media>;
+} as ComponentMeta<typeof Media_image>;
 
-const Template: ComponentStory<typeof Media> = (args) => (
+const Template: ComponentStory<typeof Media_image> = (args) => (
   <div
     style={{
       maxWidth: "500px",
       width: "100%",
-      height: "auto",
+      height: "100%",
       position: "relative",
       margin: "0 auto",
     }}
   >
-      <Media
+      <Media_image
         image-border-radius={args["image-border-radius"]}
 
         image={
@@ -142,6 +142,7 @@ const Template: ComponentStory<typeof Media> = (args) => (
             alt="placeholder"
             //@ts-ignore
             style={{ objectFit: args["object-fit"] }}
+            fill
           />
         }
 
@@ -183,20 +184,19 @@ const Template: ComponentStory<typeof Media> = (args) => (
 export const Media_component_story = Template.bind({});
 
 Media_component_story.args = {
-  // @ts-ignore
+  "object-fit": "cover",
 
   "image-source":
     "https://res.cloudinary.com/dxbivmheq/image/upload/v1674309864/OvidiuBunghez_diagramic_drawing_simple_color_Yellow_Orange_only_3d2d259b-ddf5-4fb3-94ef-fe74a7954ad8_cvowat.png",
-  "object-fit": "cover",
 
   // @ts-ignore
-  "label-top-right": "https://fakeimg.pl/100x50/000000/ffff00?text=right",
+  "label-top-right": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
   // @ts-ignore
-  "label-top-left": "https://fakeimg.pl/100x50/000000/00ffff?text=left",
+  "label-top-left": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
   // @ts-ignore
-  "label-bottom-right": "https://fakeimg.pl/100x50/ffffff/ff0000?text=right",
+  "label-bottom-right": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
   // @ts-ignore
-  "label-bottom-left": "https://fakeimg.pl/100x50/000000/ff00ff?text=left",
+  "label-bottom-left": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
   //@ts-ignore
   "image-border-radius": "0px",
 };
