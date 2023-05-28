@@ -1,7 +1,7 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import Footer_link_list from "./Footer_link_list";
-import Footer_link from "../../Atoms/Footer_link/Footer_link";
+import Footer_link from "../../Atoms/Link_item/Link_item";
 
 const Extra_Info = `
 <br>
@@ -13,7 +13,7 @@ const Extra_Info = `
     <td>can be:</td>
   </tr>
   <tr>
-  <td>link_element</td>
+  <td>link-element</td>
   <td></td>
   </tr>
 </table>
@@ -53,13 +53,13 @@ export default {
 const Template: ComponentStory<typeof Footer_link_list> = (args) => (
   <Footer_link_list
     {...args}
-      position={args["Position"]}
-    link_element={
-      <>
-        <Footer_link link={<p>{args["main-link"]}</p>} link_type="main" />
-        <Footer_link link={<p>secondary</p>} link_type="secondary" />
-        <Footer_link link={<p>secondary</p>} link_type="secondary" />
-        <Footer_link link={<p>secondary</p>} link_type="secondary" />
+      position={args["position"]}
+    link-element={
+        //@ts-ignore
+      <><Footer_link link={<p>{args["main-link"]}</p>} link-type="main" />
+        <Footer_link link={<p>secondary</p>} link-type="secondary" />
+        <Footer_link link={<p>secondary</p>} link-type="secondary" />
+        <Footer_link link={<p>secondary</p>} link-type="secondary" />
       </>
     }
   />
@@ -69,7 +69,7 @@ export const Footer_link_list_story = Template.bind({});
 
 Footer_link_list_story.args = {
   // @ts-ignore
-  "Position": "center",
+  "position": "center",
   // @ts-ignore
-  "Main Link": 'cacat'
-};
+  "main-link": "main"
+}

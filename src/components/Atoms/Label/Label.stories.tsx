@@ -22,7 +22,7 @@ const Extra_Info = `
     <td>hex || color name || rgb</td>
   </tr>
   <tr>
-    <td>backgroundColor</td>
+    <td>background-color</td>
     <td>string</td>
     <td>hex || color name || rgb</td>
   </tr>
@@ -75,5 +75,5 @@ export const Label_story = Template.bind({});
 Label_story.args = {
   text: "Placeholder text",
   color: "white",
-  backgroundColor: "black",
+  "background-color": "black",
 };

@@ -1,22 +1,22 @@
 import React, {ReactElement} from "react";
-import "./Footer_link.scss";
+import "./Link_item.scss";
 
 export interface Animated_text_Props {}
 
-export interface FooterLinkProps {
-  link_type?: string;
+export interface LinkItemProps {
+  "link-type"?: string;
   link: ReactElement | string;
 }
 
-export default function Footer_link(props: FooterLinkProps): ReactElement {
+export default function Link_item(props: LinkItemProps): ReactElement {
   return (
-    <div className="a-footer-link">
-      {props.link_type === "main" ? (
+    <div className="a-link-item">
+      {props["link-type"] === "main" ? (
         <div className="main-link">{props.link}</div>
       ) : (
         ""
       )}
-      {props.link_type === "secondary" ? (
+      {props["link-type"] === "secondary" ? (
         <div className="secondary-link">{props.link}</div>
       ) : (
         ""

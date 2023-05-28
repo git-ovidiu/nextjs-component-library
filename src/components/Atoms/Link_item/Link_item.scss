@@ -1,0 +1,31 @@
+@use '../../../styles/main.module.scss' as *;
+
+:root{
+    --a-link-item-main-link-font-weight: #{$font-weight-xl};
+    --a-link-item-main-link-font-size: #{$font-size-main-link};
+    --a-link-item-main-link-line-height: 24px;
+    --a-link-item-main-link-color: #{$primary-color};
+    --a-link-item-main-link-margin-botton: 5px;
+    
+    --a-link-item-secondary-link-font-weight: #{$font-weight-l};
+    --a-link-item-secondary-link-font-size: #{$font-size-secondary-link};
+    --a-link-item-secondary-link-line-height: 24px;
+    --a-link-item-secondary-link-color: #{$extra-color};
+}
+
+.a-link-item{
+    .main-link{
+        font-weight: var(--a-link-item-main-link-font-weight);
+        font-size: var(--a-link-item-main-link-font-size);
+        line-height: var(--a-link-item-main-link-line-height);
+        color: var(--a-link-item-main-link-color);
+        margin-bottom: var(--a-link-item-main-link-margin-botton);
+    }
+
+    .secondary-link{
+        font-weight: var(--a-link-item-secondary-link-font-weight);
+        font-size: var(--a-link-item-secondary-link-font-size);
+        line-height: var(--a-link-item-secondary-link-line-height);
+        color: var(--a-link-item-secondary-link-color);
+    }
+}

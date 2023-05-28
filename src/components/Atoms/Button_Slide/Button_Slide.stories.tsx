@@ -18,7 +18,7 @@ const Extra_Info = `
     <td>-</td>
   </tr>
   <tr>
-    <td> hover_effect</td>
+    <td>hover-effect</td>
     <td>string</td>
     <td>slide_down, slide_left, slide_right, slide_up</td>
   </tr>
@@ -132,7 +132,7 @@ export default {
   title: "Atoms/Buttons/Slide Animation",
   component: Button_slide,
   argTypes: {
-    hover_effect: {
+    "hover-effect": {
       control: "radio",
       options: ["slide-up", "slide-down", "slide-right", "slide-left"],
     },
@@ -165,7 +165,7 @@ export const Button_slide_story = Template.bind({});
 
 Button_slide_story.args = {
   text: "Placeholder text",
-  hover_effect: "slide-right",
+  "hover-effect": "slide-right",
   padding: "xs",
   "icon-position": "right",
 };

@@ -34,11 +34,11 @@ const Extra_Info = `
     <td>ReactElement</td>
   </tr>
   <tr>
-    <td>image_full_width</td>
+    <td>image-full-width</td>
     <td>boolean</td>
   </tr>
   <tr>
-    <td>is_overlapped</td>
+    <td>is-overlapped</td>
     <td>boolean</td>
   </tr>
 </table>
@@ -158,12 +158,12 @@ const Template: ComponentStory<typeof Card> = (args) => (
       labels={
         <>
           <Label
-            backgroundColor="black"
+            background-color="black"
             color="white"
             text="Placeholder text"
           />
           <Label
-            backgroundColor="black"
+            background-color="black"
             color="white"
             text="Placeholder text"
           />
@@ -184,14 +184,14 @@ const Template: ComponentStory<typeof Card> = (args) => (
       buttons={
         <>
           <Button_slide
-            hover_effect="slide-right"
+            hover-effect="slide-right"
             icon={<AiOutlineDownload size={20} />}
              icon-position="right"
             text="Placeholder text"
             padding="xxs"
           />
           <Button_Line_Drawing
-              line_effect="line-below"
+              line-effect="line-below"
               padding="xxs"
               text="Placeholder text"
               icon={<AiOutlineDownload size={20} />}
@@ -204,7 +204,7 @@ const Template: ComponentStory<typeof Card> = (args) => (
 );
 export const Card_story = Template.bind({});
 Card_story.args = {
-  is_overlapped: true,
-  image_full_width: false,
+  "is-overlapped": true,
+  "image-full-width": false,
   buttons: undefined
 };

@@ -7,8 +7,8 @@ export interface CardProps {
   title?: ReactElement | string;
   description?: ReactElement | string;
   buttons?: ReactElement | string;
-  image_full_width?: boolean;
-  is_overlapped?: boolean;
+  "image-full-width"?: boolean;
+  "is-overlapped"?: boolean;
 }
 
 export default function Card(props: CardProps) {
@@ -32,10 +32,10 @@ export default function Card(props: CardProps) {
     <div className="buttons">{props.buttons}</div>
   ) : null;
 
-  const cardImageClass = props.image_full_width
+  const cardImageClass = props["image-full-width"]
     ? "m-card image-full-width"
     : "";
-  const isOverlapped = props.is_overlapped ? "m-card m-card-overlapped" : "";
+  const isOverlapped = props["is-overlapped"] ? "m-card m-card-overlapped" : "";
 
   return (
     <div className="card-container">

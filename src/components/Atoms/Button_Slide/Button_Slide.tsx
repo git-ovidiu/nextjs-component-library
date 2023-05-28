@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import "./Button_Slide.scss";
 export interface ButtonProps {
   text: string;
-  hover_effect: string;
+  "hover-effect": string;
   icon?: ReactElement | string;
   "icon-position"?: string;
   padding: string;
@@ -18,17 +18,17 @@ export default function Button_slide(props: ButtonProps) {
         }${props.padding === "l" ? "padding-l" : ""}${
           props.padding === "xl" ? "padding-xl" : ""
         }${props.padding === "xxl" ? "padding-xxl" : ""} ${
-          props.hover_effect === "slide-down"
+          props["hover-effect"] === "slide-down"
             ? "btn_hover_slide slide_down"
             : ""
         }${
-          props.hover_effect === "slide-up" ? "btn_hover_slide slide_up" : ""
+          props["hover-effect"] === "slide-up" ? "btn_hover_slide slide_up" : ""
         }${
-          props.hover_effect === "slide-right"
+          props["hover-effect"] === "slide-right"
             ? "btn_hover_slide slide_right"
             : ""
         }${
-          props.hover_effect === "slide-left"
+          props["hover-effect"] === "slide-left"
             ? "btn_hover_slide slide_left"
             : ""
         } `}

@@ -6,7 +6,7 @@ export { default as Description } from "./Atoms/Description";
 export { default as FAQ_item } from "./Atoms/FAQ_item";
 export { default as Label } from "./Atoms/Label";
 export { default as Animated_text } from "./Atoms/Animated_text";
-export { default as Footer_link } from "./Atoms/Footer_link";
+export { default as Link_item } from "./Atoms/Link_item";
 export { default as Logo } from "./Atoms/Logo";
 export { default as Simple_Divider } from "./Atoms/Simple_divider";
 

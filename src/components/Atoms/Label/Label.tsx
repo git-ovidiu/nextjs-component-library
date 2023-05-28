@@ -7,10 +7,11 @@ interface LabelStyle extends CSSProperties {
 }
 
 export interface LabelProps {
+  style?: LabelStyle;
+
   text: string;
   color: string;
-  backgroundColor: string;
-  style?: LabelStyle;
+  "background-color": string;
 }
 
 export default function Label(props: LabelProps): ReactElement {
@@ -19,7 +20,7 @@ export default function Label(props: LabelProps): ReactElement {
       className="a-label"
       style={{
         "--a-label-color": props.color,
-        "--a-label-background-color": props.backgroundColor,
+        "--a-label-background-color": props["background-color"],
         ...props.style,
       }}
     >

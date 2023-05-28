@@ -19,7 +19,7 @@ const Extra_Info = `
     <td>-</td>
   </tr>
   <tr>
-    <td>line_effect</td>
+    <td>line-effect</td>
     <td>string</td>
     <td>line-below, line-above, line-side</td>
   </tr>
@@ -144,7 +144,7 @@ export default {
   title: "Atoms/Buttons/Line Drawing",
   component: Button_Line_Drawing,
   argTypes: {
-    line_effect: {
+    "line-effect": {
       control: "radio",
       options: ["line-below", "line-above", "line-side"],
     },
@@ -177,6 +177,6 @@ export const Button_Line_Drawing_story = Template.bind({});
 Button_Line_Drawing_story.args = {
   text: "Placeholder text",
   padding: "xs",
-  line_effect: "line-below",
+  "line-effect": "line-below",
   "icon-position": "right"
 };
