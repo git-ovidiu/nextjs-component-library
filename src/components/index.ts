@@ -15,5 +15,6 @@ export { default as Link_list } from "./Molecules/Link_list";
 export { default as Footer_card } from "./Molecules/Footer_card";
 export { default as Card } from "./Molecules/Card";
 export { default as Title_and_description } from "./Molecules/Title_and_description";
-export { default as Media } from "./Molecules/Media_component";
 export { default as Divider } from "./Molecules/Divider";
+export { default as Media_image } from "./Molecules/Media_image";
+export { default as Media_video } from "./Molecules/Media_video";

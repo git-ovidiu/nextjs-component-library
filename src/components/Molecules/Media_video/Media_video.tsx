@@ -3,24 +3,18 @@ import {AiOutlineStepBackward, AiOutlineStepForward} from "react-icons/ai";
 import {FaPlay} from "react-icons/fa";
 import {FiPauseCircle} from "react-icons/fi";
 import {BsArrowsFullscreen} from "react-icons/bs";
-import "./Media_component.scss";
+import "./Media_video.scss";
 
 interface ProgressLineBackgroundColor extends CSSProperties {
   "--a-video-progress-line-background"?: string;
   "--a-video-object-fit"?: string;
-  "--a-media-image-border-radius"?: string;
   "--a-video-border-radius"?: string;
 }
 
 interface MediaComponentProps {
   style?: ProgressLineBackgroundColor;
-  image?: ReactElement;
+
   "object-fit"?: string;
-  "label-top-left"?: ReactElement;
-  "label-top-right"?: ReactElement;
-  "label-bottom-left"?: ReactElement;
-  "label-bottom-right"?: ReactElement;
-  "image-border-radius"?: string;
   video?: string;
   muted?: boolean;
   loop?: boolean;
@@ -36,7 +30,7 @@ interface MediaComponentProps {
   "custom-next-icon"?: ReactElement;
 }
 
-export default function Media(props: MediaComponentProps) {
+export default function Media_video(props: MediaComponentProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [playing, setPlaying] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
@@ -102,9 +96,7 @@ export default function Media(props: MediaComponentProps) {
   };
 
   return (
-      <div className="a-media" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-        {props.video ? (
-            <div className="a-media__video" style={{ "--a-video-border-radius": props["video-border-radius"], ...props.style }}>
+            <div className="a-media-video" style={{ "--a-video-border-radius": props["video-border-radius"], ...props.style }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
               <div className="video-container">
                 <video
                     src={props.video}
@@ -167,15 +159,5 @@ export default function Media(props: MediaComponentProps) {
                   )
               )}
             </div>
-        ) : (
-            <div className="a-media__image" style={{ "--a-media-image-border-radius": props["image-border-radius"], ...props.style }}>
-              {props["label-top-left"] && <div className="label top-left">{props["label-top-left"]}</div>}
-              {props["label-top-right"] && <div className="label top-right">{props["label-top-right"]}</div>}
-              {props["label-bottom-left"] && <div className="label bottom-left">{props["label-bottom-left"]}</div>}
-              {props["label-bottom-right"] && <div className="label bottom-right">{props["label-bottom-right"]}</div>}
-              {props.image}
-            </div>
-        )}
-      </div>
   );
 }

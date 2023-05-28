@@ -39,7 +39,8 @@ npm publish
     <li>Divider</li>
     <li>Footer_card</li>
     <li>Link_list</li>
-    <li>Media_component</li>
+    <li>Media_image</li>
+    <li>Media_video</li>
     <li>Title_and_description</li>
 </ol>
 
