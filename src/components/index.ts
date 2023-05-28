@@ -11,7 +11,7 @@ export { default as Logo } from "./Atoms/Logo";
 export { default as Simple_Divider } from "./Atoms/Simple_divider";
 
 // MOLECULES
-export { default as Footer_link_list } from "./Molecules/Footer_link_list/Footer_link_list";
+export { default as Link_list } from "./Molecules/Link_list";
 export { default as Footer_card } from "./Molecules/Footer_card";
 export { default as Card } from "./Molecules/Card";
 export { default as Title_and_description } from "./Molecules/Title_and_description";

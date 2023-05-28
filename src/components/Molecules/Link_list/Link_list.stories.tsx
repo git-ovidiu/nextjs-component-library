@@ -1,7 +1,7 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
-import Footer_link_list from "./Footer_link_list";
-import Footer_link from "../../Atoms/Link_item/Link_item";
+import Link_list from "./Link_list";
+import Link_item from "../../Atoms/Link_item";
 
 const Extra_Info = `
 <br>
@@ -20,11 +20,11 @@ const Extra_Info = `
 <br>
 <h2><u>CSS VARIABLES</u></h2>
 <ol>
-<li>--m-footer-link-list-gap</li>
+<li>--m-link-list-gap</li>
 </ol>
 <table>
 <tr>
-<td>--m-footer-link-list-gap</td>
+<td>--m-link-list-gap</td>
 <td>5px</td>
 </tr>
 </table> 
@@ -32,8 +32,8 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Molecules/Footer Link List",
-  component: Footer_link_list,
+  title: "Molecules/Link List",
+  component: Link_list,
   argTypes: {
     Position: {
       control: "radio",
@@ -48,26 +48,26 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Footer_link_list>;
+} as ComponentMeta<typeof Link_list>;
 
-const Template: ComponentStory<typeof Footer_link_list> = (args) => (
-  <Footer_link_list
+const Template: ComponentStory<typeof Link_list> = (args) => (
+  <Link_list
     {...args}
       position={args["position"]}
     link-element={
         //@ts-ignore
-      <><Footer_link link={<p>{args["main-link"]}</p>} link-type="main" />
-        <Footer_link link={<p>secondary</p>} link-type="secondary" />
-        <Footer_link link={<p>secondary</p>} link-type="secondary" />
-        <Footer_link link={<p>secondary</p>} link-type="secondary" />
+      <><Link_item link={<p>{args["main-link"]}</p>} link-type="main" />
+        <Link_item link={<p>secondary</p>} link-type="secondary" />
+        <Link_item link={<p>secondary</p>} link-type="secondary" />
+        <Link_item link={<p>secondary</p>} link-type="secondary" />
       </>
     }
   />
 );
 
-export const Footer_link_list_story = Template.bind({});
+export const Link_list_story = Template.bind({});
 
-Footer_link_list_story.args = {
+Link_list_story.args = {
   // @ts-ignore
   "position": "center",
   // @ts-ignore

@@ -91,9 +91,9 @@ const Template: ComponentStory<typeof Footer_card> = (args) => (
       action={
         <Button_slide
           padding="m"
-          hover_effect="slide-right"
+          hover-effect="slide-right"
           icon={<AiOutlineDownload size={20} />}
-          iconPosition="right"
+          icon-position="right"
           // @ts-ignore
           text={args.button_text}
         />

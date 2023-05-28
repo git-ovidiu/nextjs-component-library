@@ -1,10 +1,10 @@
 @use '../../../styles/main.module.scss' as *;
 
 :root{
-    --m-footer-link-list-gap: 5px;
+    --m-link-list-gap: 5px;
 }
 
-.m-footer-link-list{
+.m-link-list{
     @include flex(column, flex-start, flex-start);
     width: 100%;
     gap: 5px;

@@ -28,14 +28,19 @@ npm publish
     <li>Button_Slide_Second</li>
     <li>Description</li>
     <li>FAQ_item</li>
-    <li>Footer_link</li>
+    <li>Link_item</li>
     <li>Label</li>
+    <li>Simple_divider</li>
+    <li>Logo</li>
 </ol>
 <h3 style="color: teal">MOLECULES</h3>
 <ol>
     <li>Card</li>
+    <li>Divider</li>
     <li>Footer_card</li>
-    <li>Footer_link_list</li>
+    <li>Link_list</li>
+    <li>Media_component</li>
+    <li>Title_and_description</li>
 </ol>
 
 
