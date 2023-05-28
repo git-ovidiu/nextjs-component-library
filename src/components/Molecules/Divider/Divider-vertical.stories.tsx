@@ -69,14 +69,14 @@ export default {
 } as ComponentMeta<typeof Divider>;
 
 const Template: ComponentStory<typeof Divider> = (args) => (
-  <div style={{display: 'flex', flexDirection: 'column', height: "100px"}}>
+  <div style={{display: 'flex', flexDirection: 'column', height: "100px", margin: "1000px 0px"}}>
     <Divider
       divider={
         <>
-          <Simple_Divider animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
-          <Simple_Divider animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="black" />
-          <Simple_Divider animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="orange" />
-          <Simple_Divider animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
+          <Simple_Divider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
+          <Simple_Divider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="black" />
+          <Simple_Divider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="orange" />
+          <Simple_Divider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
         </>
       }
       position={args.position}

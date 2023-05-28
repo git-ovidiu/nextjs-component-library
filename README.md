@@ -47,7 +47,7 @@ npm publish
 <h2 style="color: gold">SCSS - COMPONENT.scss</h2>
 
  ```scss
- //@use '../../../styles/main.scss' as *;
+ //@use '../../../styles/main.module.scss' as *;
 
 :root{
   //--a|m|o-component-name-div-action: value;

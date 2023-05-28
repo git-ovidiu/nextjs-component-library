@@ -72,3 +72,6 @@ Description_story.args = {
   color: "black",
   text: "lorem ipsum"
 };
+
+
+// TODO nu merg controalele in storybook

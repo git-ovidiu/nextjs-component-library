@@ -20,5 +20,5 @@ export default create({
   inputTextColor: "black",
   inputBorderRadius: 10,
   brandImage:
-    "https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png",
+    "https://res.cloudinary.com/dxbivmheq/image/upload/v1685281873/Atomic_Design_1_ucubt6.png",
 });

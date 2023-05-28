@@ -3,6 +3,7 @@ import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {AiOutlineDownload} from "react-icons/ai";
 import Card from "./Card";
 import {Animated_text, Button_slide, Label} from "../../../index";
+import Button_Line_Drawing from "../../Atoms/Button_Line_Drawing";
 
 const Extra_Info = `
 <br>
@@ -185,16 +186,16 @@ const Template: ComponentStory<typeof Card> = (args) => (
           <Button_slide
             hover_effect="slide-right"
             icon={<AiOutlineDownload size={20} />}
-            iconPosition="right"
+             icon-position="right"
             text="Placeholder text"
-            padding="xs"
+            padding="xxs"
           />
-          <Button_slide
-            hover_effect="slide-right"
-            icon={<AiOutlineDownload size={20} />}
-            iconPosition="right"
-            text="Placeholder text"
-            padding="xs"
+          <Button_Line_Drawing
+              line_effect="line-below"
+              padding="xxs"
+              text="Placeholder text"
+              icon={<AiOutlineDownload size={20} />}
+              icon-position="right"
           />
         </>
       }

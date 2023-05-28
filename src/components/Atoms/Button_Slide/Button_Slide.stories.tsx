@@ -33,9 +33,9 @@ const Extra_Info = `
     <td>use React Icons</td>
   </tr>
   <tr>
-    <td>iconPosition</td>
+    <td>icon-position</td>
     <td>string</td>
-    <td>left, right</td>
+    <td>left | right</td>
   </tr>
 </table>
 <br>
@@ -51,6 +51,7 @@ const Extra_Info = `
   <li>--a-button-slide-text-color</li>
   <li>--a-button-slide-gap</li>
   
+  <li>--a-button-slide-padding-xxs</li>
   <li>--a-button-slide-padding-xs</li>
   <li>--a-button-slide-padding-s</li>
   <li>--a-button-slide-padding-m</li>
@@ -135,13 +136,13 @@ export default {
       control: "radio",
       options: ["slide-up", "slide-down", "slide-right", "slide-left"],
     },
-    iconPosition: {
+    "icon-position": {
       control: "radio",
       options: ["left", "right"],
     },
     padding: {
       control: "radio",
-      options: ["xs", "s", "m", "l", "xl", "xxl"],
+      options: ["xxs", "xs", "s", "m", "l", "xl", "xxl"],
     },
   },
   parameters: {
@@ -166,5 +167,5 @@ Button_slide_story.args = {
   text: "Placeholder text",
   hover_effect: "slide-right",
   padding: "xs",
-  iconPosition: "right",
+  "icon-position": "right",
 };

@@ -92,33 +92,51 @@ const Extra_Info = `
 `;
 
 export default {
-	title: "Molecules/Title And Description",
-	component: Title_and_description,
-	argTypes: {
-		text_align: {
-			control: "radio",
-			options: ["left", "center", "right"],
-		}
-	},
-	parameters: {
-		actions: { disabled: true },
-		docs: {
-			description: {
-				component: Extra_Info,
-			},
-		},
-	},
+  title: "Molecules/Title and Description",
+  component: Title_and_description,
+  argTypes: {
+    "text-align": {
+      control: "radio",
+      options: ["left", "center", "right"],
+    },
+  },
+  parameters: {
+    actions: { disabled: true },
+    docs: {
+      description: {
+        component: Extra_Info,
+      },
+    },
+  },
 } as ComponentMeta<typeof Title_and_description>;
 
 const Template: ComponentStory<typeof Title_and_description> = (args) => (
-	<div style={{maxWidth:  "600px"}}>
-		<Title_and_description {...args} label={<Description color='red' text='Label' />} action={<Button_slide text="button text" hover_effect="slide-right" padding="xs" />} title={<Animated_text variant="h2" text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti" />} />
-	</div>
+  <div style={{ maxWidth: "600px" }}>
+    <Title_and_description
+      text-align={args["text-align"]}
+      label={<Description color="red" text="Label" />}
+      title={
+        <Animated_text
+          variant="h2"
+          text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti"
+        />
+      }
+      description={args.description}
+      action={
+        <Button_slide
+          text="button text"
+          hover_effect="slide-right"
+          padding="xs"
+        />
+      }
+    />
+  </div>
 );
 
 export const Title_and_description_STORY = Template.bind({});
 
 Title_and_description_STORY.args = {
-	text_align: "left",
-	description: "Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur",
+  "text-align": "left",
+  description:
+    "Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur",
 };

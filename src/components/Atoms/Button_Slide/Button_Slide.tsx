@@ -4,20 +4,20 @@ export interface ButtonProps {
   text: string;
   hover_effect: string;
   icon?: ReactElement | string;
-  iconPosition?: string;
-  padding?: string;
+  "icon-position"?: string;
+  padding: string;
 }
 export default function Button_slide(props: ButtonProps) {
   return (
     <>
       <button
-        className={`${props.padding === "xs" ? "padding-xs" : ""}${
-          props.padding === "s" ? "padding-s" : ""
-        }${props.padding === "m" ? "padding-m" : ""}${
-          props.padding === "l" ? "padding-l" : ""
-        }${props.padding === "xl" ? "padding-xl" : ""}${
-          props.padding === "xxl" ? "padding-xxl" : ""
-        } ${
+        className={`${props.padding === "xxs" ? "padding-xxs" : ""}${
+          props.padding === "xs" ? "padding-xs" : ""
+        }${props.padding === "s" ? "padding-s" : ""}${
+          props.padding === "m" ? "padding-m" : ""
+        }${props.padding === "l" ? "padding-l" : ""}${
+          props.padding === "xl" ? "padding-xl" : ""
+        }${props.padding === "xxl" ? "padding-xxl" : ""} ${
           props.hover_effect === "slide-down"
             ? "btn_hover_slide slide_down"
             : ""
@@ -33,7 +33,7 @@ export default function Button_slide(props: ButtonProps) {
             : ""
         } `}
       >
-        <span className={`${props.iconPosition === "left" ? "reverse" : ""}`}>
+        <span className={`${props["icon-position"] === "left" ? "reverse" : ""}`}>
           {props.text}
           {props.icon ? <div className="icon">{props.icon}</div> : ""}
         </span>

@@ -2,6 +2,7 @@ import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 import Button_Line_Drawing from "./Button_Line_Drawing";
+import {AiOutlineDownload} from "react-icons/ai";
 
 const Extra_Info = `
 <br/>
@@ -27,6 +28,16 @@ const Extra_Info = `
     <td>string</td>
     <td>xs, s, m, l, xl, xxl</td>
   </tr>
+  <tr>
+    <td>icon</td>
+    <td>ReactElement</td>
+    <td>use React Icons</td>
+  </tr>
+  <tr>
+    <td>icon-position</td>
+    <td>string</td>
+    <td>left | right</td>
+  </tr>
 </table>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
@@ -41,12 +52,15 @@ const Extra_Info = `
   <li>--a-button-line-drawing-animation-transition-fast</li>
   <li>--a-button-line-drawing-animation-transition-faster</li>
   <li>--a-button-line-drawing-animation-transition-ultra-fast</li>
+  
+  <li>--a-button-line-drawing-padding-xxs</li>
   <li>--a-button-line-drawing-padding-xs</li>
   <li>--a-button-line-drawing-padding-s</li>
   <li>--a-button-line-drawing-padding-m</li>
   <li>--a-button-line-drawing-padding-l</li>
   <li>--a-button-line-drawing-padding-xl</li>
   <li>--a-button-line-drawing-padding-xxl</li>
+  <li>--a-button-line-drawing-gap</li>
 </ol>
 <br>
 <table>
@@ -92,6 +106,10 @@ const Extra_Info = `
   </tr>
   <br>
   <tr>
+  <td>--a-button-line-drawing-padding-xxs</td>
+  <td>$padding-xxs</td>
+</tr>
+  <tr>
     <td>--a-button-line-drawing-padding-xs</td>
     <td>$padding-xs</td>
   </tr>
@@ -115,6 +133,10 @@ const Extra_Info = `
     <td>--a-button-line-drawing-padding-xxl</td>
     <td>$padding-xxl</td>
   </tr>
+  <tr>
+    <td>--a-button-line-drawing-gap</td>
+    <td>15px</td>
+  </tr>
 </table>
 `;
 
@@ -126,9 +148,13 @@ export default {
       control: "radio",
       options: ["line-below", "line-above", "line-side"],
     },
+    "icon-position": {
+      control: "radio",
+      options: ["left", "right"],
+    },
     padding: {
       control: "radio",
-      options: ["xs", "s", "m", "l", "xl", "xxl"],
+      options: ["xxs", "xs", "s", "m", "l", "xl", "xxl"],
     },
   },
   parameters: {
@@ -143,7 +169,7 @@ export default {
 
 const Template: ComponentStory<typeof Button_Line_Drawing> = (args) => (
   <>
-    <Button_Line_Drawing {...args} />
+    <Button_Line_Drawing {...args} icon-position={args["icon-position"]}  icon={<AiOutlineDownload size={20} />}  />
   </>
 );
 
@@ -152,4 +178,5 @@ Button_Line_Drawing_story.args = {
   text: "Placeholder text",
   padding: "xs",
   line_effect: "line-below",
+  "icon-position": "right"
 };

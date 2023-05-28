@@ -1,9 +1,11 @@
-$font-size-p: clamp(1rem, 3.25vw, 1.25rem);
+$font-size-p: clamp(1rem, 2.5vw, 1.1rem);
 $font-size-h1: clamp(1.6rem, 4vw, 3rem);
 $font-size-h2: clamp(1.4rem, 3.5vw, 2.7rem);
 $font-size-h3: clamp(1.2rem, 3.25vw, 2.5rem);
 $font-size-h4: clamp(1.1rem, 2.9vw, 2rem);
+
 $font-size-label: 12px;
+$font-size-buttons: clamp(0.9rem, 2vw, 1rem);
 
 $font-size-footer-main-link: clamp(1rem, 3.25vw, 1.2rem);
 $font-size-footer-secondary-link: clamp(1rem, 3.25vw, 1.1rem);

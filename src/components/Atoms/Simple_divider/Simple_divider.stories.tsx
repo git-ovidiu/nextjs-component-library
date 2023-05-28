@@ -36,6 +36,21 @@ const Extra_Info = `
 <td>string</td>
 <td>1s</td>
 </tr>
+<tr>
+<td>border-radius</td>
+<td>string</td>
+<td>0px | 0%</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>boolean</td>
+<td>-</td>
+</tr>
+<tr>
+<td>animation-delay</td>
+<td>string</td>
+<td>0s</td>
+</tr>
 </table>
 
 <br>
@@ -46,6 +61,8 @@ const Extra_Info = `
 <li>--a-simple-divider-height</li>
 <li>--a-simple-divider-width</li>
 <li>--a-simple-divider-animation-duration</li>
+<li>--a-simple-divider-border-radius</li>
+<li>--a-simple-divider-animation-delay</li>
 </ol>
 
 <table>
@@ -65,11 +82,19 @@ const Extra_Info = `
 <td>--a-simple-divider-animation-duration</td>
 <td>1s</td>
 </tr>
+<tr>
+<td>--a-simple-divider-border-radius</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>--a-simple-divider-animation-delay</td>
+<td>0s</td>
+</tr>
 </table>
 `;
 
 export default {
-	title: "Atoms/Simple_divider",
+	title: "Atoms/Simple Divider",
 	component: Simple_divider,
 	parameters: {
 		actions: { disabled: true },
@@ -88,6 +113,10 @@ const Template: ComponentStory<typeof Simple_divider> = (args) => (
 		width= {args.width}
 		animate={args.animate}
 		animation-duration={args["animation-duration"]}
+		animate-vertical={args["animate-vertical"]}
+		border-radius={args["border-radius"]}
+		loop={args.loop}
+		animation-delay={args["animation-delay"]}
 	/>
 );
 
@@ -97,6 +126,10 @@ Simple_divider_STORY.args = {
 	color: "#4cbfa6",
 	height: "2px",
 	width: "100%",
+	"border-radius": "0px",
 	animate: true,
-	"animation-duration": "1s"
+	loop: true,
+	"animate-vertical": false,
+	"animation-duration": "1s",
+	"animation-delay": "0s"
 };

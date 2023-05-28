@@ -1,16 +1,17 @@
-@use '../../../styles/main.scss' as *;
+@use '../../../styles/main.module.scss' as *;
 
 :root{
     --a-button-slide-background: #{$tertiary-color};
     --a-button-slide-background-hover: #{$primary-color};
     --a-button-slide-animation-transition: 0.3s;
     --a-button-slide-border-radius: #{$border-radius-0};
-    --a-button-slide-font-size: 20px;
+    --a-button-slide-font-size: #{$font-size-buttons};
     --a-button-slide-line-height: 1;
     --a-button-slide-font-weight: 400;
     --a-button-slide-text-color: #{$color-white};
     --a-button-slide-gap: 15px;
 
+    --a-button-slide-padding-xxs: #{$padding-xxs};
     --a-button-slide-padding-xs: #{$padding-xs};
     --a-button-slide-padding-s: #{$padding-s};
     --a-button-slide-padding-m: #{$padding-m};
@@ -37,8 +38,11 @@
     background-color: var(--a-button-slide-background-hover);
     border: none;
     cursor: pointer;
-    box-shadow: 0 5px 15px var(--a-button-slide-background);                                                
+    //box-shadow: 0 5px 15px var(--a-button-slide-background);
+    box-shadow: $box-shadow-xxxl;
+    //todo de vaazut ce fac cu box-shadow-ul de la butonul cu slide
     
+    &.padding-xxs{ span{ padding: var(--a-button-slide-padding-xxs); } }
     &.padding-xs{ span{ padding: var(--a-button-slide-padding-xs); } }
     &.padding-s{ span{ padding: var(--a-button-slide-padding-s); } }
     &.padding-m{ span{ padding: var(--a-button-slide-padding-m); } }

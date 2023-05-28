@@ -44,3 +44,6 @@ export default function Divider(props: DividerProps) {
 		</>
 	);
 }
+
+
+// todo de incercat sa vad daca mai trebuie dividerREf in fisierul asta

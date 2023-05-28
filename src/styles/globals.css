@@ -1,0 +1,54 @@
+@import './Global-Settings/Paddings.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+*::selection{
+  background: transparent;
+}
+
+*::selection:focus{
+  background: transparent;
+}
+
+*:focus{
+  outline: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+  body{
+    /*background: black;*/
+  }
+
+
+  .white{
+    color: white!important;
+  }
+
+  .black{
+    color: black!important;
+  }
+
+
+
+  .faq-container{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }

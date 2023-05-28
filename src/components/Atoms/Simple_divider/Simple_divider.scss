@@ -1,4 +1,4 @@
-@use '../../../styles/main.scss' as *;
+@use '../../../styles/main.module.scss' as *;
 
 :root{
   --a-simple-divider-background: #{$primary-color};
@@ -6,7 +6,7 @@
   --a-simple-divider-width: 100%;
   --a-simple-divider-animation-duration: 1s;
   --a-simple-divider-border-radius: 0px;
-
+  --a-simple-divider-animation-delay: 0s;
 }
 
 .a-simple-divider{
@@ -18,6 +18,7 @@
   &.animate{
     width: 0;
     animation: var(--a-simple-divider-animation-duration) lineProgress forwards;
+    animation-delay: var(--a-simple-divider-animation-delay);
 
     @keyframes lineProgress {
       0%{width: 0%}
@@ -28,6 +29,7 @@
   &.animate-vertical{
     height: 0;
     animation: var(--a-simple-divider-animation-duration) lineProgressVertical forwards;
+    animation-delay: var(--a-simple-divider-animation-delay);
 
     @keyframes lineProgressVertical {
       0%{height: 0%}
