@@ -44,7 +44,7 @@ const Extra_Info = `
 </table>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
-<ul>
+<ol>
 <li>--m-card-background</li>
 <li>--m-card-padding</li>
 <li>--m-card-box-shadow</li>
@@ -61,7 +61,10 @@ const Extra_Info = `
 <li>--m-card-buttons-gap</li>
 <li>--m-card-overlapped-width</li>
 <li>--m-card-overlapped-margin-top</li>
-</ul>
+<li>--m-card-overlapped-side-distance-mobile</li>
+<li>--m-card-overlapped-side-distance-tablet</li>
+<li>--m-card-overlapped-side-distance-desktop</li>
+</ol>
 <table>
   <tr>
     <td>--m-card-background</td>
@@ -127,6 +130,18 @@ const Extra_Info = `
     <td>--m-card-overlapped-margin-top</td>
     <td>-40px</td>
   </tr>
+<tr>
+<td>--m-card-overlapped-side-distance-mobile</td>
+<td>60px</td>
+</tr>
+<tr>
+<td>--m-card-overlapped-side-distance-tablet</td>
+<td>70px</td>
+</tr>
+<tr>
+<td>--m-card-overlapped-side-distance-desktop</td>
+<td>80px</td>
+</tr>
 </table>
 
 `;
@@ -145,7 +160,7 @@ export default {
 } as ComponentMeta<typeof Card>;
 
 const Template: ComponentStory<typeof Card> = (args) => (
-  <div style={{ width: "360px" }}>
+  <div style={{ maxWidth: "360px" }}>
     <Card
       {...args}
       image={

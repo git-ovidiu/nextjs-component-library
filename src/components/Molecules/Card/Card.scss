@@ -15,12 +15,14 @@
   --m-card-description-margin-top: 4px;
   --m-card-buttons-margin-top: 24px;
   --m-card-buttons-gap: 16px;
-  --m-card-overlapped-width: 75%;
   --m-card-overlapped-margin-top: -40px;
+  --m-card-overlapped-side-distance-mobile:  60px;
+  --m-card-overlapped-side-distance-tablet:  70px;
+  --m-card-overlapped-side-distance-desktop:  80px;
 }
  
-.card-container {
-  .m-card {
+.m-card {
+  .card-container {
     position: relative;
     background: var(--m-card-background);
     padding: var(--m-card-padding);
@@ -40,7 +42,7 @@
       }
 
       .content {
-        width: var(--m-card-overlapped-width);
+        width: calc(100% - var(--m-card-overlapped-side-distance-mobile));
         position: relative;
         margin-top: var(--m-card-overlapped-margin-top);
         box-shadow: var(--m-card-box-shadow);
@@ -97,6 +99,31 @@ position: relative;
         @include flex(column, center, flex-start);
         gap: var(--m-card-buttons-gap);
         width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px){
+  .m-card{
+    .card-container{
+      &.m-card-overlapped {
+        .content{
+          width: calc(100% - var(--m-card-overlapped-side-distance-tablet));
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .m-card{
+    .card-container{
+      &.m-card-overlapped {
+        .content{
+          width: calc(100% - var(--m-card-overlapped-side-distance-desktop));
+        }
       }
     }
   }

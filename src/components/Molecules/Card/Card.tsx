@@ -38,8 +38,8 @@ export default function Card(props: CardProps) {
   const isOverlapped = props["is-overlapped"] ? "m-card m-card-overlapped" : "";
 
   return (
-    <div className="card-container">
-      <div className={`m-card ${isOverlapped} ${cardImageClass}`}>
+    <div className="m-card">
+      <div className={`card-container ${isOverlapped} ${cardImageClass}`}>
         {imageElement}
         <div className="content">
           {labelsElement}

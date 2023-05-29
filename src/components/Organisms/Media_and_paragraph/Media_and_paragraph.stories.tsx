@@ -8,7 +8,7 @@ import Animated_text from "../../Atoms/Animated_text";
 import Image from "next/image";
 import Logo from "../../Atoms/Logo";
 import Media_image from "../../Molecules/Media_image";
-import 'bootstrap/dist/css/bootstrap-grid.css'
+import "bootstrap/dist/css/bootstrap-grid.css";
 
 const Extra_Info = `
 <br>
@@ -45,14 +45,9 @@ export default {
   title: "Organisms/Media_and_paragraph",
   component: Media_and_paragraph,
   argTypes: {
-    selectOption: {
+    "align-elements": {
       control: "radio",
-      options: [
-        "selectOption_1",
-        "selectOption_2",
-        "selectOption_3",
-        "selectOption_4",
-      ],
+      options: ["start", "center", "end"],
     },
   },
   parameters: {
@@ -67,8 +62,15 @@ export default {
 
 const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
   <Media_and_paragraph
-
-    reverse-media={true}
+    reverse-media={args["reverse-media"]}
+    align-elements={args["align-elements"]}
+    image-col-md={5}
+    content-col-md={5}
+    image-offset-breakpoint="md"
+    content-offset-breakpoint="md"
+    image-offset-value={1}
+    content-offset-value={1}
+    object-fit="cover"
 
     content={
       <Title_and_description
@@ -92,6 +94,9 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
     }
     image={
       <Media_image
+          padding-bottom-mobile="0%"
+          padding-bottom-tablet="0%"
+          padding-bottom-desktop="0%"
         image={
           <Image
             alt="Placeholder"
@@ -100,11 +105,12 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
             src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
           />
         }
-        image-border-radius="200px"
+        image-border-radius="0px"
         label-bottom-right={
           <Logo
             background="#4cbfa6"
             border-radius="20px "
+            image-source="https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png"
             logo="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
             logo-href="https://www.google.com"
           />
@@ -116,4 +122,11 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
 
 export const Media_and_paragraph_story = Template.bind({});
 
-Media_and_paragraph_story.args = {};
+Media_and_paragraph_story.args = {
+  "align-elements": "center",
+  "reverse-media": true,
+};
+
+
+
+ // todo DE VERIFICAT CE COMPONENTE AU IN SNIPPET-UL DIN STORY ARGS[COMP]  = FALSE, PENTRU CA NU O SA APARA IN SNIPPET-UL DIN STORYBOOK !!!!!! (TREBUIE SA FIE TOATE CU TRUE)
