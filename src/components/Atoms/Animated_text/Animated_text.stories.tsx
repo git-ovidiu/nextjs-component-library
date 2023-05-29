@@ -61,7 +61,7 @@ export default {
     variant: {
       control: "radio",
       options: [
-        "please refresh the page if you change the below values",
+        "please refresh the page if you change the values below",
         "h1",
         "h2",
         "h3",

@@ -1,5 +1,5 @@
 import React from "react";
-import {ComponentMeta, ComponentStory} from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Logo from "./Logo";
 import Image from "next/image";
 
@@ -43,6 +43,8 @@ const Extra_Info = `
 <li>--a-logo-image-hover-transition</li>
 <li>--a-logo-box-shadow-hover</li>
 <li>--a-logo-image-transform-hover</li>
+<li>--a-logo-width</li>
+<li>--a-logo-height</li>
 </ol>
 
 <table>
@@ -56,7 +58,7 @@ const Extra_Info = `
 </tr>
 <tr>
 <td>--a-logo-padding</td>
-<td>24px</td>
+<td>0px</td>
 </tr>
 <tr>
 <td>--a-logo-box-shadow-transition</td>
@@ -78,46 +80,52 @@ const Extra_Info = `
 <td>--a-logo-image-transform-hover</td>
 <td>scale(1.15)</td>
 </tr>
+<tr>
+<td>--a-logo-width</td>
+<td>150px</td>
+</tr>
+<tr>
+<td>--a-logo-height</td>
+<td>50px</td>
+</tr>
 </table>
 `;
 
 //@ts-ignore
 const Link = ({ href, target, children }) => (
-	<a href={href} target={target} rel="noopener noreferrer">
-		{children}
-	</a>
+  <a href={href} target={target} rel="noopener noreferrer">
+    {children}
+  </a>
 );
 
 export default {
-	title: "Atoms/Logo",
-	component: Logo,
-	parameters: {
-		actions: { disabled: true },
-		docs: {
-			description: {
-				component: Extra_Info,
-			},
-		},
-	},
+  title: "Atoms/Logo",
+  component: Logo,
+  parameters: {
+    actions: { disabled: true },
+    docs: {
+      description: {
+        component: Extra_Info,
+      },
+    },
+  },
 } as ComponentMeta<typeof Logo>;
 
-
 const Template: ComponentStory<typeof Logo> = (args) => (
-	<Logo {...args}
-		border-radius={args["border-radius"]}
-	  	background={args.background}
-		logo={
-		//@ts-ignore
-		<Link href={args["logo-href"]} target="_blank"><Image src={args["image-source"]} alt="Placeholder"/></Link>}
-	/>
+  <div style={{position: "relative", width: "150px", height: "50px"}}>
+    <Logo
+      border-radius={args["border-radius"]}
+      background={args.background}
+      logo="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+      width="200px"
+      height="50px"
+    />
+  </div>
 );
 
 export const Logo_STORY = Template.bind({});
 
 Logo_STORY.args = {
-	//@ts-ignore
-	"image-source": "https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png",
-	"logo-href": "https://www.google.com",
-	background: "#4cbfa6",
-	"border-radius": "20px "
+  background: "#4cbfa6",
+  "border-radius": "20px ",
 };

@@ -1,0 +1,24 @@
+@use '../../../styles/main.module.scss' as *;
+
+:root{
+
+}
+
+.o-media-and-paragraph{
+  position: relative;
+  border: 2px solid red;
+
+  .container{
+    .row{
+      .image-container{
+        border: 2px solid red;
+        position: relative;
+
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

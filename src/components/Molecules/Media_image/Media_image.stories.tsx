@@ -2,6 +2,7 @@ import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import Media_image from "./Media_image";
 import Image from "next/image";
+import Logo from "../../Atoms/Logo";
 
 const Extra_Info = `
 <br>
@@ -47,57 +48,102 @@ const Extra_Info = `
     <td>string </td>
     <td>0px | 0%</td>
 </tr>
+<tr>
+<td>padding-bottom-mobile</td>
+<td>string</td>
+<td>0% | 0px</td>
+</tr>
+<tr>
+<td>padding-bottom-tablet</td>
+<td>string</td>
+<td>0% | 0px</td>
+</tr>
+<tr>
+<td>padding-bottom-desktop</td>
+<td>string</td>
+<td>0% | 0px</td>
+</tr>
 </table>
 <br/>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
 <ol>
-<li>--a-media-label-top-left-margin-top</li>
-<li>--a-media-label-top-left-margin-left</li>
-<li>--a-media-label-top-right-margin-top</li>
-<li>--a-media-label-top-right-margin-right</li>
-<li>--a-media-label-bottom-left-margin-bottom</li>
-<li>--a-media-label-bottom-left-margin-left</li>
-<li>--a-media-label-bottom-right-margin-top</li>
-<li>--a-media-label-bottom-right-margin-right</li>
-<li>--a-media-image-border-radius</li>
+<li>--m-media-label-top-left-margin-top</li>
+<li>--m-media-label-top-left-margin-left</li>
+<li>--m-media-label-top-right-margin-top</li>
+<li>--m-media-label-top-right-margin-right</li>
+<li>--m-media-label-bottom-left-margin-bottom</li>
+<li>--m-media-label-bottom-left-margin-left</li>
+<li>--m-media-label-bottom-right-margin-top</li>
+<li>--m-media-label-bottom-right-margin-right</li>
+<li>--m-media-image-border-radius</li>
+<li>--m-label-width</li>
+<li>--m-label-height</li>
+<li>--m-media-image-object-fit</li>
+<li>--m-media-image-padding-bottom-mobile</li>
+<li>--m-media-image-padding-bottom-tablet</li>
+<li>--m-media-image-padding-bottom-desktop</li>
 </ol>
 <table>
 <tr>
-    <td>--a-media-label-top-left-margin-top</td>
+    <td>--m-media-label-top-left-margin-top</td>
     <td>50px</td>
 </tr>
 <tr>
-    <td>--a-media-label-top-left-margin-left</td>
+    <td>--m-media-label-top-left-margin-left</td>
     <td>50px</td>
 </tr>
 <tr>
-    <td>--a-media-label-top-right-margin-top</td>
+    <td>--m-media-label-top-right-margin-top</td>
     <td>50px</td>
 </tr>
 <tr>
-    <td>--a-media-label-top-right-margin-right</td>
+    <td>--m-media-label-top-right-margin-right</td>
     <td>50px</td>
 </tr>
 <tr>
-    <td>--a-media-label-bottom-left-margin-bottom</td>
+    <td>--m-media-label-bottom-left-margin-bottom</td>
     <td>50px</td>
 </tr>
 <tr>
-    <td>--a-media-label-bottom-left-margin-left</td>
+    <td>--m-media-label-bottom-left-margin-left</td>
     <td>50px</td>
 </tr>
 <tr>
-    <td>--a-media-label-bottom-right-margin-top</td>
+    <td>--m-media-label-bottom-right-margin-top</td>
     <td>50px</td>
 </tr>
 <tr>
-    <td>--a-media-label-bottom-right-margin-right</td>
+    <td>--m-media-label-bottom-right-margin-right</td>
     <td>50px</td>
 </tr>
 <tr>
-    <td>--a-media-image-border-radius</td>
+    <td>--m-media-image-border-radius</td>
     <td>unset</td>
+</tr>
+<tr>
+<td>--m-label-width</td>
+<td>150px</td>
+</tr>
+<tr>
+<td>--m-label-height</td>
+<td>50px</td>
+</tr>
+<tr>
+<td>--m-media-image-object-fit</td>
+<td>cover</td>
+</tr>
+<tr>
+<td>--m-media-image-padding-bottom-mobile</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>--m-media-image-padding-bottom-tablet</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>--m-media-image-padding-bottom-desktop</td>
+<td>100%</td>
 </tr>
 </table>
 
@@ -123,27 +169,19 @@ export default {
 } as ComponentMeta<typeof Media_image>;
 
 const Template: ComponentStory<typeof Media_image> = (args) => (
-  <div
-    style={{
-      maxWidth: "500px",
-      width: "100%",
-      height: "100%",
-      position: "relative",
-      margin: "0 auto",
-    }}
-  >
       <Media_image
         image-border-radius={args["image-border-radius"]}
-
+        object-fit={args["object-fit"]}
+        padding-bottom-desktop="0%"
+        padding-bottom-mobile="0%"
+        padding-bottom-tablet="0%"
         image={
-          <Image
-            //@ts-ignore
-            src={args["image-source"]}
-            alt="placeholder"
-            //@ts-ignore
-            style={{ objectFit: args["object-fit"] }}
-            fill
-          />
+            <Image
+                fill
+                alt="Placeholder"
+                src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
         }
 
         label-top-left={
@@ -171,23 +209,21 @@ const Template: ComponentStory<typeof Media_image> = (args) => (
         }
 
         label-bottom-right={
-          <Image
-            //@ts-ignore
-            src={args["label-bottom-right"]}
-            alt="Placeholder"
-          />
+            <Logo
+                background="#4cbfa6"
+                border-radius="20px "
+                image-source="https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png"
+                logo="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+                logo-href="https://www.google.com"
+            />
         }
       />
-  </div>
 );
 
 export const Media_component_story = Template.bind({});
 
 Media_component_story.args = {
   "object-fit": "cover",
-
-  "image-source":
-    "https://res.cloudinary.com/dxbivmheq/image/upload/v1674309864/OvidiuBunghez_diagramic_drawing_simple_color_Yellow_Orange_only_3d2d259b-ddf5-4fb3-94ef-fe74a7954ad8_cvowat.png",
 
   // @ts-ignore
   "label-top-right": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",

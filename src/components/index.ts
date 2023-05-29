@@ -18,3 +18,6 @@ export { default as Title_and_description } from "./Molecules/Title_and_descript
 export { default as Divider } from "./Molecules/Divider";
 export { default as Media_image } from "./Molecules/Media_image";
 export { default as Media_video } from "./Molecules/Media_video";
+
+//Organisms
+export { default as Media_and_paragraph } from "./Organisms/Media_and_paragraph";
