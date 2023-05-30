@@ -8,8 +8,11 @@
   --a-logo-box-shadow: #{$box-shadow-s-white};
   --a-logo-image-hover-transition: #{$transition-duration-fast};
   --a-logo-box-shadow-hover: #{$box-shadow-l-white};
-  --a-logo-image-transform-hover: scale(1.15);
+  --a-logo-image-transform-hover: scale(1.025);
+  --a-logo-width: 150px;
+  --a-logo-height: 50px;
 }
+
 
 
 .a-logo{
@@ -20,8 +23,8 @@
   	border-radius: var(--a-logo-border-radius);
   	padding: var(--a-logo-padding);
 	background: var(--a-logo-background);
-  	height: 100%;
-
+	width: var(--a-logo-width);
+  	height: var(--a-logo-height);
 
   img{
 	transform: scale(1);

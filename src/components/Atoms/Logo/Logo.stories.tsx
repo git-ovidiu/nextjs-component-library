@@ -78,7 +78,7 @@ const Extra_Info = `
 </tr>
 <tr>
 <td>--a-logo-image-transform-hover</td>
-<td>scale(1.15)</td>
+<td>scale(1.025)</td>
 </tr>
 <tr>
 <td>--a-logo-width</td>
@@ -112,20 +112,20 @@ export default {
 } as ComponentMeta<typeof Logo>;
 
 const Template: ComponentStory<typeof Logo> = (args) => (
-  <div style={{position: "relative", width: "150px", height: "50px"}}>
     <Logo
       border-radius={args["border-radius"]}
       background={args.background}
-      logo="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-      width="200px"
+      logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+      width="150px"
       height="50px"
+      logo-alt="Placeholder"
     />
-  </div>
 );
 
 export const Logo_STORY = Template.bind({});
 
 Logo_STORY.args = {
   background: "#4cbfa6",
-  "border-radius": "20px ",
+  "border-radius": "20px",
+
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import {ComponentMeta, ComponentStory} from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Media_image from "./Media_image";
 import Image from "next/image";
 import Logo from "../../Atoms/Logo";
@@ -77,8 +77,6 @@ const Extra_Info = `
 <li>--m-media-label-bottom-right-margin-top</li>
 <li>--m-media-label-bottom-right-margin-right</li>
 <li>--m-media-image-border-radius</li>
-<li>--m-label-width</li>
-<li>--m-label-height</li>
 <li>--m-media-image-object-fit</li>
 <li>--m-media-image-padding-bottom-mobile</li>
 <li>--m-media-image-padding-bottom-tablet</li>
@@ -122,14 +120,6 @@ const Extra_Info = `
     <td>unset</td>
 </tr>
 <tr>
-<td>--m-label-width</td>
-<td>150px</td>
-</tr>
-<tr>
-<td>--m-label-height</td>
-<td>50px</td>
-</tr>
-<tr>
 <td>--m-media-image-object-fit</td>
 <td>cover</td>
 </tr>
@@ -169,55 +159,34 @@ export default {
 } as ComponentMeta<typeof Media_image>;
 
 const Template: ComponentStory<typeof Media_image> = (args) => (
-      <Media_image
-        image-border-radius={args["image-border-radius"]}
-        object-fit={args["object-fit"]}
-        padding-bottom-desktop="0%"
-        padding-bottom-mobile="0%"
-        padding-bottom-tablet="0%"
-        image={
-            <Image
-                fill
-                alt="Placeholder"
-                src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-        }
-
-        label-top-left={
-          <Image
-            //@ts-ignore
-            src={args["label-top-left"]}
-            alt="Placeholder"
-          />
-        }
-
-        label-top-right={
-          <Image
-            //@ts-ignore
-            src={args["label-top-right"]}
-            alt="Placeholder"
-          />
-        }
-        label-bottom-left={
-
-          <Image
-            //@ts-ignore
-            src={args["label-bottom-left"]}
-            alt="Placeholder"
-          />
-        }
-
-        label-bottom-right={
-            <Logo
-                background="#4cbfa6"
-                border-radius="20px "
-                image-source="https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png"
-                logo="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-                logo-href="https://www.google.com"
-            />
-        }
+  <Media_image
+    image-border-radius={args["image-border-radius"]}
+    object-fit={args["object-fit"]}
+    padding-bottom-desktop="0%"
+    padding-bottom-mobile="0%"
+    padding-bottom-tablet="0%"
+    image={
+      <Image
+        fill
+        alt="Placeholder"
+        src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
+    }
+    label-top-left={
+        <Logo
+            background="white"
+            border-radius="20px"
+            height="50px"
+            logo-alt="Placeholder"
+            logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+            width="150px"
+        />
+    }
+    label-top-right='test'
+    label-bottom-left='test'
+    label-bottom-right='test'
+  />
 );
 
 export const Media_component_story = Template.bind({});
@@ -226,13 +195,17 @@ Media_component_story.args = {
   "object-fit": "cover",
 
   // @ts-ignore
-  "label-top-right": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
+  "label-top-right":
+    "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
   // @ts-ignore
-  "label-top-left": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
+  "label-top-left":
+    "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
   // @ts-ignore
-  "label-bottom-right": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
+  "label-bottom-right":
+    "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
   // @ts-ignore
-  "label-bottom-left": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
+  "label-bottom-left":
+    "https://res.cloudinary.com/dxbivmheq/image/upload/v1685288101/dummy_100x50_ffffff_000000_q4dp06.webp",
   //@ts-ignore
   "image-border-radius": "0px",
 };

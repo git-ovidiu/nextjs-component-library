@@ -53,3 +53,8 @@ export default function Media_image(props: MediaComponentProps) {
     </div>
   );
 }
+
+
+// todo te pus custom shapes pe fiecare organism in parte (pentru asta trebuie facut un ceva modul separat pentru asta care sa aiba position: absolute probabil (in colturile organismului)
+
+// todo de facut o componenta care sa fie un listing-cards by default, dar cu o proprietate de 'slider' care sa integreze SPLIDE SWIPER

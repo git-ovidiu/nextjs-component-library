@@ -108,7 +108,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
         image-border-radius="0px"
         label-bottom-right={
           <Logo
-            background="#4cbfa6"
+            background="white"
             border-radius="20px "
             image-source="https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png"
             logo="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"

@@ -12,11 +12,12 @@ interface LogoInterface extends CSSProperties {
 export interface LogoProps {
   style?: LogoInterface;
 
-  width?: string;
-  height?: string;
-  logo?: string;
-  background?: string;
+  width: string;
+  height: string;
+  "logo-image-url": string;
+  background: string;
   "border-radius": string;
+  "logo-alt": string;
 }
 export default function Logo(props: LogoProps) {
   return (
@@ -30,7 +31,7 @@ export default function Logo(props: LogoProps) {
         ...props.style,
       }}
     >
-      {props.logo && <Image src={props.logo} alt="Placeholder" fill />}
+      {props["logo-image-url"] && <Image src={props["logo-image-url"]} alt="Placeholder" fill />}
     </div>
   );
 }
