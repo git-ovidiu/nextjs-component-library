@@ -93,29 +93,18 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
       />
     }
     image={
-      <Media_image
-          padding-bottom-mobile="0%"
-          padding-bottom-tablet="0%"
-          padding-bottom-desktop="0%"
-        image={
-          <Image
-            alt="Placeholder"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
-          />
-        }
-        image-border-radius="0px"
-        label-bottom-right={
-          <Logo
-            background="white"
-            border-radius="20px "
-            image-source="https://res.cloudinary.com/alvarosaburido/image/upload/v1616082729/as-portfolio/awesome-sushi-logo_aiaydr.png"
-            logo="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-            logo-href="https://www.google.com"
-          />
-        }
-      />
+        <Media_image
+            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
+            image-border-radius="0px"
+            label-bottom-left="test"
+            label-bottom-right="test"
+            label-top-left={<Logo background="white" border-radius="20px" height="50px" logo-alt="Placeholder" logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg" width="150px"/>}
+            label-top-right="test"
+            object-fit="cover"
+            padding-bottom-desktop="0%"
+            padding-bottom-mobile="0%"
+            padding-bottom-tablet="0%"
+        />
     }
   />
 );
