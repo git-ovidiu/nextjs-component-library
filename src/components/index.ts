@@ -9,6 +9,7 @@ export { default as Animated_text } from "./Atoms/Animated_text";
 export { default as Link_item } from "./Atoms/Link_item";
 export { default as Logo } from "./Atoms/Logo";
 export { default as Simple_Divider } from "./Atoms/Simple_divider";
+export { default as Custom_Shape } from "./Atoms/Custom_shape";
 
 // MOLECULES
 export { default as Link_list } from "./Molecules/Link_list";
@@ -21,3 +22,7 @@ export { default as Media_video } from "./Molecules/Media_video";
 
 //Organisms
 export { default as Media_and_paragraph } from "./Organisms/Media_and_paragraph";
+
+// Styleguide
+export { default as Custom_grid_column } from "./Styleguide/Grid/Column";
+export { default as Custom_grid_row } from "./Styleguide/Grid/Row";

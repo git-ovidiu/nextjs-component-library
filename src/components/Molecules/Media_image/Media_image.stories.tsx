@@ -160,7 +160,7 @@ export default {
 
 const Template: ComponentStory<typeof Media_image> = (args) => (
   <Media_image
-    image-border-radius={args["image-border-radius"]}
+    image-border-radius="30px"
     object-fit={args["object-fit"]}
     padding-bottom-desktop="0%"
     padding-bottom-mobile="0%"
@@ -183,9 +183,36 @@ const Template: ComponentStory<typeof Media_image> = (args) => (
             width="150px"
         />
     }
-    label-top-right='test'
-    label-bottom-left='test'
-    label-bottom-right='test'
+    label-top-right={
+              <Logo
+            background="white"
+            border-radius="20px"
+            height="50px"
+            logo-alt="Placeholder"
+            logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+            width="150px"
+        />
+    }
+    label-bottom-left={
+              <Logo
+            background="white"
+            border-radius="20px"
+            height="50px"
+            logo-alt="Placeholder"
+            logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+            width="150px"
+        />
+    }
+    label-bottom-right={
+              <Logo
+            background="white"
+            border-radius="20px"
+            height="50px"
+            logo-alt="Placeholder"
+            logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+            width="150px"
+        />
+    }
   />
 );
 

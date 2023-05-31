@@ -69,7 +69,7 @@ export default {
 } as ComponentMeta<typeof Divider>;
 
 const Template: ComponentStory<typeof Divider> = (args) => (
-  <div style={{display: 'flex', flexDirection: 'column', height: "100px", margin: "1000px 0px"}}>
+  <div style={{display: 'flex', flexDirection: 'column', height: "100px"}}>
     <Divider
       divider={
         <>

@@ -1,0 +1,16 @@
+@use '../../../styles/main.module.scss' as *;
+
+:root{
+  --a-custom-shape-margin-top: 0px;
+  --a-custom-shape-margin-bottom: 0px;
+  --a-custom-shape-margin-right: 0px;
+  --a-custom-shape-margin-left: 0px;
+}
+
+.a-custom-shape{
+  	position: absolute;
+  	top: var(--a-custom-shape-margin-top);
+  	bottom: var(--a-custom-shape-margin-bottom);
+  	right: var(--a-custom-shape-margin-right);
+  	left: var(--a-custom-shape-margin-left);
+}

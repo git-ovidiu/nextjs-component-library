@@ -8,7 +8,12 @@ import Animated_text from "../../Atoms/Animated_text";
 import Image from "next/image";
 import Logo from "../../Atoms/Logo";
 import Media_image from "../../Molecules/Media_image";
-import "bootstrap/dist/css/bootstrap-grid.css";
+import Custom_shape from "../../Atoms/Custom_shape/Custom_shape"
+// import "bootstrap/dist/css/bootstrap-grid.css";
+import { Parallax } from 'react-scroll-parallax';
+import { ParallaxProvider } from 'react-scroll-parallax';
+
+
 
 const Extra_Info = `
 <br>
@@ -61,11 +66,17 @@ export default {
 } as ComponentMeta<typeof Media_and_paragraph>;
 
 const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
+    <>
+        <ParallaxProvider>
+            <Parallax translateY={[-20, 300]}>
+                <Custom_shape style={{ position: 'absolute', top: 0, left: 0 }} />
+            </Parallax>
+        <>
   <Media_and_paragraph
     reverse-media={args["reverse-media"]}
     align-elements={args["align-elements"]}
-    image-col-md={5}
-    content-col-md={5}
+    image-col-md={6}
+    content-col-md={6}
     image-offset-breakpoint="md"
     content-offset-breakpoint="md"
     image-offset-value={1}
@@ -107,6 +118,201 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
         />
     }
   />
+        </>
+        <>
+  <Media_and_paragraph
+    reverse-media={args["reverse-media"]}
+    align-elements={args["align-elements"]}
+    image-col-md={6}
+    content-col-md={6}
+    image-offset-breakpoint="md"
+    content-offset-breakpoint="md"
+    image-offset-value={1}
+    content-offset-value={1}
+    object-fit="cover"
+
+    content={
+      <Title_and_description
+        action={
+          <Button_slide
+            hover-effect="slide-right"
+            padding="xs"
+            text="button text"
+          />
+        }
+        description="Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur"
+        label={<Description color="red" text="Label" />}
+        text-align="left"
+        title={
+          <Animated_text
+            text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti"
+            variant="h2"
+          />
+        }
+      />
+    }
+    image={
+        <Media_image
+            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
+            image-border-radius="0px"
+            label-bottom-left="test"
+            label-bottom-right="test"
+            label-top-left={<Logo background="white" border-radius="20px" height="50px" logo-alt="Placeholder" logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg" width="150px"/>}
+            label-top-right="test"
+            object-fit="cover"
+            padding-bottom-desktop="0%"
+            padding-bottom-mobile="0%"
+            padding-bottom-tablet="0%"
+        />
+    }
+  />
+        </>
+        <>
+  <Media_and_paragraph
+    reverse-media={args["reverse-media"]}
+    align-elements={args["align-elements"]}
+    image-col-md={6}
+    content-col-md={6}
+    image-offset-breakpoint="md"
+    content-offset-breakpoint="md"
+    image-offset-value={1}
+    content-offset-value={1}
+    object-fit="cover"
+
+    content={
+      <Title_and_description
+        action={
+          <Button_slide
+            hover-effect="slide-right"
+            padding="xs"
+            text="button text"
+          />
+        }
+        description="Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur"
+        label={<Description color="red" text="Label" />}
+        text-align="left"
+        title={
+          <Animated_text
+            text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti"
+            variant="h2"
+          />
+        }
+      />
+    }
+    image={
+        <Media_image
+            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
+            image-border-radius="0px"
+            label-bottom-left="test"
+            label-bottom-right="test"
+            label-top-left={<Logo background="white" border-radius="20px" height="50px" logo-alt="Placeholder" logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg" width="150px"/>}
+            label-top-right="test"
+            object-fit="cover"
+            padding-bottom-desktop="0%"
+            padding-bottom-mobile="0%"
+            padding-bottom-tablet="0%"
+        />
+    }
+  />
+        </>
+        <>
+  <Media_and_paragraph
+    reverse-media={args["reverse-media"]}
+    align-elements={args["align-elements"]}
+    image-col-md={6}
+    content-col-md={6}
+    image-offset-breakpoint="md"
+    content-offset-breakpoint="md"
+    image-offset-value={1}
+    content-offset-value={1}
+    object-fit="cover"
+
+    content={
+      <Title_and_description
+        action={
+          <Button_slide
+            hover-effect="slide-right"
+            padding="xs"
+            text="button text"
+          />
+        }
+        description="Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur"
+        label={<Description color="red" text="Label" />}
+        text-align="left"
+        title={
+          <Animated_text
+            text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti"
+            variant="h2"
+          />
+        }
+      />
+    }
+    image={
+        <Media_image
+            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
+            image-border-radius="0px"
+            label-bottom-left="test"
+            label-bottom-right="test"
+            label-top-left={<Logo background="white" border-radius="20px" height="50px" logo-alt="Placeholder" logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg" width="150px"/>}
+            label-top-right="test"
+            object-fit="cover"
+            padding-bottom-desktop="0%"
+            padding-bottom-mobile="0%"
+            padding-bottom-tablet="0%"
+        />
+    }
+  />
+        </>
+        <>
+  <Media_and_paragraph
+    reverse-media={args["reverse-media"]}
+    align-elements={args["align-elements"]}
+    image-col-md={6}
+    content-col-md={6}
+    image-offset-breakpoint="md"
+    content-offset-breakpoint="md"
+    image-offset-value={1}
+    content-offset-value={1}
+    object-fit="cover"
+
+    content={
+      <Title_and_description
+        action={
+          <Button_slide
+            hover-effect="slide-right"
+            padding="xs"
+            text="button text"
+          />
+        }
+        description="Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur"
+        label={<Description color="red" text="Label" />}
+        text-align="left"
+        title={
+          <Animated_text
+            text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti"
+            variant="h2"
+          />
+        }
+      />
+    }
+    image={
+        <Media_image
+            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
+            image-border-radius="0px"
+            label-bottom-left="test"
+            label-bottom-right="test"
+            label-top-left={<Logo background="white" border-radius="20px" height="50px" logo-alt="Placeholder" logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg" width="150px"/>}
+            label-top-right="test"
+            object-fit="cover"
+            padding-bottom-desktop="0%"
+            padding-bottom-mobile="0%"
+            padding-bottom-tablet="0%"
+        />
+    }
+  />
+        </>
+        </ParallaxProvider>
+    </>
 );
 
 export const Media_and_paragraph_story = Template.bind({});

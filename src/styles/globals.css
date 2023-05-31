@@ -44,11 +44,3 @@ body::-webkit-scrollbar{
   .black{
     color: black!important;
   }
-
-
-
-  .faq-container{
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-  }
