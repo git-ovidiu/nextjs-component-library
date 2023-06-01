@@ -66,12 +66,12 @@ export default {
 } as ComponentMeta<typeof Media_and_paragraph>;
 
 const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
-    <>
+    <div style={{position: "relative"}}>
         <ParallaxProvider>
-            <Parallax translateY={[-20, 300]}>
-                <Custom_shape style={{ position: 'absolute', top: 0, left: 0 }} />
+            <Parallax translateY={[-1000, 600]} style={{position: 'absolute'}}>
+                <Custom_shape style={{zIndex: 99, position: 'relative' }} />
             </Parallax>
-        <>
+        <div style={{zIndex: -1}}>
   <Media_and_paragraph
     reverse-media={args["reverse-media"]}
     align-elements={args["align-elements"]}
@@ -88,17 +88,17 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
         action={
           <Button_slide
             hover-effect="slide-right"
-            padding="xs"
+            padding="s"
             text="button text"
           />
         }
-        description="Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur"
-        label={<Description color="red" text="Label" />}
+        description={<p>Tation 123 pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur</p>}
+        label={<Description color="red" text="Label" underline />}
         text-align="left"
         title={
           <Animated_text
             text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti"
-            variant="h2"
+            variant="h1"
           />
         }
       />
@@ -118,7 +118,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
         />
     }
   />
-        </>
+        </div>
         <>
   <Media_and_paragraph
     reverse-media={args["reverse-media"]}
@@ -312,7 +312,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
   />
         </>
         </ParallaxProvider>
-    </>
+    </div>
 );
 
 export const Media_and_paragraph_story = Template.bind({});

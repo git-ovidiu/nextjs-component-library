@@ -40,7 +40,7 @@ export default function Custom_shape(props: CustomShapeProps) {
 			<Image
 				src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685576370/Shapes_mlzoj0.svg"
 				alt="Placeholder"
-				width={200}
+				width={250}
 				height={200}
 			/>
 		</div>
