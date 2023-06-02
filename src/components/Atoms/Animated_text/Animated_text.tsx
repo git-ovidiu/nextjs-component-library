@@ -50,19 +50,19 @@ export default function Animated_text(props: AnimatedTextProps) {
   return (
     <>
       {props.variant === "h1" ? (
-        <h1 ref={titleRef} className="animated-title" style={{"--a-animated-text-color": props.color, ...props.style}}>
+        <h1 ref={titleRef} className="animated-title font-size-h1" style={{"--a-animated-text-color": props.color, ...props.style}}>
           {props.text}
         </h1>
       ) : props.variant === "h2" ? (
-        <h2 ref={titleRef} className="animated-title" style={{"--a-animated-text-color": props.color, ...props.style}}>
+        <h2 ref={titleRef} className="animated-title font-size-h2" style={{"--a-animated-text-color": props.color, ...props.style}}>
           {props.text}
         </h2>
       ) : props.variant === "h3" ? (
-        <h3 ref={titleRef} className="animated-title" style={{"--a-animated-text-color": props.color, ...props.style}}>
+        <h3 ref={titleRef} className="animated-title font-size-h3" style={{"--a-animated-text-color": props.color, ...props.style}}>
           {props.text}
         </h3>
       ) : props.variant === "h4" ? (
-        <h4 ref={titleRef} className="animated-title" style={{"--a-animated-text-color": props.color, ...props.style}}>
+        <h4 ref={titleRef} className="animated-title font-size-h4" style={{"--a-animated-text-color": props.color, ...props.style}}>
           {props.text}
         </h4>
       ) : props.variant === "p" ? (
