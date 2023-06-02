@@ -17,6 +17,7 @@ export interface CustomWrapperProps {
   "custom-background-color"?: string | ReactElement;
   "custom-background-image"?: string;
   "custom-background-video"?: string;
+  "container-fluid"?: string;
 }
 export default function Custom_wrapper({
   children,
@@ -26,23 +27,18 @@ export default function Custom_wrapper({
   "custom-background-color": customBackgroundColor,
   "custom-background-image": customBackgroundImage,
   "custom-background-video": customBackgroundVideo,
+  "container-fluid": containerFluid,
   style,
 }: CustomWrapperProps) {
-  // if (customBackgroundImage) {
-  // 	backgroundColorTheme = undefined;
-  // 	customBackgroundColor = undefined;
-  // }
-  //
-  // if(customBackgroundColor){
-  // 	backgroundColorTheme = undefined;
-  // }
 
+  //will remove the theme and the custom background color if the background-image is set
   customBackgroundImage
     ? ((backgroundColorTheme = undefined), (customBackgroundColor = undefined))
     : customBackgroundColor
     ? (backgroundColorTheme = undefined)
     : null;
 
+  // will remove the theme, custom background color and the background image if set
   customBackgroundVideo ? ((backgroundColorTheme = undefined), (customBackgroundColor = undefined), (customBackgroundImage = undefined)) : null;
 
   return (
@@ -58,7 +54,7 @@ export default function Custom_wrapper({
     >
       {customBackgroundImage ? (
           <div className="has-background-image">
-            <div className="container">
+            <div className={`${containerFluid ? 'container-fluid' : 'container'}`}>
               <div className="image-container">
                 <picture>
                   <Image fill src={customBackgroundImage} alt="placeholder" />
@@ -70,7 +66,7 @@ export default function Custom_wrapper({
       ) :
 		  customBackgroundVideo ? (
 			  <div className="has-background-video">
-				  <div className="container">
+				  <div className={`${containerFluid ? 'container-fluid' : 'container'}`}>
 					  <div className="video-container">
 					  <Media_video
 						  auto-play
@@ -88,7 +84,7 @@ export default function Custom_wrapper({
 			  </div>
 		  ) :
 		  (
-        <div className="container">{children}</div>
+        <div className={`${containerFluid ? 'container-fluid' : 'container'}`}>{children}</div>
       )}
     </section>
   );

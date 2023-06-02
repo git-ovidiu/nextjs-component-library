@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Custom_wrapper from "./Custom_wrapper";
 import {
-  Animated_text,
+  AnimatedText,
   Button_slide,
   Custom_grid_column,
   Custom_grid_row,
@@ -127,7 +127,7 @@ const Template: ComponentStory<typeof Custom_wrapper> = (args) => (
           text-align="left"
           title={
             <span>
-              <Animated_text
+              <AnimatedText
                 color="white"
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!"
                 variant="h4"

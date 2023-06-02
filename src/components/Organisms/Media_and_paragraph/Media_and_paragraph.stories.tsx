@@ -2,13 +2,13 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Media_and_paragraph from "./Media_and_paragraph";
 import Title_and_description from "../../Molecules/Title_and_description";
-import Button_slide from "../../Atoms/Button_Slide";
+import ButtonSlide from "../../Atoms/Button-slide";
 import Description from "../../Atoms/Description";
-import Animated_text from "../../Atoms/Animated_text";
+import AnimatedText from "../../Atoms/Animated-text";
 import Image from "next/image";
 import Logo from "../../Atoms/Logo";
 import Media_image from "../../Molecules/Media_image";
-import Custom_shape from "../../Atoms/Custom_shape/Custom_shape"
+import CustomShape from "../../Atoms/Custom-shape/Custom-shape";
 import "../../../styles/bootstrap/css/bootstrap-grid.css";
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -75,7 +75,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
     <div style={{position: "relative"}}>
         <ParallaxProvider>
             <Parallax translateY={[-1000, 600]} style={{position: 'absolute'}}>
-                <Custom_shape style={{zIndex: 99, position: 'relative' }} />
+                <CustomShape style={{zIndex: 99, position: 'relative' }} />
             </Parallax>
         <div style={{zIndex: -1}}>
             <div style={{border: "2px solid red"}}>
@@ -119,11 +119,11 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
                   }}
               >
                   <Title_and_description
-                      action={<Button_slide hover-effect="slide-right" padding="xs" text="button text"/>}
+                      action={<ButtonSlide hover-effect="slide-right" padding="xs" text="button text"/>}
                       description="Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur"
                       label={<Description color="red" text="Label"/>}
                       text-align="left"
-                      title={<Animated_text text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti" variant="h2"/>}
+                      title={<AnimatedText text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti" variant="h2"/>}
                   />
               </div>
           </Custom_grid_column>
