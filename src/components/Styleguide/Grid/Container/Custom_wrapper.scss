@@ -1,0 +1,53 @@
+@use '../../../../styles/main.module.scss' as *;
+
+:root {
+  --s-custom-wrapper-background-primary: #{$background-color-primary};
+  --s-custom-wrapper-background-secondary: #{$background-color-secondary};
+  --s-custom-wrapper-background-tertiary: #{$background-color-tertiary};
+  --s-custom-wrapper-background-custom: "red";
+  --s-custom-wrapper-background-image: unset;
+}
+
+.s-custom-wrapper {
+  position: relative;
+  background: var(--s-custom-wrapper-background-custom);
+
+  &.primary {
+    background: var(--s-custom-wrapper-background-primary);
+  }
+  &.secondary {
+    background: var(--s-custom-wrapper-background-secondary);
+  }
+  &.tertiary {
+    background: var(--s-custom-wrapper-background-tertiary);
+  }
+
+  .has-background-image {
+    picture {
+      img {
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .has-background-video {
+    width: 100%;
+    height: 100%;
+
+    .video-container {
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+  }
+}

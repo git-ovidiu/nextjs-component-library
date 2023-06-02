@@ -4,47 +4,55 @@
 
 
 /* !top */
+.padding_top_0{
+padding-top: unset;
+}
 .padding_top_xs{
-padding: clamp(5px, 5vw, 25px) 0px;
+padding-top: clamp(5px, 5vw, 25px);
 }
 .padding_top_s{
-padding: clamp(10px, 5vw, 35px) 0px;
+padding-top: clamp(10px, 5vw, 35px);
 }
 .padding_top_m{
-padding: clamp(20px, 5vw, 50px) 0px;
+padding-top: clamp(20px, 5vw, 50px);
 }
 .padding_top_l{
-padding: clamp(30px, 5vw, 65px) 0px;
+padding-top: clamp(30px, 5vw, 65px);
 }
 .padding_top_xl{
-padding: clamp(40px, 5vw, 80px) 0px;
+padding-top: clamp(40px, 5vw, 80px);
 }
 .padding_top_xxl{
-padding: clamp(50px, 5vw, 100px) 0px;
+padding-top: clamp(50px, 5vw, 100px);
 }
 
 /* !bottom */
+.padding_bottom_0{
+padding-bottom: unset;
+}
 .padding_bottom_xs{
-padding: clamp(5px, 5vw, 25px) 0px;
+padding-bottom: clamp(5px, 5vw, 25px);
 }
 .padding_bottom_s{
-padding: clamp(10px, 5vw, 35px) 0px;
+padding-bottom: clamp(10px, 5vw, 35px);
 }
 .padding_bottom_m{
-padding: clamp(20px, 5vw, 50px) 0px;
+padding-bottom: clamp(20px, 5vw, 50px);
 }
 .padding_bottom_l{
-padding: clamp(30px, 5vw, 65px) 0px;
+padding-bottom: clamp(30px, 5vw, 65px);
 }
 .padding_bottom_xl{
-padding: clamp(40px, 5vw, 80px) 0px;
+padding-bottom: clamp(40px, 5vw, 80px);
 }
 .padding_bottom_xxl{
-padding: clamp(50px, 5vw, 100px) 0px;
+padding-bottom: clamp(50px, 5vw, 100px);
 }
 
 /* !all */
-
+.padding_0{
+padding: unset;
+}
 .padding_xs{
 padding: clamp(5px, 5vw, 25px) 0px;
 }

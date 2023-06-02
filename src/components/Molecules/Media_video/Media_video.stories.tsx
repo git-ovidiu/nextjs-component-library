@@ -266,7 +266,7 @@ const Template: ComponentStory<typeof Media_video> = (args) => (
 				<Media_video
 					{...args}
 					//@ts-ignore
-					video={args["video-source"]}
+					video={args["video"]}
 					//@ts-ignore
 					video-border-radius={args["video-border-radius"]}
 					object-fit={args["object-fit"]}
@@ -295,7 +295,7 @@ export const Media_video_story = Template.bind({});
 
 Media_video_story.args = {
 	//@ts-ignore
-	"video-source":
+	"video":
 		"https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
 	["auto-play"]: false,
 	"video-border-radius": undefined,

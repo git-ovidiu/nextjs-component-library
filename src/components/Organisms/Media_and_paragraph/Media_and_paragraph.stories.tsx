@@ -79,7 +79,18 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
             </Parallax>
         <div style={{zIndex: -1}}>
             <div style={{border: "2px solid red"}}>
-  <Media_and_paragraph space-top={args["space-top"]} space-bottom={args["space-bottom"]} background-color={args["background-color"]}>
+
+  <Media_and_paragraph space-top={args["space-top"]} space-bottom={args["space-bottom"]} background-color={args["background-color"]} custom-background={args["custom-background"]} custom-background-image={
+      <Media_image
+          image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666627243/VIBE%20INTERIOR/Penthouse%20C:/living_1_qkudee.jpg"/>}
+          image-border-radius="0px"
+          object-fit="cover"
+          padding-bottom-desktop="0%"
+          padding-bottom-mobile="0%"
+          padding-bottom-tablet="0%"
+      />
+  }>
+                <div className="container">
       <Custom_grid_row vertical-alignment="center" reverse-breakpoint="xl">
           <Custom_grid_column
               md={12}
@@ -89,7 +100,6 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
           >
               <Media_image
                   image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
-                  image-border-radius="30px"
                   label-bottom-right={<Logo background="white" border-radius="20px" height="50px" logo-alt="Placeholder" logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg" width="150px"/>}
                   object-fit="cover"
                   padding-bottom-desktop="0%"
@@ -118,6 +128,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
               </div>
           </Custom_grid_column>
       </Custom_grid_row>
+                </div>
   </Media_and_paragraph>
             </div>
         </div>
@@ -129,9 +140,10 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
 export const Media_and_paragraph_story = Template.bind({});
 
 Media_and_paragraph_story.args = {
-  "space-bottom": 'm',
-  "space-top": 'm',
-    "background-color": 'primary'
+    "space-top": 'm',
+    "space-bottom": 'm',
+    "background-color": 'primary',
+    "custom-background": "red"
 };
 
 

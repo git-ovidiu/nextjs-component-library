@@ -161,3 +161,6 @@ export default function Media_video(props: MediaComponentProps) {
             </div>
   );
 }
+
+
+// todo add option to add/remove the progress bar
