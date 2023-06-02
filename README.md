@@ -21,29 +21,47 @@ npm publish
 <hr/>
 <h2> LIVE COMPONENTS </h2>
 <h3 style="color: teal">ATOMS</h3>
-<ol>
+<ul>
+<hr>
+    <h4 style="color: yellow">TEXT</h4>
+    <ul>
     <li>Animated_text</li>
-    <li>Button_Line_Drawing</li>
-    <li>Button_Slide</li>
-    <li>Button_Slide_Second</li>
     <li>Description</li>
     <li>FAQ_item</li>
     <li>Link_item</li>
     <li>Label</li>
+    </ul>
+    <hr>
+    <h4 style="color: yellow">BUTTONS</h4>
+    <ul>
+    <li>Button_Line_Drawing</li>
+    <li>Button_Slide</li>
+    <li>Button_Slide_Second</li>
+    </ul>
+    <hr>
     <li>Simple_divider</li>
     <li>Logo</li>
-</ol>
+    <li>Custom_Shape</li>
+</ul>
 <h3 style="color: teal">MOLECULES</h3>
-<ol>
-    <li>Card</li>
-    <li>Divider</li>
-    <li>Footer_card</li>
+<ul>
     <li>Link_list</li>
+    <li>Footer_card</li>
+    <li>Card</li>
+    <li>Title_and_description</li>
+    <li>Divider</li>
     <li>Media_image</li>
     <li>Media_video</li>
-    <li>Title_and_description</li>
-</ol>
-
+</ul>
+<h3 style="color: teal">ORGANISMS</h3>
+<ul>
+<li>Media_and_paragraph</li>
+</ul>
+<h3 style="color: teal">STYLEGUIDE</h3>
+<ul>
+<li>Custom_grid_column</li>
+<li>Custom_grid_row</li>
+</ul>
 
 <hr/>
 

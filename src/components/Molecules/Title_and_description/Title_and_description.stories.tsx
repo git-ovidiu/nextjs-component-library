@@ -125,7 +125,7 @@ const Template: ComponentStory<typeof Title_and_description> = (args) => (
       action={
         <Button_slide
           text="button text"
-          hover_effect="slide-right"
+          hover-effect="slide-right"
           padding="xs"
         />
       }

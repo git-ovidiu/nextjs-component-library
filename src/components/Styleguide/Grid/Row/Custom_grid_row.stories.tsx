@@ -38,9 +38,9 @@ export default {
 	title: "Styleguide/Grid/Row",
 	component: Custom_grid_row,
 	argTypes: {
-		selectOption: {
+		"reverse-breakpoint": {
 			control: "radio",
-			options: ["selectOption_1", "selectOption_2", "selectOption_3", "selectOption_4"],
+			options: ["sm", "md", "lg", "xl", "xxl"],
 		}
 	},
 	parameters: {
@@ -54,45 +54,48 @@ export default {
 } as ComponentMeta<typeof Custom_grid_row>;
 
 const Template: ComponentStory<typeof Custom_grid_row> = (args) => (
-	<div className="container">
-	<Custom_grid_row {...args}>
+	<Custom_grid_row {...args}
+		vertical-alignment={args["vertical-alignment"]}
+		reverse-breakpoint={args["reverse-breakpoint"]}
+	>
 		<Custom_grid_column
-			breakpoint="md"
-			extra-classes=""
-			offset-breakpoint="sm"
-			offset-size={0}
-			size={6}
+			xs={12}
+			sm={5}
+			md={5}
+			lg={5}
+			xl={5}
+			xxl={5}
 		>
 			<h1
 				style={{
-					border: '2px solid red'
+					border: '2px solid #4cbfa6'
 				}}
 			>
-				offset-sm-0 & col-md-12
+				offset-- & col--6 1
 			</h1>
 		</Custom_grid_column>
-
 		<Custom_grid_column
-			breakpoint="md"
-			extra-classes=""
-			offset-breakpoint="sm"
-			offset-size={0}
-			size={6}
+			xs={12}
+			sm={7}
+			md={7}
+			lg={7}
+			xl={7}
+			xxl={7}
 		>
 			<h1
 				style={{
-					border: '2px solid red'
+					border: '2px solid #4cbfa6'
 				}}
 			>
-				offset-sm-0 & col-md-12
+				offset-- & col--6 2
 			</h1>
 		</Custom_grid_column>
 	</Custom_grid_row>
-			</div>
 );
 
 export const Custom_grid_row_STORY = Template.bind({});
 
 Custom_grid_row_STORY.args = {
-	text: "Placeholder text",
+	"vertical-alignment": "center",
+	"reverse-breakpoint": undefined
 };

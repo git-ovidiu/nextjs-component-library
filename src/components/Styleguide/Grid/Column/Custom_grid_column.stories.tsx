@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Custom_grid_column from "./Custom_grid_column";
-import "../../../../styles/bootstrap/css/bootstrap.css";
+import "../../../../styles/bootstrap/css/bootstrap-grid.css";
 
 
 const Extra_Info = `
@@ -69,33 +69,33 @@ export default {
 
 const Template: ComponentStory<typeof Custom_grid_column> = (args) => (
 	<Custom_grid_column {...args}
-		// breakpoint={args.breakpoint}
-		// size={args.size}
-		// offset-breakpoint={args["offset-breakpoint"]}
-		// offset-size={args["offset-size"]}
-		// extra-classes=""
+		//@ts-ignore
 		xs={args.size}
+		//@ts-ignore
 		sm={args.size}
+		//@ts-ignore
 		md={args.size}
+		//@ts-ignore
 		lg={args.size}
+		//@ts-ignore
 		xl={args.size}
+		//@ts-ignore
 		xxl={args.size}
 
+		//@ts-ignore
 		xs-offset={args["offset-size"]}
+		//@ts-ignore
 		sm-offset={args["offset-size"]}
+		//@ts-ignore
 		md-offset={args["offset-size"]}
+		//@ts-ignore
 		lg-offset={args["offset-size"]}
-
-	>
-		<h1 style={{border: "2px solid red"}}>offset-{args["offset-breakpoint"]}-{args["offset-size"]} & col-{args.breakpoint}-{args.size}</h1>
+		//@ts-ignore
+	><h1 style={{border: "2px solid #4cbfa6"}}>offset-{args["offset-size"]} & col-{args.size}</h1>
 	</Custom_grid_column>
 );
 
 export const Custom_grid_column_STORY = Template.bind({});
 
 Custom_grid_column_STORY.args = {
-	// breakpoint: 'md',
-	// size: 5,
-	// "offset-breakpoint": 'sm',
-	// "offset-size": 0
 };

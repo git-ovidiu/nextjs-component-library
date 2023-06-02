@@ -1,11 +1,27 @@
 @use '../../../styles/main.module.scss' as *;
 
 :root{
-
+  --o-media-and-paragraph-background-primary: #{$background-color-primary};
+  --o-media-and-paragraph-background-secondary: #{$background-color-secondary};
+  --o-media-and-paragraph-background-tertiary: #{$background-color-tertiary};
+  --o-media-and-paragraph-background-custom: 'red';
 }
 
 .o-media-and-paragraph{
   position: relative;
+
+  &.primary{
+    background: var(--o-media-and-paragraph-background-primary);
+  }
+  &.secondary{
+    background: var(--o-media-and-paragraph-background-secondary);
+  }
+  &.tertiary{
+    background: var(--o-media-and-paragraph-background-tertiary);
+  }
+  &.custom{
+    background: var(--o-media-and-paragraph-background-custom);
+  }
 
   .container{
     .row{

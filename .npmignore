@@ -11,6 +11,7 @@
 *.editorconfig
 *.env
 *.storybook
+*styles
 
 # Directories
 node_modules

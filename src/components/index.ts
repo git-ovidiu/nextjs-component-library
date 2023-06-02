@@ -1,14 +1,14 @@
 // ATOMS
-export { default as Button_slide } from "./Atoms/Button_Slide";
+export { default as Animated_text } from "./Atoms/Animated_text";
 export { default as Button_Line_Drawing } from "./Atoms/Button_Line_Drawing";
+export { default as Button_slide } from "./Atoms/Button_Slide";
 export { default as Button_Slide_Second } from "./Atoms/Button_Slide_Second";
 export { default as Description } from "./Atoms/Description";
 export { default as FAQ_item } from "./Atoms/FAQ_item";
-export { default as Label } from "./Atoms/Label";
-export { default as Animated_text } from "./Atoms/Animated_text";
 export { default as Link_item } from "./Atoms/Link_item";
-export { default as Logo } from "./Atoms/Logo";
+export { default as Label } from "./Atoms/Label";
 export { default as Simple_Divider } from "./Atoms/Simple_divider";
+export { default as Logo } from "./Atoms/Logo";
 export { default as Custom_Shape } from "./Atoms/Custom_shape";
 
 // MOLECULES
