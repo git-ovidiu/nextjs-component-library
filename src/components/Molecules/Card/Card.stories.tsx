@@ -2,8 +2,8 @@ import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {AiOutlineDownload} from "react-icons/ai";
 import Card from "./Card";
-import {Animated_text, Button_slide, Label} from "../../../index";
-import Button_Line_Drawing from "../../Atoms/Button_Line_Drawing";
+import {AnimatedText, Button_slide, Label} from "../../../index";
+import ButtonLineDrawing from "../../Atoms/Button-line-drawing";
 
 const Extra_Info = `
 <br>
@@ -185,13 +185,13 @@ const Template: ComponentStory<typeof Card> = (args) => (
         </>
       }
       title={
-        <Animated_text
+        <AnimatedText
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque."
           variant="h3"
         />
       }
       description={
-        <Animated_text
+        <AnimatedText
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"
           variant="p"
         />
@@ -205,7 +205,7 @@ const Template: ComponentStory<typeof Card> = (args) => (
             text="Placeholder text"
             padding="xxs"
           />
-          <Button_Line_Drawing
+          <ButtonLineDrawing
               line-effect="line-below"
               padding="xxs"
               text="Placeholder text"

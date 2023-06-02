@@ -2,7 +2,7 @@ import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {AiOutlineDownload} from "react-icons/ai";
 import Footer_card from "./Footer_card";
-import Button_slide from "../../Atoms/Button_Slide";
+import ButtonSlide from "../../Atoms/Button-slide";
 
 const Extra_Info = `
 <br>
@@ -89,7 +89,7 @@ const Template: ComponentStory<typeof Footer_card> = (args) => (
         />
       }
       action={
-        <Button_slide
+        <ButtonSlide
           padding="m"
           hover-effect="slide-right"
           icon={<AiOutlineDownload size={20} />}

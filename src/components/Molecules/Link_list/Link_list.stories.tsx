@@ -1,7 +1,7 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import Link_list from "./Link_list";
-import Link_item from "../../Atoms/Link_item";
+import LinkItem from "../../Atoms/Link-item";
 
 const Extra_Info = `
 <br>
@@ -56,10 +56,10 @@ const Template: ComponentStory<typeof Link_list> = (args) => (
       position={args["position"]}
     link-element={
         //@ts-ignore
-      <><Link_item link={<p>{args["main-link"]}</p>} link-type="main" />
-        <Link_item link={<p>secondary</p>} link-type="secondary" />
-        <Link_item link={<p>secondary</p>} link-type="secondary" />
-        <Link_item link={<p>secondary</p>} link-type="secondary" />
+      <><LinkItem link={<p>{args["main-link"]}</p>} link-type="main" />
+        <LinkItem link={<p>secondary</p>} link-type="secondary" />
+        <LinkItem link={<p>secondary</p>} link-type="secondary" />
+        <LinkItem link={<p>secondary</p>} link-type="secondary" />
       </>
     }
   />

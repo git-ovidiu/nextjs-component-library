@@ -2,8 +2,9 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Title_and_description from "./Title_and_description";
 import Description from "../../Atoms/Description";
-import Animated_text from "../../Atoms/Animated_text";
-import Button_slide from "../../Atoms/Button_Slide";
+import AnimatedText from "../../Atoms/Animated-text";
+import {ButtonSlide} from "../../index"
+
 
 const Extra_Info = `
 <br>
@@ -116,14 +117,14 @@ const Template: ComponentStory<typeof Title_and_description> = (args) => (
       text-align={args["text-align"]}
       label={<Description color="red" text="Label" />}
       title={
-        <Animated_text
+        <AnimatedText
           variant="h2"
           text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti"
         />
       }
       description={args.description}
       action={
-        <Button_slide
+        <ButtonSlide
           text="button text"
           hover-effect="slide-right"
           padding="xs"

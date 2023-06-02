@@ -1,15 +1,15 @@
 // ATOMS
-export { default as Animated_text } from "./Atoms/Animated_text";
-export { default as Button_Line_Drawing } from "./Atoms/Button_Line_Drawing";
-export { default as Button_slide } from "./Atoms/Button_Slide";
-export { default as Button_Slide_Second } from "./Atoms/Button_Slide_Second";
+export { default as AnimatedText } from "./Atoms/Animated-text";
+export { default as ButtonLineDrawing } from "./Atoms/Button-line-drawing";
+export { default as ButtonSlide } from "./Atoms/Button-slide";
+export { default as ButtonSlideSecond } from "./Atoms/Button-slide-second";
 export { default as Description } from "./Atoms/Description";
-export { default as FAQ_item } from "./Atoms/FAQ_item";
-export { default as Link_item } from "./Atoms/Link_item";
+export { default as FaqItem } from "./Atoms/FAQ-item";
+export { default as Link_item } from "./Atoms/Link-item";
 export { default as Label } from "./Atoms/Label";
-export { default as Simple_Divider } from "./Atoms/Simple_divider";
+export { default as SimpleDivider } from "./Atoms/Simple-divider";
 export { default as Logo } from "./Atoms/Logo";
-export { default as Custom_Shape } from "./Atoms/Custom_shape";
+export { default as CustomShape } from "./Atoms/Custom-shape";
 
 // MOLECULES
 export { default as Link_list } from "./Molecules/Link_list";
@@ -26,3 +26,4 @@ export { default as Media_and_paragraph } from "./Organisms/Media_and_paragraph"
 // Styleguide
 export { default as Custom_grid_column } from "./Styleguide/Grid/Column";
 export { default as Custom_grid_row } from "./Styleguide/Grid/Row";
+export { default as Custom_wrapper } from "./Styleguide/Grid/Container";
