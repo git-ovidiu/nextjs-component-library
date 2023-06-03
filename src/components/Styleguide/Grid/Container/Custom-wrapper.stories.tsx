@@ -47,13 +47,12 @@ export default {
   title: "Styleguide/Grid/Custom Wrapper",
   component: CustomWrapper,
   argTypes: {
-    selectOption: {
-      control: "radio",
+    "background-color-theme": {
+      control: "select",
       options: [
-        "selectOption_1",
-        "selectOption_2",
-        "selectOption_3",
-        "selectOption_4",
+        "primary",
+        "secondary",
+        "tertiary"
       ],
     },
   },
@@ -73,11 +72,12 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
     {...args}
     space-top={args["space-top"]}
     space-bottom={args["space-bottom"]}
-    background-color-theme="primary"
-    custom-background-color="red"
-    // custom-background-image="https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png"
-    custom-background-video={"https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4"}
-    // https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4
+    background-color-theme={args["background-color-theme"]}
+    custom-background-color={args["custom-background-color"]}
+    custom-background-image={args["custom-background-image"]}
+    custom-background-video={args["custom-background-video"]}
+    container-fluid={args["container-fluid"]}
+    border-radius={args["border-radius"]}
   >
     <CustomGridRow vertical-alignment="center">
       <CustomGridColumn lg={5} xs={12}>
@@ -86,7 +86,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
             <Image
               alt="Placeholder"
               fill
-              src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
+              src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685771607/_bd478abc-0aa9-492c-bfe9-ba6466c51b19_kvlmat.jpg"
             />
           }
           image-border-radius="30px"
@@ -141,8 +141,15 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
 export const Custom_wrapper_STORY = Template.bind({});
 
 Custom_wrapper_STORY.args = {
+  //@ts-ignore
+  "container-fluid": false,
+  "border-radius": "0px",
   "space-top": "xxl",
   "space-bottom": "xxl",
+  "background-color-theme": "primary",
+  "custom-background-color": undefined,
+  "custom-background-image": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
+  "custom-background-video": "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
 };
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters

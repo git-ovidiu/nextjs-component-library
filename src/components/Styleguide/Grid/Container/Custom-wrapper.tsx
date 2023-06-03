@@ -1,9 +1,10 @@
 import React, { CSSProperties, ReactElement, ReactNode } from "react";
 import "./Custom-wrapper.scss";
 import Image from "next/image";
-import {MediaVideo} from "../../../index"
+import { MediaVideo } from "../../../index";
 interface CustomWrapperStyle extends CSSProperties {
   "--s-custom-wrapper-background-custom"?: string;
+  "--s-custom-wrapper-border-radius"?: string;
 }
 
 export interface CustomWrapperProps {
@@ -12,8 +13,8 @@ export interface CustomWrapperProps {
   children: ReactNode;
   "space-top"?: string;
   "space-bottom"?: string;
-  "background-color-theme"?: string;
   "border-radius"?: string;
+  "background-color-theme"?: string;
   "custom-background-color"?: string;
   "custom-background-image"?: string;
   "custom-background-video"?: string;
@@ -28,9 +29,9 @@ export default function CustomWrapper({
   "custom-background-image": customBackgroundImage,
   "custom-background-video": customBackgroundVideo,
   "container-fluid": containerFluid,
+  "border-radius": borderRadius,
   style,
 }: CustomWrapperProps) {
-
   //will remove the theme and the custom background color if the background-image is set
   customBackgroundImage
     ? ((backgroundColorTheme = undefined), (customBackgroundColor = undefined))
@@ -39,7 +40,18 @@ export default function CustomWrapper({
     : null;
 
   // will remove the theme, custom background color and the background image if set
-  customBackgroundVideo ? ((backgroundColorTheme = undefined), (customBackgroundColor = undefined), (customBackgroundImage = undefined)) : null;
+  customBackgroundVideo
+    ? ((backgroundColorTheme = undefined),
+      (customBackgroundColor = undefined),
+      (customBackgroundImage = undefined))
+    : null;
+
+  // will remove the background color, the background image and the background video if set
+  backgroundColorTheme
+    ? ((customBackgroundVideo = undefined),
+      (customBackgroundColor = undefined),
+      (customBackgroundImage = undefined))
+    : null;
 
   return (
     <section
@@ -49,41 +61,47 @@ export default function CustomWrapper({
 				${backgroundColorTheme ? `${backgroundColorTheme}` : ""}`}
       style={{
         "--s-custom-wrapper-background-custom": customBackgroundColor,
+        "--s-custom-wrapper-border-radius": borderRadius,
         ...style,
       }}
     >
       {customBackgroundImage ? (
-          <div className="has-background-image">
-            <div className={`${containerFluid ? 'container-fluid' : 'container'}`}>
-              <div className="image-container">
-                <picture>
-                  <Image fill src={customBackgroundImage} alt="placeholder" />
-                </picture>
-              </div>
-              {children}
+        <div className="has-background-image">
+          <div
+            className={`${containerFluid ? "container-fluid" : "container"}`}
+          >
+            <div className="image-container">
+              <picture>
+                <Image fill src={customBackgroundImage} alt="placeholder" style={{borderRadius: borderRadius}} />
+              </picture>
             </div>
+            {children}
           </div>
-      ) :
-		  customBackgroundVideo ? (
-			  <div className="has-background-video">
-				  <div className={`${containerFluid ? 'container-fluid' : 'container'}`}>
-					  <div className="video-container">
-					  <MediaVideo
-						  auto-play
-						  loop
-						  muted
-						  object-fit="cover"
-						  progress-bar-color="red"
-						  remove-controls
-						  video={customBackgroundVideo}
-					  />
-					  </div>
-					  {children}
-				  </div>
-			  </div>
-		  ) :
-		  (
-        <div className={`${containerFluid ? 'container-fluid' : 'container'}`}>{children}</div>
+        </div>
+      ) : customBackgroundVideo ? (
+        <div className="has-background-video">
+          <div
+            className={`${containerFluid ? "container-fluid" : "container"}`}
+          >
+            <div className="video-container">
+              <MediaVideo
+                auto-play
+                loop
+                muted
+                object-fit="cover"
+                progress-bar-color="red"
+                remove-controls
+                video={customBackgroundVideo}
+                video-border-radius={borderRadius}
+              />
+            </div>
+            {children}
+          </div>
+        </div>
+      ) : (
+        <div className={`${containerFluid ? "container-fluid" : "container"}`}>
+          {children}
+        </div>
       )}
     </section>
   );

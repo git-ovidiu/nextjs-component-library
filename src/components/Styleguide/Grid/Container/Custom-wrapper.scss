@@ -6,11 +6,13 @@
   --s-custom-wrapper-background-tertiary: #{$background-color-tertiary};
   --s-custom-wrapper-background-custom: "red";
   --s-custom-wrapper-background-image: unset;
+  --s-custom-wrapper-border-radius: unset;
 }
 
 .s-custom-wrapper {
   position: relative;
   background: var(--s-custom-wrapper-background-custom);
+  border-radius: var(--s-custom-wrapper-border-radius);
 
   &.primary {
     background: var(--s-custom-wrapper-background-primary);
