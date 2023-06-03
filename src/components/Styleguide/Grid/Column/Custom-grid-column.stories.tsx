@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Custom_grid_column from "./Custom_grid_column";
+import CustomGridColumn from "./Custom-grid-column";
 import "../../../../styles/bootstrap/css/bootstrap-grid.css";
 
 
@@ -37,7 +37,7 @@ const Extra_Info = `
 
 export default {
 	title: "Styleguide/Grid/Column",
-	component: Custom_grid_column,
+	component: CustomGridColumn,
 	argTypes: {
 		size: {
 			control: {
@@ -65,10 +65,10 @@ export default {
 			},
 		},
 	},
-} as ComponentMeta<typeof Custom_grid_column>;
+} as ComponentMeta<typeof CustomGridColumn>;
 
-const Template: ComponentStory<typeof Custom_grid_column> = (args) => (
-	<Custom_grid_column {...args}
+const Template: ComponentStory<typeof CustomGridColumn> = (args) => (
+	<CustomGridColumn {...args}
 		//@ts-ignore
 		xs={args.size}
 		//@ts-ignore
@@ -92,10 +92,10 @@ const Template: ComponentStory<typeof Custom_grid_column> = (args) => (
 		lg-offset={args["offset-size"]}
 		//@ts-ignore
 	><h1 style={{border: "2px solid #4cbfa6"}}>offset-{args["offset-size"]} & col-{args.size}</h1>
-	</Custom_grid_column>
+	</CustomGridColumn>
 );
 
-export const Custom_grid_column_STORY = Template.bind({});
+export const CustomGridColumn_STORY = Template.bind({});
 
-Custom_grid_column_STORY.args = {
+CustomGridColumn_STORY.args = {
 };

@@ -1,11 +1,11 @@
 import React, {ReactElement, ReactNode} from "react";
 
-export interface Custom_grid_rowProps {
+export interface CustomGridRowProps {
 	children: ReactNode;
 	"vertical-alignment": string;
 	"reverse-breakpoint"?: string;
 }
-export default function Custom_grid_row({children, "vertical-alignment": verticalAlignment, "reverse-breakpoint": reverseBreakpoint}: Custom_grid_rowProps) {
+export default function CustomGridRow({children, "vertical-alignment": verticalAlignment, "reverse-breakpoint": reverseBreakpoint}: CustomGridRowProps) {
 	return (
 		<section className={`row align-items-${verticalAlignment} ${reverseBreakpoint ? `flex-${reverseBreakpoint}-row-reverse` : ''}`}>
 			{children}

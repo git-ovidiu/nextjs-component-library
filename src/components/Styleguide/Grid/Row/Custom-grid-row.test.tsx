@@ -1,14 +1,14 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import {Custom_grid_column, Custom_grid_row} from "../../../index"
+import {CustomGridColumn, CustomGridRow} from "../../../index"
 
-describe("Custom_grid_column", () => {
-	test("renders the Custom_grid_column", () => {
+describe("CustomGridColumn", () => {
+	test("renders the CustomGridColumn", () => {
 		render(
-			<Custom_grid_row
+			<CustomGridRow
 				vertical-alignment="center"
 			>
-				<Custom_grid_column
+				<CustomGridColumn
 					lg={6}
 					md={6}
 					sm={6}
@@ -23,8 +23,8 @@ describe("Custom_grid_column", () => {
 					>
 						offset-- & col--6
 					</h1>
-				</Custom_grid_column>
-				<Custom_grid_column
+				</CustomGridColumn>
+				<CustomGridColumn
 					lg={6}
 					md={6}
 					sm={6}
@@ -39,8 +39,8 @@ describe("Custom_grid_column", () => {
 					>
 						offset-- & col--6
 					</h1>
-				</Custom_grid_column>
-			</Custom_grid_row>
+				</CustomGridColumn>
+			</CustomGridRow>
 		);
 	});
 });

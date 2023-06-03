@@ -24,6 +24,6 @@ export { default as MediaVideo } from "./Molecules/Media-video";
 export { default as MediaAndParagraph } from "./Organisms/Media-and-paragraph";
 
 // Styleguide
-export { default as Custom_grid_column } from "./Styleguide/Grid/Column";
-export { default as Custom_grid_row } from "./Styleguide/Grid/Row";
+export { default as CustomGridColumn } from "./Styleguide/Grid/Column";
+export { default as CustomGridRow } from "./Styleguide/Grid/Row";
 export { default as Custom_wrapper } from "./Styleguide/Grid/Container";

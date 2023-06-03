@@ -1,1 +1,1 @@
-export { default } from './Custom_grid_row';
+export { default } from './Custom-grid-row';

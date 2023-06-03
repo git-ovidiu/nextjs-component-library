@@ -10,7 +10,7 @@ import CustomShape from "../../Atoms/Custom-shape/Custom-shape";
 import "../../../styles/bootstrap/css/bootstrap-grid.css";
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import {Custom_grid_column, Custom_grid_row, TitleAndDescription} from "../../index"
+import {CustomGridColumn, Custom_grid_row, TitleAndDescription} from "../../index"
 import '../../../styles/Global-Settings/Paddings.css';
 import Image from "next/image";
 
@@ -91,7 +91,7 @@ const Template: ComponentStory<typeof MediaAndParagraph> = (args) => (
   }>
                 <div className="container">
       <Custom_grid_row vertical-alignment="center" reverse-breakpoint="xl">
-          <Custom_grid_column
+          <CustomGridColumn
               md={12}
               lg={6}
               sm={12}
@@ -105,8 +105,8 @@ const Template: ComponentStory<typeof MediaAndParagraph> = (args) => (
                   padding-bottom-mobile="0%"
                   padding-bottom-tablet="0%"
               />
-          </Custom_grid_column>
-          <Custom_grid_column
+          </CustomGridColumn>
+          <CustomGridColumn
               xs={12}
               sm={12}
               lg={6}
@@ -125,7 +125,7 @@ const Template: ComponentStory<typeof MediaAndParagraph> = (args) => (
                       title={<AnimatedText text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti" variant="h2"/>}
                   />
               </div>
-          </Custom_grid_column>
+          </CustomGridColumn>
       </Custom_grid_row>
                 </div>
   </MediaAndParagraph>

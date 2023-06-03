@@ -1,1 +1,1 @@
-export { default } from './Custom_wrapper';
+export { default } from './Custom-wrapper';

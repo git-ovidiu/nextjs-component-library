@@ -1,1 +1,1 @@
-export { default } from './Custom_grid_column'
+export { default } from './Custom-grid-column'

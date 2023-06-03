@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Custom_grid_row from "./Custom_grid_row";
-import Custom_grid_column from "../Column/Custom_grid_column"
+import CustomGridRow from "./Custom-grid-row";
+import CustomGridColumn from "../Column/Custom-grid-column";
 
 const Extra_Info = `
 <br>
@@ -36,7 +36,7 @@ const Extra_Info = `
 
 export default {
 	title: "Styleguide/Grid/Row",
-	component: Custom_grid_row,
+	component: CustomGridRow,
 	argTypes: {
 		"reverse-breakpoint": {
 			control: "radio",
@@ -51,14 +51,14 @@ export default {
 			},
 		},
 	},
-} as ComponentMeta<typeof Custom_grid_row>;
+} as ComponentMeta<typeof CustomGridRow>;
 
-const Template: ComponentStory<typeof Custom_grid_row> = (args) => (
-	<Custom_grid_row {...args}
+const Template: ComponentStory<typeof CustomGridRow> = (args) => (
+	<CustomGridRow {...args}
 		vertical-alignment={args["vertical-alignment"]}
 		reverse-breakpoint={args["reverse-breakpoint"]}
 	>
-		<Custom_grid_column
+		<CustomGridColumn
 			xs={12}
 			sm={5}
 			md={5}
@@ -73,8 +73,8 @@ const Template: ComponentStory<typeof Custom_grid_row> = (args) => (
 			>
 				offset-- & col--6 1
 			</h1>
-		</Custom_grid_column>
-		<Custom_grid_column
+		</CustomGridColumn>
+		<CustomGridColumn
 			xs={12}
 			sm={7}
 			md={7}
@@ -89,13 +89,13 @@ const Template: ComponentStory<typeof Custom_grid_row> = (args) => (
 			>
 				offset-- & col--6 2
 			</h1>
-		</Custom_grid_column>
-	</Custom_grid_row>
+		</CustomGridColumn>
+	</CustomGridRow>
 );
 
-export const Custom_grid_row_STORY = Template.bind({});
+export const CustomGridRow_STORY = Template.bind({});
 
-Custom_grid_row_STORY.args = {
+CustomGridRow_STORY.args = {
 	"vertical-alignment": "center",
 	"reverse-breakpoint": undefined
 };

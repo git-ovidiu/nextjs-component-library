@@ -1,19 +1,16 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Custom_wrapper from "./Custom_wrapper";
 import {
-  AnimatedText,
-  Button_slide,
-  Custom_grid_column,
-  Custom_grid_row,
+  AnimatedText, ButtonSlide,
   Description,
-  Logo,
-  Media_image,
-  Title_and_description,
+  Logo, MediaImage, TitleAndDescription,
 } from "../../../index";
 import Image from "next/image";
 
 import "../../../../styles/Global-Settings/Paddings.css";
+import CustomGridRow from "../Row"
+import CustomGridColumn from "../Column"
+import CustomWrapper from "./Custom-wrapper"
 
 const Extra_Info = `
 <br>
@@ -48,7 +45,7 @@ const Extra_Info = `
 
 export default {
   title: "Styleguide/Grid/Custom Wrapper",
-  component: Custom_wrapper,
+  component: CustomWrapper,
   argTypes: {
     selectOption: {
       control: "radio",
@@ -69,21 +66,22 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Custom_wrapper>;
+} as ComponentMeta<typeof CustomWrapper>;
 
-const Template: ComponentStory<typeof Custom_wrapper> = (args) => (
-  <Custom_wrapper
+const Template: ComponentStory<typeof CustomWrapper> = (args) => (
+  <CustomWrapper
     {...args}
     space-top={args["space-top"]}
     space-bottom={args["space-bottom"]}
     background-color-theme="primary"
     custom-background-color="red"
     // custom-background-image="https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png"
-    custom-background-video
+    custom-background-video={"https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4"}
+    // https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4
   >
-    <Custom_grid_row vertical-alignment="center">
-      <Custom_grid_column lg={5} xs={12}>
-        <Media_image
+    <CustomGridRow vertical-alignment="center">
+      <CustomGridColumn lg={5} xs={12}>
+        <MediaImage
           image={
             <Image
               alt="Placeholder"
@@ -107,11 +105,11 @@ const Template: ComponentStory<typeof Custom_wrapper> = (args) => (
           padding-bottom-mobile="0%"
           padding-bottom-tablet="0%"
         />
-      </Custom_grid_column>
-      <Custom_grid_column lg={6} lg-offset={1} xs={12}>
-        <Title_and_description
+      </CustomGridColumn>
+      <CustomGridColumn lg={6} lg-offset={1} xs={12}>
+        <TitleAndDescription
           action={
-            <Button_slide
+            <ButtonSlide
               hover-effect="slide-right"
               padding="xs"
               text="button text"
@@ -135,9 +133,9 @@ const Template: ComponentStory<typeof Custom_wrapper> = (args) => (
             </span>
           }
         />
-      </Custom_grid_column>
-    </Custom_grid_row>
-  </Custom_wrapper>
+      </CustomGridColumn>
+    </CustomGridRow>
+  </CustomWrapper>
 );
 
 export const Custom_wrapper_STORY = Template.bind({});

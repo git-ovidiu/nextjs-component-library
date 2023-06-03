@@ -1,7 +1,7 @@
 import React, { CSSProperties, ReactElement, ReactNode } from "react";
-import "./Custom_wrapper.scss";
+import "./Custom-wrapper.scss";
 import Image from "next/image";
-import {Media_video} from "../../../index"
+import {MediaVideo} from "../../../index"
 interface CustomWrapperStyle extends CSSProperties {
   "--s-custom-wrapper-background-custom"?: string;
 }
@@ -14,12 +14,12 @@ export interface CustomWrapperProps {
   "space-bottom"?: string;
   "background-color-theme"?: string;
   "border-radius"?: string;
-  "custom-background-color"?: string | ReactElement;
+  "custom-background-color"?: string;
   "custom-background-image"?: string;
   "custom-background-video"?: string;
   "container-fluid"?: string;
 }
-export default function Custom_wrapper({
+export default function CustomWrapper({
   children,
   "space-top": spaceTop,
   "space-bottom": spaceBottom,
@@ -68,15 +68,14 @@ export default function Custom_wrapper({
 			  <div className="has-background-video">
 				  <div className={`${containerFluid ? 'container-fluid' : 'container'}`}>
 					  <div className="video-container">
-					  <Media_video
+					  <MediaVideo
 						  auto-play
 						  loop
 						  muted
 						  object-fit="cover"
 						  progress-bar-color="red"
 						  remove-controls
-						  video="https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4"
-						  video-source="https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4"
+						  video={customBackgroundVideo}
 					  />
 					  </div>
 					  {children}
