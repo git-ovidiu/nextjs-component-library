@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Divider from "./Divider";
-import {SimpleDivider} from "components/components"
+import {SimpleDivider} from "../../index"
 
 const Extra_Info = `
 <br>
