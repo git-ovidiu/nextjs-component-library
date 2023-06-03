@@ -10,7 +10,7 @@ import CustomShape from "../../Atoms/Custom-shape/Custom-shape";
 import "../../../styles/bootstrap/css/bootstrap-grid.css";
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import {CustomGridColumn, Custom_grid_row, TitleAndDescription} from "../../index"
+import {CustomGridColumn, CustomGridRow, TitleAndDescription} from "../../index"
 import '../../../styles/Global-Settings/Paddings.css';
 import Image from "next/image";
 
@@ -90,7 +90,7 @@ const Template: ComponentStory<typeof MediaAndParagraph> = (args) => (
       />
   }>
                 <div className="container">
-      <Custom_grid_row vertical-alignment="center" reverse-breakpoint="xl">
+      <CustomGridRow vertical-alignment="center" reverse-breakpoint="xl">
           <CustomGridColumn
               md={12}
               lg={6}
@@ -126,7 +126,7 @@ const Template: ComponentStory<typeof MediaAndParagraph> = (args) => (
                   />
               </div>
           </CustomGridColumn>
-      </Custom_grid_row>
+      </CustomGridRow>
                 </div>
   </MediaAndParagraph>
             </div>
