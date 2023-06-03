@@ -18,10 +18,10 @@ export { default as Card } from "./Molecules/Card";
 export { default as TitleAndDescription } from "./Molecules/Title-and-description";
 export { default as Divider } from "./Molecules/Divider";
 export { default as MediaImage } from "./Molecules/Media-image";
-export { default as Media_video } from "./Molecules/Media-video";
+export { default as MediaVideo } from "./Molecules/Media-video";
 
 //Organisms
-export { default as Media_and_paragraph } from "./Organisms/Media_and_paragraph";
+export { default as MediaAndParagraph } from "./Organisms/Media-and-paragraph";
 
 // Styleguide
 export { default as Custom_grid_column } from "./Styleguide/Grid/Column";

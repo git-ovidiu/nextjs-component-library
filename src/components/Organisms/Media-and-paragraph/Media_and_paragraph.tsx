@@ -1,5 +1,5 @@
 import React, { CSSProperties, ReactElement, ReactNode } from "react";
-import "./Media_and_paragraph.scss";
+import "./Media-and-paragraph.scss";
 
 interface MediaAndParagraphStyle extends CSSProperties {
     "--o-media-and-paragraph-background-custom"?: string;
@@ -16,7 +16,7 @@ export interface MediaAndParagraphProps {
     "custom-background-image"?: ReactElement;
 }
 
-export default function Media_and_paragraph({
+export default function MediaAndParagraph({
                                                 children,
                                                 "space-top": spaceTop,
                                                 "space-bottom": spaceBottom,

@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Media_and_paragraph from "./Media_and_paragraph";
+import MediaAndParagraph from "./Media_and_paragraph";
 import ButtonSlide from "../../Atoms/Button-slide";
 import Description from "../../Atoms/Description";
 import AnimatedText from "../../Atoms/Animated-text";
@@ -48,8 +48,8 @@ const Extra_Info = `
 `;
 
 export default {
-  title: "Organisms/Media_and_paragraph",
-  component: Media_and_paragraph,
+  title: "Organisms/MediaAndParagraph",
+  component: MediaAndParagraph,
   argTypes: {
     "align-elements": {
       control: "radio",
@@ -68,9 +68,9 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Media_and_paragraph>;
+} as ComponentMeta<typeof MediaAndParagraph>;
 
-const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
+const Template: ComponentStory<typeof MediaAndParagraph> = (args) => (
     <div style={{position: "relative"}}>
         <ParallaxProvider>
             <Parallax translateY={[-1000, 600]} style={{position: 'absolute'}}>
@@ -79,7 +79,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
         <div style={{zIndex: -1}}>
             <div style={{border: "2px solid red"}}>
 
-  <Media_and_paragraph space-top={args["space-top"]} space-bottom={args["space-bottom"]} background-color={args["background-color"]} custom-background={args["custom-background"]} custom-background-image={
+  <MediaAndParagraph space-top={args["space-top"]} space-bottom={args["space-bottom"]} background-color={args["background-color"]} custom-background={args["custom-background"]} custom-background-image={
       <MediaImage
           image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666627243/VIBE%20INTERIOR/Penthouse%20C:/living_1_qkudee.jpg"/>}
           image-border-radius="0px"
@@ -128,7 +128,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
           </Custom_grid_column>
       </Custom_grid_row>
                 </div>
-  </Media_and_paragraph>
+  </MediaAndParagraph>
             </div>
         </div>
         </ParallaxProvider>
@@ -136,9 +136,9 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
 
 );
 
-export const Media_and_paragraph_story = Template.bind({});
+export const MediaAndParagraph_story = Template.bind({});
 
-Media_and_paragraph_story.args = {
+MediaAndParagraph_story.args = {
     "space-top": 'm',
     "space-bottom": 'm',
     "background-color": 'primary',
