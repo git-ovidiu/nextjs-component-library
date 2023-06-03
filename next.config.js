@@ -9,11 +9,6 @@ const nextConfig = {
   experimental: {
     modern: true, // Enable modern script deployment strategy
     polyfillsOptimization: true, // Optimize polyfills
-    asyncToPromises: true, // Enable async/await transformation
-    optimizeFonts: true, // Optimize font loading
-    optimizeImages: true, // Optimize image loading
-    optimizeCss: true, // Optimize CSS
-    scrollRestoration: true, // Enable scroll restoration
   },
 };
 
