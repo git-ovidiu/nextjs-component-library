@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import "./Link_list.scss";
+import "./Link-list.scss";
 
 export interface Animated_text_Props {}
 
@@ -8,7 +8,7 @@ export interface LinkListProps {
   position?: string;
 }
 
-export default function Link_list(props: LinkListProps): ReactElement {
+export default function LinkList(props: LinkListProps): ReactElement {
   return (
     <div className={`m-link-list ${props.position == 'center' ? 'center' : ''}${props.position == 'right' ? 'right' : ''}`}>
       {props["link-element"]}

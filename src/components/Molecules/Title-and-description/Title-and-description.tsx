@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import "./Title_and_description.scss";
+import "./Title-and-description.scss";
 export interface TitleAndDescriptionProps {
   label?: ReactElement | string;
   title?: ReactElement | string;
@@ -7,7 +7,7 @@ export interface TitleAndDescriptionProps {
   action?: ReactElement | string;
   "text-align": string;
 }
-export default function Title_and_description(props: TitleAndDescriptionProps) {
+export default function TitleAndDescription(props: TitleAndDescriptionProps) {
   return (
     <>
       <div className={`m-title-and-description ${props["text-align"]} === "center" ? 'center' : ''} ${props["text-align"] === "right" ? "right" : ''}`}>

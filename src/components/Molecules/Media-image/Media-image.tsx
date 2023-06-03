@@ -1,5 +1,5 @@
 import React, { CSSProperties, ReactElement } from "react";
-import "./Media_image.scss";
+import "./Media-image.scss";
 
 interface MediaImageStyle extends CSSProperties {
   "--m-media-image-border-radius"?: string;
@@ -23,7 +23,7 @@ interface MediaComponentProps {
   "padding-bottom-desktop"?: string;
 }
 
-export default function Media_image(props: MediaComponentProps) {
+export default function MediaImage(props: MediaComponentProps) {
   return (
     <div
       className="m-media-image"

@@ -1,7 +1,7 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import '../../../styles/Settings/Design/_Colors.scss';
-import Media_video from "../Media_video/Media_video";
+import MediaVideo from "../Media-video";
 
 const Extra_Info = `
 <br>
@@ -233,7 +233,7 @@ const Extra_Info = `
 
 export default {
 	title: "Molecules/Media/Video",
-	component: Media_video,
+	component: MediaVideo,
 	argTypes:{
 		"object-fit": {
 			control: "radio",
@@ -248,9 +248,9 @@ export default {
 			},
 		},
 	},
-} as ComponentMeta<typeof Media_video>;
+} as ComponentMeta<typeof MediaVideo>;
 
-const Template: ComponentStory<typeof Media_video> = (args) => (
+const Template: ComponentStory<typeof MediaVideo> = (args) => (
 
 
 
@@ -263,7 +263,7 @@ const Template: ComponentStory<typeof Media_video> = (args) => (
 				margin: "0 auto",
 			}}
 		>
-				<Media_video
+				<MediaVideo
 					{...args}
 					//@ts-ignore
 					video={args["video"]}
@@ -291,9 +291,9 @@ const Template: ComponentStory<typeof Media_video> = (args) => (
 
 );
 
-export const Media_video_story = Template.bind({});
+export const MediaVideo_story = Template.bind({});
 
-Media_video_story.args = {
+MediaVideo_story.args = {
 	//@ts-ignore
 	"video":
 		"https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",

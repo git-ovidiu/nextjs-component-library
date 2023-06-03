@@ -3,7 +3,7 @@ import {AiOutlineStepBackward, AiOutlineStepForward} from "react-icons/ai";
 import {FaPlay} from "react-icons/fa";
 import {FiPauseCircle} from "react-icons/fi";
 import {BsArrowsFullscreen} from "react-icons/bs";
-import "./Media_video.scss";
+import "./Media-video.scss";
 
 interface ProgressLineBackgroundColor extends CSSProperties {
   "--a-video-progress-line-background"?: string;
@@ -30,7 +30,7 @@ interface MediaComponentProps {
   "custom-next-icon"?: ReactElement;
 }
 
-export default function Media_video(props: MediaComponentProps) {
+export default function MediaVideo(props: MediaComponentProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [playing, setPlaying] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);

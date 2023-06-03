@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Title_and_description from "./Title_and_description";
+import TitleAndDescription from "./Title-and-description";
 import Description from "../../Atoms/Description";
 import AnimatedText from "../../Atoms/Animated-text";
 import {ButtonSlide} from "../../index"
@@ -94,7 +94,7 @@ const Extra_Info = `
 
 export default {
   title: "Molecules/Title and Description",
-  component: Title_and_description,
+  component: TitleAndDescription,
   argTypes: {
     "text-align": {
       control: "radio",
@@ -109,11 +109,11 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Title_and_description>;
+} as ComponentMeta<typeof TitleAndDescription>;
 
-const Template: ComponentStory<typeof Title_and_description> = (args) => (
+const Template: ComponentStory<typeof TitleAndDescription> = (args) => (
   <div style={{ maxWidth: "600px" }}>
-    <Title_and_description
+    <TitleAndDescription
       text-align={args["text-align"]}
       label={<Description color="red" text="Label" />}
       title={
@@ -134,9 +134,9 @@ const Template: ComponentStory<typeof Title_and_description> = (args) => (
   </div>
 );
 
-export const Title_and_description_STORY = Template.bind({});
+export const TitleAndDescription_STORY = Template.bind({});
 
-Title_and_description_STORY.args = {
+TitleAndDescription_STORY.args = {
   "text-align": "left",
   description:
     "Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur",

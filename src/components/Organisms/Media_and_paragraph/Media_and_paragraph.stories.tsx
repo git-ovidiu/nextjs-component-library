@@ -1,19 +1,18 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Media_and_paragraph from "./Media_and_paragraph";
-import Title_and_description from "../../Molecules/Title_and_description";
 import ButtonSlide from "../../Atoms/Button-slide";
 import Description from "../../Atoms/Description";
 import AnimatedText from "../../Atoms/Animated-text";
-import Image from "next/image";
 import Logo from "../../Atoms/Logo";
-import Media_image from "../../Molecules/Media_image";
+import MediaImage from "../../Molecules/Media-image";
 import CustomShape from "../../Atoms/Custom-shape/Custom-shape";
 import "../../../styles/bootstrap/css/bootstrap-grid.css";
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import {Custom_grid_column, Custom_grid_row} from "../../index"
+import {Custom_grid_column, Custom_grid_row, TitleAndDescription} from "../../index"
 import '../../../styles/Global-Settings/Paddings.css';
+import Image from "next/image";
 
 
 
@@ -81,7 +80,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
             <div style={{border: "2px solid red"}}>
 
   <Media_and_paragraph space-top={args["space-top"]} space-bottom={args["space-bottom"]} background-color={args["background-color"]} custom-background={args["custom-background"]} custom-background-image={
-      <Media_image
+      <MediaImage
           image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666627243/VIBE%20INTERIOR/Penthouse%20C:/living_1_qkudee.jpg"/>}
           image-border-radius="0px"
           object-fit="cover"
@@ -98,7 +97,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
               sm={12}
               xs={12}
           >
-              <Media_image
+              <MediaImage
                   image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
                   label-bottom-right={<Logo background="white" border-radius="20px" height="50px" logo-alt="Placeholder" logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg" width="150px"/>}
                   object-fit="cover"
@@ -118,7 +117,7 @@ const Template: ComponentStory<typeof Media_and_paragraph> = (args) => (
                       maxWidth: '600px'
                   }}
               >
-                  <Title_and_description
+                  <TitleAndDescription
                       action={<ButtonSlide hover-effect="slide-right" padding="xs" text="button text"/>}
                       description="Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur"
                       label={<Description color="red" text="Label"/>}

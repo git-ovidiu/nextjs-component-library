@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import "./Footer_card.scss";
+import "./Footer-card.scss";
 
 export interface FooterCardProps {
   logo? : ReactNode | string;
@@ -7,7 +7,7 @@ export interface FooterCardProps {
   action? : ReactNode | string;
 }
 
-export default function Footer_card(props: FooterCardProps) {
+export default function FooterCard(props: FooterCardProps) {
   return (
     <div className="footer-card-container">
       <div className="logo">{props.logo}</div>

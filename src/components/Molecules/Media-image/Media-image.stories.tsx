@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Media_image from "./Media_image";
+import MediaImage from "./Media-image";
 import Image from "next/image";
 import Logo from "../../Atoms/Logo";
 
@@ -141,7 +141,7 @@ const Extra_Info = `
 
 export default {
   title: "Molecules/Media/Image",
-  component: Media_image,
+  component: MediaImage,
   argTypes: {
     "object-fit": {
       control: "radio",
@@ -156,10 +156,10 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Media_image>;
+} as ComponentMeta<typeof MediaImage>;
 
-const Template: ComponentStory<typeof Media_image> = (args) => (
-  <Media_image
+const Template: ComponentStory<typeof MediaImage> = (args) => (
+  <MediaImage
     image-border-radius="30px"
     object-fit={args["object-fit"]}
     padding-bottom-desktop="0%"

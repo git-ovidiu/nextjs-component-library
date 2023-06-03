@@ -1,6 +1,6 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
-import Link_list from "./Link_list";
+import LinkList from "./Link-list";
 import LinkItem from "../../Atoms/Link-item";
 
 const Extra_Info = `
@@ -33,7 +33,7 @@ const Extra_Info = `
 
 export default {
   title: "Molecules/Link List",
-  component: Link_list,
+  component: LinkList,
   argTypes: {
     Position: {
       control: "radio",
@@ -48,10 +48,10 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Link_list>;
+} as ComponentMeta<typeof LinkList>;
 
-const Template: ComponentStory<typeof Link_list> = (args) => (
-  <Link_list
+const Template: ComponentStory<typeof LinkList> = (args) => (
+  <LinkList
     {...args}
       position={args["position"]}
     link-element={
@@ -65,9 +65,9 @@ const Template: ComponentStory<typeof Link_list> = (args) => (
   />
 );
 
-export const Link_list_story = Template.bind({});
+export const LinkList_story = Template.bind({});
 
-Link_list_story.args = {
+LinkList_story.args = {
   // @ts-ignore
   "position": "center",
   // @ts-ignore

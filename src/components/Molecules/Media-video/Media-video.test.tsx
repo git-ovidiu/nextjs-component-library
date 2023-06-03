@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Media_video from "./Media_video";
+import MediaVideo from "./Media-video";
 
 describe("Media_component", () => {
   test("renders the Media_component", () => {
@@ -15,7 +15,7 @@ describe("Media_component", () => {
             width: "100%",
           }}
         >
-          <Media_video
+          <MediaVideo
             auto-play
             loop
             muted

@@ -1,7 +1,7 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {AiOutlineDownload} from "react-icons/ai";
-import Footer_card from "./Footer_card";
+import FooterCard from "./Footer-card";
 import ButtonSlide from "../../Atoms/Button-slide";
 
 const Extra_Info = `
@@ -67,7 +67,7 @@ const Extra_Info = `
 `;
 export default {
   title: "Molecules/Footer Card",
-  component: Footer_card,
+  component: FooterCard,
   parameters: {
     actions: { disabled: true },
     docs: {
@@ -76,11 +76,11 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Footer_card>;
+} as ComponentMeta<typeof FooterCard>;
 
-const Template: ComponentStory<typeof Footer_card> = (args) => (
+const Template: ComponentStory<typeof FooterCard> = (args) => (
   <div style={{ width: "360px" }}>
-    <Footer_card
+    <FooterCard
       {...args}
       logo={
         <img
