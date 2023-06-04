@@ -174,6 +174,8 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           image-border-radius="30px"
           label-bottom-right={
             <Logo
+              open-in-new-tab
+              link-url= "https://www.youtube.com"
               width="150px"
               height="50px"
               background={"#ffffff"}
@@ -187,6 +189,8 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           }
           label-bottom-left={
             <Logo
+              open-in-new-tab
+              link-url= "https://www.youtube.com"
               width="150px"
               height="50px"
               background={"#ffffff"}
@@ -200,6 +204,8 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           }
           label-top-left={
             <Logo
+              open-in-new-tab
+              link-url= "https://www.youtube.com"
               width="150px"
               height="50px"
               background={"#ffffff"}
@@ -213,6 +219,8 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           }
           label-top-right={
             <Logo
+              open-in-new-tab
+              link-url= "https://www.youtube.com"
               width="150px"
               height="50px"
               background={"#ffffff"}
@@ -291,3 +299,4 @@ Custom_wrapper_STORY.args = {
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters
 // todo de fauct story la column, row, custom-row
+// de facut update la logo-uri pe unde mai apar prin proiect

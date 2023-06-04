@@ -12,6 +12,16 @@ const Extra_Info = `
     <td>can be:</td>
   </tr>
 <tr>
+<td>link-url</td>
+<td>string</td>
+<td>use website route '/' || URL (has next/link implemented)</td>
+</tr>
+<tr>
+<td>open-in-new-tab</td>
+<td>boolean</td>
+<td>-</td>
+</tr>
+<tr>
 <td>width</td>
 <td>string</td>
 <td>0px | 0%</td>
@@ -166,6 +176,8 @@ const Template: ComponentStory<typeof Logo> = (args) => (
 export const Logo_STORY = Template.bind({});
 
 Logo_STORY.args = {
+  "open-in-new-tab": true,
+  "link-url": "https://www.youtube.com",
   "width": "150px",
   "height": "50px",
   "background": "#4cbfa6",
@@ -174,9 +186,7 @@ Logo_STORY.args = {
   "default-opacity-mobile": "1",
   "default-opacity-desktop": "1",
   "border-radius-desktop": "0px",
-  "border-radius-mobile": "50%",
-  "open-in-new-tab": true,
-  "link-url": "https://www.youtube.com"
+  "border-radius-mobile": "50%"
 
 };
 

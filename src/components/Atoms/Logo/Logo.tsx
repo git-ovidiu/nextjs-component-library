@@ -25,7 +25,6 @@ export interface LogoProps {
   "default-opacity-mobile"?: string;
   "default-opacity-desktop"?: string;
   "border-radius-mobile"?: string;
-
   "link-url"?: string;
   "open-in-new-tab"?: boolean;
 }
