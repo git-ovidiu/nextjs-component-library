@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement, ReactNode } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 import "./Custom-wrapper.scss";
 import Image from "next/image";
 import { MediaVideo } from "../../../index";
@@ -19,6 +19,7 @@ export interface CustomWrapperProps {
   "custom-background-image"?: string;
   "custom-background-video"?: string;
   "container-fluid"?: string;
+  "image-priority"?: boolean;
 }
 export default function CustomWrapper({
   children,
@@ -30,27 +31,30 @@ export default function CustomWrapper({
   "custom-background-video": customBackgroundVideo,
   "container-fluid": containerFluid,
   "border-radius": borderRadius,
+  "image-priority": imagePriority,
   style,
 }: CustomWrapperProps) {
   //will remove the theme and the custom background color if the background-image is set
   customBackgroundImage
-    ? ((backgroundColorTheme = undefined), (customBackgroundColor = undefined))
+    ? ((backgroundColorTheme = undefined) ||
+      (customBackgroundColor = undefined))
     : customBackgroundColor
     ? (backgroundColorTheme = undefined)
     : null;
 
   // will remove the theme, custom background color and the background image if set
   customBackgroundVideo
-    ? ((backgroundColorTheme = undefined),
-      (customBackgroundColor = undefined),
+    ? ((backgroundColorTheme = undefined) ||
+      (customBackgroundColor = undefined) ||
       (customBackgroundImage = undefined))
     : null;
 
   // will remove the background color, the background image and the background video if set
   backgroundColorTheme
-    ? ((customBackgroundVideo = undefined),
-      (customBackgroundColor = undefined),
-      (customBackgroundImage = undefined))
+    ? ((customBackgroundVideo = undefined) ||
+      (customBackgroundColor = undefined) ||
+      (customBackgroundImage = undefined)
+    )
     : null;
 
   return (
@@ -72,7 +76,7 @@ export default function CustomWrapper({
           >
             <div className="image-container">
               <picture>
-                <Image fill src={customBackgroundImage} alt="placeholder" style={{borderRadius: borderRadius}} />
+                <Image fill src={customBackgroundImage} priority={!!imagePriority} alt="placeholder" style={{borderRadius: borderRadius}} />
               </picture>
             </div>
             {children}
@@ -108,3 +112,6 @@ export default function CustomWrapper({
 }
 
 // todo de pus si custom link de video aici ca poate e nevoie
+
+
+// todo de pus priority pe imaginea de background ca sa verific la lighthouse de ce da 90% (fix)

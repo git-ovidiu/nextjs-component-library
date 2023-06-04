@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement } from "react";
+import React, { CSSProperties } from "react";
 import "./Logo.scss";
 import Image from "next/image";
 
@@ -12,12 +12,12 @@ interface LogoInterface extends CSSProperties {
 export interface LogoProps {
   style?: LogoInterface;
 
-  width: string;
-  height: string;
-  "logo-image-url": string;
-  background: string;
-  "border-radius": string;
-  "logo-alt": string;
+  width?: string;
+  height?: string;
+  "logo-image-url"?: string;
+  background?: string;
+  "border-radius"?: string;
+  "logo-alt"?: string;
 }
 export default function Logo(props: LogoProps) {
   return (

@@ -78,6 +78,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
     custom-background-video={args["custom-background-video"]}
     container-fluid={args["container-fluid"]}
     border-radius={args["border-radius"]}
+    image-priority
   >
     <CustomGridRow vertical-alignment="center">
       <CustomGridColumn lg={5} xs={12}>
@@ -92,7 +93,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           image-border-radius="30px"
           label-bottom-right={
             <Logo
-              background="white"
+              background={"#ffffff"}
               border-radius="20px"
               height="50px"
               logo-alt="Placeholder"
@@ -153,3 +154,4 @@ Custom_wrapper_STORY.args = {
 };
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters
+// todo de fauct story la column, row, custom-row
