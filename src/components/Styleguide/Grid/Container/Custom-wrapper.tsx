@@ -110,8 +110,3 @@ export default function CustomWrapper({
     </section>
   );
 }
-
-// todo de pus si custom link de video aici ca poate e nevoie
-
-
-// todo de pus priority pe imaginea de background ca sa verific la lighthouse de ce da 90% (fix)
