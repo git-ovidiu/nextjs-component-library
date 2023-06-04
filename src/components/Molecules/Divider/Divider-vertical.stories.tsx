@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Divider from "./Divider";
-import { Simple_Divider } from "../../index";
+import { SimpleDivider } from "../../index";
 
 const Extra_Info = `
 <br>
@@ -73,10 +73,10 @@ const Template: ComponentStory<typeof Divider> = (args) => (
     <Divider
       divider={
         <>
-          <Simple_Divider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
-          <Simple_Divider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="black" />
-          <Simple_Divider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="orange" />
-          <Simple_Divider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
+          <SimpleDivider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
+          <SimpleDivider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="black" />
+          <SimpleDivider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="orange" />
+          <SimpleDivider loop={true} animate-vertical={true} animation-duration="1s" width="3px" height="100%" color="red" />
         </>
       }
       position={args.position}

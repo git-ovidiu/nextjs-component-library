@@ -1,16 +1,19 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import {
-  AnimatedText, ButtonSlide,
+  AnimatedText,
+  ButtonSlide,
   Description,
-  Logo, MediaImage, TitleAndDescription,
+  Logo,
+  MediaImage,
+  TitleAndDescription,
 } from "../../../index";
 import Image from "next/image";
 
 import "../../../../styles/Global-Settings/Paddings.css";
-import CustomGridRow from "../Row"
-import CustomGridColumn from "../Column"
-import CustomWrapper from "./Custom-wrapper"
+import CustomGridRow from "../Row";
+import CustomGridColumn from "../Column";
+import CustomWrapper from "./Custom-wrapper";
 
 const Extra_Info = `
 <br>
@@ -49,11 +52,7 @@ export default {
   argTypes: {
     "background-color-theme": {
       control: "select",
-      options: [
-        "primary",
-        "secondary",
-        "tertiary"
-      ],
+      options: ["primary", "secondary", "tertiary"],
     },
   },
   parameters: {
@@ -81,7 +80,15 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
     image-priority
   >
     <CustomGridRow vertical-alignment="center">
-      <CustomGridColumn lg={5} xs={12}>
+      <CustomGridColumn
+        lg={5}
+        xs={12}
+        column-background={"red"}
+        column-border-radius={"500px"}
+        column-background-opacity={"0.37"}
+        column-padding-top={"unset"}
+        column-padding-bottom={"unset"}
+      >
         <MediaImage
           image={
             <Image
@@ -107,7 +114,16 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           padding-bottom-tablet="0%"
         />
       </CustomGridColumn>
-      <CustomGridColumn lg={6} lg-offset={1} xs={12}>
+      <CustomGridColumn
+        lg={6}
+        lg-offset={1}
+        xs={12}
+        column-background={"blue"}
+        column-border-radius={"0px 100px 100px 0px"}
+        column-background-opacity={"0.37"}
+        column-padding-top={"unset"}
+        column-padding-bottom={"unset"}
+      >
         <TitleAndDescription
           action={
             <ButtonSlide
@@ -149,8 +165,10 @@ Custom_wrapper_STORY.args = {
   "space-bottom": "xxl",
   "background-color-theme": "primary",
   "custom-background-color": undefined,
-  "custom-background-image": "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
-  "custom-background-video": "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
+  "custom-background-image":
+    "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
+  "custom-background-video":
+    "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
 };
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters
