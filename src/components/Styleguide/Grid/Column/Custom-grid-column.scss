@@ -13,6 +13,11 @@
   padding-top: var(--s-column-padding-top);
   padding-bottom: var(--s-column-padding-bottom);
 
+  &.equal-paddings{
+    padding-top: calc(var(--bs-gutter-x) * 0.5);
+    padding-bottom: calc(var(--bs-gutter-x) * 0.5);
+  }
+
   &::before{
     content: '';
     position: absolute;

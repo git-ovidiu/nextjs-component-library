@@ -37,6 +37,11 @@ const Extra_Info = `
   <td>string</td>
   <td>0px | 0%</td>
 </tr>
+<tr>
+  <td>columns-equal-paddings</td>
+  <td>boolean</td>
+  <td>if true : 0px 10px => 10px </td>
+</tr>
 <br>
 <h2><u>GRID COLUMNS</u></h2>
   <tr>
@@ -201,17 +206,23 @@ const Template: ComponentStory<typeof CustomGridColumn> = (args) => (
     md-offset={args["offset-size"]}
     //@ts-ignore
     lg-offset={args["offset-size"]}
-    //@ts-ignore
+    column-background={args["column-background"]}
+    column-border-radius={args["column-border-radius"]}
+    column-background-opacity={args["column-background-opacity"]}
+    column-padding-top={args["column-padding-top"]}
+    column-padding-bottom={args["column-padding-bottom"]}
+    columns-equal-paddings={args["columns-equal-paddings"]}
   >
     <h1
-		style={{
-		border: '2px solid black',
-		padding: '20px',
-		background: 'black',
-		color: '#4cbfa6',
-        textAlign: 'center'}}
-        //@ts-ignore
-    >offset-{args["offset-size"]} & col-{args.size}
+      style={{
+        border: "2px solid black",
+        padding: "20px",
+        background: "black",
+        color: "#4cbfa6",
+        textAlign: "center",
+      }}
+      //@ts-ignore
+      >offset-{args["offset-size"]} & col-{args.size}
     </h1>
   </CustomGridColumn>
 );
@@ -220,6 +231,12 @@ export const CustomGridColumn_STORY = Template.bind({});
 
 CustomGridColumn_STORY.args = {
   //@ts-ignore
-  "size": 4,
-  "offset-size": 0
+  size: 4,
+  "offset-size": 0,
+  "column-background": "#4cbfa6",
+  "column-border-radius": "0px",
+  "column-background-opacity": "1",
+  "column-padding-top": "0px",
+  "column-padding-bottom": "0px",
+  "columns-equal-paddings": true
 };

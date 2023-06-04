@@ -9,8 +9,8 @@ interface CustomWrapperStyle extends CSSProperties {
 
 export interface CustomWrapperProps {
   style?: CustomWrapperStyle;
-
   children: ReactNode;
+
   "space-top"?: string;
   "space-bottom"?: string;
   "border-radius"?: string;
@@ -18,7 +18,7 @@ export interface CustomWrapperProps {
   "custom-background-color"?: string;
   "custom-background-image"?: string;
   "custom-background-video"?: string;
-  "container-fluid"?: string;
+  "container-fluid"?: boolean;
   "image-priority"?: boolean;
 }
 export default function CustomWrapper({
@@ -50,7 +50,7 @@ export default function CustomWrapper({
     : null;
 
   // will remove the background color, the background image and the background video if set
-  backgroundColorTheme
+  customBackgroundColor
     ? ((customBackgroundVideo = undefined) ||
       (customBackgroundColor = undefined) ||
       (customBackgroundImage = undefined)

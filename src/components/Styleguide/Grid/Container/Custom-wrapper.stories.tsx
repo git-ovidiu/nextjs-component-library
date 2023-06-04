@@ -24,25 +24,90 @@ const Extra_Info = `
     <td>type</td>
     <td>can be:</td>
   </tr>
-  <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
+<tr>
+<td>space-top</td>
+<td>string</td>
+<td>0 - xs - s - m - l - xl - xxl</td>
+</tr>
+<tr>
+<td>space-bottom</td>
+<td>string</td>
+<td>0 - xs - s - m - l - xl - xxl</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>string</td>
+<td>0px | 0%</td>
+</tr>
+<tr>
+<td>background-color-theme</td>
+<td>string</td>
+<td>primary | secondary | tertiary</td>
+</tr>
+<tr>
+<td>custom-background-color</td>
+<td>string</td>
+<td>hex || color name || rgb</td>
+</tr>
+<tr>
+<td>custom-background-image</td>
+<td>string</td>
+<td>URL (has a next/image implemented already (for priority use image-priority)</td>
+</tr>
+<tr>
+<td>custom-background-video</td>
+<td>string</td>
+<td>URL (has the MediaVideo implemented already</td>
+</tr>
+<tr>
+<td>container-fluid</td>
+<td>boolean</td>
+<td>use this property to add container-fluid class to the container</td>
+</tr>
+<tr>
+<td>image-priority</td>
+<td>boolean</td>
+<td>-</td>
+</tr>
 </table>
 
 <br>
 
 <h2><u>CSS VARIABLES</u></h2>
 <ol>
-  <li>--a-test-component-right-column-background</li>
+<li>--s-custom-wrapper-background-primary</li>
+<li>--s-custom-wrapper-background-secondary</li>
+<li>--s-custom-wrapper-background-tertiary</li>
+<li>--s-custom-wrapper-background-custom</li>
+<li>--s-custom-wrapper-background-image</li>
+<li>--s-custom-wrapper-border-radius</li>
 </ol>
 
 <table>
-  <tr>
-    <td>--a-test-component-right-column-background</td>
-    <td>gray</td>
-  </tr>
+<tr>
+<td>--s-custom-wrapper-background-primary</td>
+<td>$background-color-primary</td>
+</tr>
+<tr>
+<td>--s-custom-wrapper-background-secondary</td>
+<td>$background-color-secondary</td>
+</tr>
+<tr>
+<td>--s-custom-wrapper-background-tertiary</td>
+<td>$background-color-tertiary</td>
+</tr>
+<tr>
+<td>--s-custom-wrapper-background-custom</td>
+<td>unset</td>
+</tr>
+<tr>
+<td>--s-custom-wrapper-background-image</td>
+<td>unset</td>
+</tr>
+<tr>
+<td>--s-custom-wrapper-border-radius</td>
+<td>unset</td>
+</tr>
 </table>
 `;
 
@@ -54,6 +119,14 @@ export default {
       control: "select",
       options: ["primary", "secondary", "tertiary"],
     },
+    "space-top": {
+      control: "select",
+      options: ["0", "xs", "s", "m", "l", "xl", "xxl"]
+    },
+    "space-bottom": {
+      control: "select",
+      options: ["0", "xs", "s", "m", "l", "xl", "xxl"]
+    }
   },
   parameters: {
     actions: { disabled: true },
@@ -77,7 +150,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
     custom-background-video={args["custom-background-video"]}
     container-fluid={args["container-fluid"]}
     border-radius={args["border-radius"]}
-    image-priority
+    image-priority={args["image-priority"]}
   >
     <CustomGridRow vertical-alignment="center">
       <CustomGridColumn
@@ -88,6 +161,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
         column-background-opacity={"0.37"}
         column-padding-top={"unset"}
         column-padding-bottom={"unset"}
+        columns-equal-paddings
       >
         <MediaImage
           image={
@@ -119,10 +193,11 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
         lg-offset={1}
         xs={12}
         column-background={"blue"}
-        column-border-radius={"0px 100px 100px 0px"}
+        column-border-radius={"0px"}
         column-background-opacity={"0.37"}
         column-padding-top={"unset"}
         column-padding-bottom={"unset"}
+        columns-equal-paddings
       >
         <TitleAndDescription
           action={
@@ -159,10 +234,11 @@ export const Custom_wrapper_STORY = Template.bind({});
 
 Custom_wrapper_STORY.args = {
   //@ts-ignore
-  "container-fluid": false,
+  "space-top": "m",
+  "space-bottom": "m",
   "border-radius": "0px",
-  "space-top": "xxl",
-  "space-bottom": "xxl",
+  "image-priority": undefined,
+  "container-fluid": undefined,
   "background-color-theme": "primary",
   "custom-background-color": undefined,
   "custom-background-image":

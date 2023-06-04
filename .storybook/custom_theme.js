@@ -2,7 +2,7 @@ import { create } from "@storybook/theming";
 
 export default create({
   base: "light",
-  appBg: "white",
+  appBg: "#ffffff",
 
   // appBg: "black",
   appBorderColor: "#4cbfa6",
@@ -16,6 +16,8 @@ export default create({
   barSelectedColor: "#000000",
   barBg: "#4cbfa6",
   inputBg: "white",
+  textInverseColor: 'red',
+  textMutedColor: '#4cbfa6',
   inputBorder: "#4cbfa6",
   inputTextColor: "black",
   inputBorderRadius: '5px',

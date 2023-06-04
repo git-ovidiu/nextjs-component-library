@@ -18,6 +18,7 @@ export interface CustomGridColumnProps {
 	"column-background-opacity"?: string;
 	"column-padding-top"?: string;
 	"column-padding-bottom"?: string;
+	"columns-equal-paddings"?: boolean;
 
 	xs?: number;
 	sm?: number;
@@ -45,6 +46,7 @@ export default function CustomGridColumn({
 		"column-background-opacity": columnBackgroundOpacity,
 		"column-padding-top": columnPaddingTop,
 		"column-padding-bottom": columnPaddingBottom,
+		"columns-equal-paddings": columnEqualPaddings,
 
 		 xs,
 		 sm,
@@ -74,7 +76,7 @@ export default function CustomGridColumn({
 		<>
 			<section
 				style={columnStyle}
-				className={`s-custom-grid-column ${xs ? `col-xs-${xs}` : ""} ${sm ? `col-sm-${sm}` : ""} ${md ? `col-md-${md}` : ""} ${lg ? `col-lg-${lg}` : ""} ${ xl ? `col-xl-${xl}` : "" } ${xxl ? `col-xxl-${xxl}` : ""} col-off ${xs_offset ? `offset-xs-${xs_offset}` : ""} ${sm_offset ? `offset-sm-${sm_offset}` : ""} ${md_offset ? `offset-md-${md_offset}` : ""} ${lg_offset ? `offset-lg-${lg_offset}` : ""} `}
+				className={`s-custom-grid-column ${columnEqualPaddings ? "equal-paddings" : ""} ${xs ? `col-xs-${xs}` : ""} ${sm ? `col-sm-${sm}` : ""} ${md ? `col-md-${md}` : ""} ${lg ? `col-lg-${lg}` : ""} ${ xl ? `col-xl-${xl}` : "" } ${xxl ? `col-xxl-${xxl}` : ""} col-off ${xs_offset ? `offset-xs-${xs_offset}` : ""} ${sm_offset ? `offset-sm-${sm_offset}` : ""} ${md_offset ? `offset-md-${md_offset}` : ""} ${lg_offset ? `offset-lg-${lg_offset}` : ""} `}
 			>
 				<div className={`column-wrapper`} style={{padding: "10px"}}>
 					{children}
