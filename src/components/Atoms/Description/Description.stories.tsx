@@ -60,18 +60,15 @@ export default {
 
 const Template: ComponentStory<typeof Description> = (args) => (
     <>
-      <h1>Vel massa erat deseruisse eripuit aenean  <Description text={<h4>{args.text}</h4>} color="red"/> deseruisse eripuit aenean</h1>
+      <h1>Vel massa erat deseruisse eripuit aenean  <Description text={<h4>{args.text}</h4>} color={args.color} italic={args.italic} underline={args.underline}/> deseruisse eripuit aenean</h1>
     </>
 );
 
 export const Description_story = Template.bind({});
 
 Description_story.args = {
-  underline: true,
-  italic: true,
-  color: "black",
+  underline: false,
+  italic: false,
+  color: "#4cbfa6",
   text: "lorem ipsum"
 };
-
-
-// TODO nu merg controalele in storybook

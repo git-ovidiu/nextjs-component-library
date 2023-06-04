@@ -41,7 +41,7 @@
     //box-shadow: 0 5px 15px var(--a-button-slide-background);
     box-shadow: $box-shadow-xxxl;
     //todo de vaazut ce fac cu box-shadow-ul de la butonul cu slide
-    
+
     &.padding-xxs{ span{ padding: var(--a-button-slide-padding-xxs); } }
     &.padding-xs{ span{ padding: var(--a-button-slide-padding-xs); } }
     &.padding-s{ span{ padding: var(--a-button-slide-padding-s); } }
@@ -92,7 +92,7 @@
     }
     &:hover {
         &::before {
-            height: 0%;
+            height: 0;
         }
     }
 }
@@ -108,7 +108,7 @@
     }
     &:hover {
         &::before {
-            height: 0%;
+            height: 0;
         }
     }
 }
@@ -125,7 +125,7 @@
     }
     &:hover {
         &::before {
-            width: 0%;
+            width: 0;
         }
     }
 }
@@ -141,7 +141,7 @@
     }
     &:hover {
         &::before {
-            width: 0%;
+            width: 0;
         }
     }
 }

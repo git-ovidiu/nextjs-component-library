@@ -24,4 +24,3 @@ export default function FaqItem(props: FAQProps) {
   );
 }
 
-// todo TE INTRRAT IN TOATE FISIERELE DE TEST SA VERIFIC SNIPPETUL

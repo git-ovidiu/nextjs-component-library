@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement, ReactNode } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 import "./Custom-wrapper.scss";
 import Image from "next/image";
 import { MediaVideo } from "../../../index";
@@ -9,8 +9,8 @@ interface CustomWrapperStyle extends CSSProperties {
 
 export interface CustomWrapperProps {
   style?: CustomWrapperStyle;
-
   children: ReactNode;
+
   "space-top"?: string;
   "space-bottom"?: string;
   "border-radius"?: string;
@@ -18,7 +18,8 @@ export interface CustomWrapperProps {
   "custom-background-color"?: string;
   "custom-background-image"?: string;
   "custom-background-video"?: string;
-  "container-fluid"?: string;
+  "container-fluid"?: boolean;
+  "image-priority"?: boolean;
 }
 export default function CustomWrapper({
   children,
@@ -30,27 +31,30 @@ export default function CustomWrapper({
   "custom-background-video": customBackgroundVideo,
   "container-fluid": containerFluid,
   "border-radius": borderRadius,
+  "image-priority": imagePriority,
   style,
 }: CustomWrapperProps) {
   //will remove the theme and the custom background color if the background-image is set
   customBackgroundImage
-    ? ((backgroundColorTheme = undefined), (customBackgroundColor = undefined))
+    ? ((backgroundColorTheme = undefined) ||
+      (customBackgroundColor = undefined))
     : customBackgroundColor
     ? (backgroundColorTheme = undefined)
     : null;
 
   // will remove the theme, custom background color and the background image if set
   customBackgroundVideo
-    ? ((backgroundColorTheme = undefined),
-      (customBackgroundColor = undefined),
+    ? ((backgroundColorTheme = undefined) ||
+      (customBackgroundColor = undefined) ||
       (customBackgroundImage = undefined))
     : null;
 
   // will remove the background color, the background image and the background video if set
-  backgroundColorTheme
-    ? ((customBackgroundVideo = undefined),
-      (customBackgroundColor = undefined),
-      (customBackgroundImage = undefined))
+  customBackgroundColor
+    ? ((customBackgroundVideo = undefined) ||
+      (customBackgroundColor = undefined) ||
+      (customBackgroundImage = undefined)
+    )
     : null;
 
   return (
@@ -72,7 +76,7 @@ export default function CustomWrapper({
           >
             <div className="image-container">
               <picture>
-                <Image fill src={customBackgroundImage} alt="placeholder" style={{borderRadius: borderRadius}} />
+                <Image fill src={customBackgroundImage} priority={!!imagePriority} alt="placeholder" style={{borderRadius: borderRadius}} />
               </picture>
             </div>
             {children}
@@ -106,5 +110,3 @@ export default function CustomWrapper({
     </section>
   );
 }
-
-// todo de pus si custom link de video aici ca poate e nevoie
