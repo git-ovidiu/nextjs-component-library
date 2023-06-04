@@ -2,7 +2,6 @@
 
 :root{
   --a-logo-background: white;
-  --a-logo-border-radius: 10px;
   --a-logo-padding: 0px;
   --a-logo-box-shadow-transition: #{$transition-duration-normal};
   --a-logo-box-shadow: #{$box-shadow-s-white};
@@ -11,6 +10,10 @@
   --a-logo-image-transform-hover: scale(1.025);
   --a-logo-width: 150px;
   --a-logo-height: 50px;
+  --a-logo-border-radius-desktop: 10px;
+  --a-logo-default-opacity-mobile: 1;
+  --a-logo-default-opacity-desktop: 1;
+  --a-logo-border-radius-mobile: unset;
 }
 
 
@@ -19,12 +22,22 @@
   @include flex(row, center, center);
   	z-index: 2;
   	transition: box-shadow var(--a-logo-box-shadow-transition);
-	box-shadow: var(--a-logo-box-shadow);
-  	border-radius: var(--a-logo-border-radius);
   	padding: var(--a-logo-padding);
-	background: var(--a-logo-background);
 	width: var(--a-logo-width);
   	height: var(--a-logo-height);
+   	position: relative;
+
+  &::before{
+	content: '';
+	box-shadow: var(--a-logo-box-shadow);
+	background: var(--a-logo-background);
+  	border-radius: var(--a-logo-border-radius-mobile);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: var(--a-logo-default-opacity-mobile);
+  }
 
   img{
 	transform: scale(1);
@@ -34,10 +47,29 @@
   }
 
   &:hover{
+
+	&::before{
   	box-shadow:  var(--a-logo-box-shadow-hover);
+	}
 
 	img{
 	  transform: var(--a-logo-image-transform-hover);
+	}
+  }
+}
+
+@media (min-width: 768px){
+  .a-logo{
+	&::before{
+	  border-radius: var(--a-logo-border-radius-desktop);
+	}
+  }
+}
+
+@media (min-width: 992px){
+  .a-logo{
+	&::before{
+	  opacity: var(--a-logo-default-opacity-desktop);
 	}
   }
 }

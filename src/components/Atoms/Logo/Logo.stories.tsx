@@ -1,7 +1,6 @@
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Logo from "./Logo";
-import Image from "next/image";
 
 const Extra_Info = `
 <br>
@@ -12,11 +11,15 @@ const Extra_Info = `
     <td>type</td>
     <td>can be:</td>
   </tr>
-	
 <tr>
-<td>logo</td>
-<td>ReactElement</td>
-<td>use next/image</td>
+<td>width</td>
+<td>string</td>
+<td>0px | 0%</td>
+</tr>
+<tr>
+<td>height</td>
+<td>string</td>
+<td>0px | 0%</td>
 </tr>
 <tr>
 <td>background</td>
@@ -24,11 +27,35 @@ const Extra_Info = `
 <td>hex || color name || rgb</td>
 </tr>
 <tr>
-<td>border-radius</td>
+<td>logo-image-url</td>
+<td>string</td>
+<td>URL (already has a next/image implemented)</td>
+</tr>
+<tr>
+<td>logo-alt</td>
+<td>string</td>
+<td>Logo Placeholder</td>
+</tr>
+<tr>
+<td>default-opacity-mobile</td>
+<td>string</td>
+<td>1 (default - * if lower, it will be again '1' on hover)</td>
+</tr>
+<tr>
+<td>default-opacity-desktop</td>
+<td>string</td>
+<td>1 (default)</td>
+</tr>
+<tr>
+<td>border-radius-desktop</td>
 <td>string</td>
 <td>0px | 0%</td>
 </tr>
-
+<tr>
+<td>border-radius-mobile</td>
+<td>string</td>
+<td>0px | 0%</td>
+</tr>
 </table>
 
 <br>
@@ -36,7 +63,6 @@ const Extra_Info = `
 <h2><u>CSS VARIABLES</u></h2>
 <ol>
 <li>--a-logo-background</li>
-<li>--a-logo-border-radius</li>
 <li>--a-logo-padding</li>
 <li>--a-logo-box-shadow-transition</li>
 <li>--a-logo-box-shadow</li>
@@ -45,16 +71,16 @@ const Extra_Info = `
 <li>--a-logo-image-transform-hover</li>
 <li>--a-logo-width</li>
 <li>--a-logo-height</li>
+<li>--a-logo-border-radius-desktop</li>
+<li>--a-logo-default-opacity-mobile</li>
+<li>--a-logo-default-opacity-desktop</li>
+<li>--a-logo-border-radius-mobile</li>
 </ol>
 
 <table>
 <tr>
 <td>--a-logo-background</td>
 <td>white</td>
-</tr>
-<tr>
-<td>--a-logo-border-radius</td>
-<td>10px</td>
 </tr>
 <tr>
 <td>--a-logo-padding</td>
@@ -88,15 +114,25 @@ const Extra_Info = `
 <td>--a-logo-height</td>
 <td>50px</td>
 </tr>
+<tr>
+<td>--a-logo-border-radius-desktop</td>
+<td>10px</td>
+</tr>
+<tr>
+<td>--a-logo-default-opacity-mobile</td>
+<td>1</td>
+</tr>
+<tr>
+<td>--a-logo-default-opacity-desktop</td>
+<td>1</td>
+</tr>
+<tr>
+<td>--a-logo-border-radius-mobile</td>
+<td>unset</td>
+</tr>
 </table>
 `;
 
-//@ts-ignore
-const Link = ({ href, target, children }) => (
-  <a href={href} target={target} rel="noopener noreferrer">
-    {children}
-  </a>
-);
 
 export default {
   title: "Atoms/Logo",
@@ -113,19 +149,35 @@ export default {
 
 const Template: ComponentStory<typeof Logo> = (args) => (
     <Logo
-      border-radius={args["border-radius"]}
+      width={args.width}
+      height={args.height}
       background={args.background}
-      logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-      width="150px"
-      height="50px"
-      logo-alt="Placeholder"
+      logo-image-url={args["logo-image-url"]}
+      logo-alt={args["logo-alt"]}
+      default-opacity-mobile={args["default-opacity-mobile"]}
+      default-opacity-desktop={args["default-opacity-desktop"]}
+      border-radius-desktop={args["border-radius-desktop"]}
+      border-radius-mobile={args["border-radius-mobile"]}
+      open-in-new-tab={args["open-in-new-tab"]}
+      link-url={args["link-url"]}
     />
 );
 
 export const Logo_STORY = Template.bind({});
 
 Logo_STORY.args = {
-  background: "#4cbfa6",
-  "border-radius": "20px",
+  "width": "150px",
+  "height": "50px",
+  "background": "#4cbfa6",
+  "logo-image-url": "https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg",
+  "logo-alt": "Placeholder",
+  "default-opacity-mobile": "1",
+  "default-opacity-desktop": "1",
+  "border-radius-desktop": "0px",
+  "border-radius-mobile": "50%",
+  "open-in-new-tab": true,
+  "link-url": "https://www.youtube.com"
 
 };
+
+//todo sa vad daca trebuie PRIORITY si pe logo

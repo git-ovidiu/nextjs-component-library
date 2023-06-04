@@ -85,35 +85,35 @@ const Extra_Info = `
 <table>
 <tr>
     <td>--m-media-label-top-left-margin-top</td>
-    <td>50px</td>
+    <td>25px</td>
 </tr>
 <tr>
     <td>--m-media-label-top-left-margin-left</td>
-    <td>50px</td>
+    <td>25px</td>
 </tr>
 <tr>
     <td>--m-media-label-top-right-margin-top</td>
-    <td>50px</td>
+    <td>25px</td>
 </tr>
 <tr>
     <td>--m-media-label-top-right-margin-right</td>
-    <td>50px</td>
+    <td>25px</td>
 </tr>
 <tr>
     <td>--m-media-label-bottom-left-margin-bottom</td>
-    <td>50px</td>
+    <td>25px</td>
 </tr>
 <tr>
     <td>--m-media-label-bottom-left-margin-left</td>
-    <td>50px</td>
+    <td>25px</td>
 </tr>
 <tr>
     <td>--m-media-label-bottom-right-margin-top</td>
-    <td>50px</td>
+    <td>25px</td>
 </tr>
 <tr>
     <td>--m-media-label-bottom-right-margin-right</td>
-    <td>50px</td>
+    <td>25px</td>
 </tr>
 <tr>
     <td>--m-media-image-border-radius</td>

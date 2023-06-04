@@ -121,12 +121,12 @@ export default {
     },
     "space-top": {
       control: "select",
-      options: ["0", "xs", "s", "m", "l", "xl", "xxl"]
+      options: ["0", "xs", "s", "m", "l", "xl", "xxl"],
     },
     "space-bottom": {
       control: "select",
-      options: ["0", "xs", "s", "m", "l", "xl", "xxl"]
-    }
+      options: ["0", "xs", "s", "m", "l", "xl", "xxl"],
+    },
   },
   parameters: {
     actions: { disabled: true },
@@ -174,12 +174,54 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           image-border-radius="30px"
           label-bottom-right={
             <Logo
-              background={"#ffffff"}
-              border-radius="20px"
-              height="50px"
-              logo-alt="Placeholder"
-              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
               width="150px"
+              height="50px"
+              background={"#ffffff"}
+              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+              logo-al="Placeholder"
+              default-opacity-mobile="1"
+              default-opacity-desktop="1"
+              border-radius-desktop="0px"
+              border-radius-mobile="50%"
+            />
+          }
+          label-bottom-left={
+            <Logo
+              width="150px"
+              height="50px"
+              background={"#ffffff"}
+              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+              logo-al="Placeholder"
+              default-opacity-mobile="1"
+              default-opacity-desktop="1"
+              border-radius-desktop="0px"
+              border-radius-mobile="50%"
+            />
+          }
+          label-top-left={
+            <Logo
+              width="150px"
+              height="50px"
+              background={"#ffffff"}
+              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+              logo-al="Placeholder"
+              default-opacity-mobile="1"
+              default-opacity-desktop="1"
+              border-radius-desktop="0px"
+              border-radius-mobile="50%"
+            />
+          }
+          label-top-right={
+            <Logo
+              width="150px"
+              height="50px"
+              background={"#ffffff"}
+              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
+              logo-al="Placeholder"
+              default-opacity-mobile="1"
+              default-opacity-desktop="1"
+              border-radius-desktop="0px"
+              border-radius-mobile="50%"
             />
           }
           object-fit="cover"
