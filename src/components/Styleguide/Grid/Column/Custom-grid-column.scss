@@ -1,0 +1,28 @@
+@use '../../../../../src/styles/main.module.scss' as *;
+
+:root{
+  --s-column-background-color: unset;
+  --s-column-border-radius: unset;
+  --s-column-background-opacity: 1;
+  --s-column-padding-top: unset;
+  --s-column-padding-bottom: unset;
+}
+
+.s-custom-grid-column{
+  position: relative;
+  padding-top: var(--s-column-padding-top);
+  padding-bottom: var(--s-column-padding-bottom);
+
+  &::before{
+    content: '';
+    position: absolute;
+    border-radius: var(--s-column-border-radius);
+    background: var(--s-column-background-color);
+    opacity: var(--s-column-background-opacity);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+}

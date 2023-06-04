@@ -12,7 +12,8 @@
 .animated-title {
     opacity: 0;
     color: var(--a-animated-text-color);
-  
+    margin: unset;
+
     span {
       display: inline-block;
     }

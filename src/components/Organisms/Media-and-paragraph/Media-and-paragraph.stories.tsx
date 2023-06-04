@@ -10,11 +10,9 @@ import CustomShape from "../../Atoms/Custom-shape/Custom-shape";
 import "../../../styles/bootstrap/css/bootstrap-grid.css";
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import {CustomGridColumn, Custom_grid_row, TitleAndDescription} from "../../index"
+import {CustomGridColumn, CustomGridRow, CustomWrapper, TitleAndDescription} from "../../index"
 import '../../../styles/Global-Settings/Paddings.css';
 import Image from "next/image";
-
-
 
 const Extra_Info = `
 <br>
@@ -77,59 +75,45 @@ const Template: ComponentStory<typeof MediaAndParagraph> = (args) => (
                 <CustomShape style={{zIndex: 99, position: 'relative' }} />
             </Parallax>
         <div style={{zIndex: -1}}>
-            <div style={{border: "2px solid red"}}>
-
-  <MediaAndParagraph space-top={args["space-top"]} space-bottom={args["space-bottom"]} background-color={args["background-color"]} custom-background={args["custom-background"]} custom-background-image={
-      <MediaImage
-          image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666627243/VIBE%20INTERIOR/Penthouse%20C:/living_1_qkudee.jpg"/>}
-          image-border-radius="0px"
-          object-fit="cover"
-          padding-bottom-desktop="0%"
-          padding-bottom-mobile="0%"
-          padding-bottom-tablet="0%"
-      />
-  }>
-                <div className="container">
-      <Custom_grid_row vertical-alignment="center" reverse-breakpoint="xl">
-          <CustomGridColumn
-              md={12}
-              lg={6}
-              sm={12}
-              xs={12}
-          >
-              <MediaImage
-                  image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
-                  label-bottom-right={<Logo background="white" border-radius="20px" height="50px" logo-alt="Placeholder" logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg" width="150px"/>}
-                  object-fit="cover"
-                  padding-bottom-desktop="0%"
-                  padding-bottom-mobile="0%"
-                  padding-bottom-tablet="0%"
-              />
-          </CustomGridColumn>
-          <CustomGridColumn
-              xs={12}
-              sm={12}
-              lg={6}
-              md={12}
-          >
-              <div
-                  style={{
-                      maxWidth: '600px'
-                  }}
-              >
-                  <TitleAndDescription
-                      action={<ButtonSlide hover-effect="slide-right" padding="xs" text="button text"/>}
-                      description="Tation pertinacia pretium feugiat diam torquent qui oratio scripta offendit dicat unum montes brute referrentur"
-                      label={<Description color="red" text="Label"/>}
-                      text-align="left"
-                      title={<AnimatedText text="Epicuri posidonium non natoque aenean repudiare principes verterem eius potenti" variant="h2"/>}
-                  />
-              </div>
-          </CustomGridColumn>
-      </Custom_grid_row>
-                </div>
-  </MediaAndParagraph>
-            </div>
+            <CustomWrapper
+                background-color-theme="primary"
+                border-radius="0px"
+                custom-background-image="https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png"
+                custom-background-video="https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4"
+                image-priority
+                space-bottom="xxl"
+                space-top="xxl"
+            >
+                <CustomGridRow vertical-alignment="center">
+                    <CustomGridColumn
+                        lg={5}
+                        xs={12}
+                    >
+                        <MediaImage
+                            image={<Image alt="Placeholder" fill src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685771607/_bd478abc-0aa9-492c-bfe9-ba6466c51b19_kvlmat.jpg"/>}
+                            image-border-radius="30px"
+                            label-bottom-right={<Logo background={"#ffffff"} border-radius="20px" height="50px" logo-alt="Placeholder" logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg" width="150px"/>}
+                            object-fit="cover"
+                            padding-bottom-desktop="0%"
+                            padding-bottom-mobile="0%"
+                            padding-bottom-tablet="0%"
+                        />
+                    </CustomGridColumn>
+                    <CustomGridColumn
+                        lg={6}
+                        lg-offset={1}
+                        xs={12}
+                    >
+                        <TitleAndDescription
+                            action={<ButtonSlide hover-effect="slide-right" padding="xs" text="button text"/>}
+                            description={<Description color="white" text="pulvinar numquam finibus hinc fames scelerisque sapientem errem bibendum discere platonem ornatus tacimates laoreet facilis animal sententiae aenean omittam definiebas"/>}
+                            label={<Description color="white" text="Label"/>}
+                            text-align="left"
+                            title={<span><AnimatedText color="white" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis officia libero dolores. Delectus repellendus dolore accusamus!" variant="h4"/></span>}
+                        />
+                    </CustomGridColumn>
+                </CustomGridRow>
+            </CustomWrapper>
         </div>
         </ParallaxProvider>
     </div>

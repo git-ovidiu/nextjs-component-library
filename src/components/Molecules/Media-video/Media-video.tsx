@@ -163,4 +163,4 @@ export default function MediaVideo(props: MediaComponentProps) {
 }
 
 
-// todo add option to add/remove the progress bar
+// todo add option to add/remove the progress bar (e deja custom, dar la custom-row am proprietate de backgorund video, si ar fi buna o proprietate sa scot sau sa bag progress bar-ul)

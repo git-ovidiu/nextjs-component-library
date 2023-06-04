@@ -13,25 +13,22 @@ const Extra_Info = `
     <td>can be:</td>
   </tr>
   <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
-</table>
-
-<br>
-
-<h2><u>CSS VARIABLES</u></h2>
-<ol>
-  <li>--a-test-component-right-column-background</li>
-</ol>
-
-<table>
+  <td>vertical-alignment</td>
+  <td>string</td>
+  <td>start | center | end</td>
+</tr>
   <tr>
-    <td>--a-test-component-right-column-background</td>
-    <td>gray</td>
-  </tr>
+  <td>reverse-breakpoint</td>
+  <td>string</td>
+  <td>sm | md | lg | xl | xxl</td>
+</tr>
+  <tr>
+  <td>row-background</td>
+  <td>string</td>
+  <td>hex || color name || rgb</td>
+</tr>
 </table>
+<br>
 `;
 
 export default {
@@ -57,6 +54,7 @@ const Template: ComponentStory<typeof CustomGridRow> = (args) => (
 	<CustomGridRow {...args}
 		vertical-alignment={args["vertical-alignment"]}
 		reverse-breakpoint={args["reverse-breakpoint"]}
+	    row-background={args["row-background"]}
 	>
 		<CustomGridColumn
 			xs={12}
@@ -68,7 +66,10 @@ const Template: ComponentStory<typeof CustomGridRow> = (args) => (
 		>
 			<h1
 				style={{
-					border: '2px solid #4cbfa6'
+					border: '2px solid black',
+					padding: '20px',
+					background: 'black',
+					color: '#4cbfa6'
 				}}
 			>
 				offset-- & col--6 1
@@ -84,7 +85,10 @@ const Template: ComponentStory<typeof CustomGridRow> = (args) => (
 		>
 			<h1
 				style={{
-					border: '2px solid #4cbfa6'
+					border: '2px solid black',
+					padding: '20px',
+					background: 'black',
+					color: '#4cbfa6'
 				}}
 			>
 				offset-- & col--6 2
@@ -97,5 +101,6 @@ export const CustomGridRow_STORY = Template.bind({});
 
 CustomGridRow_STORY.args = {
 	"vertical-alignment": "center",
-	"reverse-breakpoint": undefined
+	"reverse-breakpoint": "md",
+	"row-background": '#4cbfa6'
 };

@@ -2,7 +2,7 @@ import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {AiOutlineDownload} from "react-icons/ai";
 import Card from "./Card";
-import {AnimatedText, Button_slide, Label} from "../../../index";
+import {AnimatedText, ButtonSlide, Label} from "../../../index";
 import ButtonLineDrawing from "../../Atoms/Button-line-drawing";
 
 const Extra_Info = `
@@ -198,7 +198,7 @@ const Template: ComponentStory<typeof Card> = (args) => (
       }
       buttons={
         <>
-          <Button_slide
+          <ButtonSlide
             hover-effect="slide-right"
             icon={<AiOutlineDownload size={20} />}
              icon-position="right"
