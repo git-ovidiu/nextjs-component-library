@@ -149,6 +149,21 @@ const Extra_Info = `
 export default {
   title: "Molecules/Card",
   component: Card,
+  argTypes:{
+    variant: {
+      control: "radio",
+      options: [
+        "please refresh the page if you change the values below",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "p",
+      ],
+    },
+  },
   parameters: {
     actions: { disabled: true },
     docs: {
@@ -187,7 +202,8 @@ const Template: ComponentStory<typeof Card> = (args) => (
       title={
         <AnimatedText
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque."
-          variant="h3"
+          //@ts-ignore
+          variant={args.variant}
         />
       }
       description={
@@ -221,5 +237,7 @@ export const Card_story = Template.bind({});
 Card_story.args = {
   "is-overlapped": true,
   "image-full-width": false,
-  buttons: undefined
+  buttons: undefined,
+  //@ts-ignore
+  variant: "h5"
 };

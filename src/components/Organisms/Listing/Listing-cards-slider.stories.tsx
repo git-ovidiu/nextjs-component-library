@@ -73,14 +73,25 @@ const Template: ComponentStory<{}> = () =>
 	<section className={"o-listing-cards-slider"}>
 
 				<Splide aria-label="My Favorite Images" options={{
-					gap: '2%'
+					gap: '2%',
+					perPage: 3,
+						breakpoints: {
+							576: {
+								perPage: 1,
+							},
+							992: {
+								perPage: 3,
+							},
+						},
+
+
 				}}>
 					<SplideSlide>
 							<Card
 								is-overlapped
 								image={<img alt="placeholder" src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg" width="100%"/>}
 								labels={<><Label background-color="black" color="white" text="Placeholder text"/><Label background-color="black" color="white" text="Placeholder text"/></>}
-								title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h4"/>}
+								title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h5"/>}
 								description={<Description text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"/>}
 								buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xxs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xxs" text="Placeholder text"/></>}
 							/>
@@ -90,7 +101,7 @@ const Template: ComponentStory<{}> = () =>
 							is-overlapped
 							image={<img alt="placeholder" src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg" width="100%"/>}
 							labels={<><Label background-color="black" color="white" text="Placeholder text"/><Label background-color="black" color="white" text="Placeholder text"/></>}
-							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h4"/>}
+							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h6"/>}
 							description={<Description text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"/>}
 							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xxs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xxs" text="Placeholder text"/></>}
 						/>
@@ -129,6 +140,7 @@ const Template: ComponentStory<{}> = () =>
 						/>
 					</SplideSlide>
 				</Splide>
+
 
 		{/*	</CustomGridRow>*/}
 		{/*</CustomWrapper>*/}

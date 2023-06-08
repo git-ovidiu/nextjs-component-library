@@ -1,7 +1,7 @@
 @use '../../../styles/main.module.scss'as *;
 
 :root {
-  --m-card-background: transparent;
+  --m-card-background: white;
   --m-card-padding: 24px;
   --m-card-box-shadow: #{$box-shadow-xs};
   --m-card-border-radius: 20px 20px 60px 20px;
@@ -22,6 +22,7 @@
 }
 
 .m-card {
+  height: 100%;
   //padding: 0px 50px; //todo de pus aici o proprietate de padding pentru atunci cand bag cardul intr-un slider (left && right)
   .card-container {
     position: relative;
@@ -34,52 +35,10 @@
     flex-direction: column;
     overflow: hidden;
 
-    &.m-card-overlapped {
-      padding: unset;
-      align-items: center;
-      box-shadow: unset;
-
-      .image {
-        position: relative;
-      }
-
-      .content {
-        border-radius: var(--m-card-border-radius);
-        width: calc(100% - var(--m-card-overlapped-side-distance-mobile));
-        position: relative;
-        margin-top: var(--m-card-overlapped-margin-top);
-        box-shadow: var(--m-card-box-shadow);
-        padding: var(--m-card-padding);
-
-        .labels{
-            margin-top: unset;
-        }
-      }
-    }
-
-    &.image-full-width {
-      padding: unset;
-
-      .content {
-        padding: var(--m-card-padding);
-
-        .labels {
-          margin-top: unset;
-        }
-      }
-    }
-
-    .image {
-position: relative;
-
-      img {
-        height: var(--m-card-image-height);
-        object-fit: var(--m-card-image-object-fit);
-      }
-    }
-
     .content {
-      background: var(--m-card-content-background);
+      background: transparent;
+      height: 100%;
+      @include flex(column, space-between, flex-start);
 
       .labels {
         margin-top: var(--m-card-labels-margin-top);
@@ -102,6 +61,56 @@ position: relative;
         @include flex(column, center, flex-start);
         gap: var(--m-card-buttons-gap);
         width: 100%;
+        align-self: flex-end;
+        justify-self: flex-end;
+      }
+    }
+
+
+    &.m-card-overlapped {
+      padding: unset;
+      align-items: center;
+      box-shadow: unset;
+
+      .image {
+        position: relative;
+      }
+
+      .content {
+        //border-radius: var(--m-card-border-radius);
+        background: var(--m-card-background);
+        width: calc(100% - var(--m-card-overlapped-side-distance-mobile));
+        position: relative;
+        margin-top: var(--m-card-overlapped-margin-top);
+        border-radius: var(--m-card-border-radius);
+        margin-bottom: 20px;
+        box-shadow: var(--m-card-box-shadow);
+        padding: var(--m-card-padding);
+
+        .labels{
+            margin-top: unset;
+        }
+      }
+    }
+
+    &.image-full-width {
+      padding: unset;
+
+      .content {
+        padding: var(--m-card-padding);
+
+        .labels {
+          margin-top: unset;
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+
+      img {
+        height: var(--m-card-image-height);
+        object-fit: var(--m-card-image-object-fit);
       }
     }
   }
