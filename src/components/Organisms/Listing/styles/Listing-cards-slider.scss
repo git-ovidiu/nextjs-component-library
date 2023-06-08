@@ -1,0 +1,29 @@
+.o-listing-cards-slider {
+  max-width: 1400px;
+  margin: 0 auto;
+  .splide {
+    .splide__slide {
+      flex: 0 0 100%;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .o-listing-cards-slider {
+    .splide {
+      .splide__slide {
+        flex: 0 0 48%;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .o-listing-cards-slider {
+    .splide {
+      .splide__slide {
+        flex: 0 0 32%;
+      }
+    }
+  }
+}

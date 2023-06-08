@@ -48,4 +48,4 @@ export default function CustomShape(props: CustomShapeProps) {
 }
 
 
-// todo de facut un {children} la parallax si orice e in interior sa se aplice
+// todo de facut un {children} la parallax si orice e in interior sa se aplice +++ sa aiba props de distante *
