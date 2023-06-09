@@ -52,10 +52,11 @@ export default function CustomWrapper({
   // will remove the background color, the background image and the background video if set
   customBackgroundColor
     ? ((customBackgroundVideo = undefined) ||
-      (customBackgroundColor = undefined) ||
+      (backgroundColorTheme = undefined) ||
       (customBackgroundImage = undefined)
     )
     : null;
+
 
   return (
     <section

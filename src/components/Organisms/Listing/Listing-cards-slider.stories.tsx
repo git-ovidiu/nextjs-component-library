@@ -13,16 +13,8 @@ import {
 import { AiOutlineDownload } from "react-icons/ai";
 import Image from "next/image";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "./styles/Listing-cards-slider.scss";
-
-// import "@splidejs/react-splide/css";
-
-// or other themes
-// import "@splidejs/react-splide/css/skyblue";
-// import "@splidejs/react-splide/css/sea-green";
-//
-// or only core styles
-// import "@splidejs/react-splide/css/core";
+import "@splidejs/react-splide/css";
+import "@splidejs/react-splide/css/sea-green";
 
 const Extra_Info = `
 <br>
@@ -69,8 +61,20 @@ export default {
 	},
 };
 
+//@ts-ignore
 const Template: ComponentStory<{}> = () =>
 	<section className={"o-listing-cards-slider"}>
+
+
+		<CustomWrapper
+			background-color-theme="primary"
+			border-radius="0px"
+			custom-background-image="https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png"
+			custom-background-video="https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4"
+			space-bottom="m"
+			space-top="m"
+			// container-fluid={true}
+		>
 
 				<Splide aria-label="My Favorite Images" options={{
 					gap: '2%',
@@ -140,7 +144,7 @@ const Template: ComponentStory<{}> = () =>
 						/>
 					</SplideSlide>
 				</Splide>
-
+		</CustomWrapper>
 
 		{/*	</CustomGridRow>*/}
 		{/*</CustomWrapper>*/}

@@ -1,7 +1,7 @@
 @use '../../../styles/main.module.scss'as *;
 
 :root {
-  --m-card-background: white;
+  --m-card-background: rgba(255, 255, 255, 0.73);
   --m-card-padding: 24px;
   --m-card-box-shadow: #{$box-shadow-xs};
   --m-card-border-radius: 20px 20px 60px 20px;
@@ -71,6 +71,7 @@
       padding: unset;
       align-items: center;
       box-shadow: unset;
+      background: transparent;
 
       .image {
         position: relative;
@@ -79,6 +80,7 @@
       .content {
         //border-radius: var(--m-card-border-radius);
         background: var(--m-card-background);
+
         width: calc(100% - var(--m-card-overlapped-side-distance-mobile));
         position: relative;
         margin-top: var(--m-card-overlapped-margin-top);

@@ -11,17 +11,6 @@ import {
 	Label, TitleAndDescription,
 } from "../../index";
 import { AiOutlineDownload } from "react-icons/ai";
-import Image from "next/image";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-
-import "@splidejs/react-splide/css";
-
-// or other themes
-import "@splidejs/react-splide/css/skyblue";
-import "@splidejs/react-splide/css/sea-green";
-
-// or only core styles
-import "@splidejs/react-splide/css/core";
 
 const Extra_Info = `
 <br>
@@ -68,8 +57,9 @@ export default {
 	},
 };
 
+//@ts-ignore
 const Template: ComponentStory<{}> = () =>
-	<section>
+	<section className={"o-listing-cards"}>
 		<CustomWrapper
 			custom-background-color={"red"}
 			border-radius="0px"
