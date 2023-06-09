@@ -2,8 +2,9 @@ import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import {AiOutlineDownload} from "react-icons/ai";
 import Card from "./Card";
-import {AnimatedText, ButtonSlide, Label} from "../../../index";
+import {AnimatedText, ButtonSlide, Description, Label, Logo, MediaImage} from "../../../index";
 import ButtonLineDrawing from "../../Atoms/Button-line-drawing";
+import Image from "next/image"
 
 const Extra_Info = `
 <br>
@@ -92,7 +93,7 @@ const Extra_Info = `
   </tr>
   <tr>
     <td>--m-card-image-height</td>
-    <td>300px</td>
+    <td>250px</td>
   </tr>
   <tr>
     <td>--m-card-image-object-fit</td>
@@ -179,10 +180,13 @@ const Template: ComponentStory<typeof Card> = (args) => (
     <Card
       {...args}
       image={
-        <img
-          src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg"
-          alt="placeholder"
-          width="100%"
+        <MediaImage
+            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
+            image-border-radius="30px"
+            object-fit="cover"
+            padding-bottom-desktop="0%"
+            padding-bottom-mobile="0%"
+            padding-bottom-tablet="0%"
         />
       }
       labels={
@@ -203,13 +207,12 @@ const Template: ComponentStory<typeof Card> = (args) => (
         <AnimatedText
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque."
           //@ts-ignore
-          variant={args.variant}
+          variant="h5"
         />
       }
       description={
-        <AnimatedText
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"
-          variant="p"
+        <Description
+            text={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!</p>}
         />
       }
       buttons={
@@ -219,11 +222,11 @@ const Template: ComponentStory<typeof Card> = (args) => (
             icon={<AiOutlineDownload size={20} />}
              icon-position="right"
             text="Placeholder text"
-            padding="xxs"
+            padding="xs"
           />
           <ButtonLineDrawing
               line-effect="line-below"
-              padding="xxs"
+              padding="xs"
               text="Placeholder text"
               icon={<AiOutlineDownload size={20} />}
               icon-position="right"
@@ -236,8 +239,6 @@ const Template: ComponentStory<typeof Card> = (args) => (
 export const Card_story = Template.bind({});
 Card_story.args = {
   "is-overlapped": true,
-  "image-full-width": false,
+  "image-full-width": true,
   buttons: undefined,
-  //@ts-ignore
-  variant: "h5"
 };

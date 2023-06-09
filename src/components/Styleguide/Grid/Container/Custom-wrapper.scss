@@ -24,6 +24,21 @@
     background: var(--s-custom-wrapper-background-tertiary);
   }
 
+  //custom-shapes
+  .custom-corner-shape{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    &.bottom-left{
+      top: -200px;
+      left: -200px;
+    }
+    &.top-left{}
+    &.bottom-right{}
+    &.top-right{}
+    &.center{}
+  }
+
   .has-background-image {
     picture {
       img {

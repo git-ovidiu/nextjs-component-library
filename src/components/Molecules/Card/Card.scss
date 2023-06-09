@@ -7,7 +7,7 @@
   --m-card-border-radius: 20px 20px 60px 20px;
   --m-card-content-background: #{$color-white};
   --m-card-height: 100%;
-  --m-card-image-height: 300px;
+  --m-card-image-height: 250px;
   --m-card-image-object-fit: cover;
   --m-card-labels-margin-top: 24px;
   --m-card-labels-gap: 8px;
@@ -29,7 +29,7 @@
     background: var(--m-card-background);
     padding: var(--m-card-padding);
     box-shadow: var(--m-card-box-shadow);
-    border-radius: var(--m-card-border-radius);
+    //border-radius: var(--m-card-border-radius);
     height: var(--m-card-height);
     display: flex;
     flex-direction: column;
@@ -57,12 +57,19 @@
       }
 
       .buttons {
-        margin-top: var(--m-card-buttons-margin-top);
         @include flex(column, center, flex-start);
+        margin-top: var(--m-card-buttons-margin-top);
         gap: var(--m-card-buttons-gap);
         width: 100%;
-        align-self: flex-end;
-        justify-self: flex-end;
+      }
+    }
+
+    .image {
+      position: relative;
+
+      img {
+        height: var(--m-card-image-height);
+        object-fit: var(--m-card-image-object-fit);
       }
     }
 
@@ -78,7 +85,6 @@
       }
 
       .content {
-        //border-radius: var(--m-card-border-radius);
         background: var(--m-card-background);
 
         width: calc(100% - var(--m-card-overlapped-side-distance-mobile));
@@ -104,15 +110,6 @@
         .labels {
           margin-top: unset;
         }
-      }
-    }
-
-    .image {
-      position: relative;
-
-      img {
-        height: var(--m-card-image-height);
-        object-fit: var(--m-card-image-object-fit);
       }
     }
   }

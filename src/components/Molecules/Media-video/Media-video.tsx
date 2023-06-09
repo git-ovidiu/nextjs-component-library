@@ -6,9 +6,9 @@ import {BsArrowsFullscreen} from "react-icons/bs";
 import "./Media-video.scss";
 
 interface ProgressLineBackgroundColor extends CSSProperties {
-  "--a-video-progress-line-background"?: string;
-  "--a-video-object-fit"?: string;
-  "--a-video-border-radius"?: string;
+  "--m-video-progress-line-background"?: string;
+  "--m-video-object-fit"?: string;
+  "--m-video-border-radius"?: string;
 }
 
 interface MediaComponentProps {
@@ -96,18 +96,18 @@ export default function MediaVideo(props: MediaComponentProps) {
   };
 
   return (
-            <div className="a-media-video" style={{ "--a-video-border-radius": props["video-border-radius"], ...props.style }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+            <div className="a-media-video" style={{ "--m-video-border-radius": props["video-border-radius"], ...props.style }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
               <div className="video-container">
                 <video
                     src={props.video}
                     ref={videoRef}
-                    style={{ width: "100%", "--a-video-object-fit": props["object-fit"], ...props.style }}
+                    style={{ width: "100%", "--m-video-object-fit": props["object-fit"], ...props.style }}
                     autoPlay={props["remove-controls"] || props["auto-play"]}
                     muted={!!(props["remove-controls"] || props.muted)}
                     loop={props.loop}
                 />
               </div>
-              <div className="progress-line-container" style={{ "--a-video-progress-line-background": props["progress-bar-color"], ...props.style }}>
+              <div className="progress-line-container" style={{ "--m-video-progress-line-background": props["progress-bar-color"], ...props.style }}>
                 <div className="progress-line" style={{ width: `${progress}%` }}></div>
               </div>
               {props["remove-controls"] ? null : (

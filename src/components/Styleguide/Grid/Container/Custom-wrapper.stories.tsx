@@ -9,7 +9,7 @@ import {
   TitleAndDescription,
 } from "../../../index";
 import Image from "next/image";
-
+import {motion} from "framer-motion";
 import "../../../../styles/Global-Settings/Paddings.css";
 import CustomGridRow from "../Row";
 import CustomGridColumn from "../Column";
@@ -151,6 +151,9 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
     container-fluid={args["container-fluid"]}
     border-radius={args["border-radius"]}
     image-priority={args["image-priority"]}
+
+    //custom-shapes
+    bottom-left-corner-shape={"https://res.cloudinary.com/dxbivmheq/image/upload/v1686337212/blob-haikei_xlvrmm.svg"}
   >
     <CustomGridRow vertical-alignment="center">
       <CustomGridColumn
@@ -163,6 +166,10 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
         column-padding-bottom={"unset"}
         columns-equal-paddings
       >
+        <motion.div
+            initial={{opacity: 0, y: 200}}
+            whileInView={{opacity: 1, y: 0}}
+        >
         <MediaImage
           image={
             <Image
@@ -175,7 +182,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           label-bottom-right={
             <Logo
               open-in-new-tab
-              link-url= "https://www.youtube.com"
+              link-url="https://www.youtube.com"
               width="150px"
               height="50px"
               background={"#ffffff"}
@@ -190,7 +197,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           label-bottom-left={
             <Logo
               open-in-new-tab
-              link-url= "https://www.youtube.com"
+              link-url="https://www.youtube.com"
               width="150px"
               height="50px"
               background={"#ffffff"}
@@ -205,7 +212,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           label-top-left={
             <Logo
               open-in-new-tab
-              link-url= "https://www.youtube.com"
+              link-url="https://www.youtube.com"
               width="150px"
               height="50px"
               background={"#ffffff"}
@@ -220,7 +227,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           label-top-right={
             <Logo
               open-in-new-tab
-              link-url= "https://www.youtube.com"
+              link-url="https://www.youtube.com"
               width="150px"
               height="50px"
               background={"#ffffff"}
@@ -237,6 +244,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
           padding-bottom-mobile="0%"
           padding-bottom-tablet="0%"
         />
+        </motion.div>
       </CustomGridColumn>
       <CustomGridColumn
         lg={6}
@@ -289,12 +297,12 @@ Custom_wrapper_STORY.args = {
   "border-radius": "0px",
   "image-priority": undefined,
   "container-fluid": undefined,
-  "background-color-theme": "primary",
-  "custom-background-color": undefined,
-  "custom-background-image":
-    "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
-  "custom-background-video":
-    "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
+  // "background-color-theme": "primary",
+  // "custom-background-color": undefined,
+  // "custom-background-image":
+  //   "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
+  // "custom-background-video":
+  //   "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
 };
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters

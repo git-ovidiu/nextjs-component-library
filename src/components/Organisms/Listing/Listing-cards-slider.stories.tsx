@@ -8,7 +8,7 @@ import {
 	CustomGridColumn,
 	CustomGridRow,
 	CustomWrapper, Description,
-	Label, TitleAndDescription,
+	Label, MediaImage, TitleAndDescription,
 } from "../../index";
 import { AiOutlineDownload } from "react-icons/ai";
 import Image from "next/image";
@@ -67,80 +67,83 @@ const Template: ComponentStory<{}> = () =>
 
 
 		<CustomWrapper
-			background-color-theme="primary"
 			border-radius="0px"
-			custom-background-image="https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png"
-			custom-background-video="https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4"
 			space-bottom="m"
 			space-top="m"
-			// container-fluid={true}
+			custom-background-color={"gray"}
+			container-fluid={true}
 		>
 
 				<Splide aria-label="My Favorite Images" options={{
 					gap: '2%',
 					perPage: 3,
 						breakpoints: {
-							576: {
+							768: {
 								perPage: 1,
 							},
-							992: {
-								perPage: 3,
+							1100: {
+								perPage: 2,
 							},
 						},
 
 
 				}}>
 					<SplideSlide>
-							<Card
-								is-overlapped
-								image={<img alt="placeholder" src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg" width="100%"/>}
-								labels={<><Label background-color="black" color="white" text="Placeholder text"/><Label background-color="black" color="white" text="Placeholder text"/></>}
-								title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h5"/>}
-								description={<Description text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"/>}
-								buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xxs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xxs" text="Placeholder text"/></>}
-							/>
+						<Card
+							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xs" text="Placeholder text"/></>}
+							description={<Description text={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!</p>} />}
+							image={<MediaImage image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>} image-border-radius="0px" object-fit="cover" padding-bottom-desktop="0%" padding-bottom-mobile="0%" padding-bottom-tablet="0%"/>}
+							image-full-width
+							is-overlapped
+							labels={<><Label background-color="black" color="white" text="Placeholder text"/><Label background-color="black" color="white" text="Placeholder text"/></>}
+							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h5"/>}
+						/>
 					</SplideSlide>
 					<SplideSlide>
 						<Card
+							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xs" text="Placeholder text"/></>}
+							description={<Description text={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!</p>} />}
+							image={<MediaImage image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>} image-border-radius="30px" object-fit="cover" padding-bottom-desktop="0%" padding-bottom-mobile="0%" padding-bottom-tablet="0%"/>}
+							image-full-width
 							is-overlapped
-							image={<img alt="placeholder" src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg" width="100%"/>}
 							labels={<><Label background-color="black" color="white" text="Placeholder text"/><Label background-color="black" color="white" text="Placeholder text"/></>}
-							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h6"/>}
-							description={<Description text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"/>}
-							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xxs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xxs" text="Placeholder text"/></>}
+							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h5"/>}
 						/>
 					</SplideSlide>
 
 					<SplideSlide>
 						<Card
+							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xs" text="Placeholder text"/></>}
+							description={<Description text={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!</p>} />}
+							image={<MediaImage image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>} image-border-radius="30px" object-fit="cover" padding-bottom-desktop="0%" padding-bottom-mobile="0%" padding-bottom-tablet="0%"/>}
+							image-full-width
 							is-overlapped
-							image={<img alt="placeholder" src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg" width="100%"/>}
 							labels={<><Label background-color="black" color="white" text="Placeholder text"/><Label background-color="black" color="white" text="Placeholder text"/></>}
-							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h4"/>}
-							description={<Description text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"/>}
-							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xxs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xxs" text="Placeholder text"/></>}
+							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h5"/>}
 						/>
 					</SplideSlide>
 
 					<SplideSlide>
 						<Card
+							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xs" text="Placeholder text"/></>}
+							description={<Description text={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!</p>} />}
+							image={<MediaImage image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>} image-border-radius="30px" object-fit="cover" padding-bottom-desktop="0%" padding-bottom-mobile="0%" padding-bottom-tablet="0%"/>}
+							image-full-width
 							is-overlapped
-							image={<img alt="placeholder" src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg" width="100%"/>}
 							labels={<><Label background-color="black" color="white" text="Placeholder text"/><Label background-color="black" color="white" text="Placeholder text"/></>}
-							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h4"/>}
-							description={<Description text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"/>}
-							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xxs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xxs" text="Placeholder text"/></>}
+							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h5"/>}
 						/>
 					</SplideSlide>
 
 					<SplideSlide>
 						<Card
+							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xs" text="Placeholder text"/></>}
+							description={<Description text={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!</p>} />}
+							image={<MediaImage image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>} image-border-radius="30px" object-fit="cover" padding-bottom-desktop="0%" padding-bottom-mobile="0%" padding-bottom-tablet="0%"/>}
+							image-full-width
 							is-overlapped
-							image={<img alt="placeholder" src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg" width="100%"/>}
 							labels={<><Label background-color="black" color="white" text="Placeholder text"/><Label background-color="black" color="white" text="Placeholder text"/></>}
-							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h4"/>}
-							description={<Description text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque doloremque omnis!"/>}
-							buttons={<><ButtonSlide hover-effect="slide-right" icon={<AiOutlineDownload size={20} />} icon-position="right" padding="xxs" text="Placeholder text"/><ButtonLineDrawing icon={<AiOutlineDownload size={20} />} icon-position="right" line-effect="line-below" padding="xxs" text="Placeholder text"/></>}
+							title={<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque." variant="h5"/>}
 						/>
 					</SplideSlide>
 				</Splide>
