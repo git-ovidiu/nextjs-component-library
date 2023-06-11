@@ -21,7 +21,6 @@ export { default as MediaImage } from "./Molecules/Media-image";
 export { default as MediaVideo } from "./Molecules/Media-video";
 
 //Organisms
-export { default as MediaAndParagraph } from "./Organisms/Media-and-paragraph";
 
 // Styleguide
 export { default as CustomGridColumn } from "./Styleguide/Grid/Column";

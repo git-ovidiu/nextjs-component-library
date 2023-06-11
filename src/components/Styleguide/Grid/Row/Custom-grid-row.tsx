@@ -3,8 +3,8 @@ import React, {CSSProperties, ReactElement, ReactNode} from "react";
 
 
 export interface CustomGridRowProps {
-	children: ReactNode;
-	"vertical-alignment": string;
+	children?: ReactNode;
+	"vertical-alignment"?: string;
 	"reverse-breakpoint"?: string;
 	"row-background"?: string;
 }

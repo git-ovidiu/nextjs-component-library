@@ -11,7 +11,7 @@ interface CustomGridColumnStyle extends CSSProperties{
 export interface CustomGridColumnProps {
 	style?: CustomGridColumnStyle;
 
-	children: ReactNode;
+	children?: ReactNode;
 
 	"column-background"?: string;
 	"column-border-radius"?: string;

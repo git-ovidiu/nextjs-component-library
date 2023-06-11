@@ -1,4 +1,4 @@
-import React, {CSSProperties, ReactElement, ReactNode} from "react";
+import React, {CSSProperties, ReactNode} from "react";
 import "./Custom-wrapper.scss";
 import Image from "next/image";
 import { MediaVideo } from "../../../index";

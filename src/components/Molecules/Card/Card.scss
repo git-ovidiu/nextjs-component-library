@@ -66,6 +66,8 @@
 
     .image {
       position: relative;
+      height: auto;
+      width: 100%;
 
       img {
         height: var(--m-card-image-height);

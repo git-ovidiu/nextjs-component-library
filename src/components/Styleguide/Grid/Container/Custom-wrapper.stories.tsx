@@ -17,6 +17,8 @@ import CustomWrapper from "./Custom-wrapper";
 
 const Extra_Info = `
 <br>
+<!--//todo MAI JOS-->
+<h1>install react-icons ,framer motion, splide, swiper etc de vazut ce mai trebuie</h1>
 <h2><u>PROPS</u></h2>
 <table>
   <tr>

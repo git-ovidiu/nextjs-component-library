@@ -192,7 +192,7 @@ const Extra_Info = `
 </tr>
 <tr>
 <td>--m-video-controls-play-icon-color</td>
-<td>red</td>
+<td>#4cbfa6</td>
 </tr>
 <br/>
 <h4>MOBILE</h4>
@@ -296,7 +296,7 @@ export const MediaVideo_story = Template.bind({});
 MediaVideo_story.args = {
 	//@ts-ignore
 	"video":
-		"https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
+		"https://camonysi.sirv.com/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
 	["auto-play"]: false,
 	"video-border-radius": undefined,
 	muted: true,
@@ -305,7 +305,7 @@ MediaVideo_story.args = {
 	"show-controls": true,
 	"object-fit": "cover",
 	"remove-controls": false,
-	"progress-bar-color": "red",
+	"progress-bar-color": "#4cbfa6",
 
 	"custom-fullscreen-icon": undefined,
 	"custom-prev-icon": undefined,
@@ -314,3 +314,6 @@ MediaVideo_story.args = {
 	"custom-next-icon": undefined
 
 };
+
+// coffee video
+// https://camonysi.sirv.com/Moo-Free%20Brews/pexels-kelly-6769802-3840x2160-24fps.mp4
