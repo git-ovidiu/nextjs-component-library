@@ -1,4 +1,4 @@
-import React, {CSSProperties, ReactNode} from "react";
+import React, {CSSProperties, ReactElement, ReactNode} from "react";
 import "./Custom-wrapper.scss";
 import Image from "next/image";
 import { MediaVideo } from "../../../index";
@@ -22,11 +22,11 @@ export interface CustomWrapperProps {
   "container-fluid"?: boolean;
   "image-priority"?: boolean;
 
-  "bottom-left-corner-shape"?: string;
-  "top-left-corner-shape"?: string;
-  "bottom-right-corner-shape"?: string;
-  "top-right-corner-shape"?: string;
-  "center-shape"?: string;
+  "bottom-left-corner-shape"?: ReactElement;
+  "top-left-corner-shape"?: ReactElement;
+  "bottom-right-corner-shape"?: ReactElement;
+  "top-right-corner-shape"?: ReactElement;
+  "center-shape"?: ReactElement;
 }
 export default function CustomWrapper({
   children,
@@ -84,31 +84,28 @@ export default function CustomWrapper({
     >
       {/*//todo de pus props ca sa pun in proiecte imaginea, nu direct aici */}
       {bottomLeftCornerShape ? (
-            <motion.div className={"custom-corner-shape bottom-left"}
-            initial={{opacity: 0, x: -200}}
-            whileInView={{opacity: 1, x: 0}}
-            >
-              <Image src={bottomLeftCornerShape} width={600} height={600} alt="Custom Corner Shape Placeholder" />
-          </motion.div>
+          <div className={"custom-corner-shape bottom-left"}>
+           {bottomLeftCornerShape}
+          </div>
       ) : ''}
       {topLeftCornerShape ? (
           <div className={"custom-corner-shape top-left"}>
-              <Image src={topLeftCornerShape} alt="Custom Corner Shape Placeholder" />
+            {topLeftCornerShape}
           </div>
       ) : ''}
       {bottomRightCornerShape ? (
           <div className={"custom-corner-shape bottom-right"}>
-              <Image src={bottomRightCornerShape} alt="Custom Corner Shape Placeholder" />
+            {bottomRightCornerShape}
           </div>
       ) : ''}
       {topRightCornerShape ? (
           <div className={"custom-corner-shape top-right"}>
-              <Image src={topRightCornerShape} alt="Custom Corner Shape Placeholder" />
+            {topRightCornerShape}
           </div>
       ) : ''}
       {centerShape ? (
           <div className={"custom-corner-shape center"}>
-              <Image src={centerShape} alt="Custom Corner Shape Placeholder" />
+            {centerShape}
           </div>
       ) : ''}
       {customBackgroundImage ? (

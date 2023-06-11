@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import {
   AnimatedText,
-  ButtonSlide,
+  ButtonSlide, CustomShape,
   Description,
   Logo,
   MediaImage,
@@ -15,6 +15,7 @@ import CustomGridRow from "../Row";
 import CustomGridColumn from "../Column";
 import CustomWrapper from "./Custom-wrapper";
 import {AiOutlineDownload} from "react-icons/ai"
+import {Parallax, ParallaxProvider} from "react-scroll-parallax"
 
 const Extra_Info = `
 <br>
@@ -143,6 +144,7 @@ export default {
 } as ComponentMeta<typeof CustomWrapper>;
 
 const Template: ComponentStory<typeof CustomWrapper> = (args) => (
+    <ParallaxProvider>
   <CustomWrapper
     {...args}
     space-top={args["space-top"]}
@@ -156,13 +158,23 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
     image-priority={args["image-priority"]}
 
     //custom-shapes
-    bottom-left-corner-shape={"https://res.cloudinary.com/dxbivmheq/image/upload/v1686337212/blob-haikei_xlvrmm.svg"}
+    top-left-corner-shape={
+      <CustomShape
+          margin-top={"-50px"}
+          margin-left={"-200px"}
+          shape={
+            <Parallax translateY={[250, -10]}>
+                <Image alt="Placeholder" height={300} src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685576370/Shapes_mlzoj0.svg" width={400}/>
+            </Parallax>
+      }
+      />
+    }
   >
     <CustomGridRow vertical-alignment="center">
       <CustomGridColumn
-        lg={5}
+        lg={4}
         xs={12}
-        column-background={"red"}
+        column-background={"black"}
         column-border-radius={"500px"}
         column-background-opacity={"0.37"}
         column-padding-top={"unset"}
@@ -178,7 +190,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
             <Image
               alt="Placeholder"
               fill
-              src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685771607/_bd478abc-0aa9-492c-bfe9-ba6466c51b19_kvlmat.jpg"
+              src="https://camonysi.sirv.com/NextJS%20Component%20Library/jesse-schoff-Ph2KtIqKs7c-unsplash.jpg"
             />
           }
           image-border-radius="30px"
@@ -250,10 +262,10 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
         </motion.div>
       </CustomGridColumn>
       <CustomGridColumn
-        lg={6}
+        lg={7}
         lg-offset={1}
         xs={12}
-        column-background={"blue"}
+        column-background={"black"}
         column-border-radius={"0px"}
         column-background-opacity={"0.37"}
         column-padding-top={"unset"}
@@ -293,6 +305,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
       </CustomGridColumn>
     </CustomGridRow>
   </CustomWrapper>
+        </ParallaxProvider>
 );
 
 export const Custom_wrapper_STORY = Template.bind({});
@@ -301,14 +314,14 @@ Custom_wrapper_STORY.args = {
   "space-top": "m",
   "space-bottom": "m",
   "border-radius": "0px",
-  "image-priority": undefined,
-  "container-fluid": undefined,
+  "image-priority": false,
+  "container-fluid": false,
   "background-color-theme": "primary",
   "custom-background-color": undefined,
   "custom-background-image":
       "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
   "custom-background-video":
-      "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
+      "https://camonysi.sirv.com/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
 };
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters

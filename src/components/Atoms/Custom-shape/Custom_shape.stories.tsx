@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import CustomShape from "./Custom-shape";
+import Image from "next/image"
 
 const Extra_Info = `
 <br>
@@ -55,6 +56,14 @@ export default {
 const Template: ComponentStory<typeof CustomShape> = (args) => (
 	<CustomShape {...args}
 		  margin-top= "40px"
+				 shape={
+					 <Image
+						 src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685576370/Shapes_mlzoj0.svg"
+						 alt="Placeholder"
+						 width={350}
+						 height={300}
+					 />
+				 }
 	/>
 );
 
