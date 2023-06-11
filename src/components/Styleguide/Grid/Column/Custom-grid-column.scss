@@ -13,6 +13,10 @@
   padding-top: var(--s-column-padding-top);
   padding-bottom: var(--s-column-padding-bottom);
 
+  .column-wrapper{
+    height: 100%;
+  }
+
   &.equal-paddings{
     padding-top: calc(var(--bs-gutter-x) * 0.5);
     padding-bottom: calc(var(--bs-gutter-x) * 0.5);
