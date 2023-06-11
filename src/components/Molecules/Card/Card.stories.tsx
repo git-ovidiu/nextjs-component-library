@@ -218,19 +218,25 @@ const Template: ComponentStory<typeof Card> = (args) => (
       buttons={
         <>
           <ButtonSlide
-            hover-effect="slide-right"
-            icon={<AiOutlineDownload size={20} />}
-             icon-position="right"
-            text="Placeholder text"
-            padding="xs"
-          />
-          <ButtonLineDrawing
-              line-effect="line-below"
-              padding="xs"
-              text="Placeholder text"
+              hover-effect="slide-right"
               icon={<AiOutlineDownload size={20} />}
               icon-position="right"
+              link-url="https://www.google.com"
+              open-in-new-tab
+              padding="xs"
+              text="Placeholder text"
           />
+          <>
+            <ButtonLineDrawing
+                icon={<AiOutlineDownload size={20} />}
+                icon-position="right"
+                line-effect="line-below"
+                link-url="https://www.google.com"
+                open-in-new-tab
+                padding="m"
+                text="Placeholder text"
+            />
+          </>
         </>
       }
     />

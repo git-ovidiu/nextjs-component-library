@@ -14,6 +14,7 @@ import "../../../../styles/Global-Settings/Paddings.css";
 import CustomGridRow from "../Row";
 import CustomGridColumn from "../Column";
 import CustomWrapper from "./Custom-wrapper";
+import {AiOutlineDownload} from "react-icons/ai"
 
 const Extra_Info = `
 <br>
@@ -262,9 +263,13 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
         <TitleAndDescription
           action={
             <ButtonSlide
-              hover-effect="slide-right"
-              padding="xs"
-              text="button text"
+                hover-effect="slide-right"
+                icon={<AiOutlineDownload size={20} />}
+                icon-position="right"
+                link-url="https://www.google.com"
+                open-in-new-tab
+                padding="xs"
+                text="Placeholder text"
             />
           }
           description={

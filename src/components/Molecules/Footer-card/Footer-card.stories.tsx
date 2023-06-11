@@ -90,12 +90,13 @@ const Template: ComponentStory<typeof FooterCard> = (args) => (
       }
       action={
         <ButtonSlide
-          padding="m"
-          hover-effect="slide-right"
-          icon={<AiOutlineDownload size={20} />}
-          icon-position="right"
-          // @ts-ignore
-          text={args.button_text}
+            hover-effect="slide-right"
+            icon={<AiOutlineDownload size={20} />}
+            icon-position="right"
+            link-url="https://www.google.com"
+            open-in-new-tab
+            padding="xs"
+            text="Placeholder text"
         />
       }
     />

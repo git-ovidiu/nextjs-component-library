@@ -4,6 +4,7 @@ import TitleAndDescription from "./Title-and-description";
 import Description from "../../Atoms/Description";
 import AnimatedText from "../../Atoms/Animated-text";
 import {ButtonSlide} from "../../index"
+import {AiOutlineDownload} from "react-icons/ai"
 
 
 const Extra_Info = `
@@ -125,9 +126,13 @@ const Template: ComponentStory<typeof TitleAndDescription> = (args) => (
       description={args.description}
       action={
         <ButtonSlide
-          text="button text"
-          hover-effect="slide-right"
-          padding="xs"
+            hover-effect="slide-right"
+            icon={<AiOutlineDownload size={20} />}
+            icon-position="right"
+            link-url="https://www.google.com"
+            open-in-new-tab
+            padding="xs"
+            text="Placeholder text"
         />
       }
     />

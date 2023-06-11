@@ -82,23 +82,23 @@ export default {
 const Template: ComponentStory<{}> = (args) => (
   <section className={"o-listing-cards-slider"}>
     <CustomWrapper
-		//@ts-ignore
+      //@ts-ignore
       space-top={args["space-top"]}
-		//@ts-ignore
+      //@ts-ignore
       space-bottom={args["space-bottom"]}
-		//@ts-ignore
+      //@ts-ignore
       background-color-theme={args["background-color-theme"]}
-		//@ts-ignore
+      //@ts-ignore
       custom-background-color={args["custom-background-color"]}
-		//@ts-ignore
+      //@ts-ignore
       custom-background-image={args["custom-background-image"]}
-		//@ts-ignore
+      //@ts-ignore
       custom-background-video={args["custom-background-video"]}
-		//@ts-ignore
+      //@ts-ignore
       container-fluid={args["container-fluid"]}
-		//@ts-ignore
+      //@ts-ignore
       border-radius={args["border-radius"]}
-		//@ts-ignore
+      //@ts-ignore
       image-priority={args["image-priority"]}
     >
       <Splide
@@ -124,16 +124,22 @@ const Template: ComponentStory<{}> = (args) => (
                   hover-effect="slide-right"
                   icon={<AiOutlineDownload size={20} />}
                   icon-position="right"
+                  link-url="https://www.google.com"
+                  open-in-new-tab
                   padding="xs"
                   text="Placeholder text"
                 />
-                <ButtonLineDrawing
-                  icon={<AiOutlineDownload size={20} />}
-                  icon-position="right"
-                  line-effect="line-below"
-                  padding="xs"
-                  text="Placeholder text"
-                />
+                <>
+                  <ButtonLineDrawing
+                    icon={<AiOutlineDownload size={20} />}
+                    icon-position="right"
+                    line-effect="line-below"
+                    link-url="https://www.google.com"
+                    open-in-new-tab
+                    padding="xs"
+                    text="Placeholder text"
+                  />
+                </>
               </>
             }
             description={
@@ -141,8 +147,8 @@ const Template: ComponentStory<{}> = (args) => (
                 text={
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident, corporisconsectetur adipisicing elit. Provident, corporis
-                    atque doloremque omnis!
+                    Provident, corporisconsectetur adipisicing elit. Provident,
+                    corporis atque doloremque omnis!
                   </p>
                 }
               />
@@ -196,16 +202,22 @@ const Template: ComponentStory<{}> = (args) => (
                   hover-effect="slide-right"
                   icon={<AiOutlineDownload size={20} />}
                   icon-position="right"
+                  link-url="https://www.google.com"
+                  open-in-new-tab
                   padding="xs"
                   text="Placeholder text"
                 />
-                <ButtonLineDrawing
-                  icon={<AiOutlineDownload size={20} />}
-                  icon-position="right"
-                  line-effect="line-below"
-                  padding="xs"
-                  text="Placeholder text"
-                />
+                <>
+                  <ButtonLineDrawing
+                    icon={<AiOutlineDownload size={20} />}
+                    icon-position="right"
+                    line-effect="line-below"
+                    link-url="https://www.google.com"
+                    open-in-new-tab
+                    padding="xs"
+                    text="Placeholder text"
+                  />
+                </>
               </>
             }
             description={
@@ -213,8 +225,8 @@ const Template: ComponentStory<{}> = (args) => (
                 text={
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident, corporisconsectetur adipisicing elit. Provident, corporis
-                    atque doloremque omnis!
+                    Provident, corporisconsectetur adipisicing elit. Provident,
+                    corporis atque doloremque omnis!
                   </p>
                 }
               />
@@ -268,23 +280,99 @@ const Template: ComponentStory<{}> = (args) => (
                   hover-effect="slide-right"
                   icon={<AiOutlineDownload size={20} />}
                   icon-position="right"
+                  link-url="https://www.google.com"
+                  open-in-new-tab
                   padding="xs"
                   text="Placeholder text"
                 />
-                <ButtonLineDrawing
+                <>
+                  <ButtonLineDrawing
+                    icon={<AiOutlineDownload size={20} />}
+                    icon-position="right"
+                    line-effect="line-below"
+                    link-url="https://www.google.com"
+                    open-in-new-tab
+                    padding="xs"
+                    text="Placeholder text"
+                  />
+                </>
+              </>
+            }
+            description={<Description text={<p></p>} />}
+            image={
+              <MediaImage
+                image={
+                  <Image
+                    alt="Placeholder"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
+                  />
+                }
+                image-border-radius="30px"
+                object-fit="cover"
+                padding-bottom-desktop="0%"
+                padding-bottom-mobile="0%"
+                padding-bottom-tablet="0%"
+              />
+            }
+            image-full-width
+            is-overlapped
+            labels={
+              <>
+                <Label
+                  background-color="black"
+                  color="white"
+                  text="Placeholder text"
+                />
+                <Label
+                  background-color="black"
+                  color="white"
+                  text="Placeholder text"
+                />
+              </>
+            }
+            title={
+              <AnimatedText
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque."
+                variant="h5"
+              />
+            }
+          />
+        </SplideSlide>
+        <SplideSlide>
+          <Card
+            buttons={
+              <>
+                <ButtonSlide
+                  hover-effect="slide-right"
                   icon={<AiOutlineDownload size={20} />}
                   icon-position="right"
-                  line-effect="line-below"
+                  link-url="https://www.google.com"
+                  open-in-new-tab
                   padding="xs"
                   text="Placeholder text"
                 />
+                <>
+                  <ButtonLineDrawing
+                    icon={<AiOutlineDownload size={20} />}
+                    icon-position="right"
+                    line-effect="line-below"
+                    link-url="https://www.google.com"
+                    open-in-new-tab
+                    padding="xs"
+                    text="Placeholder text"
+                  />
+                </>
               </>
             }
             description={
               <Description
                 text={
                   <p>
-
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Provident, corporisconsectetur adipisicing elit. Provident,
+                    corporis atque doloremque omnis!
                   </p>
                 }
               />
@@ -338,88 +426,22 @@ const Template: ComponentStory<{}> = (args) => (
                   hover-effect="slide-right"
                   icon={<AiOutlineDownload size={20} />}
                   icon-position="right"
+                  link-url="https://www.google.com"
+                  open-in-new-tab
                   padding="xs"
                   text="Placeholder text"
                 />
-                <ButtonLineDrawing
-                  icon={<AiOutlineDownload size={20} />}
-                  icon-position="right"
-                  line-effect="line-below"
-                  padding="xs"
-                  text="Placeholder text"
-                />
-              </>
-            }
-            description={
-              <Description
-                text={
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident, corporisconsectetur adipisicing elit. Provident, corporis
-                    atque doloremque omnis!
-                  </p>
-                }
-              />
-            }
-            image={
-              <MediaImage
-                image={
-                  <Image
-                    alt="Placeholder"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
+                <>
+                  <ButtonLineDrawing
+                    icon={<AiOutlineDownload size={20} />}
+                    icon-position="right"
+                    line-effect="line-below"
+                    link-url="https://www.google.com"
+                    open-in-new-tab
+                    padding="xs"
+                    text="Placeholder text"
                   />
-                }
-                image-border-radius="30px"
-                object-fit="cover"
-                padding-bottom-desktop="0%"
-                padding-bottom-mobile="0%"
-                padding-bottom-tablet="0%"
-              />
-            }
-            image-full-width
-            is-overlapped
-            labels={
-              <>
-                <Label
-                  background-color="black"
-                  color="white"
-                  text="Placeholder text"
-                />
-                <Label
-                  background-color="black"
-                  color="white"
-                  text="Placeholder text"
-                />
-              </>
-            }
-            title={
-              <AnimatedText
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, corporis atque."
-                variant="h5"
-              />
-            }
-          />
-        </SplideSlide>
-        <SplideSlide>
-          <Card
-            buttons={
-              <>
-                <ButtonSlide
-                  hover-effect="slide-right"
-                  icon={<AiOutlineDownload size={20} />}
-                  icon-position="right"
-                  padding="xs"
-                  text="Placeholder text"
-                />
-                <ButtonLineDrawing
-                  icon={<AiOutlineDownload size={20} />}
-                  icon-position="right"
-                  line-effect="line-below"
-                  padding="xs"
-                  text="Placeholder text"
-                />
+                </>
               </>
             }
             description={
@@ -427,8 +449,8 @@ const Template: ComponentStory<{}> = (args) => (
                 text={
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident, corporisconsectetur adipisicing elit. Provident, corporis
-                    atque doloremque omnis!
+                    Provident, corporisconsectetur adipisicing elit. Provident,
+                    corporis atque doloremque omnis!
                   </p>
                 }
               />
