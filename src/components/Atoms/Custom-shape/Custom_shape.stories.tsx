@@ -58,7 +58,7 @@ const Template: ComponentStory<typeof CustomShape> = (args) => (
 		  margin-top= "40px"
 				 shape={
 					 <Image
-						 src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685576370/Shapes_mlzoj0.svg"
+						 src="https://camonysi.sirv.com/NextJS%20Component%20Library/Shapes_mlzoj0.svg"
 						 alt="Placeholder"
 						 width={350}
 						 height={300}

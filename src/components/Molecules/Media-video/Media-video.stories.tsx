@@ -296,7 +296,7 @@ export const MediaVideo_story = Template.bind({});
 MediaVideo_story.args = {
 	//@ts-ignore
 	"video":
-		"https://camonysi.sirv.com/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
+		"https://camonysi.sirv.com/NextJS%20Component%20Library/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
 	["auto-play"]: false,
 	"video-border-radius": undefined,
 	muted: true,

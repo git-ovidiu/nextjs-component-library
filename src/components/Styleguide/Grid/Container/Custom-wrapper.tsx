@@ -28,7 +28,7 @@ export interface CustomWrapperProps {
   "top-right-corner-shape"?: ReactElement;
   "center-shape"?: ReactElement;
 }
-export default function CustomWrapper({
+export default function CustomWrapper( {
   children,
   "space-top": spaceTop,
   "space-bottom": spaceBottom,

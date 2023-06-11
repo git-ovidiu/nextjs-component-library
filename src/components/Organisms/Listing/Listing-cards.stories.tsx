@@ -66,7 +66,6 @@ const Template: ComponentStory<{}> = (args) => (
   <section className={"o-listing-cards"}>
     <CustomWrapper
       border-radius="0px"
-      bottom-left-corner-shape="https://res.cloudinary.com/dxbivmheq/image/upload/v1686337212/blob-haikei_xlvrmm.svg"
       space-bottom="m"
       space-top="m"
     >

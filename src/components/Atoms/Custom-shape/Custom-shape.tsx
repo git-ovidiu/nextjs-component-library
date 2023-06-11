@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement } from "react";
+import React, {CSSProperties, ReactElement, ReactNode} from "react";
 import "./Custom-shape.scss";
 import Image from "next/image";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
@@ -12,6 +12,7 @@ interface CustomShapeStyle extends CSSProperties {
 
 export interface CustomShapeProps {
   style?: CustomShapeStyle;
+  children: ReactNode;
 
   "margin-top"?: string;
   "margin-bottom"?: string;
@@ -20,14 +21,14 @@ export interface CustomShapeProps {
   shape?: ReactElement;
 }
 
-export default function CustomShape(props: CustomShapeProps) {
-  const {
+export default function CustomShape( {
+    children,
     style,
     "margin-top": marginTop,
     "margin-bottom": marginBottom,
     "margin-right": marginRight,
     "margin-left": marginLeft,
-  } = props;
+  }: CustomShapeProps) {
 
   const customShapeStyle: CSSProperties = {
     "--a-custom-shape-margin-top": marginTop,
@@ -38,9 +39,9 @@ export default function CustomShape(props: CustomShapeProps) {
   };
 
   return (
-        <div className="a-custom-shape" style={customShapeStyle}>
-          {props.shape}
-        </div>
+    <div className="a-custom-shape" style={customShapeStyle}>
+      {children}
+    </div>
   );
 }
 

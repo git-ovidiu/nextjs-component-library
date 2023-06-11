@@ -20,7 +20,7 @@ import {Parallax, ParallaxProvider} from "react-scroll-parallax"
 const Extra_Info = `
 <br>
 <!--//todo MAI JOS-->
-<h1>install react-icons ,framer motion, splide, swiper etc de vazut ce mai trebuie</h1>
+<h1>install react-icons ,framer motion, splide, swiper etc de vazut ce mai trebuie  --- npm install react-scroll-parallax  --- </h1>
 <h2><u>PROPS</u></h2>
 <table>
   <tr>
@@ -162,12 +162,11 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
       <CustomShape
           margin-top={"-50px"}
           margin-left={"-200px"}
-          shape={
-            <Parallax translateY={[250, -10]}>
-                <Image alt="Placeholder" height={300} src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685576370/Shapes_mlzoj0.svg" width={400}/>
-            </Parallax>
-      }
-      />
+      >
+        <Parallax translateY={[250, -10]}>
+          <Image alt="Placeholder" height={300} src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685576370/Shapes_mlzoj0.svg" width={400}/>
+        </Parallax>
+        </CustomShape>
     }
   >
     <CustomGridRow vertical-alignment="center">
