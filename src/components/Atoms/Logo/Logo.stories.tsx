@@ -186,7 +186,7 @@ Logo_STORY.args = {
   "default-opacity-mobile": "1",
   "default-opacity-desktop": "1",
   "border-radius-desktop": "0px",
-  "border-radius-mobile": "50%"
+  "border-radius-mobile": "0%"
 
 };
 

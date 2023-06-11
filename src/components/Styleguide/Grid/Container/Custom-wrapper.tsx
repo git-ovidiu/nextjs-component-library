@@ -19,6 +19,7 @@ export interface CustomWrapperProps {
   "custom-background-color"?: string;
   "custom-background-image"?: string;
   "custom-background-video"?: string;
+  "progress-bar-background"?: string;
   "container-fluid"?: boolean;
   "image-priority"?: boolean;
 
@@ -27,6 +28,8 @@ export interface CustomWrapperProps {
   "bottom-right-corner-shape"?: ReactElement;
   "top-right-corner-shape"?: ReactElement;
   "center-shape"?: ReactElement;
+
+  "full-height"?: boolean;
 }
 export default function CustomWrapper( {
   children,
@@ -36,6 +39,7 @@ export default function CustomWrapper( {
   "custom-background-color": customBackgroundColor,
   "custom-background-image": customBackgroundImage,
   "custom-background-video": customBackgroundVideo,
+  "progress-bar-background": progressBarBackground,
   "container-fluid": containerFluid,
   "border-radius": borderRadius,
   "image-priority": imagePriority,
@@ -44,6 +48,7 @@ export default function CustomWrapper( {
     "bottom-right-corner-shape": bottomRightCornerShape,
     "top-right-corner-shape": topRightCornerShape,
     "center-shape": centerShape,
+    "full-height": fullHeight,
   style,
 }: CustomWrapperProps) {
   //will remove the theme and the custom background color if the background-image is set
@@ -75,14 +80,15 @@ export default function CustomWrapper( {
       className={`s-custom-wrapper 
 				${spaceTop ? `padding_top_${spaceTop}` : ""} 
 				${spaceBottom ? `padding_bottom_${spaceBottom}` : ""} 
-				${backgroundColorTheme ? `${backgroundColorTheme}` : ""}`}
+				${backgroundColorTheme ? `${backgroundColorTheme}` : ""}
+				${fullHeight ? 'full-height' : ""}
+				`}
       style={{
         "--s-custom-wrapper-background-custom": customBackgroundColor,
         "--s-custom-wrapper-border-radius": borderRadius,
         ...style,
       }}
     >
-      {/*//todo de pus props ca sa pun in proiecte imaginea, nu direct aici */}
       {bottomLeftCornerShape ? (
           <div className={"custom-corner-shape bottom-left"}>
            {bottomLeftCornerShape}
@@ -132,7 +138,7 @@ export default function CustomWrapper( {
                 loop
                 muted
                 object-fit="cover"
-                progress-bar-color="red"
+                progress-bar-color={progressBarBackground}
                 remove-controls
                 video={customBackgroundVideo}
                 video-border-radius={borderRadius}

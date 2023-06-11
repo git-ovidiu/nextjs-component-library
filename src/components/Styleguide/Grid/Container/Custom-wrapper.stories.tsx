@@ -64,6 +64,11 @@ const Extra_Info = `
 <td>URL (has the MediaVideo implemented already</td>
 </tr>
 <tr>
+<td>progress-bar-background</td>
+<td>string</td>
+<td>hex || color name || rgb</td>
+</tr>
+<tr>
 <td>container-fluid</td>
 <td>boolean</td>
 <td>use this property to add container-fluid class to the container</td>
@@ -153,20 +158,25 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
     custom-background-color={args["custom-background-color"]}
     custom-background-image={args["custom-background-image"]}
     custom-background-video={args["custom-background-video"]}
+    progress-bar-background={args["progress-bar-background"]}
     container-fluid={args["container-fluid"]}
     border-radius={args["border-radius"]}
     image-priority={args["image-priority"]}
+    full-height={args["full-height"]}
 
-    //custom-shapes
-    top-left-corner-shape={
+
+    bottom-right-corner-shape={
       <CustomShape
-          margin-top={"-50px"}
-          margin-left={"-200px"}
       >
-        <Parallax translateY={[250, -10]}>
-          <Image alt="Placeholder" height={300} src="https://res.cloudinary.com/dxbivmheq/image/upload/v1685576370/Shapes_mlzoj0.svg" width={400}/>
-        </Parallax>
-        </CustomShape>
+        <Image alt="Placeholder" height={300} src="https://camonysi.sirv.com/NextJS%20Component%20Library/blob-haikei.svg" width={400}/>
+      </CustomShape>
+    }
+
+    center-shape={
+      <CustomShape
+      >
+        <Image alt="Placeholder" height={300} src="https://camonysi.sirv.com/NextJS%20Component%20Library/blob-haikei.svg" width={400}/>
+      </CustomShape>
     }
   >
     <CustomGridRow vertical-alignment="center">
@@ -202,25 +212,10 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
               background={"#ffffff"}
               logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
               logo-al="Placeholder"
-              default-opacity-mobile="1"
+              default-opacity-mobile="0.5"
               default-opacity-desktop="1"
               border-radius-desktop="0px"
-              border-radius-mobile="50%"
-            />
-          }
-          label-bottom-left={
-            <Logo
-              open-in-new-tab
-              link-url="https://www.youtube.com"
-              width="150px"
-              height="50px"
-              background={"#ffffff"}
-              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-              logo-al="Placeholder"
-              default-opacity-mobile="1"
-              default-opacity-desktop="1"
-              border-radius-desktop="0px"
-              border-radius-mobile="50%"
+              border-radius-mobile="30px 0px 30px 0px"
             />
           }
           label-top-left={
@@ -232,25 +227,10 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
               background={"#ffffff"}
               logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
               logo-al="Placeholder"
-              default-opacity-mobile="1"
-              default-opacity-desktop="1"
+              default-opacity-mobile="0.8"
+              default-opacity-desktop="0.8"
               border-radius-desktop="0px"
-              border-radius-mobile="50%"
-            />
-          }
-          label-top-right={
-            <Logo
-              open-in-new-tab
-              link-url="https://www.youtube.com"
-              width="150px"
-              height="50px"
-              background={"#ffffff"}
-              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-              logo-al="Placeholder"
-              default-opacity-mobile="1"
-              default-opacity-desktop="1"
-              border-radius-desktop="0px"
-              border-radius-mobile="50%"
+              border-radius-mobile="0%"
             />
           }
           object-fit="cover"
@@ -320,7 +300,9 @@ Custom_wrapper_STORY.args = {
   "custom-background-image":
       "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
   "custom-background-video":
-      "https://camonysi.sirv.com/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
+      "https://camonysi.sirv.com/NextJS%20Component%20Library/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
+  "progress-bar-background": "red",
+  "full-height": false,
 };
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters

@@ -8,10 +8,9 @@
 }
 
 .a-custom-shape{
-  	position: absolute;
-  	top: var(--a-custom-shape-margin-top);
-  	bottom: var(--a-custom-shape-margin-bottom);
-  	right: var(--a-custom-shape-margin-right);
-  	left: var(--a-custom-shape-margin-left);
-  z-index: 999!important;
+  width: 100%;
+  height: 100%;
+
+  //opacity: 0.5; + opacitate
+  //transform rotate --- sa vina custom prin proprietate
 }
