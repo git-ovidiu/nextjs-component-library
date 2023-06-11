@@ -1,6 +1,6 @@
 import React from "react";
-import {ComponentMeta, ComponentStory} from "@storybook/react";
-import {AiOutlineDownload} from "react-icons/ai";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { AiOutlineDownload } from "react-icons/ai";
 import ButtonSlide from "./Button-slide";
 
 const Extra_Info = `
@@ -12,6 +12,16 @@ const Extra_Info = `
     <td>type</td>
     <td>can be:</td>
   </tr>
+  <tr>
+<td>link-url</td>
+<td>string</td>
+<td>use website route '/' || URL (has next/link implemented)</td>
+</tr>
+<tr>
+<td>open-in-new-tab</td>
+<td>boolean</td>
+<td>-</td>
+</tr>
   <tr>
     <td>text</td>
     <td>string</td>
@@ -156,14 +166,19 @@ export default {
 } as ComponentMeta<typeof ButtonSlide>;
 
 const Template: ComponentStory<typeof ButtonSlide> = (args) => (
-  <>
-    <ButtonSlide {...args} icon={<AiOutlineDownload size={20} />} />
-  </>
+  <ButtonSlide
+    {...args}
+    open-in-new-tab={args["open-in-new-tab"]}
+    link-url={args["link-url"]}
+    icon={<AiOutlineDownload size={20} />}
+  />
 );
 
 export const Button_slide_story = Template.bind({});
 
 Button_slide_story.args = {
+  "open-in-new-tab": true,
+  "link-url": "https://www.google.com",
   text: "Placeholder text",
   "hover-effect": "slide-right",
   padding: "xs",

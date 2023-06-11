@@ -293,18 +293,17 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
 export const Custom_wrapper_STORY = Template.bind({});
 
 Custom_wrapper_STORY.args = {
-  //@ts-ignore
   "space-top": "m",
   "space-bottom": "m",
   "border-radius": "0px",
   "image-priority": undefined,
   "container-fluid": undefined,
-  // "background-color-theme": "primary",
-  // "custom-background-color": undefined,
-  // "custom-background-image":
-  //   "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
-  // "custom-background-video":
-  //   "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
+  "background-color-theme": "primary",
+  "custom-background-color": undefined,
+  "custom-background-image":
+      "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
+  "custom-background-video":
+      "https://res.cloudinary.com/dxbivmheq/video/upload/v1664097081/samples/sea-turtle.mp4",
 };
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters

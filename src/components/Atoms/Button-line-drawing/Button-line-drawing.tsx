@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import "./Button-line-drawing.scss";
+import Link from "next/link"
 
 export interface ButtonLineDrawingProps {
   text?: string;
@@ -7,6 +8,8 @@ export interface ButtonLineDrawingProps {
   padding: string;
   icon?: ReactElement | string;
   "icon-position"?: string;
+  "link-url"?: string;
+  "open-in-new-tab"?: boolean;
 }
 
 export default function ButtonLineDrawing(props: ButtonLineDrawingProps) {
@@ -27,10 +30,11 @@ export default function ButtonLineDrawing(props: ButtonLineDrawingProps) {
           props["line-effect"] === "line-side" ? "btn_hover_line line_side" : ""
         } `}
       >
-        <span className={`${props["icon-position"] === "left" ? "reverse" : ""}`}>
+        <Link href={props["link-url"] || ""} target={props["open-in-new-tab"] ? '_blank' : ''}
+            className={`${props["icon-position"] === "left" ? "reverse" : ""}`}>
           {props.text}
           {props.icon ? <div className="icon">{props.icon}</div> : ""}
-        </span>
+        </Link>
       </button>
     </>
   );

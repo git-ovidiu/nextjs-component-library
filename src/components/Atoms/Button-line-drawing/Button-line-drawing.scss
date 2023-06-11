@@ -38,13 +38,13 @@
     border: none;
     cursor: pointer;
 
-    &.padding-xxs{ span{ padding: var(--a-button-line-drawing-padding-xxs); } }
-    &.padding-xs{ span{ padding: var(--a-button-line-drawing-padding-xs); } }
-    &.padding-s{ span{ padding: var(--a-button-line-drawing-padding-s); } }
-    &.padding-m{ span{ padding: var(--a-button-line-drawing-padding-m); } }
-    &.padding-l{ span{ padding: var(--a-button-line-drawing-padding-l); } }
-    &.padding-xl{ span{ padding: var(--a-button-line-drawing-padding-xl); } }
-    &.padding-xxl{ span{ padding: var(--a-button-line-drawing-padding-xxl); } }
+    &.padding-xxs{ a{ padding: var(--a-button-line-drawing-padding-xxs); } }
+    &.padding-xs{ a{ padding: var(--a-button-line-drawing-padding-xs); } }
+    &.padding-s{ a{ padding: var(--a-button-line-drawing-padding-s); } }
+    &.padding-m{ a{ padding: var(--a-button-line-drawing-padding-m); } }
+    &.padding-l{ a{ padding: var(--a-button-line-drawing-padding-l); } }
+    &.padding-xl{ a{ padding: var(--a-button-line-drawing-padding-xl); } }
+    &.padding-xxl{ a{ padding: var(--a-button-line-drawing-padding-xxl); } }
 
     .icon{
         z-index: 2;
@@ -52,7 +52,7 @@
 
     }
 
-    span {
+    a {
         &.reverse{
             flex-direction: row-reverse
         }
@@ -112,7 +112,7 @@
             transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in;
         }
     }
-    span {
+    a {
         &::before {
             position: absolute;
             content: "";
@@ -173,7 +173,7 @@
         top: 0;
     }
 
-    span {
+    a {
         &::before {
             top: 0;
             border-left: 2px solid var(--a-button-line-drawing-line-color);
@@ -216,7 +216,7 @@
             transition: height var(--a-button-line-drawing-animation-transition-ultra-fast) ease-in;
         }
     }
-    span {
+    a {
         &::before {
             position: absolute;
             content: "";

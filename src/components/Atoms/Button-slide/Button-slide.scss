@@ -28,6 +28,10 @@
 }
 
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 .btn_hover_slide {
     @include button_typography_primary;
@@ -42,22 +46,26 @@
     box-shadow: $box-shadow-xxxl;
     //todo de vaazut ce fac cu box-shadow-ul de la butonul cu slide
 
-    &.padding-xxs{ span{ padding: var(--a-button-slide-padding-xxs); } }
-    &.padding-xs{ span{ padding: var(--a-button-slide-padding-xs); } }
-    &.padding-s{ span{ padding: var(--a-button-slide-padding-s); } }
-    &.padding-m{ span{ padding: var(--a-button-slide-padding-m); } }
-    &.padding-l{ span{ padding: var(--a-button-slide-padding-l); } }
-    &.padding-xl{ span{ padding: var(--a-button-slide-padding-xl); } }
-    &.padding-xxl{ span{ padding: var(--a-button-slide-padding-xxl); } }
-    
+    &.padding-xxs{ a{ padding: var(--a-button-slide-padding-xxs); } }
+    &.padding-xs{ a{ padding: var(--a-button-slide-padding-xs); } }
+    &.padding-s{ a{ padding: var(--a-button-slide-padding-s); } }
+    &.padding-m{ a{ padding: var(--a-button-slide-padding-m); } }
+    &.padding-l{ a{ padding: var(--a-button-slide-padding-l); } }
+    &.padding-xl{ a{ padding: var(--a-button-slide-padding-xl); } }
+    &.padding-xxl{ a{ padding: var(--a-button-slide-padding-xxl); } }
+
 
     .icon{
         z-index: 2;
         display: inline-flex;
-        
+
     }
 
-    span {
+
+
+    a {
+        text-decoration: none;
+        color: inherit;
         &.reverse{
             flex-direction: row-reverse
         }

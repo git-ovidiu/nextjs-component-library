@@ -1,11 +1,14 @@
 import React, { ReactElement } from "react";
 import "./Button-slide.scss";
+import Link from "next/link"
 export interface ButtonProps {
   text: string;
   "hover-effect": string;
   icon?: ReactElement | string;
   "icon-position"?: string;
   padding: string;
+  "link-url"?: string;
+  "open-in-new-tab"?: boolean;
 }
 export default function ButtonSlide(props: ButtonProps) {
   return (
@@ -33,10 +36,12 @@ export default function ButtonSlide(props: ButtonProps) {
             : ""
         } `}
       >
-        <span className={`${props["icon-position"] === "left" ? "reverse" : ""}`}>
-          {props.text}
-          {props.icon ? <div className="icon">{props.icon}</div> : ""}
-        </span>
+          <Link href={props["link-url"] || ""} target={props["open-in-new-tab"] ? '_blank' : ''}
+            className={`${props["icon-position"] === "left" ? "reverse" : ""}`}
+          >
+            {props.text}
+            {props.icon ? <div className="icon">{props.icon}</div> : ""}
+        </Link>
       </button>
     </>
   );

@@ -1,8 +1,8 @@
 import React from "react";
-import {ComponentMeta, ComponentStory} from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import ButtonLineDrawing from "./Button-line-drawing";
-import {AiOutlineDownload} from "react-icons/ai";
+import { AiOutlineDownload } from "react-icons/ai";
 
 const Extra_Info = `
 <br/>
@@ -13,6 +13,16 @@ const Extra_Info = `
     <td>type</td>
     <td>can be:</td>
   </tr>
+    <tr>
+<td>link-url</td>
+<td>string</td>
+<td>use website route '/' || URL (has next/link implemented)</td>
+</tr>
+<tr>
+<td>open-in-new-tab</td>
+<td>boolean</td>
+<td>-</td>
+</tr>
   <tr>
     <td>text</td>
     <td>string</td>
@@ -169,14 +179,22 @@ export default {
 
 const Template: ComponentStory<typeof ButtonLineDrawing> = (args) => (
   <>
-    <ButtonLineDrawing {...args} icon-position={args["icon-position"]}  icon={<AiOutlineDownload size={20} />}  />
+    <ButtonLineDrawing
+      {...args}
+      open-in-new-tab={args["open-in-new-tab"]}
+      link-url={args["link-url"]}
+      icon-position={args["icon-position"]}
+      icon={<AiOutlineDownload size={20} />}
+    />
   </>
 );
 
 export const ButtonLineDrawing_story = Template.bind({});
 ButtonLineDrawing_story.args = {
+  "open-in-new-tab": true,
+  "link-url": "https://www.google.com",
   text: "Placeholder text",
   padding: "xs",
   "line-effect": "line-below",
-  "icon-position": "right"
+  "icon-position": "right",
 };
