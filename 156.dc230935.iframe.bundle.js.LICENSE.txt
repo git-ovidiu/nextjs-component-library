@@ -5,6 +5,13 @@ object-assign
 */
 
 /*!
+ * Splide.js
+ * Version  : 4.1.3
+ * License  : MIT
+ * Copyright: 2022 Naotoshi Fujita
+ */
+
+/*!
  * The buffer module from node.js, for the browser.
  *
  * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
