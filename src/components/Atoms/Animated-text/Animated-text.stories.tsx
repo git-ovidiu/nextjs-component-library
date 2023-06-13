@@ -1,10 +1,8 @@
 import React from "react";
-import {ComponentMeta, ComponentStory} from "@storybook/react";
-
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import AnimatedText from "./Animated-text";
 
-const Extra_Info = `
-<br/>
+const Extra_Info = `<br/>
 <h2><u>PROPS</u></h2>
 <table>
   <tr>
@@ -52,7 +50,13 @@ const Extra_Info = `
         <td>$color-black</td>
     </tr>
 </table>
+<table>
 `;
+
+const Cacat = ` 
+bg pl
+`
+
 
 export default {
   title: "Atoms/Text/Animated Text",
@@ -74,18 +78,18 @@ export default {
     actions: { disabled: true },
     docs: {
       description: {
-        component: Extra_Info,
+        component: Extra_Info
       },
+
     },
   },
 } as ComponentMeta<typeof AnimatedText>;
 
 const Template: ComponentStory<typeof AnimatedText> = (args) => (
-    <span>
-      <AnimatedText {...args} />
-    </span>
+  <span>
+    <AnimatedText {...args} />
+  </span>
 );
-
 export const AnimatedText_story = Template.bind({});
 
 AnimatedText_story.args = {

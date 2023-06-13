@@ -28,6 +28,7 @@ interface MediaComponentProps {
   "custom-pause-icon"?: ReactElement;
   "custom-prev-icon"?: ReactElement;
   "custom-next-icon"?: ReactElement;
+  "video-fullscreen"?: boolean;
 }
 
 export default function MediaVideo(props: MediaComponentProps) {
@@ -96,7 +97,7 @@ export default function MediaVideo(props: MediaComponentProps) {
   };
 
   return (
-            <div className="a-media-video" style={{ "--m-video-border-radius": props["video-border-radius"], ...props.style }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+            <div className={`a-media-video ${props["video-fullscreen"] ? 'video-fullscreen' : ''}`} style={{ "--m-video-border-radius": props["video-border-radius"], ...props.style }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
               <div className="video-container">
                 <video
                     src={props.video}

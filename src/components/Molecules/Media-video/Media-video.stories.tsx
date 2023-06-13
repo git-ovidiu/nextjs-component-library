@@ -265,20 +265,15 @@ const Template: ComponentStory<typeof MediaVideo> = (args) => (
 		>
 				<MediaVideo
 					{...args}
-					//@ts-ignore
 					video={args["video"]}
-					//@ts-ignore
+					video-fullscreen={args["video-fullscreen"]}
 					video-border-radius={args["video-border-radius"]}
 					object-fit={args["object-fit"]}
 					auto-play={args["auto-play"]}
-					//@ts-ignore
 					muted={args.muted}
-					//@ts-ignore
 					loop={args.loop}
-					//@ts-ignore
 					show-controls={args["show-controls"]}
 					remove-controls={args["remove-controls"]}
-					//@ts-ignore
 					progress-bar-color={args["progress-bar-color"]}
 
 					custom-fullscreen-icon={args["custom-fullscreen-icon"]}
@@ -297,6 +292,7 @@ MediaVideo_story.args = {
 	//@ts-ignore
 	"video":
 		"https://camonysi.sirv.com/NextJS%20Component%20Library/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
+	"video-fullscreen": true,
 	["auto-play"]: false,
 	"video-border-radius": undefined,
 	muted: true,
