@@ -18,6 +18,34 @@ npm run test
 npm publish
 ```
 
+<h1 style="color: teal">IMPORTS</h1>
+<h3 style="color: yellow">COMPONENTS IMPORT</h3>
+
+```mdxjs
+import {Animated_text, Description, FAQ_item, Link_item, SimpleDivider, Label, Button_Line_Drawing, Button_Slide, Button_Slide_Second, Simple_divider, Logo, Custom_Shape, Link_list, Footer_card, Card, Title_and_description, Divider, Media_image, Media_video, Custom_grid_column, Custom_grid_row} from "@git-ovidiu/nextjs-component-library";
+```
+
+<h3 style="color: yellow">SPLIDE IMPORT</h3>
+```mdxjs
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+```
+
+<h3 style="color: yellow">PARALLAX IMPORT</h3>
+
+```mdxjs
+import { Parallax, ParallaxBanner, ParallaxBannerLayer, ParallaxProvider } from "react-scroll-parallax";
+```
+
+<h3 style="color: yellow">FRAMER MOTION IMPORT</h3>
+
+```mdxjs
+import { motion } from "react-scroll-parallax";
+```
+
+
+
+
+
 <hr/>
 <h2> LIVE COMPONENTS </h2>
 <h3 style="color: teal">ATOMS</h3>

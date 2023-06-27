@@ -19,34 +19,7 @@ import "@splidejs/react-splide/css";
 import "@splidejs/react-splide/css/sea-green";
 
 const Extra_Info = `
-<br>
-<h2><u>PROPS</u></h2>
-<table>
-  <tr>
-    <td>name</td>
-    <td>type</td>
-    <td>can be:</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
-</table>
 
-<br>
-
-<h2><u>CSS VARIABLES</u></h2>
-<ol>
-  <li>--a-test-component-right-column-background</li>
-</ol>
-
-<table>
-  <tr>
-    <td>--a-test-component-right-column-background</td>
-    <td>gray</td>
-  </tr>
-</table>
 `;
 
 export default {
@@ -114,10 +87,11 @@ const Template: ComponentStory<{}> = () => (
               <Card
                 is-overlapped
                 image={
-                  <img
-                    alt="placeholder"
-                    src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg"
-                    width="100%"
+                  <Image
+                    alt="Placeholder"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
                   />
                 }
                 labels={
@@ -171,10 +145,11 @@ const Template: ComponentStory<{}> = () => (
               <Card
                 is-overlapped
                 image={
-                  <img
-                    alt="placeholder"
-                    src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg"
-                    width="100%"
+                  <Image
+                    alt="Placeholder"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
                   />
                 }
                 labels={
@@ -229,10 +204,11 @@ const Template: ComponentStory<{}> = () => (
               <Card
                 is-overlapped
                 image={
-                  <img
-                    alt="placeholder"
-                    src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg"
-                    width="100%"
+                  <Image
+                    alt="Placeholder"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
                   />
                 }
                 labels={
@@ -287,10 +263,11 @@ const Template: ComponentStory<{}> = () => (
               <Card
                 is-overlapped
                 image={
-                  <img
-                    alt="placeholder"
-                    src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg"
-                    width="100%"
+                  <Image
+                    alt="Placeholder"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
                   />
                 }
                 labels={
@@ -345,10 +322,11 @@ const Template: ComponentStory<{}> = () => (
               <Card
                 is-overlapped
                 image={
-                  <img
-                    alt="placeholder"
-                    src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1667659799/samples/ecommerce/leather-bag-gray.jpg"
-                    width="100%"
+                  <Image
+                    alt="Placeholder"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
                   />
                 }
                 labels={

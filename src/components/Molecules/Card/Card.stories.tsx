@@ -181,7 +181,7 @@ const Template: ComponentStory<typeof Card> = (args) => (
       {...args}
       image={
         <MediaImage
-            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"/>}
+            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"/>}
             image-border-radius="30px"
             object-fit="cover"
             padding-bottom-desktop="0%"

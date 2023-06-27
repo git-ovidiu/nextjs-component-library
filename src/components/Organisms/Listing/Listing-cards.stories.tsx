@@ -10,41 +10,13 @@ import {
   CustomWrapper,
   Description,
   Label,
-  MediaImage,
-  TitleAndDescription,
+  MediaImage
 } from "../../index";
 import { AiOutlineDownload } from "react-icons/ai";
 import Image from "next/image";
 
 const Extra_Info = `
-<br>
-<h2><u>PROPS</u></h2>
-<table>
-  <tr>
-    <td>name</td>
-    <td>type</td>
-    <td>can be:</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
-</table>
 
-<br>
-
-<h2><u>CSS VARIABLES</u></h2>
-<ol>
-  <li>--a-test-component-right-column-background</li>
-</ol>
-
-<table>
-  <tr>
-    <td>--a-test-component-right-column-background</td>
-    <td>gray</td>
-  </tr>
-</table>
 `;
 
 export default {
@@ -117,7 +89,7 @@ const Template: ComponentStory<{}> = (args) => (
                     alt="Placeholder"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
+                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
                   />
                 }
                 image-border-radius="30px"
@@ -202,7 +174,7 @@ const Template: ComponentStory<{}> = (args) => (
                     alt="Placeholder"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
+                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
                   />
                 }
                 image-border-radius="30px"
@@ -284,7 +256,7 @@ const Template: ComponentStory<{}> = (args) => (
                     alt="Placeholder"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="https://res.cloudinary.com/dxbivmheq/image/upload/v1666628108/VIBE%20INTERIOR/Complex%20Duplex%20Brasov/dressing_2_sxxqfd.jpg"
+                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
                   />
                 }
                 image-border-radius="30px"

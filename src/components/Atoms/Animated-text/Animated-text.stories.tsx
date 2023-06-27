@@ -53,10 +53,6 @@ const Extra_Info = `<br/>
 <table>
 `;
 
-const Cacat = ` 
-bg pl
-`
-
 
 export default {
   title: "Atoms/Text/Animated Text",
