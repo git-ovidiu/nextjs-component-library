@@ -41,23 +41,13 @@ export default function InteractivePanel({ card, button }: InteractivePanelProps
   };
 
   return (
-      <section className="o-interactive-panel">
-          <CustomWrapper
-              border-radius="0px"
-              space-bottom="m"
-              space-top="m"
-              custom-background-color={"white"}
-          >
-            <CustomGridRow vertical-alignment="center" reverse-breakpoint={"md"}>
+      <div className={"o-interactive-panel"}>
+          <CustomGridRow vertical-alignment="center" reverse-breakpoint={"md"}>
               <CustomGridColumn
-                  column-background="black"
-                  column-background-opacity="0.37"
-                  column-border-radius="0px"
-                  column-padding-bottom="unset"
-                  column-padding-top="unset"
+                  column-background="transparent"
                   columns-equal-paddings
                   md={4}
-                  md-offset={2}
+                  md-offset={1}
               >
                 <div className="buttons-container">
                   {button &&
@@ -72,14 +62,12 @@ export default function InteractivePanel({ card, button }: InteractivePanelProps
                       ))}
                 </div>
               </CustomGridColumn>
+
               <CustomGridColumn
-                  column-background="black"
-                  column-background-opacity="0.37"
-                  column-border-radius="0px"
-                  column-padding-bottom="unset"
-                  column-padding-top="unset"
+                  column-background="transparent"
                   columns-equal-paddings
                   md={6}
+                  md-offset={1}
               >
                 <Splide ref={splideRef} onMoved={handleSlideMoved} options={{ perPage: 1 }}>
                   {card &&
@@ -88,8 +76,7 @@ export default function InteractivePanel({ card, button }: InteractivePanelProps
                       ))}
                 </Splide>
               </CustomGridColumn>
-            </CustomGridRow>
-          </CustomWrapper>
-      </section>
+          </CustomGridRow>
+      </div>
   );
 }

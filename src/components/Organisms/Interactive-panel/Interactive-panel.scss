@@ -12,6 +12,11 @@
 	width: 100%;
 	scroll-snap-type: x mandatory; /* Add scroll-snap properties */
 	padding: 20px 40px 20px 0px;
+	box-shadow: none;
+
+	.btn_hover_left{
+	  box-shadow: none;
+	}
 
 	&::-webkit-scrollbar {
 	  width: 0;
@@ -36,11 +41,12 @@
   .splide{
 	padding: unset;
 	--m-card-image-height: 350px;
-	background: white;
+	background: transparent;
 	//overflow: hidden;
 
 	.m-card{
-	  border-radius: $border-radius-xxl;
+	  //border-radius: $border-radius-xxl;
+	  box-shadow: none;
 
 	  .card-buttons-container{
 		display: flex;
@@ -53,9 +59,8 @@
 
 	box-shadow: $box-shadow-m;
 
-	border-radius: $border-radius-xxl;
+	//border-radius: $border-radius-xxl;
 	&__slide{
-	  --m-card-border-radius: $border-radius-xxl;
 	}
 
 

@@ -50,7 +50,8 @@
     overflow: hidden;
     position: relative;
     background-color: var(--a-button-slide-second-background);
-    box-shadow: 0 5px 15px var(--a-button-slide-second-background);
+    //box-shadow: 0 5px 15px var(--a-button-slide-second-background);
+    box-shadow: $box-shadow-xxxl;
     min-width: var(--a-button-slide-second-min-width);
 
   &.padding-xxs{  padding: var(--a-button-slide-second-padding-xxs);  }
