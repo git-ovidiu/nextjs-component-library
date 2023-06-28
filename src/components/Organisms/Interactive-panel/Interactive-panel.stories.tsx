@@ -1,23 +1,11 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import {
-	AnimatedText,
-	ButtonLineDrawing,
-	ButtonSlide,
-	Card,
-	CustomGridColumn,
-	CustomGridRow,
-	CustomWrapper,
-	Description, Divider,
-	Label,
-	MediaImage, SimpleDivider,
-	TitleAndDescription,
-} from "../../index";
-import { AiOutlineDownload } from "react-icons/ai";
-import Image from "next/image";
-import {BiCoffeeTogo} from "react-icons/bi"
-import {Splide, SplideSlide} from "@splidejs/react-splide"
-import InteractivePanel from "./Interactive-panel"
+import InteractivePanel from "./Interactive-panel";
+import {ButtonLineDrawing, ButtonSlideSecond, Card, Label, MediaImage} from "../../index"
+import {FaGithub} from "react-icons/fa"
+import {MdOutlineArchitecture, MdOutlineCoffeeMaker, MdOutlineLiveTv} from "react-icons/md"
+import Image from "next/image"
+import {SiAtom} from "react-icons/si"
 
 const Extra_Info = `
 <br>
@@ -51,39 +39,114 @@ const Extra_Info = `
 `;
 
 export default {
-	title: "Organisms/Interactive Panel",
-	parameters: {
-		actions: { disabled: true },
-		controls: { disabled: true },
-		layout: "fullscreen",
-		docs: {
-			description: {
-				component: Extra_Info,
-			},
-		},
-	},
+  title: "Organisms/Interactive Panel",
+  component: InteractivePanel,
+    actions: { disabled: true },
+    controls: {disabled: true},
+    layout: "fullscreen",
+
+} as ComponentMeta<typeof InteractivePanel>;
+
+const Template: ComponentStory<typeof InteractivePanel> = (args) => (
+    <InteractivePanel
+        card={[
+
+            // eslint-disable-next-line react/jsx-key
+          <Card
+              image-full-width
+              buttons={
+                <div className="card-buttons-container">
+                  <ButtonLineDrawing
+                      icon={<FaGithub size={20} />}
+                      icon-position="right"
+                      line-effect="line-below"
+                      link-url="https://www.google.com"
+                      open-in-new-tab
+                      padding="m"
+                      text="Github Project"
+                  />
+                  <ButtonLineDrawing
+                      icon={<MdOutlineLiveTv size={20} />}
+                      icon-position="right"
+                      line-effect="line-below"
+                      link-url="https://www.google.com"
+                      open-in-new-tab
+                      padding="m"
+                      text="Live Website"
+                  />
+                </div>
+              }
+              image={
+                <MediaImage
+                    image={
+                      <Image
+                          alt="Placeholder"
+                          fill
+                          src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
+                      />
+                    }
+                    image-border-radius="0px"
+                    object-fit="cover"
+                    padding-bottom-desktop="0%"
+                    padding-bottom-mobile="0%"
+                    padding-bottom-tablet="0%"
+                />
+              }
+              labels={
+                <>
+                  <Label background-color="black" color="white" text="typescript" />
+                  <Label background-color="black" color="white" text="scss" />
+                  <Label background-color="black" color="white" text="storybook" />
+                  <Label background-color="black" color="white" text="html" />
+                </>
+              }
+              description={
+                <>
+                  <h3>libs used</h3>
+                  <ul>
+                    <li>lib 1</li>
+                    <li>lib 2</li>
+                    <li>lib 3</li>
+                  </ul>
+                </>
+              }
+          />,
+            // eslint-disable-next-line react/jsx-key
+            <h1>Card 2</h1>,
+            // eslint-disable-next-line react/jsx-key
+            <h1>Moo Free Brews</h1>,
+        ]}
+        button={[
+            // eslint-disable-next-line react/jsx-key
+            <ButtonSlideSecond
+              padding={"s"}
+              hover_effect="tertiary"
+              iconPosition="right"
+              text="Vibe Interior"
+              icon={<MdOutlineArchitecture size={20} />}
+          />,
+            // eslint-disable-next-line react/jsx-key
+            <ButtonSlideSecond
+              icon={<SiAtom size={20} />}
+              padding={"s"}
+              hover_effect="tertiary"
+              iconPosition="right"
+              text="Component Library"
+          />,
+            // eslint-disable-next-line react/jsx-key
+            <ButtonSlideSecond
+              icon={<MdOutlineCoffeeMaker size={20} />}
+              padding={"s"}
+              hover_effect="tertiary"
+              iconPosition="right"
+              text="MooFree Brews"
+          />
+        ]}
+    />
+);
+
+export const InteractivePanel_STORY = Template.bind({});
+
+InteractivePanel_STORY.args = {
+
 };
-
-//@ts-ignore
-const Template: ComponentStory<{}> = (args) => {
-
-
-	return (
-		<InteractivePanel
-			card={
-			<>
-			<h1>card1</h1>
-			<h1>card2</h1>
-			</>
-			}
-			button={
-				<>
-					<button>button1</button>
-					<button>button2</button>
-				</>
-			}
-		/>
-	);
-};
-
-export const ListingCards_STORY = Template.bind({});

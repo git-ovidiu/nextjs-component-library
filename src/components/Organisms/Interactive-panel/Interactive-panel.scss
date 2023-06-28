@@ -1,0 +1,96 @@
+@use '../../../styles/main.module.scss' as *;
+
+.o-interactive-panel{
+  --a-button-slide-second-animation-transform-hover: translateX(-98%) translateY(-25%) rotate(45deg);
+  overflow: hidden;
+
+  .buttons-container{
+	display: flex;
+	gap: 24px;
+	--a-button-slide-second-min-width: 270px;
+	overflow: scroll; /* Change 'auto' to 'scroll' */
+	width: 100%;
+	scroll-snap-type: x mandatory; /* Add scroll-snap properties */
+	padding: 20px 40px 20px 0px;
+
+	&::-webkit-scrollbar {
+	  width: 0;
+	  height: 0;
+	}
+
+
+
+	.default{
+	  transition: all $transition-duration-fast;
+	}
+	.active{
+	  transition: all $transition-duration-fast;
+	  .btn_hover_left:after {
+		-webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+		transform: translateX(-9%) translateY(-25%) rotate(45deg);
+	  }
+	}
+  }
+
+
+  .splide{
+	padding: unset;
+	--m-card-image-height: 350px;
+	background: white;
+	//overflow: hidden;
+
+	.m-card{
+	  border-radius: $border-radius-xxl;
+
+	  .card-buttons-container{
+		display: flex;
+		gap: 30px;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		padding-bottom: 30px;
+	  }
+	}
+
+	box-shadow: $box-shadow-m;
+
+	border-radius: $border-radius-xxl;
+	&__slide{
+	  --m-card-border-radius: $border-radius-xxl;
+	}
+
+
+
+	&__arrows{
+	  display: none;
+	}
+
+	&__pagination{
+	  z-index: 2;
+	  height: 10px;
+	  margin-bottom: 40px;
+
+	  &__page{
+		border-radius: 50%;
+		width: 8px;
+		height: 8px;
+		background: rgba(81, 77, 77, 0.44);
+
+		&.is-active{
+		  background: black;
+		}
+
+	  }
+	}
+  }
+}
+
+@media (min-width: 768px){
+  .o-interactive-panel{
+	.buttons-container{
+	  @include flex(column, center, center);
+	  gap: 24px;
+	  overflow: visible;
+
+	}
+  }
+}

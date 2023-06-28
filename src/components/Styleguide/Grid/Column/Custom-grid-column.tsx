@@ -78,7 +78,7 @@ export default function CustomGridColumn({
 				style={columnStyle}
 				className={`s-custom-grid-column ${columnEqualPaddings ? "equal-paddings" : ""} ${xs ? `col-xs-${xs}` : ""} ${sm ? `col-sm-${sm}` : ""} ${md ? `col-md-${md}` : ""} ${lg ? `col-lg-${lg}` : ""} ${ xl ? `col-xl-${xl}` : "" } ${xxl ? `col-xxl-${xxl}` : ""} col-off ${xs_offset ? `offset-xs-${xs_offset}` : ""} ${sm_offset ? `offset-sm-${sm_offset}` : ""} ${md_offset ? `offset-md-${md_offset}` : ""} ${lg_offset ? `offset-lg-${lg_offset}` : ""} `}
 			>
-				<div className={`column-wrapper`} style={{padding: "10px"}}>
+				<div className={`column-wrapper`}>
 					{children}
 				</div>
 			</section>

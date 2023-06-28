@@ -42,12 +42,12 @@ export default function Card(props: CardProps) {
       <div className={`card-container ${isOverlapped} ${imageFullWidth}`}>
         {imageElement}
         <div className="content">
-          <div className="content__text-content">
+          <div className="text-content">
           {labelsElement}
           {titleElement}
           {descriptionElement}
           </div>
-          <div className="content__action-content">
+          <div className="action-content">
           {buttonsElement}
           </div>
         </div>

@@ -19,6 +19,8 @@ const Extra_Info = `
   <li>--a-button-slide-second-decoration-margin-left</li>
   <li>--a-button-slide-second-decoration-height</li>
   <li>--a-button-slide-second-decoration-width</li>
+  <li>--a-button-slide-second-animation-transform</li>
+  <li>--a-button-slide-second-animation-transform-default-state</li>
 </ul>
 <table>
   <tr>
@@ -75,8 +77,16 @@ const Extra_Info = `
   </tr>
   <tr>
     <td>--a-button-slide-second-decoration-width</td>
-    <td>140%</td>
+    <td>120%</td>
   </tr>
+  <tr>
+  <td>--a-button-slide-second-animation-transform</td>
+  <td>translateX(-9%) translateY(-25%) rotate(45deg)</td>
+  </tr>
+  <tr>
+  <td>--a-button-slide-second-animation-transform-default-state</td>
+  <td>translateX(-98%) translateY(-25%) rotate(45deg)</td>
+</tr>
 </table>
 `;
 
