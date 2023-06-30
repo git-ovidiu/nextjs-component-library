@@ -18,32 +18,76 @@ import {AiOutlineDownload} from "react-icons/ai"
 
 const Extra_Info = `
 <br>
-<h2><u>PROPS</u></h2>
-<table>
-  <tr>
-    <td>name</td>
-    <td>type</td>
-    <td>can be:</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>string</td>
-    <td>-</td>
-  </tr>
-</table>
-
-<br>
-
 <h2><u>CSS VARIABLES</u></h2>
 <ol>
-  <li>--a-test-component-right-column-background</li>
+<li>--o-interactive-panel-splide-background</li>
+<li>--o-interactive-panel-buttons-container-gap</li>
+<li>--o-interactive-panel-buttons-min-width</li>
+<li>--o-interactive-panel-buttons-paddings</li>
+<li>--o-interactive-panel-splide-box-shadow</li>
+<li>--o-interactive-panel-splide-card-buttons-gap</li>
+<li>--o-interactive-panel-splide-card-buttons-padding-bottom</li>
+<li>--o-interactive-panel-splide-card-buttons-pagination-height</li>
+<li>--o-interactive-panel-splide-card-buttons-pagination-margin-bottom</li>
+<li>--o-interactive-panel-splide-card-buttons-pagination-page-width</li>
+<li>--o-interactive-panel-splide-card-buttons-pagination-page-height</li>
+<li>--o-interactive-panel-splide-card-buttons-pagination-default-background</li>
+<li>--o-interactive-panel-splide-card-buttons-pagination-active-background</li>
 </ol>
 
 <table>
-  <tr>
-    <td>--a-test-component-right-column-background</td>
-    <td>gray</td>
-  </tr>
+<tr>
+<td>--o-interactive-panel-splide-background</td>
+<td>transparent</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-buttons-container-gap</td>
+<td>24px</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-buttons-min-width</td>
+<td>270px</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-buttons-paddings</td>
+<td>20px 40px 20px 0px</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-splide-box-shadow</td>
+<td>$box-shadow-xxl</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-splide-card-buttons-gap</td>
+<td>30px</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-splide-card-buttons-padding-bottom</td>
+<td>30px</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-splide-card-buttons-pagination-height</td>
+<td>10px</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-splide-card-buttons-pagination-margin-bottom</td>
+<td>40px</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-splide-card-buttons-pagination-page-width</td>
+<td>8px</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-splide-card-buttons-pagination-page-height</td>
+<td>8px</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-splide-card-buttons-pagination-default-background</td>
+<td>rgba(81, 77, 77, 0.44)</td>
+</tr>
+<tr>
+<td>--o-interactive-panel-splide-card-buttons-pagination-active-background</td>
+<td>$color-black</td>
+</tr>
 </table>
 `;
 

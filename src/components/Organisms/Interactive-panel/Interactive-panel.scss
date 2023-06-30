@@ -1,17 +1,35 @@
 @use '../../../styles/main.module.scss' as *;
 
+:root{
+  --o-interactive-panel-splide-background: transparent;
+  --o-interactive-panel-buttons-container-gap: 24px;
+  --o-interactive-panel-buttons-min-width: 270px;
+  --o-interactive-panel-buttons-paddings: 20px 40px 20px 0px;
+  --o-interactive-panel-splide-box-shadow: #{$box-shadow-xxl};
+  --o-interactive-panel-splide-card-buttons-gap: 30px;
+  --o-interactive-panel-splide-card-buttons-padding-bottom: 30px;
+  --o-interactive-panel-splide-card-buttons-pagination-height: 10px;
+  --o-interactive-panel-splide-card-buttons-pagination-margin-bottom: 40px;
+  --o-interactive-panel-splide-card-buttons-pagination-page-width: 8px;
+  --o-interactive-panel-splide-card-buttons-pagination-page-height: 8px;
+  --o-interactive-panel-splide-card-buttons-pagination-default-background: rgba(81, 77, 77, 0.44);
+  --o-interactive-panel-splide-card-buttons-pagination-active-background: #{$color-black};
+
+}
+
+
 .o-interactive-panel{
   --a-button-slide-second-animation-transform-hover: translateX(-98%) translateY(-25%) rotate(45deg);
   overflow: hidden;
 
   .buttons-container{
 	display: flex;
-	gap: 24px;
-	--a-button-slide-second-min-width: 270px;
+	gap: var(--o-interactive-panel-buttons-container-gap);
+	--a-button-slide-second-min-width: var(--o-interactive-panel-buttons-min-width);
 	overflow: scroll; /* Change 'auto' to 'scroll' */
 	width: 100%;
 	scroll-snap-type: x mandatory; /* Add scroll-snap properties */
-	padding: 20px 40px 20px 0px;
+	padding: var(--o-interactive-panel-buttons-paddings);
 	box-shadow: none;
 
 	.btn_hover_left{
@@ -41,26 +59,36 @@
   .splide{
 	padding: unset;
 	--m-card-image-height: 350px;
-	background: transparent;
-	//overflow: hidden;
+	background: var(--o-interactive-panel-splide-background);
+	box-shadow: var(--o-interactive-panel-splide-box-shadow);
+
+	border-radius: var(--m-card-border-radius);
+
+
 
 	.m-card{
-	  //border-radius: $border-radius-xxl;
 	  box-shadow: none;
 
 	  .card-buttons-container{
 		display: flex;
-		gap: 30px;
+		gap: var(--o-interactive-panel-splide-card-buttons-gap);
 		flex-wrap: wrap;
 		margin: 0 auto;
-		padding-bottom: 30px;
+		padding-bottom: var(--o-interactive-panel-splide-card-buttons-padding-bottom);
 	  }
 	}
 
-	box-shadow: $box-shadow-m;
 
-	//border-radius: $border-radius-xxl;
+
+	&__track{
+	  background: transparent;
+	border-radius: var(--m-card-border-radius);
+	}
+
 	&__slide{
+	  background: transparent;
+	border-radius: var(--m-card-border-radius);
+
 	}
 
 
@@ -71,17 +99,17 @@
 
 	&__pagination{
 	  z-index: 2;
-	  height: 10px;
-	  margin-bottom: 40px;
+	  height: var(--o-interactive-panel-splide-card-buttons-pagination-height);
+	  margin-bottom: var(--o-interactive-panel-splide-card-buttons-pagination-margin-bottom);
 
 	  &__page{
 		border-radius: 50%;
-		width: 8px;
-		height: 8px;
-		background: rgba(81, 77, 77, 0.44);
+		width: var(--o-interactive-panel-splide-card-buttons-pagination-page-width);
+		height: var(--o-interactive-panel-splide-card-buttons-pagination-page-height);
+		background: var(--o-interactive-panel-splide-card-buttons-pagination-default-background);
 
 		&.is-active{
-		  background: black;
+		  background: var(--o-interactive-panel-splide-card-buttons-pagination-active-background);
 		}
 
 	  }
@@ -93,7 +121,6 @@
   .o-interactive-panel{
 	.buttons-container{
 	  @include flex(column, center, center);
-	  gap: 24px;
 	  overflow: visible;
 
 	}
