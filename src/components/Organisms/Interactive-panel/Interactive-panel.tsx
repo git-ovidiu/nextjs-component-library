@@ -46,8 +46,9 @@ export default function InteractivePanel({ card, button }: InteractivePanelProps
               <CustomGridColumn
                   column-background="transparent"
                   columns-equal-paddings
-                  md={4}
-                  md-offset={1}
+                  md={5}
+                  lg={4}
+                  lg-offset={1}
               >
                 <div className="buttons-container">
                   {button &&
@@ -66,8 +67,9 @@ export default function InteractivePanel({ card, button }: InteractivePanelProps
               <CustomGridColumn
                   column-background="transparent"
                   columns-equal-paddings
-                  md={6}
-                  md-offset={1}
+                  md={7}
+                  lg={6}
+                  lg-offset={1}
               >
                 <Splide ref={splideRef} onMoved={handleSlideMoved} options={{ perPage: 1 }}>
                   {card &&

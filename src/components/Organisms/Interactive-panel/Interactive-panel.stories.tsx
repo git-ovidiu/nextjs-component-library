@@ -117,60 +117,6 @@ const Template: ComponentStory<typeof InteractivePanel> = (args) => (
                             image-full-width
                             buttons={
                                 <div className="card-buttons-container">
-                                    <ButtonSlide
-                                        hover-effect="slide-right"
-                                        icon={<AiOutlineDownload size={20} />}
-                                        icon-position="right"
-                                        link-url="https://www.google.com"
-                                        open-in-new-tab
-                                        padding="xs"
-                                        text="Placeholder text"
-                                    />
-                                    <ButtonSlide
-                                        hover-effect="slide-left"
-                                        icon={<AiOutlineDownload size={20} />}
-                                        icon-position="right"
-                                        link-url="https://www.google.com"
-                                        open-in-new-tab
-                                        padding="xs"
-                                        text="Placeholder text"
-                                    />
-                                    <ButtonSlide
-                                        hover-effect="slide-up"
-                                        icon={<AiOutlineDownload size={20} />}
-                                        icon-position="right"
-                                        link-url="https://www.google.com"
-                                        open-in-new-tab
-                                        padding="xs"
-                                        text="Placeholder text"
-                                    />
-                                    <ButtonSlide
-                                        hover-effect="slide-down"
-                                        icon={<AiOutlineDownload size={20} />}
-                                        icon-position="right"
-                                        link-url="https://www.google.com"
-                                        open-in-new-tab
-                                        padding="xs"
-                                        text="Placeholder text"
-                                    />
-                                    <ButtonLineDrawing
-                                        icon={<FaGithub size={20} />}
-                                        icon-position="left"
-                                        line-effect="line-side"
-                                        link-url="https://www.google.com"
-                                        open-in-new-tab
-                                        padding="m"
-                                        text="Github Project"
-                                    />
-                                    <ButtonLineDrawing
-                                        icon={<FaGithub size={20} />}
-                                        icon-position="right"
-                                        line-effect="line-above"
-                                        link-url="https://www.google.com"
-                                        open-in-new-tab
-                                        padding="m"
-                                        text="Github Project"
-                                    />
                                     <ButtonLineDrawing
                                         icon={<MdOutlineLiveTv size={20} />}
                                         icon-position="right"
