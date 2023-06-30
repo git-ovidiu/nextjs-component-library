@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import InteractivePanel from "./Interactive-panel";
 import {
-    ButtonLineDrawing,
+    ButtonLineDrawing, ButtonSlide,
     ButtonSlideSecond,
     Card,
     CustomGridColumn,
@@ -14,6 +14,7 @@ import {FaGithub} from "react-icons/fa"
 import {MdOutlineArchitecture, MdOutlineCoffeeMaker, MdOutlineLiveTv} from "react-icons/md"
 import Image from "next/image"
 import {SiAtom} from "react-icons/si"
+import {AiOutlineDownload} from "react-icons/ai"
 
 const Extra_Info = `
 <br>
@@ -72,10 +73,55 @@ const Template: ComponentStory<typeof InteractivePanel> = (args) => (
                             image-full-width
                             buttons={
                                 <div className="card-buttons-container">
+                                    <ButtonSlide
+                                        hover-effect="slide-right"
+                                        icon={<AiOutlineDownload size={20} />}
+                                        icon-position="right"
+                                        link-url="https://www.google.com"
+                                        open-in-new-tab
+                                        padding="xs"
+                                        text="Placeholder text"
+                                    />
+                                    <ButtonSlide
+                                        hover-effect="slide-left"
+                                        icon={<AiOutlineDownload size={20} />}
+                                        icon-position="right"
+                                        link-url="https://www.google.com"
+                                        open-in-new-tab
+                                        padding="xs"
+                                        text="Placeholder text"
+                                    />
+                                    <ButtonSlide
+                                        hover-effect="slide-up"
+                                        icon={<AiOutlineDownload size={20} />}
+                                        icon-position="right"
+                                        link-url="https://www.google.com"
+                                        open-in-new-tab
+                                        padding="xs"
+                                        text="Placeholder text"
+                                    />
+                                    <ButtonSlide
+                                        hover-effect="slide-down"
+                                        icon={<AiOutlineDownload size={20} />}
+                                        icon-position="right"
+                                        link-url="https://www.google.com"
+                                        open-in-new-tab
+                                        padding="xs"
+                                        text="Placeholder text"
+                                    />
+                                    <ButtonLineDrawing
+                                        icon={<FaGithub size={20} />}
+                                        icon-position="left"
+                                        line-effect="line-side"
+                                        link-url="https://www.google.com"
+                                        open-in-new-tab
+                                        padding="m"
+                                        text="Github Project"
+                                    />
                                     <ButtonLineDrawing
                                         icon={<FaGithub size={20} />}
                                         icon-position="right"
-                                        line-effect="line-below"
+                                        line-effect="line-above"
                                         link-url="https://www.google.com"
                                         open-in-new-tab
                                         padding="m"

@@ -1,261 +1,386 @@
 @use '../../../styles/main.module.scss' as *;
 
-:root{
-    --a-button-line-drawing-font-size: #{$font-size-buttons};
-    --a-button-line-drawing-line-height: 1;
-    --a-button-line-drawing-font-weight: 400;
-    --a-button-line-drawing-text-color: #{$color-black};
-    --a-button-line-drawing-line-color: #{$tertiary-color};
-    --a-button-line-drawing-background-color: transparent;
-    --a-button-line-drawing-animation-transition: #{$transition-duration-normal};
-    --a-button-line-drawing-animation-transition-fast: #{$transition-duration-fast};
-    --a-button-line-drawing-animation-transition-faster: #{$transition-duration-faster};
-    --a-button-line-drawing-animation-transition-ultra-fast: #{$transition-duration-ultra-fast};
-    --a-button-line-drawing-gap: 15px;
+:root {
+  --a-button-line-drawing-font-size: #{$font-size-buttons};
+  --a-button-line-drawing-line-height: 1;
+  --a-button-line-drawing-font-weight: 400;
+  --a-button-line-drawing-text-color: #{$color-black};
+  --a-button-line-drawing-line-color: #{$tertiary-color};
+  --a-button-line-drawing-background-color: transparent;
+  --a-button-line-drawing-animation-transition: #{$transition-duration-normal};
+  --a-button-line-drawing-animation-transition-fast: #{$transition-duration-fast};
+  --a-button-line-drawing-animation-transition-faster: #{$transition-duration-faster};
+  --a-button-line-drawing-animation-transition-ultra-fast: #{$transition-duration-ultra-fast};
+  --a-button-line-drawing-gap: 15px;
 
-    --a-button-line-drawing-padding-xxs: #{$padding-xxs};
-    --a-button-line-drawing-padding-xs: #{$padding-xs};
-    --a-button-line-drawing-padding-s: #{$padding-s};
-    --a-button-line-drawing-padding-m: #{$padding-m};
-    --a-button-line-drawing-padding-l: #{$padding-l};
-    --a-button-line-drawing-padding-xl: #{$padding-xl};
-    --a-button-line-drawing-padding-xxl: #{$padding-xxl};
+  --a-button-line-drawing-padding-xxs: #{$padding-xxs};
+  --a-button-line-drawing-padding-xs: #{$padding-xs};
+  --a-button-line-drawing-padding-s: #{$padding-s};
+  --a-button-line-drawing-padding-m: #{$padding-m};
+  --a-button-line-drawing-padding-l: #{$padding-l};
+  --a-button-line-drawing-padding-xl: #{$padding-xl};
+  --a-button-line-drawing-padding-xxl: #{$padding-xxl};
 }
 
+
 @mixin button_typography_primary {
-    font-size: var(--a-button-line-drawing-font-size);
-    line-height: var(--a-button-line-drawing-line-height);
-    font-weight: var(--a-button-line-drawing-font-weight);
+  font-size: var(--a-button-line-drawing-font-size);
+  line-height: var(--a-button-line-drawing-line-height);
+  font-weight: var(--a-button-line-drawing-font-weight);
 }
 
 
 .btn_hover_line {
-    @include button_typography_primary;
-    position: relative;
-    display: inline-flex;
-    height: 100%;
-    background-color: var(--a-button-line-drawing-background-color);
-    border: none;
-    cursor: pointer;
+  @include button_typography_primary;
+  position: relative;
+  display: inline-flex;
+  height: 100%;
+  background-color: var(--a-button-line-drawing-background-color);
+  border: none;
+  cursor: pointer;
 
-    &.padding-xxs{ a{ padding: var(--a-button-line-drawing-padding-xxs); } }
-    &.padding-xs{ a{ padding: var(--a-button-line-drawing-padding-xs); } }
-    &.padding-s{ a{ padding: var(--a-button-line-drawing-padding-s); } }
-    &.padding-m{ a{ padding: var(--a-button-line-drawing-padding-m); } }
-    &.padding-l{ a{ padding: var(--a-button-line-drawing-padding-l); } }
-    &.padding-xl{ a{ padding: var(--a-button-line-drawing-padding-xl); } }
-    &.padding-xxl{ a{ padding: var(--a-button-line-drawing-padding-xxl); } }
+  &.padding-xxs {
+	a {
+	  padding: var(--a-button-line-drawing-padding-xxs);
+	}
+  }
 
-    .icon{
-        z-index: 2;
-        display: inline-flex;
+  &.padding-xs {
+	a {
+	  padding: var(--a-button-line-drawing-padding-xs);
+	}
+  }
 
-    }
+  &.padding-s {
+	a {
+	  padding: var(--a-button-line-drawing-padding-s);
+	}
+  }
 
-    a {
-        &.reverse{
-            flex-direction: row-reverse
-        }
-        @include button_typography_primary;
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: var(--a-button-line-drawing-gap);
-        top: 0;
-        left: 0;
-        width: 100%;
-        color: var(--a-button-line-drawing-text-color);
-    }
+  &.padding-m {
+	a {
+	  padding: var(--a-button-line-drawing-padding-m);
+	}
+  }
 
-    &::before {
-        position: absolute;
-        content: "";
-        width: 15%;
-        height: 2px;
-        background-color: var(--a-button-line-drawing-line-color);
-        z-index: 2;
-    }
-    &::after {
-        position: absolute;
-        content: "";
-        width: 15%;
-        height: 2px;
-        background-color: var(--a-button-line-drawing-line-color);
-        z-index: 2;
-    }
+  &.padding-l {
+	a {
+	  padding: var(--a-button-line-drawing-padding-l);
+	}
+  }
+
+  &.padding-xl {
+	a {
+	  padding: var(--a-button-line-drawing-padding-xl);
+	}
+  }
+
+  &.padding-xxl {
+	a {
+	  padding: var(--a-button-line-drawing-padding-xxl);
+	}
+  }
+
+  .icon {
+	z-index: 2;
+	display: inline-flex;
+
+  }
+
+  a {
+	&.reverse {
+	  flex-direction: row-reverse
+	}
+
+	@include button_typography_primary;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: var(--a-button-line-drawing-gap);
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: var(--a-button-line-drawing-text-color);
+  }
+
+  &::before {
+	position: absolute;
+	content: "";
+	width: 15%;
+	height: 2px;
+	background-color: var(--a-button-line-drawing-line-color);
+	z-index: 2;
+  }
+
+  &::after {
+	position: absolute;
+	content: "";
+	width: 15%;
+	height: 2px;
+	background-color: var(--a-button-line-drawing-line-color);
+	z-index: 2;
+  }
 }
 
 @mixin line-animation {
-    padding: 0;
-    margin: 0;
-    &::before {
-        position: absolute;
-        content: "";
-        bottom: 0;
-        transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) ease-out;
-        right: 50%;
-    }
-    &::after {
-        position: absolute;
-        content: "";
-        bottom: 0;
-        transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) ease-out;
-        left: 50%;
-    }
-    &:hover {
-        &::before {
-            width: 50%;
-            transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in;
-        }
-        &::after {
-            width: 50%;
-            transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in;
-        }
-    }
-    a {
-        &::before {
-            position: absolute;
-            content: "";
-            width: 0%;
-            height: 0%;
-            background: transparent;
-            opacity: 0;
-            z-index: 2;
-            transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in, height var(--a-button-line-drawing-animation-transition-ultra-fast) var(--a-button-line-drawing-animation-transition-fast) linear, opacity 0s var(--a-button-line-drawing-animation-transition-faster);
-            bottom: 0;
-            left: 0;
-            border-left: 2px solid var(--a-button-line-drawing-line-color);
-            border-top: 2px solid var(--a-button-line-drawing-line-color);
-        }
-        &::after {
-            position: absolute;
-            content: "";
-            width: 0%;
-            height: 0%;
-            background: transparent;
-            opacity: 0;
-            z-index: 2;
-            transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in, height var(--a-button-line-drawing-animation-transition-ultra-fast) var(--a-button-line-drawing-animation-transition-fast) linear, opacity 0s var(--a-button-line-drawing-animation-transition-faster);
-            bottom: 0;
-            right: 0;
-            border-right: 2px solid var(--a-button-line-drawing-line-color);
-            border-top: 2px solid var(--a-button-line-drawing-line-color);
-        }
-        &:hover {
-            &::before {
-                width: 50%;
-                height: 100%;
-                opacity: 1;
-                transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-fast) ease-in, width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) linear, opacity 0s var(--a-button-line-drawing-animation-transition-fast);
-            }
-            &::after {
-                width: 50%;
-                height: 100%;
-                opacity: 1;
-                transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-fast) ease-in, width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) linear, opacity 0s var(--a-button-line-drawing-animation-transition-fast);
-            }
-        }
-    }
+  padding: 0;
+  margin: 0;
+  &::before {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) ease-out;
+	right: 50%;
+  }
+  &::after {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) ease-out;
+	left: 50%;
+  }
 }
 
 .line_below {
-    @include line-animation;
+  @include line-animation;
 }
 
-/* 16. hover-border-6 */
 .line_above {
-    @include line-animation;
-    &::before {
-        top: 0;
-    }
+  @include line-animation;
 
-    &::after {
-        top: 0;
-    }
+  &::before {
+	top: 0;
+  }
 
-    a {
-        &::before {
-            top: 0;
-            border-left: 2px solid var(--a-button-line-drawing-line-color);
-            border-bottom: 2px solid var(--a-button-line-drawing-line-color);
-            border-top: none;
-        }
-        &::after {
-            top: 0;
-            border-right: 2px solid var(--a-button-line-drawing-line-color);
-            border-bottom: 2px solid var(--a-button-line-drawing-line-color);
-            border-top: none;
-        }
-    }
+  &::after {
+	top: 0;
+  }
+
+  a {
+	&::before {
+	  top: 0;
+	  border-left: 2px solid var(--a-button-line-drawing-line-color);
+	  border-bottom: 2px solid var(--a-button-line-drawing-line-color);
+	  border-top: none;
+	}
+
+	&::after {
+	  top: 0;
+	  border-right: 2px solid var(--a-button-line-drawing-line-color);
+	  border-bottom: 2px solid var(--a-button-line-drawing-line-color);
+	  border-top: none;
+	}
+  }
 }
 
 .line_side {
-    padding: 0;
-    margin: 0;
-    &::before {
-        left: 0%;
-        height: 30%;
-        width: 2px;
-        transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-faster) ease-out;
-        top: 50%;
-    }
-    &::after {
-        left: 0%;
-        height: 30%;
-        width: 2px;
-        transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-faster) ease-out;
-        bottom: 50%;
-    }
-    &:hover {
-        &::before {
-            height: 50%;
-            transition: height var(--a-button-line-drawing-animation-transition-fast) ease-in;
-        }
-        &::after {
-            height: 50%;
-            transition: height var(--a-button-line-drawing-animation-transition-ultra-fast) ease-in;
-        }
-    }
-    a {
-        &::before {
-            position: absolute;
-            content: "";
-            width: 0%;
-            height: 0%;
-            background: transparent;
-            opacity: 0;
-            z-index: 2;
-            top: -2px;
-            left: 0%;
-            border-top: 2px solid var(--a-button-line-drawing-line-color);
-            border-right: 2px solid var(--a-button-line-drawing-line-color);
-            transition: height var(--a-button-line-drawing-animation-transition-ultra-fast) ease-in, width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-ultra-fast) linear, opacity 0s var(--a-button-line-drawing-animation-transition-faster);
-        }
-        &::after {
-            position: absolute;
-            content: "";
-            width: 0%;
-            height: 0%;
-            background: transparent;
-            opacity: 0;
-            z-index: 2;
-            bottom: 0;
-            left: 0%;
-            border-bottom: 2px solid var(--a-button-line-drawing-line-color);
-            transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in, opacity 0s var(--a-button-line-drawing-animation-transition-faster);
-        }
-        &:hover {
-            &::after {
-                width: 100%;
-                opacity: 1;
-                transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-fast) ease-out, opacity 0s var(--a-button-line-drawing-animation-transition-fast);
-            }
-            &::before {
-                width: 100%;
-                height: 100%;
-                opacity: 1;
-                transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-ultra-fast) linear, height var(--a-button-line-drawing-animation-transition-ultra-fast) var(--a-button-line-drawing-animation-transition-faster) ease-out, opacity 0s var(--a-button-line-drawing-animation-transition-ultra-fast);
-            }
-        }
-    }
+  padding: 0;
+  margin: 0;
+
+  &::before {
+	left: 0%;
+	height: 30%;
+	width: 2px;
+	transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-faster) ease-out;
+	top: 50%;
+  }
+
+  &::after {
+	left: 0%;
+	height: 30%;
+	width: 2px;
+	transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-faster) ease-out;
+	bottom: 50%;
+  }
+
+}
+
+
+@media (min-width: 992px) {
+
+
+  @mixin line-animation {
+	padding: 0;
+	margin: 0;
+	&::before {
+	  position: absolute;
+	  content: "";
+	  bottom: 0;
+	  transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) ease-out;
+	  right: 50%;
+	}
+	&::after {
+	  position: absolute;
+	  content: "";
+	  bottom: 0;
+	  transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) ease-out;
+	  left: 50%;
+	}
+	&:hover {
+	  &::before {
+		width: 50%;
+		transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in;
+	  }
+
+	  &::after {
+		width: 50%;
+		transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in;
+	  }
+	}
+	a {
+	  &::before {
+		position: absolute;
+		content: "";
+		width: 0%;
+		height: 0%;
+		background: transparent;
+		opacity: 0;
+		z-index: 2;
+		transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in, height var(--a-button-line-drawing-animation-transition-ultra-fast) var(--a-button-line-drawing-animation-transition-fast) linear, opacity 0s var(--a-button-line-drawing-animation-transition-faster);
+		bottom: 0;
+		left: 0;
+		border-left: 2px solid var(--a-button-line-drawing-line-color);
+		border-top: 2px solid var(--a-button-line-drawing-line-color);
+	  }
+
+	  &::after {
+		position: absolute;
+		content: "";
+		width: 0%;
+		height: 0%;
+		background: transparent;
+		opacity: 0;
+		z-index: 2;
+		transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in, height var(--a-button-line-drawing-animation-transition-ultra-fast) var(--a-button-line-drawing-animation-transition-fast) linear, opacity 0s var(--a-button-line-drawing-animation-transition-faster);
+		bottom: 0;
+		right: 0;
+		border-right: 2px solid var(--a-button-line-drawing-line-color);
+		border-top: 2px solid var(--a-button-line-drawing-line-color);
+	  }
+
+	  &:hover {
+		&::before {
+		  width: 50%;
+		  height: 100%;
+		  opacity: 1;
+		  transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-fast) ease-in, width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) linear, opacity 0s var(--a-button-line-drawing-animation-transition-fast);
+		}
+
+		&::after {
+		  width: 50%;
+		  height: 100%;
+		  opacity: 1;
+		  transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-fast) ease-in, width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition) linear, opacity 0s var(--a-button-line-drawing-animation-transition-fast);
+		}
+	  }
+	}
+  }
+
+  .line_below {
+	@include line-animation;
+  }
+
+  .line_above {
+	@include line-animation;
+
+	&::before {
+	  top: 0;
+	}
+
+	&::after {
+	  top: 0;
+	}
+
+	a {
+	  &::before {
+		top: 0;
+		border-left: 2px solid var(--a-button-line-drawing-line-color);
+		border-bottom: 2px solid var(--a-button-line-drawing-line-color);
+		border-top: none;
+	  }
+
+	  &::after {
+		top: 0;
+		border-right: 2px solid var(--a-button-line-drawing-line-color);
+		border-bottom: 2px solid var(--a-button-line-drawing-line-color);
+		border-top: none;
+	  }
+	}
+  }
+
+  .line_side {
+	&::before {
+	  left: 0%;
+	  height: 30%;
+	  width: 2px;
+	  transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-faster) ease-out;
+	  top: 50%;
+	}
+
+	&::after {
+	  left: 0%;
+	  height: 30%;
+	  width: 2px;
+	  transition: height var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-faster) ease-out;
+	  bottom: 50%;
+	}
+
+	&:hover {
+	  &::before {
+		height: 50%;
+		transition: height var(--a-button-line-drawing-animation-transition-fast) ease-in;
+	  }
+
+	  &::after {
+		height: 50%;
+		transition: height var(--a-button-line-drawing-animation-transition-ultra-fast) ease-in;
+	  }
+	}
+
+	a {
+	  &::before {
+		position: absolute;
+		content: "";
+		width: 0%;
+		height: 0%;
+		background: transparent;
+		opacity: 0;
+		z-index: 2;
+		top: -2px;
+		left: 0%;
+		border-top: 2px solid var(--a-button-line-drawing-line-color);
+		border-right: 2px solid var(--a-button-line-drawing-line-color);
+		transition: height var(--a-button-line-drawing-animation-transition-ultra-fast) ease-in, width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-ultra-fast) linear, opacity 0s var(--a-button-line-drawing-animation-transition-faster);
+	  }
+
+	  &::after {
+		position: absolute;
+		content: "";
+		width: 0%;
+		height: 0%;
+		background: transparent;
+		opacity: 0;
+		z-index: 2;
+		bottom: 0;
+		left: 0%;
+		border-bottom: 2px solid var(--a-button-line-drawing-line-color);
+		transition: width var(--a-button-line-drawing-animation-transition-fast) ease-in, opacity 0s var(--a-button-line-drawing-animation-transition-faster);
+	  }
+
+	  &:hover {
+		&::after {
+		  width: 100%;
+		  opacity: 1;
+		  transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-fast) ease-out, opacity 0s var(--a-button-line-drawing-animation-transition-fast);
+		}
+
+		&::before {
+		  width: 100%;
+		  height: 100%;
+		  opacity: 1;
+		  transition: width var(--a-button-line-drawing-animation-transition-fast) var(--a-button-line-drawing-animation-transition-ultra-fast) linear, height var(--a-button-line-drawing-animation-transition-ultra-fast) var(--a-button-line-drawing-animation-transition-faster) ease-out, opacity 0s var(--a-button-line-drawing-animation-transition-ultra-fast);
+		}
+	  }
+	}
+  }
 }
