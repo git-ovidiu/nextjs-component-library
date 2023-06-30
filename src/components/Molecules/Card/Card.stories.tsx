@@ -54,7 +54,6 @@ const Extra_Info = `
 <li>--m-card-height</li>
 <li>--m-card-image-height</li>
 <li>--m-card-image-object-fit</li>
-<li>--m-card-labels-margin-top</li>
 <li>--m-card-labels-gap</li>
 <li>--m-card-title-margin-top</li>
 <li>--m-card-description-margin-top</li>
@@ -98,10 +97,6 @@ const Extra_Info = `
   <tr>
     <td>--m-card-image-object-fit</td>
     <td>cover</td>
-  </tr>
-  <tr>
-    <td>--m-card-labels-margin-top</td>
-    <td>24px</td>
   </tr>
   <tr>
     <td>--m-card-labels-gap</td>
