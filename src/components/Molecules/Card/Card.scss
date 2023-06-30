@@ -26,6 +26,8 @@
   width: 100%;
   padding: 0;
   margin: 0;
+  border-radius: var(--m-card-border-radius);
+
   .card-container {
     position: relative;
     background: var(--m-card-background);
@@ -36,11 +38,13 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+      border-radius: var(--m-card-border-radius);
 
     .content {
       background: transparent;
       height: 100%;
       @include flex(column, space-between, flex-start);
+
 
       .labels {
         margin-top: var(--m-card-labels-margin-top);
@@ -63,7 +67,8 @@
         margin-top: var(--m-card-buttons-margin-top);
         gap: var(--m-card-buttons-gap);
         width: 100%;
-        gap: 50px;
+        gap: 20px;
+
       }
 
       .action-content{
@@ -84,6 +89,7 @@
 
 
     &.m-card-overlapped {
+      width: 100%;
       padding: unset;
       align-items: center;
       box-shadow: unset;
@@ -115,6 +121,7 @@
 
       .content {
         padding: var(--m-card-padding);
+        border-radius: var(--m-card-border-radius);
 
         .labels {
           margin-top: unset;
