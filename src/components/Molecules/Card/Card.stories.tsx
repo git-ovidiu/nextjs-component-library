@@ -64,6 +64,7 @@ const Extra_Info = `
 <li>--m-card-overlapped-side-distance-mobile</li>
 <li>--m-card-overlapped-side-distance-tablet</li>
 <li>--m-card-overlapped-side-distance-desktop</li>
+<li>--m-card-labels-margin-top</li>
 </ol>
 <table>
   <tr>
@@ -94,6 +95,10 @@ const Extra_Info = `
     <td>--m-card-image-height</td>
     <td>250px</td>
   </tr>
+  <tr>
+  <td>--m-card-labels-margin-top</td>
+  <td>24px</td>
+</tr>
   <tr>
     <td>--m-card-image-object-fit</td>
     <td>cover</td>
@@ -171,7 +176,7 @@ export default {
 } as ComponentMeta<typeof Card>;
 
 const Template: ComponentStory<typeof Card> = (args) => (
-  <div style={{ maxWidth: "360px" }}>
+  <div style={{ maxWidth: "360px", background: "red" }}>
     <Card
       {...args}
       image={

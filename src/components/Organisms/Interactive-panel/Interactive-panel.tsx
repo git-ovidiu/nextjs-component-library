@@ -71,7 +71,7 @@ export default function InteractivePanel({ card, button }: InteractivePanelProps
                   lg={6}
                   lg-offset={1}
               >
-                <Splide ref={splideRef} onMoved={handleSlideMoved} options={{ perPage: 1 }}>
+                <Splide ref={splideRef} onMoved={handleSlideMoved} options={{ perPage: 1, width: "100%" }}>
                   {card &&
                       card.map((cardElement: ReactNode, index: number) => (
                           <SplideSlide key={index}>{cardElement}</SplideSlide>

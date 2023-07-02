@@ -30,11 +30,18 @@ export default function ButtonLineDrawing(props: ButtonLineDrawingProps) {
           props["line-effect"] === "line-side" ? "btn_hover_line line_side" : ""
         } `}
       >
-        <Link href={props["link-url"] || ""} target={props["open-in-new-tab"] ? '_blank' : ''}
-            className={`${props["icon-position"] === "left" ? "reverse" : ""}`}>
-          {props.text}
-          {props.icon ? <div className="icon">{props.icon}</div> : ""}
-        </Link>
+        {props["link-url"] ? (
+          <Link href={props["link-url"] || ""} target={props["open-in-new-tab"] ? '_blank' : ''}
+                className={`${props["icon-position"] === "left" ? "reverse" : ""}`}>
+            {props.text}
+            {props.icon ? <div className="icon">{props.icon}</div> : ""}
+          </Link>
+      ) : (
+          <a className={`${props["icon-position"] === "left" ? "reverse" : ""}`}>
+            {props.text}
+            {props.icon ? <div className="icon">{props.icon}</div> : ""}
+          </a>
+      )}
       </button>
     </>
   );

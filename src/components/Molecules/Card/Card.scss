@@ -9,12 +9,13 @@
   --m-card-height: 100%;
   --m-card-image-height: 250px;
   --m-card-image-object-fit: cover;
+  --m-card-labels-margin-top: 24px;
   --m-card-labels-gap: 8px;
   --m-card-title-margin-top: 12px;
   --m-card-description-margin-top: 4px;
   --m-card-buttons-margin-top: 24px;
   --m-card-buttons-gap: 16px;
-  --m-card-overlapped-margin-top: -37px;
+  --m-card-overlapped-margin-top: -40px;
   --m-card-overlapped-side-distance-mobile:  60px;
   --m-card-overlapped-side-distance-tablet:  70px;
   --m-card-overlapped-side-distance-desktop:  80px;
@@ -45,7 +46,9 @@
       @include flex(column, space-between, flex-start);
 
 
+
       .labels {
+        margin-top: var(--m-card-labels-margin-top);
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -65,12 +68,13 @@
         margin-top: var(--m-card-buttons-margin-top);
         gap: var(--m-card-buttons-gap);
         width: 100%;
-        gap: 20px;
+        z-index: 2;
 
       }
 
       .action-content{
         width: 100%;
+
       }
     }
 

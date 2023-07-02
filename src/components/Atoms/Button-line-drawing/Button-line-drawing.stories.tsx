@@ -186,6 +186,13 @@ const Template: ComponentStory<typeof ButtonLineDrawing> = (args) => (
       icon-position={args["icon-position"]}
       icon={<AiOutlineDownload size={20} />}
     />
+
+    <ButtonLineDrawing
+        {...args}
+        icon-position={args["icon-position"]}
+        link-url={undefined}
+        icon={<AiOutlineDownload size={20} />}
+    />
   </>
 );
 
