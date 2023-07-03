@@ -100,6 +100,7 @@ const Extra_Info = `
 <li>--m-video-controls-container-width</li>
 <li>--m-video-controls-icon-width</li>
 <li>--m-video-controls-icon-height</li>
+<li>--m-video-has-custom-height</li>
 <li>--m-video-controls-icon-play-width</li>
 <li>--m-video-controls-icon-play-height</li>
 <li>--m-video-controls-fullscreen-padding</li>
@@ -173,6 +174,10 @@ const Extra_Info = `
 <tr>
 <td>--m-video-controls-fullscreen-padding</td>
 <td>8px;</td>
+</tr>
+<tr>
+<td>--m-video-has-custom-height</td>
+<td>100vh</td>
 </tr>
 <tr>
 <td>--m-video-controls-hover-scale</td>
