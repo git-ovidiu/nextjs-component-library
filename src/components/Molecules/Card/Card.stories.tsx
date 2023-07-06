@@ -176,8 +176,11 @@ export default {
 } as ComponentMeta<typeof Card>;
 
 const Template: ComponentStory<typeof Card> = (args) => (
-  <div style={{ maxWidth: "360px", background: "red" }}>
+  <div style={{ maxWidth: "360px", background: "white" }}>
     <Card
+        image-height-mobile={args["image-height-mobile"]}
+        image-height-tablet={args["image-height-tablet"]}
+        image-height-desktop={args["image-height-desktop"]}
       {...args}
       image={
         <MediaImage
@@ -247,4 +250,7 @@ Card_story.args = {
   "is-overlapped": true,
   "image-full-width": true,
   buttons: undefined,
+  "image-height-mobile": "250px",
+  "image-height-tablet": "250px",
+  "image-height-desktop": "250px",
 };

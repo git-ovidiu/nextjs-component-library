@@ -7,7 +7,9 @@
   --m-card-border-radius: 20px 20px 60px 20px;
   --m-card-content-background: #{$color-white};
   --m-card-height: 100%;
-  --m-card-image-height: 250px;
+  --m-card-image-height-mobile: 250px;
+  --m-card-image-height-tablet: 250px;
+  --m-card-image-height-desktop: 250px;
   --m-card-image-object-fit: cover;
   --m-card-labels-margin-top: 24px;
   --m-card-labels-gap: 8px;
@@ -84,7 +86,7 @@
       width: 100%;
 
       img {
-        height: var(--m-card-image-height);
+        height: var(--m-card-image-height-mobile);
         object-fit: var(--m-card-image-object-fit);
       }
     }
@@ -137,6 +139,11 @@
 @media (min-width: 768px){
   .m-card{
     .card-container{
+      .image{
+        img{
+          height: var(--m-card-image-height-tablet);
+        }
+      }
       &.m-card-overlapped {
         .content{
           width: calc(100% - var(--m-card-overlapped-side-distance-tablet));
@@ -149,6 +156,11 @@
 @media (min-width: 992px){
   .m-card{
     .card-container{
+      .image{
+        img{
+          height: var(--m-card-image-height-desktop);
+        }
+      }
       &.m-card-overlapped {
         .content{
           width: calc(100% - var(--m-card-overlapped-side-distance-desktop));
