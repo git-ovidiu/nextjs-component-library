@@ -2,7 +2,7 @@
 
 :root{
   --o-interactive-panel-splide-background: transparent;
-  --o-interactive-panel-buttons-container-gap: 24px;
+  --o-interactive-panel-buttons-container-gap: 12px;
   --o-interactive-panel-buttons-min-width: 270px;
   --o-interactive-panel-buttons-paddings: 20px 40px 20px 0px;
   --o-interactive-panel-splide-box-shadow: #{$box-shadow-xxl};
@@ -26,11 +26,13 @@
 	display: flex;
 	gap: var(--o-interactive-panel-buttons-container-gap);
 	--a-button-slide-second-min-width: var(--o-interactive-panel-buttons-min-width);
-	overflow: scroll; /* Change 'auto' to 'scroll' */
+	//overflow: scroll; /* Change 'auto' to 'scroll' */
 	width: 100%;
-	scroll-snap-type: x mandatory; /* Add scroll-snap properties */
-	padding: var(--o-interactive-panel-buttons-paddings);
+	//scroll-snap-type: x mandatory; /* Add scroll-snap properties */
+	//padding: var(--o-interactive-panel-buttons-paddings);
 	box-shadow: none;
+	flex-direction: column;
+	align-items: center;
 
 	.btn_hover_left{
 	  box-shadow: none;

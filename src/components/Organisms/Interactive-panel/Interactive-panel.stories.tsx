@@ -42,7 +42,7 @@ const Extra_Info = `
 </tr>
 <tr>
 <td>--o-interactive-panel-buttons-container-gap</td>
-<td>24px</td>
+<td>12px</td>
 </tr>
 <tr>
 <td>--o-interactive-panel-buttons-min-width</td>
