@@ -113,6 +113,7 @@
         padding: var(--m-card-padding);
         background: var(--m-card-background);
         overflow: hidden;
+        border-radius: var(--m-card-border-radius);
         z-index: 2;
 
         &::before{
