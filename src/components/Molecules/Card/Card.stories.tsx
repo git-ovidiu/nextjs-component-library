@@ -187,6 +187,11 @@ const Template: ComponentStory<typeof Card> = (args) => (
         image-height-tablet={args["image-height-tablet"]}
         image-height-desktop={args["image-height-desktop"]}
       {...args}
+
+        shape={
+          <Image fill src={"https://camonysi.sirv.com/portofolio/interactive-panel-card-background.svg"} alt={"Placeholder"} />
+        }
+
       image={
         <MediaImage
             image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"/>}

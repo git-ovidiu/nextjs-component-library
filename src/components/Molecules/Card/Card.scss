@@ -113,6 +113,7 @@
         padding: var(--m-card-padding);
         background: var(--m-card-background);
         overflow: hidden;
+        z-index: 2;
 
         &::before{
           content: '';
@@ -120,11 +121,22 @@
           width: 100%;
           border-radius: var(--m-card-border-radius);
           height: 100%;
-          z-index: 0;
+          z-index: 1;
           position: absolute;
           top: 0;
           left: 0;
-          filter: blur(var(--m-card-blur));
+          //filter: blur(var(--m-card-blur));
+          backdrop-filter: blur(8px); /* Apply the blur effect */
+        }
+
+        .shape{
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+
+        .action-content{
+          z-index: 2;
         }
 
         .text-content{

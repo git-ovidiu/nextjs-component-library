@@ -19,6 +19,7 @@ export interface CardProps {
   "image-height-mobile"?: string;
   "image-height-tablet"?: string;
   "image-height-desktop"?: string;
+  "shape"?: ReactElement;
 }
 
 export default function Card(props: CardProps) {
@@ -59,6 +60,9 @@ export default function Card(props: CardProps) {
           </div>
           <div className="action-content">
           {buttonsElement}
+          </div>
+          <div className="shape">
+            {props.shape}
           </div>
         </div>
       </div>
