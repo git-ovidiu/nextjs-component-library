@@ -165,19 +165,6 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
     full-height={args["full-height"]}
 
 
-    bottom-right-corner-shape={
-      <CustomShape
-      >
-        <Image alt="Placeholder" height={300} src="https://camonysi.sirv.com/NextJS%20Component%20Library/blob-haikei.svg" width={400}/>
-      </CustomShape>
-    }
-
-    center-shape={
-      <CustomShape
-      >
-        <Image alt="Placeholder" height={300} src="https://camonysi.sirv.com/NextJS%20Component%20Library/blob-haikei.svg" width={400}/>
-      </CustomShape>
-    }
   >
     <CustomGridRow vertical-alignment="center">
       <CustomGridColumn
@@ -207,11 +194,11 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
             <Logo
               open-in-new-tab
               link-url="https://www.youtube.com"
-              width="150px"
+              width="250px"
               height="50px"
               background={"#ffffff"}
-              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-              logo-al="Placeholder"
+              logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+              logo-alt="Placeholder"
               default-opacity-mobile="0.5"
               default-opacity-desktop="1"
               border-radius-desktop="0px"
@@ -222,11 +209,11 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
             <Logo
               open-in-new-tab
               link-url="https://www.youtube.com"
-              width="150px"
+              width="250px"
               height="50px"
               background={"#ffffff"}
-              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-              logo-al="Placeholder"
+              logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+              logo-alt="Placeholder"
               default-opacity-mobile="0.8"
               default-opacity-desktop="0.8"
               border-radius-desktop="0px"
@@ -302,7 +289,7 @@ Custom_wrapper_STORY.args = {
   "custom-background-video":
       "https://camonysi.sirv.com/NextJS%20Component%20Library/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
   "progress-bar-background": "red",
-  "full-height": false,
+  "full-height": true,
 };
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters

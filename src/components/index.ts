@@ -9,7 +9,6 @@ export { default as LinkItem } from "./Atoms/Link-item";
 export { default as Label } from "./Atoms/Label";
 export { default as SimpleDivider } from "./Atoms/Simple-divider";
 export { default as Logo } from "./Atoms/Logo";
-export { default as CustomShape } from "./Atoms/Custom-shape";
 
 // MOLECULES
 export { default as LinkList } from "./Molecules/Link-list";

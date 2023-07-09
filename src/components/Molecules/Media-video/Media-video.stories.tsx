@@ -297,7 +297,7 @@ MediaVideo_story.args = {
 	//@ts-ignore
 	"video":
 		"https://camonysi.sirv.com/NextJS%20Component%20Library/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
-	"video-fullscreen": true,
+	"video-fullscreen": false,
 	["auto-play"]: false,
 	"video-border-radius": undefined,
 	muted: true,

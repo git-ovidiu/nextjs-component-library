@@ -177,11 +177,11 @@ export const Logo_STORY = Template.bind({});
 
 Logo_STORY.args = {
   "open-in-new-tab": true,
-  "link-url": "https://www.youtube.com",
-  "width": "150px",
+  "link-url": "https://www.google.com",
+  "width": "250px",
   "height": "50px",
   "background": "#4cbfa6",
-  "logo-image-url": "https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg",
+  "logo-image-url": "https://camonysi.sirv.com/portofolio/storybook.png",
   "logo-alt": "Placeholder",
   "default-opacity-mobile": "1",
   "default-opacity-desktop": "1",

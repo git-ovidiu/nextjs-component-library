@@ -194,7 +194,7 @@ const Template: ComponentStory<typeof InteractivePanel> = (args) => (
                                         <Image
                                             alt="Placeholder"
                                             fill
-                                            src="https://camonysi.sirv.com/NextJS%20Component%20Library/portofolio/Screenshot%202023-06-28%20at%2023.52.07.png"
+                                            src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
                                         />
                                     }
                                     image-border-radius="0px"
@@ -223,8 +223,6 @@ const Template: ComponentStory<typeof InteractivePanel> = (args) => (
                                 </>
                             }
                         />,
-                        // eslint-disable-next-line react/jsx-key
-                        <h1>Moo Free Brews</h1>,
                     ]}
                     button={[
                         // eslint-disable-next-line react/jsx-key
@@ -232,7 +230,7 @@ const Template: ComponentStory<typeof InteractivePanel> = (args) => (
                             padding={"s"}
                             hover_effect="tertiary"
                             iconPosition="right"
-                            text="Vibe Interior"
+                            text="Slide 1"
                             icon={<MdOutlineArchitecture size={20} />}
                         />,
                         // eslint-disable-next-line react/jsx-key
@@ -241,16 +239,8 @@ const Template: ComponentStory<typeof InteractivePanel> = (args) => (
                             padding={"s"}
                             hover_effect="tertiary"
                             iconPosition="right"
-                            text="Component Library"
+                            text="Slide 2"
                         />,
-                        // eslint-disable-next-line react/jsx-key
-                        <ButtonSlideSecond
-                            icon={<MdOutlineCoffeeMaker size={20} />}
-                            padding={"s"}
-                            hover_effect="tertiary"
-                            iconPosition="right"
-                            text="MooFree Brews"
-                        />
                     ]}
 
                 />

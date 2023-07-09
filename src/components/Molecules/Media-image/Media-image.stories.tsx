@@ -179,8 +179,8 @@ const Template: ComponentStory<typeof MediaImage> = (args) => (
             border-radius="20px"
             height="50px"
             logo-alt="Placeholder"
-            logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-            width="150px"
+            logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+            width="250px"
         />
     }
     label-top-right={
@@ -189,8 +189,8 @@ const Template: ComponentStory<typeof MediaImage> = (args) => (
             border-radius="20px"
             height="50px"
             logo-alt="Placeholder"
-            logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-            width="150px"
+            logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+            width="250px"
         />
     }
     label-bottom-left={
@@ -199,8 +199,8 @@ const Template: ComponentStory<typeof MediaImage> = (args) => (
             border-radius="20px"
             height="50px"
             logo-alt="Placeholder"
-            logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-            width="150px"
+            logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+            width="250px"
         />
     }
     label-bottom-right={
@@ -209,8 +209,8 @@ const Template: ComponentStory<typeof MediaImage> = (args) => (
             border-radius="20px"
             height="50px"
             logo-alt="Placeholder"
-            logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-            width="150px"
+            logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+            width="250px"
         />
     }
   />
