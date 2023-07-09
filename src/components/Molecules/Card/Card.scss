@@ -21,6 +21,7 @@
   --m-card-overlapped-side-distance-mobile:  60px;
   --m-card-overlapped-side-distance-tablet:  70px;
   --m-card-overlapped-side-distance-desktop:  80px;
+  --m-card-blur: 20px;
 }
 
 .m-card {
@@ -104,15 +105,31 @@
       }
 
       .content {
-        background: var(--m-card-background);
-
         width: calc(100% - var(--m-card-overlapped-side-distance-mobile));
         position: relative;
         margin-top: var(--m-card-overlapped-margin-top);
-        border-radius: var(--m-card-border-radius);
         margin-bottom: 20px;
         box-shadow: var(--m-card-box-shadow);
         padding: var(--m-card-padding);
+        background: var(--m-card-background);
+        overflow: hidden;
+
+        &::before{
+          content: '';
+          background: var(--m-card-background);
+          width: 100%;
+          border-radius: var(--m-card-border-radius);
+          height: 100%;
+          z-index: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          filter: blur(var(--m-card-blur));
+        }
+
+        .text-content{
+          z-index: 2;
+        }
 
         .labels{
             margin-top: unset;
