@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import {
   AnimatedText,
-  ButtonSlide, CustomShape,
+  ButtonSlide,
   Description,
   Logo,
   MediaImage,
@@ -15,7 +15,7 @@ import CustomGridRow from "../Row";
 import CustomGridColumn from "../Column";
 import CustomWrapper from "./Custom-wrapper";
 import {AiOutlineDownload} from "react-icons/ai"
-import {Parallax, ParallaxProvider} from "react-scroll-parallax"
+import {ParallaxProvider} from "react-scroll-parallax"
 
 const Extra_Info = `
 <br>
