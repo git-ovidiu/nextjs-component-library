@@ -21,7 +21,6 @@
   --m-card-overlapped-side-distance-mobile:  60px;
   --m-card-overlapped-side-distance-tablet:  70px;
   --m-card-overlapped-side-distance-desktop:  80px;
-  --m-card-blur: 20px;
 }
 
 .m-card {
@@ -115,20 +114,6 @@
         overflow: hidden;
         border-radius: var(--m-card-border-radius);
         z-index: 2;
-
-        &::before{
-          content: '';
-          background: var(--m-card-background);
-          width: 100%;
-          border-radius: var(--m-card-border-radius);
-          height: 100%;
-          z-index: 1;
-          position: absolute;
-          top: 0;
-          left: 0;
-          //filter: blur(var(--m-card-blur));
-          backdrop-filter: blur(8px); /* Apply the blur effect */
-        }
 
         .shape{
           position: absolute;

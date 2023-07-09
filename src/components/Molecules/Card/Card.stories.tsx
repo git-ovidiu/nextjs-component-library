@@ -65,7 +65,6 @@ const Extra_Info = `
 <li>--m-card-overlapped-side-distance-tablet</li>
 <li>--m-card-overlapped-side-distance-desktop</li>
 <li>--m-card-labels-margin-top</li>
-<li>--m-card-blur</li>
 </ol>
 <table>
   <tr>
@@ -143,10 +142,6 @@ const Extra_Info = `
 <tr>
 <td>--m-card-overlapped-side-distance-desktop</td>
 <td>80px</td>
-</tr>
-<tr>
-<td>--m-card-blur</td>
-<td>20px</td>
 </tr>
 </table>
 
