@@ -42,6 +42,22 @@ const Extra_Info = `
     <td>is-overlapped</td>
     <td>boolean</td>
   </tr>
+  <tr>
+  <td>image-height-mobile</td>
+  <td>string</td>
+</tr>
+  <tr>
+  <td>image-height-tablet</td>
+  <td>string</td>
+</tr>
+  <tr>
+  <td>image-height-desktop</td>
+  <td>string</td>
+</tr>
+<tr>
+<td>shape</td>
+<td>ReactElement</td>
+</tr>
 </table>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
