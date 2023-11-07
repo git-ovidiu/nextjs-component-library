@@ -170,7 +170,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
       <CustomGridColumn
         lg={4}
         xs={12}
-        column-background={"black"}
+        column-background={"transparent"}
         column-border-radius={"500px"}
         column-background-opacity={"0.37"}
         column-padding-top={"unset"}
@@ -186,7 +186,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
             <Image
               alt="Placeholder"
               fill
-              src="https://camonysi.sirv.com/NextJS%20Component%20Library/jesse-schoff-Ph2KtIqKs7c-unsplash.jpg"
+              src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382363/comp%20library/react-component-library-2_dikzdv.jpg"
             />
           }
           image-border-radius="30px"
@@ -197,7 +197,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
               width="250px"
               height="50px"
               background={"#ffffff"}
-              logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+              logo-image-url="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png"
               logo-alt="Placeholder"
               default-opacity-mobile="0.5"
               default-opacity-desktop="1"
@@ -212,7 +212,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
               width="250px"
               height="50px"
               background={"#ffffff"}
-              logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+              logo-image-url="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png"
               logo-alt="Placeholder"
               default-opacity-mobile="0.8"
               default-opacity-desktop="0.8"
@@ -287,7 +287,7 @@ Custom_wrapper_STORY.args = {
   "custom-background-image":
       "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
   "custom-background-video":
-      "https://camonysi.sirv.com/NextJS%20Component%20Library/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
+      "https://res.cloudinary.com/dfddk8jjr/video/upload/v1699382509/pexels_videos_1151284_1080p_fx7tpa.mp4",
   "progress-bar-background": "red",
   "full-height": true,
 };

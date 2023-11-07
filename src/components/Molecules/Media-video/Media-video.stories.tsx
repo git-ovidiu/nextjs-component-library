@@ -296,7 +296,7 @@ export const MediaVideo_story = Template.bind({});
 MediaVideo_story.args = {
 	//@ts-ignore
 	"video":
-		"https://camonysi.sirv.com/NextJS%20Component%20Library/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
+		"https://res.cloudinary.com/dfddk8jjr/video/upload/v1699382509/pexels_videos_1151284_1080p_fx7tpa.mp4",
 	"video-fullscreen": false,
 	["auto-play"]: false,
 	"video-border-radius": undefined,

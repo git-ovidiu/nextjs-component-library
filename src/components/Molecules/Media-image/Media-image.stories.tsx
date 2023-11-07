@@ -169,7 +169,7 @@ const Template: ComponentStory<typeof MediaImage> = (args) => (
       <Image
         fill
         alt="Placeholder"
-        src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
+        src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382363/comp%20library/react-component-library-2_dikzdv.jpg"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     }
@@ -179,7 +179,7 @@ const Template: ComponentStory<typeof MediaImage> = (args) => (
             border-radius="20px"
             height="50px"
             logo-alt="Placeholder"
-            logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+            logo-image-url="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png"
             width="250px"
         />
     }
@@ -189,7 +189,7 @@ const Template: ComponentStory<typeof MediaImage> = (args) => (
             border-radius="20px"
             height="50px"
             logo-alt="Placeholder"
-            logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+            logo-image-url="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png"
             width="250px"
         />
     }
@@ -199,7 +199,7 @@ const Template: ComponentStory<typeof MediaImage> = (args) => (
             border-radius="20px"
             height="50px"
             logo-alt="Placeholder"
-            logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+            logo-image-url="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png"
             width="250px"
         />
     }
@@ -209,7 +209,7 @@ const Template: ComponentStory<typeof MediaImage> = (args) => (
             border-radius="20px"
             height="50px"
             logo-alt="Placeholder"
-            logo-image-url="https://camonysi.sirv.com/portofolio/storybook.png"
+            logo-image-url="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png"
             width="250px"
         />
     }

@@ -181,7 +181,7 @@ Logo_STORY.args = {
   "width": "250px",
   "height": "50px",
   "background": "#4cbfa6",
-  "logo-image-url": "https://camonysi.sirv.com/portofolio/storybook.png",
+  "logo-image-url": "https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png",
   "logo-alt": "Placeholder",
   "default-opacity-mobile": "1",
   "default-opacity-desktop": "1",

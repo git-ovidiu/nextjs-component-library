@@ -89,7 +89,7 @@ const Template: ComponentStory<{}> = (args) => (
                     alt="Placeholder"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
+                    src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382363/comp%20library/react-component-library-2_dikzdv.jpg"
                   />
                 }
                 image-border-radius="30px"
@@ -174,7 +174,7 @@ const Template: ComponentStory<{}> = (args) => (
                     alt="Placeholder"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
+                    src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382363/comp%20library/react-component-library-2_dikzdv.jpg"
                   />
                 }
                 image-border-radius="30px"
@@ -256,7 +256,7 @@ const Template: ComponentStory<{}> = (args) => (
                     alt="Placeholder"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"
+                    src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382363/comp%20library/react-component-library-2_dikzdv.jpg"
                   />
                 }
                 image-border-radius="30px"
