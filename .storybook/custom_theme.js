@@ -22,5 +22,5 @@ export default create({
   inputTextColor: "black",
   inputBorderRadius: '5px',
   brandImage:
-    "https://camonysi.sirv.com/portofolio/Atomic_Design_logo.png",
+    "https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png",
 });
