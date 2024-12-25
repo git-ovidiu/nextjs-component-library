@@ -49,6 +49,7 @@ export default function InteractivePanel({ card, button }: InteractivePanelProps
                   lg={3}
                   lg-offset={1}
               >
+
                 <div className="buttons-container">
                   {button &&
                       button.map((buttonElement: ReactNode, index: number) => (
