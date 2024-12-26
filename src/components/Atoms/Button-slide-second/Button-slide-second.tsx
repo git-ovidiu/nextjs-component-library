@@ -30,5 +30,3 @@ export default function ButtonSlideSecond(props: ButtonSlideSecondProps) {
     </>
   );
 }
-
-// todo DE VERIFICAT CA TOTUL E OK AICI
