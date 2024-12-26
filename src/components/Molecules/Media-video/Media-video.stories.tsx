@@ -100,6 +100,7 @@ const Extra_Info = `
 <li>--m-video-controls-container-width</li>
 <li>--m-video-controls-icon-width</li>
 <li>--m-video-controls-icon-height</li>
+<li>--m-video-has-custom-height</li>
 <li>--m-video-controls-icon-play-width</li>
 <li>--m-video-controls-icon-play-height</li>
 <li>--m-video-controls-fullscreen-padding</li>
@@ -173,6 +174,10 @@ const Extra_Info = `
 <tr>
 <td>--m-video-controls-fullscreen-padding</td>
 <td>8px;</td>
+</tr>
+<tr>
+<td>--m-video-has-custom-height</td>
+<td>100vh</td>
 </tr>
 <tr>
 <td>--m-video-controls-hover-scale</td>
@@ -291,8 +296,8 @@ export const MediaVideo_story = Template.bind({});
 MediaVideo_story.args = {
 	//@ts-ignore
 	"video":
-		"https://camonysi.sirv.com/NextJS%20Component%20Library/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
-	"video-fullscreen": true,
+		"https://res.cloudinary.com/dfddk8jjr/video/upload/v1699382509/pexels_videos_1151284_1080p_fx7tpa.mp4",
+	"video-fullscreen": false,
 	["auto-play"]: false,
 	"video-border-radius": undefined,
 	muted: true,

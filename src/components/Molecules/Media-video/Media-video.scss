@@ -23,6 +23,7 @@
 	--m-video-fullscreen-icon-color: white;
 	--m-video-controls-icon-color: white;
 	--m-video-controls-play-icon-color: #4cbfa6;
+  	--m-video-has-custom-height: 100vh;
 
 	//mobile
 	--m-video-controls-icon-width-mobile: 10px;
@@ -47,7 +48,7 @@
 	height: 100%;
 	justify-items: center;
 	&.video-fullscreen{
-		height: 100vh;
+		height: var(--m-video-has-custom-height);
 	}
 
 	.video-container {

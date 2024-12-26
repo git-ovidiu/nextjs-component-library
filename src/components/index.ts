@@ -9,7 +9,6 @@ export { default as LinkItem } from "./Atoms/Link-item";
 export { default as Label } from "./Atoms/Label";
 export { default as SimpleDivider } from "./Atoms/Simple-divider";
 export { default as Logo } from "./Atoms/Logo";
-export { default as CustomShape } from "./Atoms/Custom-shape";
 
 // MOLECULES
 export { default as LinkList } from "./Molecules/Link-list";
@@ -21,6 +20,7 @@ export { default as MediaImage } from "./Molecules/Media-image";
 export { default as MediaVideo } from "./Molecules/Media-video";
 
 //Organisms
+export { default as InteractivePanel } from "./Organisms/Interactive-panel";
 
 // Styleguide
 export { default as CustomGridColumn } from "./Styleguide/Grid/Column";

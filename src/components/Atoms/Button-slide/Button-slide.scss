@@ -27,7 +27,6 @@
     border-radius: var(--a-button-slide-border-radius);
 }
 
-
 a{
     text-decoration: none;
     color: inherit;
@@ -98,11 +97,6 @@ a{
         height: 100%;
         width: 100%;
     }
-    &:hover {
-        &::before {
-            height: 0;
-        }
-    }
 }
 
 .btn_hover_slide.slide_up {
@@ -113,11 +107,6 @@ a{
         right: 0;
         height: 100%;
         width: 100%;
-    }
-    &:hover {
-        &::before {
-            height: 0;
-        }
     }
 }
 
@@ -131,11 +120,6 @@ a{
         height: 100%;
         width: 100%;
     }
-    &:hover {
-        &::before {
-            width: 0;
-        }
-    }
 }
 
 .btn_hover_slide.slide_left {
@@ -147,9 +131,49 @@ a{
         height: 100%;
         width: 100%;
     }
-    &:hover {
-        &::before {
-            width: 0;
+}
+
+
+@media (min-width: 992px){
+
+
+    .btn_hover_slide.slide_down {
+        @include slide_hover_paddings;
+
+        &:hover {
+            &::before {
+                height: 0;
+            }
         }
     }
+
+    .btn_hover_slide.slide_up {
+        @include slide_hover_paddings;
+        &:hover {
+            &::before {
+                height: 0;
+            }
+        }
+    }
+
+    .btn_hover_slide.slide_right {
+        @include slide_hover_paddings;
+        &:hover {
+            &::before {
+                width: 0;
+            }
+        }
+    }
+
+    .btn_hover_slide.slide_left {
+        @include slide_hover_paddings;
+
+        &:hover {
+            &::before {
+                width: 0;
+            }
+        }
+    }
+
 }
+

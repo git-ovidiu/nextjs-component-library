@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import {
   AnimatedText,
-  ButtonSlide, CustomShape,
+  ButtonSlide,
   Description,
   Logo,
   MediaImage,
@@ -15,7 +15,7 @@ import CustomGridRow from "../Row";
 import CustomGridColumn from "../Column";
 import CustomWrapper from "./Custom-wrapper";
 import {AiOutlineDownload} from "react-icons/ai"
-import {Parallax, ParallaxProvider} from "react-scroll-parallax"
+import {ParallaxProvider} from "react-scroll-parallax"
 
 const Extra_Info = `
 <br>
@@ -165,25 +165,12 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
     full-height={args["full-height"]}
 
 
-    bottom-right-corner-shape={
-      <CustomShape
-      >
-        <Image alt="Placeholder" height={300} src="https://camonysi.sirv.com/NextJS%20Component%20Library/blob-haikei.svg" width={400}/>
-      </CustomShape>
-    }
-
-    center-shape={
-      <CustomShape
-      >
-        <Image alt="Placeholder" height={300} src="https://camonysi.sirv.com/NextJS%20Component%20Library/blob-haikei.svg" width={400}/>
-      </CustomShape>
-    }
   >
     <CustomGridRow vertical-alignment="center">
       <CustomGridColumn
         lg={4}
         xs={12}
-        column-background={"black"}
+        column-background={"transparent"}
         column-border-radius={"500px"}
         column-background-opacity={"0.37"}
         column-padding-top={"unset"}
@@ -199,7 +186,7 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
             <Image
               alt="Placeholder"
               fill
-              src="https://camonysi.sirv.com/NextJS%20Component%20Library/jesse-schoff-Ph2KtIqKs7c-unsplash.jpg"
+              src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382363/comp%20library/react-component-library-2_dikzdv.jpg"
             />
           }
           image-border-radius="30px"
@@ -207,11 +194,11 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
             <Logo
               open-in-new-tab
               link-url="https://www.youtube.com"
-              width="150px"
+              width="250px"
               height="50px"
               background={"#ffffff"}
-              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-              logo-al="Placeholder"
+              logo-image-url="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png"
+              logo-alt="Placeholder"
               default-opacity-mobile="0.5"
               default-opacity-desktop="1"
               border-radius-desktop="0px"
@@ -222,11 +209,11 @@ const Template: ComponentStory<typeof CustomWrapper> = (args) => (
             <Logo
               open-in-new-tab
               link-url="https://www.youtube.com"
-              width="150px"
+              width="250px"
               height="50px"
               background={"#ffffff"}
-              logo-image-url="https://res.cloudinary.com/dxbivmheq/image/upload/v1664097063/samples/cloudinary-logo-vector.svg"
-              logo-al="Placeholder"
+              logo-image-url="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png"
+              logo-alt="Placeholder"
               default-opacity-mobile="0.8"
               default-opacity-desktop="0.8"
               border-radius-desktop="0px"
@@ -300,9 +287,9 @@ Custom_wrapper_STORY.args = {
   "custom-background-image":
       "https://res.cloudinary.com/dxbivmheq/image/upload/v1685726349/gradient_1_ypzsxq.png",
   "custom-background-video":
-      "https://camonysi.sirv.com/NextJS%20Component%20Library/Videos/pexels-taryn-elliott-5548129-3840x2160-25fps.mp4",
+      "https://res.cloudinary.com/dfddk8jjr/video/upload/v1699382509/pexels_videos_1151284_1080p_fx7tpa.mp4",
   "progress-bar-background": "red",
-  "full-height": false,
+  "full-height": true,
 };
 
 //todo add layout: 'fullscreen', for all the storybooks under the parameters

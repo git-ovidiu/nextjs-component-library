@@ -4,16 +4,23 @@ import "./Button-slide-second.scss";
 export interface ButtonSlideSecondProps {
   text: string;
   hover_effect: string;
-  icon? : ReactNode | string;
-  iconPosition? : string;
+  icon?: ReactNode | string;
+  iconPosition?: string;
+  padding?: string;
 }
 
 export default function ButtonSlideSecond(props: ButtonSlideSecondProps) {
   return (
     <>
-        <div className="tertiary-button">
+        <div className={`tertiary-button`}>
             <button
-              className={`
+              className={`${props.padding === "xxs" ? "padding-xxs" : ""}${
+                  props.padding === "xs" ? "padding-xs" : ""
+              }${props.padding === "s" ? "padding-s" : ""}${
+                  props.padding === "m" ? "padding-m" : ""
+              }${props.padding === "l" ? "padding-l" : ""}${
+                  props.padding === "xl" ? "padding-xl" : ""
+              }${props.padding === "xxl" ? "padding-xxl" : ""}
             ${props.hover_effect === "tertiary" ? 'btn_hover_left' : ""}
           `}
             >

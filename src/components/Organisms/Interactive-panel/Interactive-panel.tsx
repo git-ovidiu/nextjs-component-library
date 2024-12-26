@@ -1,9 +1,9 @@
-import React, {ReactElement, ReactNode} from "react";
+import React, {ReactElement, ReactNode, useEffect, useState} from "react";
 import "./Interactive-panel.scss";
 
 export interface InteractivePanelProps {
-  card?: ReactElement;
-  button?: ReactElement;
+  card?: ReactNode[];
+  button?: ReactNode[];
 }
 // Default theme
 import '@splidejs/react-splide/css';
@@ -15,39 +15,68 @@ import '@splidejs/react-splide/css/sea-green';
 // or only core styles
 import '@splidejs/react-splide/css/core';
 import {Splide, SplideSlide} from "@splidejs/react-splide"
-export default function InteractivePanel( props: InteractivePanelProps) {
-  const splideRef = React.useRef<any>(null);
+import {CustomGridColumn, CustomGridRow, CustomWrapper} from "../../index"
 
-  const handleButtonClick = (slideIndex: number) => {
+
+
+
+
+export default function InteractivePanel({ card, button }: InteractivePanelProps) {
+  const splideRef = React.useRef<any>(null);
+  const [activeButtonIndex, setActiveButtonIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (button && button.length > 0) {
+      setActiveButtonIndex(0);
+    }
+  }, [button]);
+
+  const handleButtonClick = (slideIndex: number, buttonIndex: number) => {
     splideRef.current?.go(slideIndex);
+    setActiveButtonIndex(buttonIndex);
+  };
+
+  const handleSlideMoved = (splide: any) => {
+    setActiveButtonIndex(splide.index);
   };
 
   return (
-    <>
-      <section>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <Splide ref={splideRef}>
-                <SplideSlide>
-                  <h1>card1</h1>
-                </SplideSlide>
-                <SplideSlide>
-                  <h1>card2</h1>
-                </SplideSlide>
-                <SplideSlide>
-                  <h1>card3</h1>
-                </SplideSlide>
-              </Splide>
-            </div>
-            <div className="col-md-6">
-              <button onClick={() => handleButtonClick(0)}>button1</button>
-              <button onClick={() => handleButtonClick(1)}>button2</button>
-              <button onClick={() => handleButtonClick(2)}>button3</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+      <div className={"o-interactive-panel"}>
+          <CustomGridRow vertical-alignment="center" reverse-breakpoint={"md"}>
+              <CustomGridColumn
+                  column-background="transparent"
+                  columns-equal-paddings
+                  lg={3}
+                  lg-offset={1}
+              >
+
+                <div className="buttons-container">
+                  {button &&
+                      button.map((buttonElement: ReactNode, index: number) => (
+                          <div
+                              key={index}
+                              className={index === activeButtonIndex ? "active" : "default"}
+                              onClick={() => handleButtonClick(index, index)}
+                          >
+                            {buttonElement}
+                          </div>
+                      ))}
+                </div>
+              </CustomGridColumn>
+
+              <CustomGridColumn
+                  column-background="transparent"
+                  columns-equal-paddings
+                  lg={8}
+              >
+                <Splide ref={splideRef} onMoved={handleSlideMoved} options={{ perPage: 1, width: "100%", dragMinThreshold: {mouse: 10, touch: 10}}}>
+                  {card &&
+                      card.map((cardElement: ReactNode, index: number) => (
+                          <SplideSlide key={index}>{cardElement}</SplideSlide>
+                      ))}
+                </Splide>
+              </CustomGridColumn>
+          </CustomGridRow>
+      </div>
   );
 }

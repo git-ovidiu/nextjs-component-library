@@ -42,6 +42,22 @@ const Extra_Info = `
     <td>is-overlapped</td>
     <td>boolean</td>
   </tr>
+  <tr>
+  <td>image-height-mobile</td>
+  <td>string</td>
+</tr>
+  <tr>
+  <td>image-height-tablet</td>
+  <td>string</td>
+</tr>
+  <tr>
+  <td>image-height-desktop</td>
+  <td>string</td>
+</tr>
+<tr>
+<td>shape</td>
+<td>ReactElement</td>
+</tr>
 </table>
 <br>
 <h2><u>CSS VARIABLES</u></h2>
@@ -54,7 +70,6 @@ const Extra_Info = `
 <li>--m-card-height</li>
 <li>--m-card-image-height</li>
 <li>--m-card-image-object-fit</li>
-<li>--m-card-labels-margin-top</li>
 <li>--m-card-labels-gap</li>
 <li>--m-card-title-margin-top</li>
 <li>--m-card-description-margin-top</li>
@@ -65,6 +80,7 @@ const Extra_Info = `
 <li>--m-card-overlapped-side-distance-mobile</li>
 <li>--m-card-overlapped-side-distance-tablet</li>
 <li>--m-card-overlapped-side-distance-desktop</li>
+<li>--m-card-labels-margin-top</li>
 </ol>
 <table>
   <tr>
@@ -96,12 +112,12 @@ const Extra_Info = `
     <td>250px</td>
   </tr>
   <tr>
+  <td>--m-card-labels-margin-top</td>
+  <td>24px</td>
+</tr>
+  <tr>
     <td>--m-card-image-object-fit</td>
     <td>cover</td>
-  </tr>
-  <tr>
-    <td>--m-card-labels-margin-top</td>
-    <td>24px</td>
   </tr>
   <tr>
     <td>--m-card-labels-gap</td>
@@ -176,12 +192,16 @@ export default {
 } as ComponentMeta<typeof Card>;
 
 const Template: ComponentStory<typeof Card> = (args) => (
-  <div style={{ maxWidth: "360px" }}>
+  <div style={{ maxWidth: "360px", background: "white" }}>
     <Card
+        image-height-mobile={args["image-height-mobile"]}
+        image-height-tablet={args["image-height-tablet"]}
+        image-height-desktop={args["image-height-desktop"]}
       {...args}
+
       image={
         <MediaImage
-            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://camonysi.sirv.com/NextJS%20Component%20Library/react-component-library-2.jpg"/>}
+            image={<Image alt="Placeholder" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382363/comp%20library/react-component-library-2_dikzdv.jpg"/>}
             image-border-radius="30px"
             object-fit="cover"
             padding-bottom-desktop="0%"
@@ -247,4 +267,7 @@ Card_story.args = {
   "is-overlapped": true,
   "image-full-width": true,
   buttons: undefined,
+  "image-height-mobile": "250px",
+  "image-height-tablet": "250px",
+  "image-height-desktop": "250px",
 };

@@ -19,6 +19,10 @@
   margin-left: auto;
 }
 
+ul{
+  margin-left: calc(var(--bs-gutter-x) * 0.5 + 3.7px);
+}
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;

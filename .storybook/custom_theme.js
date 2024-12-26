@@ -22,5 +22,5 @@ export default create({
   inputTextColor: "black",
   inputBorderRadius: '5px',
   brandImage:
-    "https://res.cloudinary.com/dxbivmheq/image/upload/v1685281873/Atomic_Design_1_ucubt6.png",
+    "https://res.cloudinary.com/dfddk8jjr/image/upload/v1699382265/comp%20library/storybook_llxpq7.png",
 });

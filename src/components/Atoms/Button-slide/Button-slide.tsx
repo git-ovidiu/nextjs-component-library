@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import "./Button-slide.scss";
 import Link from "next/link"
 export interface ButtonProps {
+
   text: string;
   "hover-effect": string;
   icon?: ReactElement | string;

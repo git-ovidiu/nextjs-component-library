@@ -10,13 +10,17 @@
 }
 
 .s-custom-wrapper {
+
   position: relative;
   height: 100%;
   background: var(--s-custom-wrapper-background-custom);
   border-radius: var(--s-custom-wrapper-border-radius);
 
   &.full-height{
-    height: 100vh;
+    min-height: 100vh;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
   }
 
   &.primary {

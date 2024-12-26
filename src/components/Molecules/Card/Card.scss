@@ -7,7 +7,9 @@
   --m-card-border-radius: 20px 20px 60px 20px;
   --m-card-content-background: #{$color-white};
   --m-card-height: 100%;
-  --m-card-image-height: 250px;
+  --m-card-image-height-mobile: 250px;
+  --m-card-image-height-tablet: 250px;
+  --m-card-image-height-desktop: 250px;
   --m-card-image-object-fit: cover;
   --m-card-labels-margin-top: 24px;
   --m-card-labels-gap: 8px;
@@ -23,7 +25,11 @@
 
 .m-card {
   height: 100%;
-  //padding: 0px 50px; //todo de pus aici o proprietate de padding pentru atunci cand bag cardul intr-un slider (left && right)
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: var(--m-card-border-radius);
+
   .card-container {
     position: relative;
     background: var(--m-card-background);
@@ -34,11 +40,14 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+      border-radius: var(--m-card-border-radius);
 
     .content {
       background: transparent;
       height: 100%;
       @include flex(column, space-between, flex-start);
+
+
 
       .labels {
         margin-top: var(--m-card-labels-margin-top);
@@ -61,6 +70,13 @@
         margin-top: var(--m-card-buttons-margin-top);
         gap: var(--m-card-buttons-gap);
         width: 100%;
+        z-index: 2;
+
+      }
+
+      .action-content{
+        width: 100%;
+
       }
     }
 
@@ -70,13 +86,14 @@
       width: 100%;
 
       img {
-        height: var(--m-card-image-height);
+        height: var(--m-card-image-height-mobile);
         object-fit: var(--m-card-image-object-fit);
       }
     }
 
 
     &.m-card-overlapped {
+      width: 100%;
       padding: unset;
       align-items: center;
       box-shadow: unset;
@@ -87,15 +104,30 @@
       }
 
       .content {
-        background: var(--m-card-background);
-
         width: calc(100% - var(--m-card-overlapped-side-distance-mobile));
         position: relative;
         margin-top: var(--m-card-overlapped-margin-top);
-        border-radius: var(--m-card-border-radius);
         margin-bottom: 20px;
         box-shadow: var(--m-card-box-shadow);
         padding: var(--m-card-padding);
+        background: var(--m-card-background);
+        overflow: hidden;
+        border-radius: var(--m-card-border-radius);
+        z-index: 2;
+
+        .shape{
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+
+        .action-content{
+          z-index: 2;
+        }
+
+        .text-content{
+          z-index: 2;
+        }
 
         .labels{
             margin-top: unset;
@@ -108,6 +140,7 @@
 
       .content {
         padding: var(--m-card-padding);
+        border-radius: var(--m-card-border-radius);
 
         .labels {
           margin-top: unset;
@@ -121,6 +154,11 @@
 @media (min-width: 768px){
   .m-card{
     .card-container{
+      .image{
+        img{
+          height: var(--m-card-image-height-tablet);
+        }
+      }
       &.m-card-overlapped {
         .content{
           width: calc(100% - var(--m-card-overlapped-side-distance-tablet));
@@ -133,6 +171,11 @@
 @media (min-width: 992px){
   .m-card{
     .card-container{
+      .image{
+        img{
+          height: var(--m-card-image-height-desktop);
+        }
+      }
       &.m-card-overlapped {
         .content{
           width: calc(100% - var(--m-card-overlapped-side-distance-desktop));
